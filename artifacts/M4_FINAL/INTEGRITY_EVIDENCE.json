@@ -1,0 +1,3841 @@
+{
+ "manifests": {
+  "D1_gnhk_subset": {
+   "path": "data/public/gnhk/subset/manifest.json",
+   "entries": 240,
+   "unique_hashes": 240,
+   "split": {
+    "test": 160,
+    "dev": 80
+   },
+   "genuine": true
+  },
+  "D4_cvl_numeric": {
+   "path": "data/benchmarks/cvl_numeric/manifest.json",
+   "entries": 300,
+   "unique_hashes": 300,
+   "split": {
+    "dev": 90,
+    "test": 210
+   },
+   "genuine": true
+  },
+  "D5_gnhk_pairs": {
+   "path": "data/benchmarks/gnhk_pairs/manifest.json",
+   "entries": 72,
+   "unique_hashes": 72,
+   "split": {
+    "test": 69,
+    "dev": 3
+   },
+   "genuine": true
+  },
+  "D6_syn_cheques": {
+   "path": "data/benchmarks/syn_cheques/manifest.json",
+   "entries": 260,
+   "unique_hashes": 245,
+   "split": {
+    "test": 182,
+    "dev": 78
+   },
+   "genuine": false
+  }
+ },
+ "global": {
+  "entries": 872,
+  "unique_image_hashes": 854,
+  "hashes_shared_by_multiple_entries": 8,
+  "shared_hash_cross_split": [
+   [
+    "SYN_0006_num",
+    "SYN_0115_num",
+    "SYN_0254_num",
+    "SYN_0285_num"
+   ],
+   [
+    "SYN_0086_num",
+    "SYN_0124_num",
+    "SYN_0140_num",
+    "SYN_0168_num",
+    "SYN_0300_num"
+   ],
+   [
+    "SYN_0126_num",
+    "SYN_0219_num",
+    "SYN_0243_num",
+    "SYN_0302_num"
+   ]
+  ]
+ },
+ "duplicate_candidates": {
+  "total": 227,
+  "verdicts": {
+   "distinct": 213,
+   "blank_template_region": 14
+  },
+  "true_duplicates": [],
+  "distinct_ink_iou_max": 0.918,
+  "distinct_ink_iou_p95": 0.6521999999999999,
+  "rule": "true duplicate = same source image, or ink IoU >= 0.85 and mean abs grey diff <= 8.0 with the same non-blank text",
+  "evidence": [
+   {
+    "pair": [
+     "SYN_0000_num",
+     "SYN_0032_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8963",
+     "6815"
+    ],
+    "ink_iou": 0.458,
+    "mean_abs_grey_diff": 12.5,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0000_num",
+     "SYN_0125_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8963",
+     "4092"
+    ],
+    "ink_iou": 0.525,
+    "mean_abs_grey_diff": 12.26,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0000_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8963",
+     "3203"
+    ],
+    "ink_iou": 0.408,
+    "mean_abs_grey_diff": 14.73,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0000_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8963",
+     "5369"
+    ],
+    "ink_iou": 0.505,
+    "mean_abs_grey_diff": 12.44,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0000_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8963",
+     "248"
+    ],
+    "ink_iou": 0.489,
+    "mean_abs_grey_diff": 12.63,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0000_words",
+     "SYN_0273_words"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.08,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0001_num",
+     "SYN_0138_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3083",
+     "3209"
+    ],
+    "ink_iou": 0.486,
+    "mean_abs_grey_diff": 10.71,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0001_words",
+     "SYN_0002_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand and Eighty Three",
+     "Four Hundred and Sixty Two"
+    ],
+    "ink_iou": 0.232,
+    "mean_abs_grey_diff": 9.18,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0001_words",
+     "SYN_0119_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand and Eighty Three",
+     "Three Hundred and Ninety Eight"
+    ],
+    "ink_iou": 0.291,
+    "mean_abs_grey_diff": 8.75,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0001_words",
+     "SYN_0244_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand and Eighty Three",
+     "One Thousand Five Hundred and Fifty"
+    ],
+    "ink_iou": 0.244,
+    "mean_abs_grey_diff": 9.88,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0001_words",
+     "SYN_0260_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand and Eighty Three",
+     "Seven Thousand One Hundred"
+    ],
+    "ink_iou": 0.234,
+    "mean_abs_grey_diff": 9.21,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0001_words",
+     "SYN_0269_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand and Eighty Three",
+     "Five Thousand Two Hundred and Eighty Five"
+    ],
+    "ink_iou": 0.124,
+    "mean_abs_grey_diff": 13.06,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0002_num",
+     "SYN_0188_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "462",
+     "137"
+    ],
+    "ink_iou": 0.144,
+    "mean_abs_grey_diff": 7.33,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0002_num",
+     "SYN_0202_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "462",
+     "8939"
+    ],
+    "ink_iou": 0.244,
+    "mean_abs_grey_diff": 8.35,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0002_words",
+     "SYN_0188_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Four Hundred and Sixty Two",
+     "Eighty Seven"
+    ],
+    "ink_iou": 0.179,
+    "mean_abs_grey_diff": 7.37,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0005_num",
+     "SYN_0032_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3388",
+     "6815"
+    ],
+    "ink_iou": 0.429,
+    "mean_abs_grey_diff": 12.79,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0005_num",
+     "SYN_0099_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3388",
+     "3750"
+    ],
+    "ink_iou": 0.704,
+    "mean_abs_grey_diff": 6.76,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0005_num",
+     "SYN_0125_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3388",
+     "4092"
+    ],
+    "ink_iou": 0.493,
+    "mean_abs_grey_diff": 12.36,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0005_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3388",
+     "3203"
+    ],
+    "ink_iou": 0.431,
+    "mean_abs_grey_diff": 13.88,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0005_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3388",
+     "5369"
+    ],
+    "ink_iou": 0.504,
+    "mean_abs_grey_diff": 12.32,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0005_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3388",
+     "248"
+    ],
+    "ink_iou": 0.459,
+    "mean_abs_grey_diff": 12.79,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0011_num",
+     "SYN_0031_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8395",
+     "8312"
+    ],
+    "ink_iou": 0.566,
+    "mean_abs_grey_diff": 10.36,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0013_num",
+     "SYN_0029_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1737",
+     "5523"
+    ],
+    "ink_iou": 0.398,
+    "mean_abs_grey_diff": 14.96,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0013_num",
+     "SYN_0065_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1737",
+     "3546"
+    ],
+    "ink_iou": 0.48,
+    "mean_abs_grey_diff": 11.69,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0013_num",
+     "SYN_0154_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1737",
+     "5808"
+    ],
+    "ink_iou": 0.476,
+    "mean_abs_grey_diff": 12.02,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0013_num",
+     "SYN_0266_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1737",
+     "7800"
+    ],
+    "ink_iou": 0.419,
+    "mean_abs_grey_diff": 14.86,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0020_num",
+     "SYN_0226_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "",
+     "9986"
+    ],
+    "ink_iou": 0.538,
+    "mean_abs_grey_diff": 8.59,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0023_num",
+     "SYN_0032_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6636",
+     "6815"
+    ],
+    "ink_iou": 0.478,
+    "mean_abs_grey_diff": 10.37,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0023_num",
+     "SYN_0125_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6636",
+     "4092"
+    ],
+    "ink_iou": 0.484,
+    "mean_abs_grey_diff": 11.97,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0023_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6636",
+     "3203"
+    ],
+    "ink_iou": 0.478,
+    "mean_abs_grey_diff": 11.27,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0023_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6636",
+     "5369"
+    ],
+    "ink_iou": 0.475,
+    "mean_abs_grey_diff": 12.2,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0023_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6636",
+     "248"
+    ],
+    "ink_iou": 0.475,
+    "mean_abs_grey_diff": 11.59,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0026_num",
+     "SYN_0205_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8206",
+     "1435"
+    ],
+    "ink_iou": 0.247,
+    "mean_abs_grey_diff": 21.59,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0029_num",
+     "SYN_0032_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5523",
+     "6815"
+    ],
+    "ink_iou": 0.529,
+    "mean_abs_grey_diff": 9.9,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0029_num",
+     "SYN_0099_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5523",
+     "3750"
+    ],
+    "ink_iou": 0.494,
+    "mean_abs_grey_diff": 12.26,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0029_num",
+     "SYN_0125_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5523",
+     "4092"
+    ],
+    "ink_iou": 0.557,
+    "mean_abs_grey_diff": 10.53,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0029_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5523",
+     "3203"
+    ],
+    "ink_iou": 0.448,
+    "mean_abs_grey_diff": 12.88,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0029_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5523",
+     "5369"
+    ],
+    "ink_iou": 0.699,
+    "mean_abs_grey_diff": 6.85,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0029_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5523",
+     "248"
+    ],
+    "ink_iou": 0.521,
+    "mean_abs_grey_diff": 10.87,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0031_num",
+     "SYN_0112_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8312",
+     "634"
+    ],
+    "ink_iou": 0.25,
+    "mean_abs_grey_diff": 18.15,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0031_num",
+     "SYN_0171_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8312",
+     "6171"
+    ],
+    "ink_iou": 0.296,
+    "mean_abs_grey_diff": 15.84,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0031_num",
+     "SYN_0272_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8312",
+     "271"
+    ],
+    "ink_iou": 0.283,
+    "mean_abs_grey_diff": 15.74,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0041_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "4255"
+    ],
+    "ink_iou": 0.537,
+    "mean_abs_grey_diff": 8.49,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0060_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "6908"
+    ],
+    "ink_iou": 0.504,
+    "mean_abs_grey_diff": 10.02,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0065_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "3546"
+    ],
+    "ink_iou": 0.476,
+    "mean_abs_grey_diff": 11.78,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0078_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "7050"
+    ],
+    "ink_iou": 0.498,
+    "mean_abs_grey_diff": 10.69,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0146_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "4496"
+    ],
+    "ink_iou": 0.503,
+    "mean_abs_grey_diff": 9.63,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0154_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "5808"
+    ],
+    "ink_iou": 0.475,
+    "mean_abs_grey_diff": 10.26,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0167_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "3040"
+    ],
+    "ink_iou": 0.451,
+    "mean_abs_grey_diff": 12.29,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0176_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "5436"
+    ],
+    "ink_iou": 0.479,
+    "mean_abs_grey_diff": 10.33,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0184_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "9680"
+    ],
+    "ink_iou": 0.512,
+    "mean_abs_grey_diff": 10.29,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0189_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "1270"
+    ],
+    "ink_iou": 0.571,
+    "mean_abs_grey_diff": 7.63,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0192_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "610"
+    ],
+    "ink_iou": 0.507,
+    "mean_abs_grey_diff": 9.37,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0262_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "7606"
+    ],
+    "ink_iou": 0.495,
+    "mean_abs_grey_diff": 10.42,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0265_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "6119"
+    ],
+    "ink_iou": 0.532,
+    "mean_abs_grey_diff": 8.43,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0266_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "7800"
+    ],
+    "ink_iou": 0.472,
+    "mean_abs_grey_diff": 11.23,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0288_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "4212"
+    ],
+    "ink_iou": 0.527,
+    "mean_abs_grey_diff": 9.24,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0032_num",
+     "SYN_0289_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6815",
+     "7002"
+    ],
+    "ink_iou": 0.492,
+    "mean_abs_grey_diff": 10.77,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0034_num",
+     "SYN_0042_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8442",
+     "3187"
+    ],
+    "ink_iou": 0.123,
+    "mean_abs_grey_diff": 6.87,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0034_num",
+     "SYN_0202_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8442",
+     "8939"
+    ],
+    "ink_iou": 0.174,
+    "mean_abs_grey_diff": 8.78,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0034_words",
+     "SYN_0188_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Eight Thousand Four Hundred and Forty Two",
+     "Eighty Seven"
+    ],
+    "ink_iou": 0.181,
+    "mean_abs_grey_diff": 6.28,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0036_num",
+     "SYN_0112_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9981",
+     "634"
+    ],
+    "ink_iou": 0.304,
+    "mean_abs_grey_diff": 16.44,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0036_num",
+     "SYN_0158_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9981",
+     "1520"
+    ],
+    "ink_iou": 0.304,
+    "mean_abs_grey_diff": 18.46,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0036_num",
+     "SYN_0171_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9981",
+     "6171"
+    ],
+    "ink_iou": 0.334,
+    "mean_abs_grey_diff": 14.56,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0036_num",
+     "SYN_0180_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9981",
+     "688"
+    ],
+    "ink_iou": 0.266,
+    "mean_abs_grey_diff": 16.76,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0037_num",
+     "SYN_0164_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5073",
+     "707"
+    ],
+    "ink_iou": 0.742,
+    "mean_abs_grey_diff": 6.01,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0037_num",
+     "SYN_0200_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5073",
+     "459"
+    ],
+    "ink_iou": 0.454,
+    "mean_abs_grey_diff": 14.66,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0041_num",
+     "SYN_0125_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4255",
+     "4092"
+    ],
+    "ink_iou": 0.472,
+    "mean_abs_grey_diff": 11.24,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0041_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4255",
+     "3203"
+    ],
+    "ink_iou": 0.481,
+    "mean_abs_grey_diff": 10.77,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0041_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4255",
+     "5369"
+    ],
+    "ink_iou": 0.509,
+    "mean_abs_grey_diff": 10.24,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0041_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4255",
+     "248"
+    ],
+    "ink_iou": 0.597,
+    "mean_abs_grey_diff": 7.58,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_num",
+     "SYN_0089_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3187",
+     "8987"
+    ],
+    "ink_iou": 0.245,
+    "mean_abs_grey_diff": 7.41,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_num",
+     "SYN_0102_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3187",
+     "2947"
+    ],
+    "ink_iou": 0.147,
+    "mean_abs_grey_diff": 7.9,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_num",
+     "SYN_0119_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3187",
+     "1714"
+    ],
+    "ink_iou": 0.159,
+    "mean_abs_grey_diff": 6.64,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_num",
+     "SYN_0244_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3187",
+     "1550"
+    ],
+    "ink_iou": 0.145,
+    "mean_abs_grey_diff": 7.7,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_num",
+     "SYN_0260_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3187",
+     "7100"
+    ],
+    "ink_iou": 0.084,
+    "mean_abs_grey_diff": 8.1,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_words",
+     "SYN_0048_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand One Hundred and Eighty Seven",
+     "Five Thousand Five Hundred and Fifty Eight"
+    ],
+    "ink_iou": 0.211,
+    "mean_abs_grey_diff": 12.96,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_words",
+     "SYN_0086_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand One Hundred and Eighty Seven",
+     "Five Hundred and Three"
+    ],
+    "ink_iou": 0.174,
+    "mean_abs_grey_diff": 12.23,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_words",
+     "SYN_0089_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand One Hundred and Eighty Seven",
+     "Eight Thousand Nine Hundred and Eighty Seven"
+    ],
+    "ink_iou": 0.503,
+    "mean_abs_grey_diff": 7.15,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_words",
+     "SYN_0101_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand One Hundred and Eighty Seven",
+     "Three Thousand and Five"
+    ],
+    "ink_iou": 0.379,
+    "mean_abs_grey_diff": 8.21,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_words",
+     "SYN_0102_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand One Hundred and Eighty Seven",
+     "Two Thousand Nine Hundred and Forty Seven"
+    ],
+    "ink_iou": 0.236,
+    "mean_abs_grey_diff": 12.91,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_words",
+     "SYN_0114_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand One Hundred and Eighty Seven",
+     "Four Thousand Nine Hundred and Thirty Three"
+    ],
+    "ink_iou": 0.363,
+    "mean_abs_grey_diff": 10.08,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_words",
+     "SYN_0124_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand One Hundred and Eighty Seven",
+     "Three Thousand Eight Hundred and Eighty Nine"
+    ],
+    "ink_iou": 0.185,
+    "mean_abs_grey_diff": 14.21,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_words",
+     "SYN_0168_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand One Hundred and Eighty Seven",
+     "Five Thousand and Forty"
+    ],
+    "ink_iou": 0.102,
+    "mean_abs_grey_diff": 13.2,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_words",
+     "SYN_0209_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand One Hundred and Eighty Seven",
+     "Seven Thousand Two Hundred and Forty Six"
+    ],
+    "ink_iou": 0.312,
+    "mean_abs_grey_diff": 10.72,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0042_words",
+     "SYN_0260_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand One Hundred and Eighty Seven",
+     "Seven Thousand One Hundred"
+    ],
+    "ink_iou": 0.198,
+    "mean_abs_grey_diff": 12.06,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0048_words",
+     "SYN_0134_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Five Thousand Five Hundred and Fifty Eight",
+     "Five Thousand Seven Hundred and Ninety"
+    ],
+    "ink_iou": 0.48,
+    "mean_abs_grey_diff": 6.57,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0048_words",
+     "SYN_0202_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Five Thousand Five Hundred and Fifty Eight",
+     "Eight Thousand Nine Hundred and Thirty Nine"
+    ],
+    "ink_iou": 0.207,
+    "mean_abs_grey_diff": 12.52,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0060_num",
+     "SYN_0125_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6908",
+     "4092"
+    ],
+    "ink_iou": 0.529,
+    "mean_abs_grey_diff": 10.86,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0060_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6908",
+     "3203"
+    ],
+    "ink_iou": 0.454,
+    "mean_abs_grey_diff": 12.5,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0060_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6908",
+     "248"
+    ],
+    "ink_iou": 0.499,
+    "mean_abs_grey_diff": 11.09,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0065_num",
+     "SYN_0125_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3546",
+     "4092"
+    ],
+    "ink_iou": 0.421,
+    "mean_abs_grey_diff": 14.67,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0065_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3546",
+     "3203"
+    ],
+    "ink_iou": 0.423,
+    "mean_abs_grey_diff": 14.48,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0065_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3546",
+     "5369"
+    ],
+    "ink_iou": 0.439,
+    "mean_abs_grey_diff": 14.25,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0071_num",
+     "SYN_0134_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6422",
+     "5790"
+    ],
+    "ink_iou": 0.263,
+    "mean_abs_grey_diff": 7.95,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0071_num",
+     "SYN_0188_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6422",
+     "137"
+    ],
+    "ink_iou": 0.062,
+    "mean_abs_grey_diff": 10.01,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0073_num",
+     "SYN_0097_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "936",
+     "9355"
+    ],
+    "ink_iou": 0.731,
+    "mean_abs_grey_diff": 7.11,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0073_num",
+     "SYN_0226_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "936",
+     "9986"
+    ],
+    "ink_iou": 0.535,
+    "mean_abs_grey_diff": 10.85,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0078_num",
+     "SYN_0125_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7050",
+     "4092"
+    ],
+    "ink_iou": 0.617,
+    "mean_abs_grey_diff": 9.03,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0078_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7050",
+     "3203"
+    ],
+    "ink_iou": 0.477,
+    "mean_abs_grey_diff": 12.31,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0078_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7050",
+     "5369"
+    ],
+    "ink_iou": 0.53,
+    "mean_abs_grey_diff": 11.4,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0080_num",
+     "SYN_0226_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "",
+     "9986"
+    ],
+    "ink_iou": 0.538,
+    "mean_abs_grey_diff": 8.59,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0086_num",
+     "SYN_0188_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "",
+     "Eighty Seven"
+    ],
+    "ink_iou": 0.0,
+    "mean_abs_grey_diff": 4.25,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0086_words",
+     "SYN_0134_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Five Hundred and Three",
+     "Five Thousand Seven Hundred and Ninety"
+    ],
+    "ink_iou": 0.124,
+    "mean_abs_grey_diff": 11.57,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0086_words",
+     "SYN_0188_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Five Hundred and Three",
+     "Eighty Seven"
+    ],
+    "ink_iou": 0.206,
+    "mean_abs_grey_diff": 5.99,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0088_num",
+     "SYN_0097_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9587",
+     "9355"
+    ],
+    "ink_iou": 0.678,
+    "mean_abs_grey_diff": 9.23,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0088_num",
+     "SYN_0121_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9587",
+     "4374"
+    ],
+    "ink_iou": 0.522,
+    "mean_abs_grey_diff": 13.3,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0089_num",
+     "SYN_0188_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8987",
+     "137"
+    ],
+    "ink_iou": 0.13,
+    "mean_abs_grey_diff": 8.94,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0089_num",
+     "SYN_0202_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8987",
+     "8939"
+    ],
+    "ink_iou": 0.61,
+    "mean_abs_grey_diff": 3.98,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0089_words",
+     "SYN_0134_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Eight Thousand Nine Hundred and Eighty Seven",
+     "Five Thousand Seven Hundred and Ninety"
+    ],
+    "ink_iou": 0.189,
+    "mean_abs_grey_diff": 13.45,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0089_words",
+     "SYN_0202_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Eight Thousand Nine Hundred and Eighty Seven",
+     "Eight Thousand Nine Hundred and Thirty Nine"
+    ],
+    "ink_iou": 0.744,
+    "mean_abs_grey_diff": 3.24,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0097_num",
+     "SYN_0164_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9355",
+     "707"
+    ],
+    "ink_iou": 0.442,
+    "mean_abs_grey_diff": 15.55,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0097_num",
+     "SYN_0200_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9355",
+     "459"
+    ],
+    "ink_iou": 0.533,
+    "mean_abs_grey_diff": 13.09,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0097_num",
+     "SYN_0208_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9355",
+     "532"
+    ],
+    "ink_iou": 0.493,
+    "mean_abs_grey_diff": 14.52,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0097_num",
+     "SYN_0230_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9355",
+     "6112"
+    ],
+    "ink_iou": 0.5,
+    "mean_abs_grey_diff": 14.17,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0097_words",
+     "SYN_0117_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Nine Thousand Three Hundred and Fifty Five",
+     "Nine Thousand Three Hundred and Thirty Five"
+    ],
+    "ink_iou": 0.818,
+    "mean_abs_grey_diff": 5.52,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0099_num",
+     "SYN_0146_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3750",
+     "4496"
+    ],
+    "ink_iou": 0.494,
+    "mean_abs_grey_diff": 12.06,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0099_num",
+     "SYN_0266_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3750",
+     "7800"
+    ],
+    "ink_iou": 0.453,
+    "mean_abs_grey_diff": 13.6,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0100_num",
+     "SYN_0188_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7846",
+     "137"
+    ],
+    "ink_iou": 0.097,
+    "mean_abs_grey_diff": 8.11,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0100_words",
+     "SYN_0140_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 0.0,
+    "mean_abs_grey_diff": 0.61,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0100_words",
+     "SYN_0188_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "",
+     "Eighty Seven"
+    ],
+    "ink_iou": 0.036,
+    "mean_abs_grey_diff": 3.74,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0101_words",
+     "SYN_0134_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand and Five",
+     "Five Thousand Seven Hundred and Ninety"
+    ],
+    "ink_iou": 0.138,
+    "mean_abs_grey_diff": 11.43,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0101_words",
+     "SYN_0188_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand and Five",
+     "Eighty Seven"
+    ],
+    "ink_iou": 0.213,
+    "mean_abs_grey_diff": 6.07,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0102_num",
+     "SYN_0188_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "2947",
+     "137"
+    ],
+    "ink_iou": 0.161,
+    "mean_abs_grey_diff": 7.88,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0102_num",
+     "SYN_0202_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "2947",
+     "8939"
+    ],
+    "ink_iou": 0.367,
+    "mean_abs_grey_diff": 7.13,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0102_words",
+     "SYN_0134_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Two Thousand Nine Hundred and Forty Seven",
+     "Five Thousand Seven Hundred and Ninety"
+    ],
+    "ink_iou": 0.165,
+    "mean_abs_grey_diff": 13.07,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0102_words",
+     "SYN_0202_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Two Thousand Nine Hundred and Forty Seven",
+     "Eight Thousand Nine Hundred and Thirty Nine"
+    ],
+    "ink_iou": 0.256,
+    "mean_abs_grey_diff": 12.36,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0107_num",
+     "SYN_0287_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9245",
+     "8304"
+    ],
+    "ink_iou": 0.44,
+    "mean_abs_grey_diff": 18.29,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0109_num",
+     "SYN_0144_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1801",
+     "1173"
+    ],
+    "ink_iou": 0.188,
+    "mean_abs_grey_diff": 16.45,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0109_num",
+     "SYN_0249_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1801",
+     "9929"
+    ],
+    "ink_iou": 0.177,
+    "mean_abs_grey_diff": 19.48,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0114_num",
+     "SYN_0188_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4933",
+     "137"
+    ],
+    "ink_iou": 0.1,
+    "mean_abs_grey_diff": 8.03,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0114_words",
+     "SYN_0134_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Four Thousand Nine Hundred and Thirty Three",
+     "Five Thousand Seven Hundred and Ninety"
+    ],
+    "ink_iou": 0.181,
+    "mean_abs_grey_diff": 13.12,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0114_words",
+     "SYN_0202_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Four Thousand Nine Hundred and Thirty Three",
+     "Eight Thousand Nine Hundred and Thirty Nine"
+    ],
+    "ink_iou": 0.405,
+    "mean_abs_grey_diff": 8.35,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0119_num",
+     "SYN_0188_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1714",
+     "137"
+    ],
+    "ink_iou": 0.093,
+    "mean_abs_grey_diff": 7.39,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0119_num",
+     "SYN_0202_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1714",
+     "8939"
+    ],
+    "ink_iou": 0.155,
+    "mean_abs_grey_diff": 9.2,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0121_num",
+     "SYN_0164_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4374",
+     "707"
+    ],
+    "ink_iou": 0.649,
+    "mean_abs_grey_diff": 8.18,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0121_num",
+     "SYN_0200_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4374",
+     "459"
+    ],
+    "ink_iou": 0.522,
+    "mean_abs_grey_diff": 12.22,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0121_words",
+     "SYN_0275_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Four Thousand Three Hundred and Seventy Four",
+     "Four Thousand Three Hundred and Seventy Six"
+    ],
+    "ink_iou": 0.918,
+    "mean_abs_grey_diff": 2.56,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0124_num",
+     "SYN_0188_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "",
+     "Eighty Seven"
+    ],
+    "ink_iou": 0.0,
+    "mean_abs_grey_diff": 4.25,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0125_num",
+     "SYN_0146_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4092",
+     "4496"
+    ],
+    "ink_iou": 0.649,
+    "mean_abs_grey_diff": 7.48,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0125_num",
+     "SYN_0154_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4092",
+     "5808"
+    ],
+    "ink_iou": 0.523,
+    "mean_abs_grey_diff": 10.65,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0125_num",
+     "SYN_0184_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4092",
+     "9680"
+    ],
+    "ink_iou": 0.564,
+    "mean_abs_grey_diff": 10.64,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0125_num",
+     "SYN_0189_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4092",
+     "1270"
+    ],
+    "ink_iou": 0.464,
+    "mean_abs_grey_diff": 11.35,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0125_num",
+     "SYN_0192_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4092",
+     "610"
+    ],
+    "ink_iou": 0.478,
+    "mean_abs_grey_diff": 11.54,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0125_num",
+     "SYN_0262_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4092",
+     "7606"
+    ],
+    "ink_iou": 0.587,
+    "mean_abs_grey_diff": 9.62,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0125_num",
+     "SYN_0265_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4092",
+     "6119"
+    ],
+    "ink_iou": 0.516,
+    "mean_abs_grey_diff": 10.32,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0125_num",
+     "SYN_0266_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4092",
+     "7800"
+    ],
+    "ink_iou": 0.573,
+    "mean_abs_grey_diff": 10.18,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0125_num",
+     "SYN_0288_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4092",
+     "4212"
+    ],
+    "ink_iou": 0.64,
+    "mean_abs_grey_diff": 7.59,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0125_num",
+     "SYN_0289_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4092",
+     "7002"
+    ],
+    "ink_iou": 0.612,
+    "mean_abs_grey_diff": 8.86,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0129_num",
+     "SYN_0226_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "",
+     "9986"
+    ],
+    "ink_iou": 0.538,
+    "mean_abs_grey_diff": 8.59,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0133_words",
+     "SYN_0261_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Two Hundred and Seventy Five",
+     "Two Thousand Six Hundred and Ten"
+    ],
+    "ink_iou": 0.416,
+    "mean_abs_grey_diff": 16.39,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0134_words",
+     "SYN_0168_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Five Thousand Seven Hundred and Ninety",
+     "Five Thousand and Forty"
+    ],
+    "ink_iou": 0.131,
+    "mean_abs_grey_diff": 10.9,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0137_words",
+     "SYN_0157_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Five Thousand Six Hundred and Three",
+     "Six Thousand Five Hundred and Eighty Six"
+    ],
+    "ink_iou": 0.592,
+    "mean_abs_grey_diff": 12.97,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0140_num",
+     "SYN_0150_words"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 0.0,
+    "mean_abs_grey_diff": 0.61,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0140_num",
+     "SYN_0300_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "",
+     "Twenty Four"
+    ],
+    "ink_iou": 0.0,
+    "mean_abs_grey_diff": 3.67,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0140_words",
+     "SYN_0209_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Three Thousand Four Hundred and Sixteen",
+     "Seven Thousand Two Hundred and Forty Six"
+    ],
+    "ink_iou": 0.143,
+    "mean_abs_grey_diff": 17.95,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0144_num",
+     "SYN_0171_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1173",
+     "6171"
+    ],
+    "ink_iou": 0.362,
+    "mean_abs_grey_diff": 11.69,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0144_words",
+     "SYN_0158_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "One Thousand One Hundred and Seventy Three",
+     "One Thousand Five Hundred and Twenty"
+    ],
+    "ink_iou": 0.549,
+    "mean_abs_grey_diff": 15.8,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0146_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4496",
+     "3203"
+    ],
+    "ink_iou": 0.434,
+    "mean_abs_grey_diff": 13.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0146_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4496",
+     "5369"
+    ],
+    "ink_iou": 0.526,
+    "mean_abs_grey_diff": 10.77,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0150_num",
+     "SYN_0188_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6255",
+     "137"
+    ],
+    "ink_iou": 0.115,
+    "mean_abs_grey_diff": 9.34,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0150_num",
+     "SYN_0202_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6255",
+     "8939"
+    ],
+    "ink_iou": 0.299,
+    "mean_abs_grey_diff": 8.51,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0150_words",
+     "SYN_0188_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "",
+     "Eighty Seven"
+    ],
+    "ink_iou": 0.036,
+    "mean_abs_grey_diff": 3.74,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0154_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5808",
+     "3203"
+    ],
+    "ink_iou": 0.444,
+    "mean_abs_grey_diff": 12.65,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0154_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5808",
+     "5369"
+    ],
+    "ink_iou": 0.5,
+    "mean_abs_grey_diff": 11.34,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0154_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5808",
+     "248"
+    ],
+    "ink_iou": 0.535,
+    "mean_abs_grey_diff": 9.92,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0156_words",
+     "SYN_0275_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Four Thousand Three Hundred and Nineteen",
+     "Four Thousand Three Hundred and Seventy Six"
+    ],
+    "ink_iou": 0.795,
+    "mean_abs_grey_diff": 6.29,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0158_num",
+     "SYN_0205_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1520",
+     "1435"
+    ],
+    "ink_iou": 0.412,
+    "mean_abs_grey_diff": 14.27,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0158_num",
+     "SYN_0249_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1520",
+     "9929"
+    ],
+    "ink_iou": 0.256,
+    "mean_abs_grey_diff": 20.31,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0162_num",
+     "SYN_0287_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8907",
+     "8304"
+    ],
+    "ink_iou": 0.733,
+    "mean_abs_grey_diff": 8.67,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0164_num",
+     "SYN_0226_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "707",
+     "9986"
+    ],
+    "ink_iou": 0.525,
+    "mean_abs_grey_diff": 11.03,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0167_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3040",
+     "5369"
+    ],
+    "ink_iou": 0.476,
+    "mean_abs_grey_diff": 13.19,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0167_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3040",
+     "248"
+    ],
+    "ink_iou": 0.459,
+    "mean_abs_grey_diff": 13.13,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0168_num",
+     "SYN_0188_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "",
+     "Eighty Seven"
+    ],
+    "ink_iou": 0.0,
+    "mean_abs_grey_diff": 4.25,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0168_words",
+     "SYN_0188_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Five Thousand and Forty",
+     "Eighty Seven"
+    ],
+    "ink_iou": 0.131,
+    "mean_abs_grey_diff": 6.29,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0180_words",
+     "SYN_0219_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Four Hundred and Seventy Nine",
+     "Three Hundred and Ninety Nine"
+    ],
+    "ink_iou": 0.478,
+    "mean_abs_grey_diff": 14.74,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0184_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9680",
+     "3203"
+    ],
+    "ink_iou": 0.464,
+    "mean_abs_grey_diff": 12.79,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0184_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9680",
+     "5369"
+    ],
+    "ink_iou": 0.521,
+    "mean_abs_grey_diff": 11.22,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0184_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9680",
+     "248"
+    ],
+    "ink_iou": 0.582,
+    "mean_abs_grey_diff": 9.53,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0188_num",
+     "SYN_0209_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "137",
+     "7246"
+    ],
+    "ink_iou": 0.159,
+    "mean_abs_grey_diff": 8.29,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0188_num",
+     "SYN_0260_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "137",
+     "7100"
+    ],
+    "ink_iou": 0.13,
+    "mean_abs_grey_diff": 7.54,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0188_num",
+     "SYN_0269_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "137",
+     "5285"
+    ],
+    "ink_iou": 0.115,
+    "mean_abs_grey_diff": 9.67,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0188_words",
+     "SYN_0300_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Eighty Seven",
+     ""
+    ],
+    "ink_iou": 0.0,
+    "mean_abs_grey_diff": 4.25,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0188_words",
+     "SYN_0300_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Eighty Seven",
+     "Twenty Four"
+    ],
+    "ink_iou": 0.277,
+    "mean_abs_grey_diff": 3.51,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0189_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1270",
+     "3203"
+    ],
+    "ink_iou": 0.451,
+    "mean_abs_grey_diff": 11.28,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0189_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1270",
+     "5369"
+    ],
+    "ink_iou": 0.511,
+    "mean_abs_grey_diff": 10.25,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0189_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "1270",
+     "248"
+    ],
+    "ink_iou": 0.558,
+    "mean_abs_grey_diff": 8.05,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0192_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "610",
+     "3203"
+    ],
+    "ink_iou": 0.447,
+    "mean_abs_grey_diff": 11.54,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0192_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "610",
+     "5369"
+    ],
+    "ink_iou": 0.461,
+    "mean_abs_grey_diff": 11.64,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0192_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "610",
+     "248"
+    ],
+    "ink_iou": 0.514,
+    "mean_abs_grey_diff": 9.92,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0192_words",
+     "SYN_0273_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Six Hundred and Ten",
+     ""
+    ],
+    "ink_iou": 0.438,
+    "mean_abs_grey_diff": 9.61,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0202_num",
+     "SYN_0269_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "8939",
+     "5285"
+    ],
+    "ink_iou": 0.291,
+    "mean_abs_grey_diff": 8.78,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0202_words",
+     "SYN_0209_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Eight Thousand Nine Hundred and Thirty Nine",
+     "Seven Thousand Two Hundred and Forty Six"
+    ],
+    "ink_iou": 0.358,
+    "mean_abs_grey_diff": 9.55,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0202_words",
+     "SYN_0244_words"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "Eight Thousand Nine Hundred and Thirty Nine",
+     "One Thousand Five Hundred and Fifty"
+    ],
+    "ink_iou": 0.239,
+    "mean_abs_grey_diff": 12.33,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0208_num",
+     "SYN_0226_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "532",
+     "9986"
+    ],
+    "ink_iou": 0.513,
+    "mean_abs_grey_diff": 11.77,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0226_num",
+     "SYN_0230_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9986",
+     "6112"
+    ],
+    "ink_iou": 0.578,
+    "mean_abs_grey_diff": 9.58,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0226_num",
+     "SYN_0271_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9986",
+     ""
+    ],
+    "ink_iou": 0.538,
+    "mean_abs_grey_diff": 8.59,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0226_num",
+     "SYN_0310_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "9986",
+     ""
+    ],
+    "ink_iou": 0.538,
+    "mean_abs_grey_diff": 8.59,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0246_num",
+     "SYN_0287_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7500",
+     "8304"
+    ],
+    "ink_iou": 0.453,
+    "mean_abs_grey_diff": 17.72,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0246_num",
+     "SYN_0299_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7500",
+     "5220"
+    ],
+    "ink_iou": 0.657,
+    "mean_abs_grey_diff": 8.75,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0246_num",
+     "SYN_0304_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7500",
+     "957"
+    ],
+    "ink_iou": 0.478,
+    "mean_abs_grey_diff": 13.86,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0262_num",
+     "SYN_0263_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7606",
+     "3203"
+    ],
+    "ink_iou": 0.429,
+    "mean_abs_grey_diff": 13.48,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0262_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7606",
+     "5369"
+    ],
+    "ink_iou": 0.555,
+    "mean_abs_grey_diff": 10.63,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0262_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7606",
+     "248"
+    ],
+    "ink_iou": 0.569,
+    "mean_abs_grey_diff": 9.98,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0263_num",
+     "SYN_0265_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3203",
+     "6119"
+    ],
+    "ink_iou": 0.464,
+    "mean_abs_grey_diff": 11.03,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0263_num",
+     "SYN_0266_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3203",
+     "7800"
+    ],
+    "ink_iou": 0.437,
+    "mean_abs_grey_diff": 13.52,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0263_num",
+     "SYN_0288_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3203",
+     "4212"
+    ],
+    "ink_iou": 0.463,
+    "mean_abs_grey_diff": 11.94,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0263_num",
+     "SYN_0289_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "3203",
+     "7002"
+    ],
+    "ink_iou": 0.431,
+    "mean_abs_grey_diff": 13.54,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0265_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6119",
+     "5369"
+    ],
+    "ink_iou": 0.501,
+    "mean_abs_grey_diff": 10.57,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0265_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "6119",
+     "248"
+    ],
+    "ink_iou": 0.526,
+    "mean_abs_grey_diff": 8.83,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0266_num",
+     "SYN_0273_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7800",
+     "5369"
+    ],
+    "ink_iou": 0.528,
+    "mean_abs_grey_diff": 11.64,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0266_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7800",
+     "248"
+    ],
+    "ink_iou": 0.552,
+    "mean_abs_grey_diff": 10.52,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0273_num",
+     "SYN_0288_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5369",
+     "4212"
+    ],
+    "ink_iou": 0.527,
+    "mean_abs_grey_diff": 10.6,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0273_num",
+     "SYN_0289_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "5369",
+     "7002"
+    ],
+    "ink_iou": 0.588,
+    "mean_abs_grey_diff": 9.85,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0288_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "4212",
+     "248"
+    ],
+    "ink_iou": 0.552,
+    "mean_abs_grey_diff": 9.05,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0289_num",
+     "SYN_0301_num"
+    ],
+    "prior_decision": "not_duplicate",
+    "gt": [
+     "7002",
+     "248"
+    ],
+    "ink_iou": 0.529,
+    "mean_abs_grey_diff": 10.97,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "distinct"
+   },
+   {
+    "pair": [
+     "SYN_0006_num",
+     "SYN_0254_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0006_num",
+     "SYN_0285_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0086_num",
+     "SYN_0140_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0115_num",
+     "SYN_0254_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0115_num",
+     "SYN_0285_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0124_num",
+     "SYN_0140_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0126_num",
+     "SYN_0219_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0140_num",
+     "SYN_0168_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0140_num",
+     "SYN_0300_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0219_num",
+     "SYN_0243_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   },
+   {
+    "pair": [
+     "SYN_0219_num",
+     "SYN_0302_num"
+    ],
+    "prior_decision": "blank_field",
+    "gt": [
+     "",
+     ""
+    ],
+    "ink_iou": 1.0,
+    "mean_abs_grey_diff": 0.0,
+    "same_source": false,
+    "same_group": false,
+    "verdict": "blank_template_region"
+   }
+  ]
+ },
+ "synthetic": {
+  "source_images": 130,
+  "source_images_in_multiple_splits": 0,
+  "templates_by_split": {
+   "dev": {
+    "HSBC": 8,
+    "AXIS BANK": 10,
+    "Canara Bank": 10,
+    "ICICI Bank": 11
+   },
+   "test": {
+    "AXIS BANK": 22,
+    "HSBC": 26,
+    "Canara Bank": 20,
+    "ICICI Bank": 23
+   }
+  },
+  "repeated_text_pairs": [
+   {
+    "field": "syn_num",
+    "text": "1550",
+    "pair": [
+     "SYN_0055_num",
+     "SYN_0244_num"
+    ],
+    "splits": [
+     "test",
+     "test"
+    ],
+    "templates": [
+     "HSBC",
+     "HSBC"
+    ],
+    "ink_iou": 0.161,
+    "mean_abs_grey_diff": 8.28,
+    "same_source": false,
+    "same_group": false
+   },
+   {
+    "field": "syn_words",
+    "text": "One Thousand Five Hundred and Fifty",
+    "pair": [
+     "SYN_0055_words",
+     "SYN_0244_words"
+    ],
+    "splits": [
+     "test",
+     "test"
+    ],
+    "templates": [
+     "HSBC",
+     "HSBC"
+    ],
+    "ink_iou": 0.186,
+    "mean_abs_grey_diff": 11.12,
+    "same_source": false,
+    "same_group": false
+   },
+   {
+    "field": "syn_num",
+    "text": "4376",
+    "pair": [
+     "SYN_0174_num",
+     "SYN_0275_num"
+    ],
+    "splits": [
+     "test",
+     "test"
+    ],
+    "templates": [
+     "Canara Bank",
+     "ICICI Bank"
+    ],
+    "ink_iou": 0.13,
+    "mean_abs_grey_diff": 29.94,
+    "same_source": false,
+    "same_group": false
+   },
+   {
+    "field": "syn_words",
+    "text": "Four Thousand Three Hundred and Seventy Six",
+    "pair": [
+     "SYN_0174_words",
+     "SYN_0275_words"
+    ],
+    "splits": [
+     "test",
+     "test"
+    ],
+    "templates": [
+     "Canara Bank",
+     "ICICI Bank"
+    ],
+    "ink_iou": 0.175,
+    "mean_abs_grey_diff": 37.37,
+    "same_source": false,
+    "same_group": false
+   }
+  ],
+  "repeated_text_cross_split_true_duplicates": [],
+  "blank_fields": {
+   "dev": {
+    "syn_num": 4,
+    "syn_words": 2
+   },
+   "test": {
+    "syn_words": 4,
+    "syn_num": 14
+   }
+  },
+  "license_note": "Apache-2.0 declared on the HF dataset card only; underlying cheque templates (real bank layouts) have undocumented provenance; crops contain only amount fields"
+ },
+ "gnhk_overlap": {
+  "entries": 312,
+  "unique_hashes": 309,
+  "shared_crops": 3,
+  "unique_pages": 127,
+  "shared_pages": 30,
+  "page_split_conflicts": []
+ },
+ "cvl": {
+  "readme_excerpt": "The numbers before the first minus are the respective class labels succeeded by an unique ID.\r\n\r\n\t* 2-0202-21-04.png is an image that contains a single digit with groundtruth 2\r\n\t* 135579-0001-10.png is an image that contains the digit string 135579",
+  "writer_field_documented": false,
+  "unique_hashes_in_subset": 300,
+  "status": "second filename field is described only as a 'unique ID'; used as an INFERRED writer/session id"
+ }
+}

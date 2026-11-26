@@ -86,3 +86,8 @@ This section supersedes conflicting status lines above. Earlier text is kept as 
   - See `artifacts/M4_ONLINE/`.
 - **No genuine English handwritten cheque dataset was obtainable** (IDRBT unreachable, ORAND-CAR gated). Report genuine and synthetic results separately, and never present D6 as handwriting.
 - **M4 is VERIFIED** under the revised strategy. Next is M5 (baseline evaluation), awaiting authorisation.
+
+## Decisions update (2026-11-26, M4-FINAL)
+- **Final datasets are frozen** (hashes in `artifacts/M4_FINAL/SUMMARY.json`). IDRBT could not be downloaded (DNS failure), so the genuine multiword written-amount gap remains.
+- **Blank synthetic fields** (24) are excluded from recognition metrics. Unresolved pairs are reported separately.
+- **M4 status:** VERIFIED WITH DOCUMENTED LIMITATIONS.

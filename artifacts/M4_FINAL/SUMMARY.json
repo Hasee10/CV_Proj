@@ -1,0 +1,44 @@
+{
+  "milestone": "M4-FINAL dataset integrity verification",
+  "date": "2026-11-26",
+  "status": "VERIFIED WITH DOCUMENTED LIMITATIONS",
+  "starting_commit": "bd50574b24a0314303b791d3f4a00e8df6cedee5",
+  "idrbt": {"url": "https://www.idrbt.ac.in/wp-content/uploads/2022/07/IDRBT_Cheque_Image_Dataset.zip", "attempts": 3,
+            "error": "curl (6) Could not resolve host (local DNS 'Server failed'; 8.8.8.8 returned no address)", "acquired": false},
+  "frozen_manifests_sha256": {
+    "data/public/gnhk/subset/manifest.json": "13450762dd5508154fe05878554d4867d7df94e9a30a614f2b80385371c0af56",
+    "data/benchmarks/cvl_numeric/manifest.json": "1a98f00bd7e399e6c180d56b741dcc70c1b202cc36576600c2621d83e98e0db8",
+    "data/benchmarks/gnhk_pairs/manifest.json": "212621826eac3a7ff0c465819ceb530438036e380b6e1f3108425150b7df9dfe",
+    "data/benchmarks/syn_cheques/manifest.json": "ca62710efe8446d104ff56a65155d2d79ead46b0c86f1b7d70c6d03f980e7226",
+    "data/benchmarks/amount_pairs.json": "07522b2a95fd76c88b7bc038d6ca0138c8fac255db4a0a2ae7f71ea8457618eb",
+    "data/benchmarks/duplicate_review.json": "56ee59b4d471522f91e834addb367bb5d2dac72ed272b08704bc8ef815d9d7b3"
+  },
+  "sources": {
+    "D1": "GNHK test split via HF mirror staghado/GNHK-Dataset@eaa67d39 (CC-BY-4.0)",
+    "D4": "CVL Digit Strings, Zenodo 1492173, cvl-strings-train.zip md5 123167109ed2ef554913bd0a9f4d74ba (CC-BY-NC-4.0)",
+    "D5": "GNHK test split (as D1)",
+    "D6": "HF arunchincheti/cheques_data@cd990264 test split (Apache-2.0 declared; template provenance undocumented)"
+  },
+  "counts": {
+    "entries": 872, "unique_image_hashes": 854,
+    "genuine_entries": 612, "genuine_unique_images": 609, "synthetic_entries": 260, "synthetic_unique_images": 245,
+    "per_dataset": {"D1": {"dev": 80, "test": 160}, "D4": {"dev": 90, "test": 210}, "D5": {"dev": 3, "test": 69}, "D6": {"dev": 78, "test": 182}},
+    "split_totals": {"dev": 251, "test": 621},
+    "recognition_eligible": {"dev": 245, "test": 603, "excluded_blank_fields": {"dev": 6, "test": 18}},
+    "pairs": {"total": 290, "match": 119, "mismatch": 147, "unresolved": 24,
+              "dev": {"gnhk_pairs": {"match": 1, "mismatch": 1}, "syn_cheques": {"match": 30, "mismatch": 36, "unresolved": 6}},
+              "test": {"gnhk_pairs": {"match": 26, "mismatch": 26}, "syn_cheques": {"match": 62, "mismatch": 84, "unresolved": 18}}}
+  },
+  "eligibility_rules": {"recognition": "ground_truth non-empty", "amount_value": "gt_value present", "pair": "label in {match, mismatch}; unresolved reported separately"},
+  "duplicate_audit": {"candidates": 227, "distinct": 213, "blank_template_region": 14, "true_duplicates": 0,
+                      "max_ink_iou_distinct": 0.918, "shared_hash_groups": 8, "shared_hash_groups_cross_split": 3,
+                      "shared_hash_content": "blank synthetic numeric fields only (not recognition-eligible)",
+                      "source_images_cross_split": 0},
+  "provenance": {"cvl_writer_id": "inferred (readme: 'unique ID'); 121/127 ids hold one of each string",
+                 "gnhk_overlap": {"entries": 312, "unique_hashes": 309, "shared_crops": 3, "unique_pages": 127, "shared_pages": 30, "page_split_conflicts": 0},
+                 "synthetic_license": "declared Apache-2.0 at dataset level; underlying templates undocumented; crops limited to amount fields"},
+  "validation": {"report": "artifacts/M4_FINAL/VALIDATION_REPORT.json", "passed": true, "errors": 0, "pairs_checked": 290},
+  "tests": {"m4_online": "11/11 passed", "m4_audit": "27/27 passed"},
+  "limitations": ["no genuine handwritten cheque data (IDRBT unreachable, ORAND-CAR gated)", "CVL: 10 fixed strings, non-commercial licence, inferred writer ids", "genuine written amounts are 27 isolated words", "D5 dev: 3 crops / 2 pairs", "constructed pairs reuse crops", "synthetic templates and fonts shared across splits", "checkpoint training data unknown", "no arbitrary cheque-field detection", "AI-assisted, not human-verified annotation checks"],
+  "manifests_changed": false
+}

@@ -1,0 +1,145 @@
+{
+ "milestone": "M9-A",
+ "suites": {
+  "unit": {
+   "kind": "MOCKED inference (no model)",
+   "file": "tests/test_backend_unit.py",
+   "total": 17,
+   "passed": 17,
+   "failed": 0,
+   "skipped": 0,
+   "cases": [
+    {
+     "test": "test_health_and_503_when_model_missing",
+     "seconds": 0.027,
+     "status": "passed"
+    },
+    {
+     "test": "test_recognize_ok_and_no_private_fields",
+     "seconds": 0.009,
+     "status": "passed"
+    },
+    {
+     "test": "test_recognize_rejects_bad_parameters[data0-invalid_parameter]",
+     "seconds": 0.008,
+     "status": "passed"
+    },
+    {
+     "test": "test_recognize_rejects_bad_parameters[data1-invalid_parameter]",
+     "seconds": 0.008,
+     "status": "passed"
+    },
+    {
+     "test": "test_recognize_rejects_bad_parameters[data2-invalid_request]",
+     "seconds": 0.008,
+     "status": "passed"
+    },
+    {
+     "test": "test_upload_validation",
+     "seconds": 0.049,
+     "status": "passed"
+    },
+    {
+     "test": "test_verify_decisions[texts0-accept]",
+     "seconds": 0.012,
+     "status": "passed"
+    },
+    {
+     "test": "test_verify_decisions[texts1-accept]",
+     "seconds": 0.009,
+     "status": "passed"
+    },
+    {
+     "test": "test_verify_decisions[texts2-flag]",
+     "seconds": 0.009,
+     "status": "passed"
+    },
+    {
+     "test": "test_verify_decisions[texts3-review]",
+     "seconds": 0.009,
+     "status": "passed"
+    },
+    {
+     "test": "test_verify_decisions[texts4-review]",
+     "seconds": 0.009,
+     "status": "passed"
+    },
+    {
+     "test": "test_verify_decisions[texts5-review]",
+     "seconds": 0.009,
+     "status": "passed"
+    },
+    {
+     "test": "test_verify_roi_workflow_and_validation",
+     "seconds": 0.041,
+     "status": "passed"
+    },
+    {
+     "test": "test_decimal_values_not_float",
+     "seconds": 0.0,
+     "status": "passed"
+    },
+    {
+     "test": "test_benchmark_and_openapi",
+     "seconds": 0.016,
+     "status": "passed"
+    },
+    {
+     "test": "test_busy_and_timeout_mapping",
+     "seconds": 0.065,
+     "status": "passed"
+    },
+    {
+     "test": "test_cors_configured_origin_only",
+     "seconds": 0.01,
+     "status": "passed"
+    }
+   ]
+  },
+  "integration": {
+   "kind": "GENUINE inference, real checkpoint, dev images",
+   "file": "tests/test_backend_integration.py",
+   "total": 7,
+   "passed": 7,
+   "failed": 0,
+   "skipped": 0,
+   "cases": [
+    {
+     "test": "test_health_and_model_info",
+     "seconds": 3.039,
+     "status": "passed"
+    },
+    {
+     "test": "test_recognize_numeric_matches_offline_baseline",
+     "seconds": 0.195,
+     "status": "passed"
+    },
+    {
+     "test": "test_verify_two_images_matches_offline_pair",
+     "seconds": 0.638,
+     "status": "passed"
+    },
+    {
+     "test": "test_verify_cheque_with_rois_reproduces_crops",
+     "seconds": 0.175,
+     "status": "passed"
+    },
+    {
+     "test": "test_proposed_mode_matches_offline_method",
+     "seconds": 0.299,
+     "status": "passed"
+    },
+    {
+     "test": "test_validation_error_with_real_engine",
+     "seconds": 0.006,
+     "status": "passed"
+    },
+    {
+     "test": "test_missing_checkpoint_gives_503",
+     "seconds": 0.019,
+     "status": "passed"
+    }
+   ]
+  }
+ }
+}

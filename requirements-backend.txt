@@ -1,0 +1,23 @@
+# M9-A backend + tests (pip freeze delta on top of requirements-inference.txt, Python 3.11.9, Windows 11)
+# Install: .venv\Scripts\python.exe -m pip install -r requirements-inference.txt -r requirements-backend.txt
+annotated-doc==0.0.7
+annotated-types==0.8.0
+anyio==4.16.0
+certifi==2026.11.20
+click==8.5.1
+fastapi==0.165.0
+h11==0.16.0
+httpcore==1.0.9
+httpx==0.29.0
+iniconfig==2.3.1
+opentelemetry-api==1.45.2
+pluggy==1.7.0
+pydantic==2.14.4
+pydantic_core==2.50.5
+Pygments==2.21.0
+pytest==9.2.0
+python-multipart==0.0.34
+starlette==1.10.0
+typing-inspection==0.4.5
+tzdata==2026.6
+uvicorn==0.54.0

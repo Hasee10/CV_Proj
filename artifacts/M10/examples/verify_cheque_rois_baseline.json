@@ -1,0 +1,84 @@
+{
+ "request": {
+  "method": "POST",
+  "path": "/api/verify",
+  "form": {
+   "cheque_image": "sheet.png (311x222, two GNHK dev crops pasted)",
+   "numeric_roi": "[0.12861736334405144, 0.18018018018018017, 0.17684887459807075, 0.2972972972972973]",
+   "written_roi": "[0.12861736334405144, 0.4774774774774775, 0.8713826366559485, 0.8198198198198198]",
+   "mode": "baseline"
+  }
+ },
+ "response": {
+  "decision": "accept",
+  "reasons": [
+   "values_agree: recognised numeric and written values are equal"
+  ],
+  "mode": "baseline",
+  "numeric": {
+   "field_type": "numeric",
+   "mode": "baseline",
+   "raw_text": "1",
+   "parsed_value": "1.00",
+   "parse_status": "parsed",
+   "beam_log_probability": -0.2162,
+   "preprocessing": {
+    "method": "baseline",
+    "applied": false,
+    "path": "identity"
+   },
+   "model_input_shape": [
+    1,
+    3,
+    28,
+    16
+   ],
+   "latency_seconds": {
+    "preprocess": 0.0,
+    "inference": 0.0582,
+    "total": 0.0582
+   }
+  },
+  "written": {
+   "field_type": "written",
+   "mode": "baseline",
+   "raw_text": "one",
+   "parsed_value": "1.00",
+   "parse_status": "parsed",
+   "beam_log_probability": -0.8698,
+   "preprocessing": {
+    "method": "baseline",
+    "applied": false,
+    "path": "identity"
+   },
+   "model_input_shape": [
+    1,
+    3,
+    76,
+    231
+   ],
+   "latency_seconds": {
+    "preprocess": 0.0,
+    "inference": 0.1048,
+    "total": 0.1048
+   }
+  },
+  "rois": {
+   "numeric_px": [
+    40,
+    40,
+    55,
+    66
+   ],
+   "written_px": [
+    40,
+    106,
+    271,
+    182
+   ]
+  },
+  "total_latency_seconds": 0.163,
+  "notice": "decision compares recognised values only; 'accept' is not proof of authenticity; review is required whenever either value cannot be parsed",
+  "request_id": "d56fcdd1c2a2"
+ }
+}

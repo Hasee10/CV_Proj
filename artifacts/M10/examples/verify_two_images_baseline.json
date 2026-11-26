@@ -1,0 +1,70 @@
+{
+ "request": {
+  "method": "POST",
+  "path": "/api/verify",
+  "form": {
+   "numeric_image": "SYN_0001_num.png (synthetic dev crop)",
+   "written_image": "SYN_0001_words.png (synthetic dev crop)",
+   "mode": "baseline"
+  }
+ },
+ "response": {
+  "decision": "review",
+  "reasons": [
+   "written_amount_unparseable: recognised text does not satisfy the strict English amount grammar"
+  ],
+  "mode": "baseline",
+  "numeric": {
+   "field_type": "numeric",
+   "mode": "baseline",
+   "raw_text": "3003",
+   "parsed_value": "3003.00",
+   "parse_status": "parsed",
+   "beam_log_probability": -0.7748,
+   "preprocessing": {
+    "method": "baseline",
+    "applied": false,
+    "path": "identity"
+   },
+   "model_input_shape": [
+    1,
+    3,
+    40,
+    133
+   ],
+   "latency_seconds": {
+    "preprocess": 0.0,
+    "inference": 0.101,
+    "total": 0.101
+   }
+  },
+  "written": {
+   "field_type": "written",
+   "mode": "baseline",
+   "raw_text": "mummisessing",
+   "parsed_value": null,
+   "parse_status": "unparseable",
+   "beam_log_probability": -1.8863,
+   "preprocessing": {
+    "method": "baseline",
+    "applied": false,
+    "path": "identity"
+   },
+   "model_input_shape": [
+    1,
+    3,
+    62,
+    280
+   ],
+   "latency_seconds": {
+    "preprocess": 0.0,
+    "inference": 0.5267,
+    "total": 0.5267
+   }
+  },
+  "rois": null,
+  "total_latency_seconds": 0.6277,
+  "notice": "decision compares recognised values only; 'accept' is not proof of authenticity; review is required whenever either value cannot be parsed",
+  "request_id": "154ac70c3a9c"
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "milestone": "M9-A",
+ "status": "VERIFIED",
+ "component": "FastAPI backend (backend/app.py, backend/engine.py) reusing scripts/smoke_inference.py, scripts/athn.py, scripts/eval_metrics.py unchanged",
+ "endpoints": ["GET /health", "GET /api/model-info", "POST /api/recognize", "POST /api/verify", "GET /api/benchmark", "GET /docs", "GET /openapi.json"],
+ "model_loading": "once at startup (lifespan); checkpoint SHA-256 verified; weights_only load; failure -> 503 on inference endpoints",
+ "concurrency": "bounded semaphore (CV_MAX_CONCURRENCY, default 1); wait up to CV_QUEUE_TIMEOUT_S then 503 busy; per-call timeout CV_INFERENCE_TIMEOUT_S (default 120 s) -> 504",
+ "default_mode": "proposed (declared in artifacts/M7/FROZEN_CONFIG.json before M8); baseline selectable per request",
+ "security_controls": ["per-file byte limit", "max side and max pixel limits checked from the header before decoding", "PIL decompression-bomb limit",
+   "MIME allow-list (png, jpeg) plus magic-byte check", "decode validation", "ROI validation (normalised, ordered, minimum size)",
+   "no temp files; images processed in memory and not retained", "logs: request id, path, status, latency only", "configurable CORS allow-list",
+   "structured errors with request id; no stack traces returned", "Decimal amounts; strict grammars; no digit repair", "no calibrated-confidence claims"],
+ "tests": {"unit_mocked": "17/17 passed", "integration_real_checkpoint": "7/7 passed", "details": "artifacts/M9/TEST_RESULTS.json"},
+ "known_limitation": "proposed mode on enlarged written-amount lines can exceed the 120 s timeout (5 of 89 synthetic written test lines in M8)"
+}

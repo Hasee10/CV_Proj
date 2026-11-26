@@ -1,0 +1,17 @@
+{
+ "request": {
+  "method": "POST",
+  "path": "/api/recognize",
+  "form": {
+   "image": "x.png (12 bytes of text)",
+   "field_type": "numeric"
+  }
+ },
+ "response": {
+  "error": {
+   "code": "content_mismatch",
+   "message": "image: file content does not match its declared type",
+   "request_id": "263d167937c6"
+  }
+ }
+}

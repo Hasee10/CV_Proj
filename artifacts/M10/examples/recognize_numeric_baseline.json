@@ -1,0 +1,40 @@
+{
+ "request": {
+  "method": "POST",
+  "path": "/api/recognize",
+  "form": {
+   "image": "CVL_25000_0021_08.png (CVL dev crop)",
+   "field_type": "numeric",
+   "mode": "baseline"
+  }
+ },
+ "response": {
+  "field_type": "numeric",
+  "mode": "baseline",
+  "raw_text": "25000",
+  "parsed_value": "25000.00",
+  "parse_status": "parsed",
+  "beam_log_probability": -0.0116,
+  "preprocessing": {
+   "method": "baseline",
+   "applied": false,
+   "path": "identity"
+  },
+  "model_input_shape": [
+   1,
+   3,
+   55,
+   205
+  ],
+  "latency_seconds": {
+   "preprocess": 0.0,
+   "inference": 0.1829,
+   "total": 0.1829
+  },
+  "image": {
+   "width": 205,
+   "height": 55
+  },
+  "request_id": "0f6495da7a3e"
+ }
+}

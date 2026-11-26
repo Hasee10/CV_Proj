@@ -1,0 +1,14 @@
+{
+ "request": {
+  "method": "POST",
+  "path": "/api/recognize",
+  "note": "server started without checkpoint"
+ },
+ "response": {
+  "error": {
+   "code": "model_unavailable",
+   "message": "the recognition model is not loaded",
+   "request_id": "55c6752570f1"
+  }
+ }
+}

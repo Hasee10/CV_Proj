@@ -1,0 +1,52 @@
+{
+ "milestone": "M7",
+ "status": "VERIFIED",
+ "method": "Adaptive Text-Height Normalisation (ATHN), training-free",
+ "selected": "P1-A",
+ "success_rule_met": true,
+ "passing_candidates": [
+  "P1-A",
+  "P1-C"
+ ],
+ "dev_primary_objective_D6_numeric_value_exact": {
+  "B0": 0,
+  "P1-A": 18,
+  "n": 35
+ },
+ "dev_genuine": {
+  "D1_exact": [
+   34,
+   36
+  ],
+  "D1_cer": [
+   0.305,
+   0.2918
+  ],
+  "D4_exact": [
+   38,
+   36
+  ],
+  "D4_cer": [
+   0.1846,
+   0.1971
+  ]
+ },
+ "dev_pairs": "all 72 synthetic dev pairs still routed to review (written amounts never parse); baseline identical",
+ "p2_adopted": false,
+ "p2_written_cer": [
+  0.7791545189504373,
+  0.37099125364431484
+ ],
+ "p2_written_value_correct": [
+  0,
+  1
+ ],
+ "artifacts": [
+  "DEVELOPMENT_RESULTS.json",
+  "PROTOCOL_FROZEN.sha256",
+  "SELECTION_PROTOCOL.md",
+  "FROZEN_CONFIG.json",
+  "ABLATION_RESULTS.json",
+  "SUMMARY.json"
+ ]
+}

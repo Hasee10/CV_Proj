@@ -1,0 +1,317 @@
+{
+ "protocol": "artifacts/M7/SELECTION_PROTOCOL.md",
+ "split": "dev",
+ "results": {
+  "B0": {
+   "D1": {
+    "exact": 34,
+    "cer": 0.305
+   },
+   "D4": {
+    "exact": 38,
+    "cer": 0.1846,
+    "value_exact": 38
+   },
+   "D5": {
+    "exact_num": 1,
+    "exact_words": 1
+   },
+   "D6_num": {
+    "exact": 0,
+    "cer": 0.9927,
+    "value_exact": 0,
+    "parseable": 4
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.871,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.2909,
+   "latency_p95_s": 1.7044,
+   "preprocess_median_s": 0.0,
+   "resized": 0,
+   "resized_genuine": 0
+  },
+  "P1-A": {
+   "D1": {
+    "exact": 36,
+    "cer": 0.2918
+   },
+   "D4": {
+    "exact": 36,
+    "cer": 0.1971,
+    "value_exact": 36
+   },
+   "D5": {
+    "exact_num": 2,
+    "exact_words": 1
+   },
+   "D6_num": {
+    "exact": 18,
+    "cer": 0.365,
+    "value_exact": 18,
+    "parseable": 30
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.7792,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.3562,
+   "latency_p95_s": 20.0488,
+   "preprocess_median_s": 0.0016,
+   "resized": 115,
+   "resized_genuine": 41,
+   "guardrails": {
+    "D1_cer": true,
+    "D1_exact": true,
+    "D4_cer": true,
+    "D4_exact": true,
+    "D4_value": true,
+    "incorrect_acceptance": true,
+    "latency": true,
+    "not_all_review_unless_baseline": true
+   },
+   "passes": true
+  },
+  "P1-B": {
+   "D1": {
+    "exact": 34,
+    "cer": 0.2918
+   },
+   "D4": {
+    "exact": 34,
+    "cer": 0.2061,
+    "value_exact": 34
+   },
+   "D5": {
+    "exact_num": 2,
+    "exact_words": 1
+   },
+   "D6_num": {
+    "exact": 18,
+    "cer": 0.365,
+    "value_exact": 18,
+    "parseable": 30
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.7792,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.3647,
+   "latency_p95_s": 20.0488,
+   "preprocess_median_s": 0.0014,
+   "resized": 147,
+   "resized_genuine": 73,
+   "guardrails": {
+    "D1_cer": true,
+    "D1_exact": true,
+    "D4_cer": false,
+    "D4_exact": false,
+    "D4_value": false,
+    "incorrect_acceptance": true,
+    "latency": true,
+    "not_all_review_unless_baseline": true
+   },
+   "passes": false
+  },
+  "P1-C": {
+   "D1": {
+    "exact": 34,
+    "cer": 0.2997
+   },
+   "D4": {
+    "exact": 38,
+    "cer": 0.1846,
+    "value_exact": 38
+   },
+   "D5": {
+    "exact_num": 1,
+    "exact_words": 1
+   },
+   "D6_num": {
+    "exact": 14,
+    "cer": 0.4599,
+    "value_exact": 14,
+    "parseable": 27
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.7697,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.3353,
+   "latency_p95_s": 18.2715,
+   "preprocess_median_s": 0.0015,
+   "resized": 97,
+   "resized_genuine": 23,
+   "guardrails": {
+    "D1_cer": true,
+    "D1_exact": true,
+    "D4_cer": true,
+    "D4_exact": true,
+    "D4_value": true,
+    "incorrect_acceptance": true,
+    "latency": true,
+    "not_all_review_unless_baseline": true
+   },
+   "passes": true
+  },
+  "B1": {
+   "D1": {
+    "exact": 27,
+    "cer": 0.4456
+   },
+   "D4": {
+    "exact": 19,
+    "cer": 0.2903,
+    "value_exact": 19
+   },
+   "D5": {
+    "exact_num": 1,
+    "exact_words": 0
+   },
+   "D6_num": {
+    "exact": 7,
+    "cer": 0.6131,
+    "value_exact": 7,
+    "parseable": 22
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.8644,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.7384,
+   "latency_p95_s": 5.7166,
+   "preprocess_median_s": 0.0004,
+   "resized": 251,
+   "resized_genuine": 173,
+   "guardrails": {
+    "D1_cer": false,
+    "D1_exact": false,
+    "D4_cer": false,
+    "D4_exact": false,
+    "D4_value": false,
+    "incorrect_acceptance": true,
+    "latency": true,
+    "not_all_review_unless_baseline": true
+   },
+   "passes": false
+  },
+  "P1-D": {
+   "D1": {
+    "exact": 34,
+    "cer": 0.321
+   },
+   "D4": {
+    "exact": 36,
+    "cer": 0.1971,
+    "value_exact": 36
+   },
+   "D5": {
+    "exact_num": 2,
+    "exact_words": 1
+   },
+   "D6_num": {
+    "exact": 18,
+    "cer": 0.365,
+    "value_exact": 18,
+    "parseable": 30
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.7792,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.3707,
+   "latency_p95_s": 20.0488,
+   "preprocess_median_s": 0.0007,
+   "resized": 101,
+   "resized_genuine": 27,
+   "guardrails": {
+    "D1_cer": true,
+    "D1_exact": true,
+    "D4_cer": true,
+    "D4_exact": true,
+    "D4_value": true,
+    "incorrect_acceptance": true,
+    "latency": true,
+    "not_all_review_unless_baseline": true
+   },
+   "passes": true
+  }
+ },
+ "passing_candidates": [
+  "P1-A",
+  "P1-C"
+ ],
+ "ranking": [
+  "P1-A",
+  "P1-C"
+ ],
+ "selected": "P1-A",
+ "success_rule_met": true
+}

@@ -16,3 +16,6 @@ data/synthetic/hf_cheques/cache/
 # generated stress / diagnostic images (regenerable)
 data/stress/
 data/diagnostics/
+# M7/M8 prediction caches (regenerable; large)
+data/m7/
+data/m8/

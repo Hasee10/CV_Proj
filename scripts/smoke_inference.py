@@ -126,11 +126,15 @@ def load_model(report: dict):
 def preprocess(path: Path):
     """Upstream test-time path: PIL RGB -> ScaleToLimitRange(16..1024 w, 16..256 h) -> ToTensor."""
     import numpy as np
-    import torch
     from PIL import Image
+    return preprocess_array(np.array(Image.open(path).convert("RGB")))
+
+
+def preprocess_array(img):
+    """Same upstream transform for an in-memory RGB uint8 array (used by ATHN and the backend)."""
+    import torch
     from comer.datamodule.dataset import CROHMEDataset
 
-    img = np.array(Image.open(path).convert("RGB"))
     x = CROHMEDataset([], is_train=False, scale_aug=False).transform(img)  # [3,H,W] in [0,1]
     mask = torch.zeros(1, x.shape[1], x.shape[2], dtype=torch.bool)  # batch of 1: no padding
     return x.unsqueeze(0), mask

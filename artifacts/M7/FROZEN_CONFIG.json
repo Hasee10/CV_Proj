@@ -1,0 +1,47 @@
+{
+ "milestone": "M7",
+ "status": "VERIFIED",
+ "selected": "P1-A",
+ "method_config": {
+  "id": "P1-A",
+  "method": "athn",
+  "band_lo": 24,
+  "band_hi": 72,
+  "target": 48,
+  "min_scale": 0.5,
+  "max_scale": 4.0
+ },
+ "method_config_file": "artifacts/M7/configs/P1-A.json",
+ "method_config_sha256": "49bde3460efac522f9a34b8039ff6f80156b8888b4db7a62680463a7257cf53b",
+ "p2_word_segmentation": {
+  "adopted": false,
+  "reason": "frozen rule: >= 3 more correct written values and lower CER"
+ },
+ "backend_default_mode": "proposed",
+ "backend_default_rule": "declared before M8: proposed if the M7 dev success rule is met, else baseline",
+ "dev_results_file": "artifacts/M7/dev/P1-A/BASELINE_RESULTS.json",
+ "checkpoint_sha256": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432",
+ "upstream_commit": "9eaea5fe",
+ "dictionary": "SSL_HWD_Dict.txt",
+ "frozen_manifests_sha256": {
+  "data/public/gnhk/subset/manifest.json": "13450762dd5508154fe05878554d4867d7df94e9a30a614f2b80385371c0af56",
+  "data/benchmarks/cvl_numeric/manifest.json": "1a98f00bd7e399e6c180d56b741dcc70c1b202cc36576600c2621d83e98e0db8",
+  "data/benchmarks/gnhk_pairs/manifest.json": "212621826eac3a7ff0c465819ceb530438036e380b6e1f3108425150b7df9dfe",
+  "data/benchmarks/syn_cheques/manifest.json": "ca62710efe8446d104ff56a65155d2d79ead46b0c86f1b7d70c6d03f980e7226",
+  "data/benchmarks/amount_pairs.json": "07522b2a95fd76c88b7bc038d6ca0138c8fac255db4a0a2ae7f71ea8457618eb",
+  "data/benchmarks/duplicate_review.json": "56ee59b4d471522f91e834addb367bb5d2dac72ed272b08704bc8ef815d9d7b3"
+ },
+ "source_sha256": {
+  "scripts/athn.py": "a88897fbd0366f04641978511de9332b29035dfd1e6c265f2b913cbd0c390d4b",
+  "scripts/run_method.py": "ed0a4863f405c26bae4d5f9aab7670bc45b3cfc7c47280809fadd88a7ca81a12",
+  "scripts/smoke_inference.py": "0467dba701d077357ac54cb8acda4ac3f148111459c536d454ad28c2660747ca",
+  "scripts/run_baseline.py": "1a48f76fb89901d24b24c091dc623faaf444af56ed26338ea7560d9779e1ff74",
+  "scripts/eval_metrics.py": "57e605eb37be3a1889d07c84f85aee6a7527468c29ebd8826c6cc7dd4852b1bd",
+  "scripts/score_baseline.py": "b108fcb5c57381e836bbc20e540c72ac839d3783f540b23dd4234f4a93f77951",
+  "scripts/m7_select.py": "e022b8ae567ae40ad3fb46b4eabc8b3acb518dbbee0f6ff4cbebb66846a76985",
+  "scripts/m7_p2.py": "a01b0ca831c4dfb02a89373860fad7e6683cdefe4e552b5eb9228b688e155223",
+  "scripts/m6_prepare.py": "696c07cab60038c60ad4dfe7bf40a35a312f1560914592bcbcaf0d3a918857d7",
+  "artifacts/M7/SELECTION_PROTOCOL.md": "490e4bc7737954e4e2ea064d7d9d755a5f12bb9fa0208f9532572da4edf20b6f"
+ },
+ "selection_used": "dev split only; the locked test split was never read in M7"
+}

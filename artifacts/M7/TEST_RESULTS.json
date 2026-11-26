@@ -1,0 +1,52 @@
+{
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "results": [
+    {
+      "test": "test_athn_selftest_and_determinism",
+      "status": "passed",
+      "seconds": 0.042
+    },
+    {
+      "test": "test_protocol_and_frozen_config_integrity",
+      "status": "passed",
+      "seconds": 0.003
+    },
+    {
+      "test": "test_selection_reproducible_from_saved_runs",
+      "status": "passed",
+      "seconds": 0.027
+    },
+    {
+      "test": "test_m7_runs_are_dev_only_and_complete",
+      "status": "passed",
+      "seconds": 0.014
+    },
+    {
+      "test": "test_identity_path_reuses_baseline_predictions",
+      "status": "passed",
+      "seconds": 0.005
+    },
+    {
+      "test": "test_run_method_refuses_test_split_without_flag",
+      "status": "passed",
+      "seconds": 0.443
+    },
+    {
+      "test": "test_preprocess_path_equals_array_path",
+      "status": "passed",
+      "seconds": 5.534
+    },
+    {
+      "test": "test_p2_decision_follows_rule",
+      "status": "passed",
+      "seconds": 0.001
+    },
+    {
+      "test": "m6_m5_m4_suites",
+      "status": "passed",
+      "detail": "7/7 passed"
+    }
+  ]
+}

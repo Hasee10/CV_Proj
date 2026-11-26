@@ -1,0 +1,278 @@
+{
+ "split": "dev",
+ "note": "B0 = M5 baseline predictions (reused). B1/P1-D are ablations (not selectable).",
+ "rows": {
+  "B0": {
+   "D1": {
+    "exact": 34,
+    "cer": 0.305
+   },
+   "D4": {
+    "exact": 38,
+    "cer": 0.1846,
+    "value_exact": 38
+   },
+   "D5": {
+    "exact_num": 1,
+    "exact_words": 1
+   },
+   "D6_num": {
+    "exact": 0,
+    "cer": 0.9927,
+    "value_exact": 0,
+    "parseable": 4
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.871,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.2909,
+   "latency_p95_s": 1.7044,
+   "resized": 0,
+   "resized_genuine": 0,
+   "passes_guardrails": null
+  },
+  "B1": {
+   "D1": {
+    "exact": 27,
+    "cer": 0.4456
+   },
+   "D4": {
+    "exact": 19,
+    "cer": 0.2903,
+    "value_exact": 19
+   },
+   "D5": {
+    "exact_num": 1,
+    "exact_words": 0
+   },
+   "D6_num": {
+    "exact": 7,
+    "cer": 0.6131,
+    "value_exact": 7,
+    "parseable": 22
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.8644,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.7384,
+   "latency_p95_s": 5.7166,
+   "resized": 251,
+   "resized_genuine": 173,
+   "passes_guardrails": false
+  },
+  "P1-A": {
+   "D1": {
+    "exact": 36,
+    "cer": 0.2918
+   },
+   "D4": {
+    "exact": 36,
+    "cer": 0.1971,
+    "value_exact": 36
+   },
+   "D5": {
+    "exact_num": 2,
+    "exact_words": 1
+   },
+   "D6_num": {
+    "exact": 18,
+    "cer": 0.365,
+    "value_exact": 18,
+    "parseable": 30
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.7792,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.3562,
+   "latency_p95_s": 20.0488,
+   "resized": 115,
+   "resized_genuine": 41,
+   "passes_guardrails": true
+  },
+  "P1-B": {
+   "D1": {
+    "exact": 34,
+    "cer": 0.2918
+   },
+   "D4": {
+    "exact": 34,
+    "cer": 0.2061,
+    "value_exact": 34
+   },
+   "D5": {
+    "exact_num": 2,
+    "exact_words": 1
+   },
+   "D6_num": {
+    "exact": 18,
+    "cer": 0.365,
+    "value_exact": 18,
+    "parseable": 30
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.7792,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.3647,
+   "latency_p95_s": 20.0488,
+   "resized": 147,
+   "resized_genuine": 73,
+   "passes_guardrails": false
+  },
+  "P1-C": {
+   "D1": {
+    "exact": 34,
+    "cer": 0.2997
+   },
+   "D4": {
+    "exact": 38,
+    "cer": 0.1846,
+    "value_exact": 38
+   },
+   "D5": {
+    "exact_num": 1,
+    "exact_words": 1
+   },
+   "D6_num": {
+    "exact": 14,
+    "cer": 0.4599,
+    "value_exact": 14,
+    "parseable": 27
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.7697,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.3353,
+   "latency_p95_s": 18.2715,
+   "resized": 97,
+   "resized_genuine": 23,
+   "passes_guardrails": true
+  },
+  "P1-D": {
+   "D1": {
+    "exact": 34,
+    "cer": 0.321
+   },
+   "D4": {
+    "exact": 36,
+    "cer": 0.1971,
+    "value_exact": 36
+   },
+   "D5": {
+    "exact_num": 2,
+    "exact_words": 1
+   },
+   "D6_num": {
+    "exact": 18,
+    "cer": 0.365,
+    "value_exact": 18,
+    "parseable": 30
+   },
+   "D6_words": {
+    "exact": 0,
+    "cer": 0.7792,
+    "value_exact": 0,
+    "parseable": 0
+   },
+   "D6_pairs": {
+    "decisions": {
+     "review": 72
+    },
+    "correct_auto": 0,
+    "incorrect_acceptance_rate": 0.0,
+    "review_rate": 1.0,
+    "all_review": true
+   },
+   "latency_median_s": 0.3707,
+   "latency_p95_s": 20.0488,
+   "resized": 101,
+   "resized_genuine": 27,
+   "passes_guardrails": true
+  }
+ },
+ "P2": {
+  "base": "P1-A",
+  "p1_full_line": {
+   "cer": 0.7791545189504373,
+   "exact": 0,
+   "n": 37,
+   "value_correct": 0,
+   "value_parseable": 0,
+   "value_n": 37
+  },
+  "p2_segmented": {
+   "cer": 0.37099125364431484,
+   "exact": 1,
+   "n": 37,
+   "value_correct": 1,
+   "value_parseable": 1,
+   "value_n": 37
+  },
+  "adopted": false
+ },
+ "what_each_ablation_isolates": {
+  "B1": "resizing without adaptivity (every crop 2x)",
+  "P1-D": "adaptivity without shrinking (enlarge only)",
+  "P1-B/P1-C": "band width / target sensitivity",
+  "P2": "word segmentation on top of the selected ATHN"
+ }
+}

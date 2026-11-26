@@ -91,6 +91,7 @@ def classify(r):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dir", required=True)
+    ap.add_argument("--split", default="dev")
     a = ap.parse_args()
     d = Path(a.dir)
     for f in ("METRICS.json", "PAIR_RESULTS.json", "RUNTIME_REPORT.json"):
@@ -98,7 +99,7 @@ def main():
             raise SystemExit(f"{d / f} exists; refusing to overwrite")
     base = json.loads((d / "BASELINE_RESULTS.json").read_text(encoding="utf-8"))
     rows, run = base["results"], base["run"]
-    assert all(r["split"] == "dev" for r in rows), "non-dev sample in results"
+    assert all(r["split"] == a.split for r in rows), f"sample outside the {a.split} split in results"
     by_id = {r["id"]: r for r in rows}
     groups = {
         "D1_gnhk_words_genuine": [r for r in rows if r["dataset"] == "D1"],
@@ -113,12 +114,12 @@ def main():
     for t in sorted({r["template"] for r in rows if r["template"]}):
         for c, lab in (("syn_num", "numeric"), ("syn_words", "words")):
             groups[f"D6_{lab}_{t.split()[0]}_SYNTHETIC"] = [r for r in rows if r["template"] == t and r["category"] == c]
-    metrics = {"scope": "DEV split only; frozen baseline; genuine and synthetic reported separately; no pooled overall score",
+    metrics = {"scope": f"{a.split.upper()} split only; genuine and synthetic reported separately; no pooled overall score",
                "groups": {k: group_metrics(v) for k, v in groups.items()}}
 
     # pairs
     pairs = [p for p in json.loads((ROOT / "data/benchmarks/amount_pairs.json").read_text(encoding="utf-8"))["pairs"]
-             if p["split"] == "dev"]
+             if p["split"] == a.split]
     presults = []
     for p in pairs:
         n, w = by_id[p["num_id"]], by_id[p["words_id"]]
@@ -165,7 +166,7 @@ def main():
     runtime = {"run": {k: v for k, v in run.items() if k in ("torch", "threads", "python", "model_load_seconds", "warmup_seconds",
                                                             "entries", "unique_inputs", "computed_this_run", "reused_from_cache",
                                                             "wall_seconds", "inference_seconds_computed", "checkpoint_sha256")},
-               "pilot": "artifacts/M5_DEV/BASELINE_RESULTS_pilot5.json (18 entries, 4.98 s inference, median 0.1507 s; reused in full run)",
+               "pilot": ("BASELINE_RESULTS_pilot5.json (18 entries, 4.98 s inference, median 0.1507 s; reused in full run)" if (d / "BASELINE_RESULTS_pilot5.json").exists() else None),
                "latency_all_unique_inputs": em.latency_stats(lat),
                "latency_by_dataset": {ds: em.latency_stats([r["latency_seconds"] for r in rows if r["dataset"] == ds and r["cache_status"] != "dedup_same_image"])
                                       for ds in ("D1", "D4", "D5", "D6")},

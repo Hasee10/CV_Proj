@@ -1,0 +1,9 @@
+{
+ "id": "P1-D",
+ "method": "athn",
+ "band_lo": 24,
+ "band_hi": 1000000000.0,
+ "target": 48,
+ "min_scale": 1.0,
+ "max_scale": 4.0
+}

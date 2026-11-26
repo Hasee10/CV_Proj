@@ -1,0 +1,67 @@
+{
+  "milestone": "M4-AUDIT consolidated pre-evaluation corrections",
+  "date": "2026-11-26",
+  "status": "VERIFIED",
+  "status_scope": "All listed audit corrections implemented and regression-tested with temporary fixtures. M4 itself remains PARTIAL: genuine custom handwritten data is not collected; real-photo sheet extraction is untested until the W01_A pilot.",
+  "m4_status": "PARTIAL",
+  "issues_fixed": {
+    "1_numeric_parser": "strict grammar (no/international/South Asian grouping, exactly 2 decimals, Rs/Rs./PKR only, /- suffix); no repair",
+    "2_written_parser": "conservative recursive grammar; scale order/uniqueness; and-placement; paisa 1-99; no fuzzy/segmentation",
+    "3_independent_gt_values": "designed value only after human verification; human-entered value for deviations; unresolved kept with reason; finalize never calls parser",
+    "4_failure_aware_metrics": "error or missing/None prediction = empty prediction; success-only + coverage separate; empty-GT excluded and listed; punctuation exclusions; discrepancy label/decision validation, totals assertion, all_review flag",
+    "5_collection_safeguards": "rectify no-marker fix; filename/duplicate/unreadable/wrong-sheet/geometry/write checks; atomic merge with backup; hash-gated preservation and re-verification flags; --only pilot; frozen-manifest refusal; finalize completeness checks",
+    "6_collection_sheets": "unchanged (3 sheets, 21 pairs, 15 match / 6 mismatch, same markers and layout); instructions amended; pilot workflow added",
+    "7_manifest_validation": "near duplicates require reviewed --resolved; empty/missing-field/duplicate-id/source-hash/pair-split/lineage failures; no report overwrite",
+    "8_split_limitations": "5 writers preferred (2 dev/3 test), min 4; same-amount limitation documented; image-only inputs to recognition",
+    "9_stress_safeguards": "parent hash, read/write checks, metadata + lineage preserved, overwrite refusal; legibility caveat; runtime estimate",
+    "10_docs_and_tests": "dated amendments in M4 protocols; tests/test_m4_audit.py"
+  },
+  "tests": {
+    "suite": "tests/test_m4_audit.py",
+    "total": 27,
+    "passed": 27,
+    "failed": 0,
+    "parser_cases": {"numeric_accept": 19, "numeric_reject": 28, "words_accept": 17, "words_reject": 37, "designed_pairs": 21},
+    "results_file": "artifacts/M4_AUDIT/TEST_RESULTS.json",
+    "fixtures": "temporary synthetic only; none in data/"
+  },
+  "gnhk_revalidation": {"passed": true, "samples": 240, "dev": 80, "test": 160, "near_duplicate_candidates": 0,
+                         "manifest_sha256": "13450762dd5508154fe05878554d4867d7df94e9a30a614f2b80385371c0af56",
+                         "report": "artifacts/M4_AUDIT/VALIDATION_GNHK.json"},
+  "files_modified": ["scripts/eval_metrics.py", "scripts/custom_sheets.py", "scripts/validate_manifest.py",
+                     "scripts/stress_corrupt.py", "data/custom/template/annotation_template.csv",
+                     "artifacts/M4/EVALUATION_PROTOCOL.md", "artifacts/M4/SPLIT_PROTOCOL.md",
+                     "artifacts/M4/STRESS_TEST_PROTOCOL.md", "artifacts/M4/COLLECTION_INSTRUCTIONS.md", "PROJECT_TRACKER.md"],
+  "files_created": ["tests/test_m4_audit.py", "artifacts/M4_AUDIT/SUMMARY.json", "artifacts/M4_AUDIT/AUDIT_FIXES.md",
+                    "artifacts/M4_AUDIT/TEST_RESULTS.json", "artifacts/M4_AUDIT/COMMANDS.md", "artifacts/M4_AUDIT/VALIDATION_GNHK.json"],
+  "preserved_hashes_sha256": {
+    "models/logo_htr/Downstream_Full_Model_Best.ckpt": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432",
+    "artifacts/M3_A/SUMMARY.json": "2a094722c8cb8e45f36833fce8df579acb871400a2f0222bb6d17aed6d933661",
+    "artifacts/M3_B/SUMMARY.json": "15271211a13904fca73901ec445b7eb6386951640525e9758e6b3491444a680b",
+    "artifacts/M3_B_corrected/SUMMARY.json": "2b98632686d19c500efe8d8afc664cc6b1245d4e0423a06ff8d28e9475b13160",
+    "artifacts/M3_B_final/SUMMARY.json": "cf31f1b47c1efcf1df3a9759e6c51dd31820f24312f548c8fe2a397f41d8385c",
+    "artifacts/M4/SUMMARY.json": "f7eb49222fbf05759548e823dd42639bed447b6450e4d415341095d78949e857",
+    "data/handwritten_examples/manifest.json": "d0cd3812773852128a549963777c9e3c26805d5c32cc34cc2a5c8147764296df",
+    "data/public/gnhk/subset/manifest.json": "13450762dd5508154fe05878554d4867d7df94e9a30a614f2b80385371c0af56",
+    "data/custom/template/collection_sheets.pdf": "8b63fe36c62f2d180c634254d5ad9e56037646f96aff1032ea1cef10e6b2a780",
+    "data/custom/template/layout.json": "ffe92414009f7177fbbbfbc5bce880b013cb8ba35a3e97f193c87fb9454c0a6a",
+    "data/custom/template/amount_list.csv": "e9d86b66135d70a61b0929a5507910b0b46d8d60c7e849cc81dfd2f2686a8335",
+    "all_M3_A_M3_B_M3_B_corrected_files": "re-verified against recorded hashes: intact"
+  },
+  "remaining_blockers": [
+    "custom data not collected (0 writers, 0 photos)",
+    "real-photo extraction unverified until the W01_A pilot",
+    "custom verification, finalize, validation and near-duplicate review pending"
+  ],
+  "remaining_limitations": [
+    "checkpoint fine-tuning data unknown; overlap cannot be ruled out",
+    "GNHK page-disjoint split, writer-disjointness unverifiable; digit-enriched, vocabulary-filtered subset",
+    "same 21 amounts for every writer: tests unseen styles, not unseen expressions",
+    "written-amount grammar rejects some legitimate styles (commas, 'eleven hundred', trailing period); such GT is not affected because GT values are human-entered",
+    "dHash near-duplicate check is coarse; blank fields generate false-positive candidates needing review",
+    "runtime figures for M5/M6 are estimates, not measurements"
+  ],
+  "inference_run": false,
+  "training": false,
+  "next_milestone_authorized": false
+}

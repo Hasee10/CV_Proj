@@ -1,0 +1,142 @@
+{
+  "total": 27,
+  "passed": 27,
+  "failed": 0,
+  "results": [
+    {
+      "test": "test_numeric_accepts",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_numeric_rejects",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_numeric_never_repairs_decimal",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_words_accepts",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_words_rejects",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_all_21_designed_pairs",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_failure_aware_ignores_stale_prediction",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_missing_none_empty_predictions",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_empty_ground_truth_policy",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_punctuation_alignment_and_exclusion",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_discrepancy_invalid_decision_raises",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_discrepancy_labels_totals_and_review",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_latency_stats",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_rectify_no_markers_and_wrong_sheet",
+      "status": "passed",
+      "seconds": 0.156
+    },
+    {
+      "test": "test_extract_names_duplicates_unreadable",
+      "status": "passed",
+      "seconds": 0.32
+    },
+    {
+      "test": "test_extract_pilot_only_and_refuses_frozen",
+      "status": "passed",
+      "seconds": 0.17
+    },
+    {
+      "test": "test_annotation_preserved_or_flagged",
+      "status": "passed",
+      "seconds": 0.265
+    },
+    {
+      "test": "test_finalize_incomplete_reports_missing",
+      "status": "passed",
+      "seconds": 0.124
+    },
+    {
+      "test": "test_finalize_rejects_duplicates_and_pending",
+      "status": "passed",
+      "seconds": 0.116
+    },
+    {
+      "test": "test_finalize_complete_independent_values_and_split",
+      "status": "passed",
+      "seconds": 1.955
+    },
+    {
+      "test": "test_validator_core_failures",
+      "status": "passed",
+      "seconds": 0.012
+    },
+    {
+      "test": "test_validator_near_duplicates_need_review",
+      "status": "passed",
+      "seconds": 0.004
+    },
+    {
+      "test": "test_validator_pairs_lineage_sources",
+      "status": "passed",
+      "seconds": 0.004
+    },
+    {
+      "test": "test_gnhk_subset_integrity_unchanged",
+      "status": "passed",
+      "seconds": 0.25
+    },
+    {
+      "test": "test_stress_generation_safeguards",
+      "status": "passed",
+      "seconds": 0.026
+    },
+    {
+      "test": "test_existing_selftests",
+      "status": "passed",
+      "seconds": 0.192
+    },
+    {
+      "test": "test_inference_input_hash_guard",
+      "status": "passed",
+      "seconds": 0.047
+    }
+  ]
+}

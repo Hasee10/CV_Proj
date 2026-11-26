@@ -1,0 +1,36 @@
+{
+  "milestone": "M4-PILOT real handwriting sheet extraction",
+  "attempt": 1,
+  "date": "2026-11-26T18:03:45+05:00",
+  "status": "BLOCKED",
+  "blocker": "no photograph present: data/custom/raw/ is empty; no misnamed or misplaced W01_A photo found in the project, Downloads, Desktop, Pictures or OneDrive/Pictures",
+  "photo": null,
+  "markers_detected": null,
+  "expected_crops": 14,
+  "actual_crops": 0,
+  "extraction_command": ".\\.venv\\Scripts\\python.exe -X utf8 -I scripts\\custom_sheets.py extract --only W01_A",
+  "extraction_output": "ERROR: nothing to extract; problems: ['W01_A: no single valid photo found'] (exit 1, nothing written)",
+  "acceptance": {
+    "genuine_photo_processed": false,
+    "four_markers_detected": "not tested",
+    "exactly_14_crops": false,
+    "handwriting_preserved": "not tested",
+    "no_prompt_leakage": "not tested",
+    "annotation_entries_correct": "not created",
+    "original_photo_preserved": "n/a"
+  },
+  "contact_sheet": "not created (no crops)",
+  "human_verification": "not performed and not marked",
+  "corrective_action": "place the sheet A photo at data/custom/raw/W01_A.jpg (confirm OneDrive has downloaded it locally), then rerun M4-PILOT",
+  "pending_corrections_before_finalize": [
+    "read_annotations() can silently collapse duplicate sample_id rows",
+    "verified_value accepts non-finite Decimal (NaN, Infinity); require finite, >= 0, <= 2 decimals",
+    "numeric_value uses \\d, which matches non-ASCII Unicode digits; use [0-9]"
+  ],
+  "collection_can_proceed": false,
+  "m4_status": "PARTIAL",
+  "inference_run": false,
+  "files_created": ["artifacts/M4_PILOT/SUMMARY.json", "artifacts/M4_PILOT/PILOT_REPORT.md", "artifacts/M4_PILOT/COMMANDS.md"],
+  "files_modified": ["PROJECT_TRACKER.md"],
+  "next_milestone_authorized": false
+}

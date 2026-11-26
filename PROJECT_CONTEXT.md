@@ -98,3 +98,8 @@ This section supersedes conflicting status lines above. Earlier text is kept as 
   - CVL numeric strings: 42% exact, CER 0.185.
   - Synthetic cheque fields: 0% exact, and every synthetic pair goes to review.
 - The locked test split has not been run. M6 (stress tests and failure analysis) awaits authorisation.
+
+## Decisions update (2026-11-26, M6)
+- **Failure analysis is complete on dev** (`artifacts/M6/`).
+- **Evidence-ranked M7 direction:** adaptive text-height normalisation is primary. Automatic word segmentation is conditional, because the automatic attempt failed on 0/8 lines. Line removal is rejected.
+- **M7 needs authorisation.**

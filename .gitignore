@@ -13,3 +13,6 @@ data/public/gnhk/cache/
 # online raw sources (re-fetchable; full synthetic cheques show template account numbers)
 data/public/cvl/cache/
 data/synthetic/hf_cheques/cache/
+# generated stress / diagnostic images (regenerable)
+data/stress/
+data/diagnostics/

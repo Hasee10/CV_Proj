@@ -1,0 +1,1127 @@
+{
+ "note": "constructed pairs reuse field crops; pairs are not independent observations",
+ "clean": {
+  "gnhk_pairs": {
+   "pairs": 2,
+   "resolved": 2,
+   "unresolved": 0,
+   "auto_accept_coverage_of_matches": "1/1",
+   "auto_flag_coverage_of_mismatches": "0/1",
+   "review_rate": 0.5,
+   "incorrect_acceptance_rate": 0.0,
+   "incorrect_rejection_rate": 0.0,
+   "all_review": false,
+   "reasons": {
+    "correct": 1,
+    "numeric_unparseable": 1
+   }
+  },
+  "syn_cheques": {
+   "pairs": 72,
+   "resolved": 66,
+   "unresolved": 6,
+   "auto_accept_coverage_of_matches": "0/30",
+   "auto_flag_coverage_of_mismatches": "0/36",
+   "review_rate": 1.0,
+   "incorrect_acceptance_rate": 0.0,
+   "incorrect_rejection_rate": 0.0,
+   "all_review": true,
+   "reasons": {
+    "written_unparseable": 6,
+    "both_unparseable": 60,
+    "blank_source_field": 6
+   }
+  }
+ },
+ "clean_pairs": [
+  {
+   "pair_id": "P_GNHKP_eng_EU_117_w051_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "decision": "accept",
+   "reason": "correct"
+  },
+  {
+   "pair_id": "P_GNHKP_eng_EU_117_w051_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "numeric_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0001",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "written_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0013",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0031",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0032",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0036",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0037",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0042",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0051",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0068",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0097",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0099",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0113",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0121",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0125",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0134",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "written_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0140",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "decision": "review",
+   "reason": "blank_source_field"
+  },
+  {
+   "pair_id": "P_SYN_0144",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0156",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0157",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0188",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0198",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0202",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0205",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0219",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "decision": "review",
+   "reason": "blank_source_field"
+  },
+  {
+   "pair_id": "P_SYN_0226",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0233",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0249",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0254",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "decision": "review",
+   "reason": "blank_source_field"
+  },
+  {
+   "pair_id": "P_SYN_0258",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0261",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "written_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0263",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0273",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "decision": "review",
+   "reason": "blank_source_field"
+  },
+  {
+   "pair_id": "P_SYN_0285",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "decision": "review",
+   "reason": "blank_source_field"
+  },
+  {
+   "pair_id": "P_SYN_0287",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0294",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "decision": "review",
+   "reason": "blank_source_field"
+  },
+  {
+   "pair_id": "P_SYN_0299",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0301",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0304",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0308",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0001_x_SYN_0125",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "written_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0013_x_SYN_0156",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0031_x_SYN_0263",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0032_x_SYN_0037",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0036_x_SYN_0097",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0037_x_SYN_0157",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0042_x_SYN_0301",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0051_x_SYN_0304",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0068_x_SYN_0233",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0097_x_SYN_0113",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0099_x_SYN_0261",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0113_x_SYN_0261",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0121_x_SYN_0144",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0125_x_SYN_0121",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0134_x_SYN_0249",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "written_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0144_x_SYN_0198",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0156_x_SYN_0001",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0157_x_SYN_0287",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0188_x_SYN_0202",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0198_x_SYN_0205",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0202_x_SYN_0013",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0205_x_SYN_0188",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0226_x_SYN_0308",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0233_x_SYN_0299",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0249_x_SYN_0032",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0258_x_SYN_0031",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0261_x_SYN_0051",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "written_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0263_x_SYN_0134",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0287_x_SYN_0036",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0299_x_SYN_0226",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0301_x_SYN_0258",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0304_x_SYN_0068",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  },
+  {
+   "pair_id": "P_SYN_0308_x_SYN_0042",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "decision": "review",
+   "reason": "both_unparseable"
+  }
+ ],
+ "stress": {
+  "lowres_s1": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 6,
+     "both_unparseable": 60,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "lowres_s2": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "both_unparseable": 64,
+     "written_unparseable": 2,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "lowres_s3": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "0/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 1,
+     "both_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "both_unparseable": 62,
+     "written_unparseable": 4,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "blur_s1": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 6,
+     "both_unparseable": 60,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "blur_s2": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 6,
+     "both_unparseable": 60,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "blur_s3": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "0/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 1,
+     "both_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "both_unparseable": 64,
+     "blank_source_field": 6,
+     "written_unparseable": 2
+    }
+   }
+  },
+  "illum_s1": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 6,
+     "both_unparseable": 60,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "illum_s2": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 8,
+     "both_unparseable": 58,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "illum_s3": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 8,
+     "both_unparseable": 58,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "contrast_s1": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 8,
+     "both_unparseable": 58,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "contrast_s2": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 10,
+     "both_unparseable": 56,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "contrast_s3": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 4,
+     "both_unparseable": 62,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "noise_s1": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 6,
+     "both_unparseable": 60,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "noise_s2": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 6,
+     "both_unparseable": 60,
+     "blank_source_field": 6
+    }
+   }
+  },
+  "noise_s3": {
+   "gnhk_pairs": {
+    "pairs": 2,
+    "resolved": 2,
+    "unresolved": 0,
+    "auto_accept_coverage_of_matches": "1/1",
+    "auto_flag_coverage_of_mismatches": "0/1",
+    "review_rate": 0.5,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": false,
+    "reasons": {
+     "correct": 1,
+     "numeric_unparseable": 1
+    }
+   },
+   "syn_cheques": {
+    "pairs": 72,
+    "resolved": 66,
+    "unresolved": 6,
+    "auto_accept_coverage_of_matches": "0/30",
+    "auto_flag_coverage_of_mismatches": "0/36",
+    "review_rate": 1.0,
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "all_review": true,
+    "reasons": {
+     "written_unparseable": 6,
+     "both_unparseable": 60,
+     "blank_source_field": 6
+    }
+   }
+  }
+ }
+}

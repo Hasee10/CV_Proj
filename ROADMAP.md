@@ -23,8 +23,8 @@ The course requires a reproducible baseline from the selected paper, standard an
 | M3-B | Test it on independent handwriting | done | 26 Nov | |
 | M4 | Datasets, splits and evaluation protocol | done | 26 Nov | |
 | M5 | Baseline evaluation | dev done; locked test pending | 27 Nov | |
-| M6 | Stress tests and failure analysis | next | 28 Nov | |
-| M7 | Improvement (design and implementation) | planned | 29 Nov | |
+| M6 | Stress tests and failure analysis | done | 28 Nov | |
+| M7 | Improvement (design and implementation) | next: adaptive text-height normalisation | 29 Nov | |
 | M8 | Baseline vs improved comparison and ablations | planned | 30 Nov | |
 | M9 | Web demo | planned | 30 Nov – 1 Dec | |
 | M10 | Reproducibility pass and final tests | planned | 1 Dec | |

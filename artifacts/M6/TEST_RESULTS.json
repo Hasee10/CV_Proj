@@ -1,0 +1,42 @@
+{
+  "total": 7,
+  "passed": 7,
+  "failed": 0,
+  "results": [
+    {
+      "test": "test_every_planned_variant_accounted_with_lineage",
+      "status": "passed",
+      "seconds": 0.342
+    },
+    {
+      "test": "test_stress_results_complete_dev_only_and_mapped",
+      "status": "passed",
+      "seconds": 0.069
+    },
+    {
+      "test": "test_stress_metrics_reproducible_and_paired",
+      "status": "passed",
+      "seconds": 0.062
+    },
+    {
+      "test": "test_diagnostics_complete_and_oracle_geometry",
+      "status": "passed",
+      "seconds": 0.003
+    },
+    {
+      "test": "test_figures_derived_from_saved_results",
+      "status": "passed",
+      "seconds": 0.001
+    },
+    {
+      "test": "test_protocol_amendments_recorded",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "m5_dev_and_m4_suites",
+      "status": "passed",
+      "detail": "8/8 passed"
+    }
+  ]
+}

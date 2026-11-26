@@ -14,7 +14,8 @@ This is an academic prototype for the Computer Vision course (FAST-NUCES, Fall 2
 | M3-B: independent handwriting check | verified (exploratory) | 9 photographed samples from one writer: 4/9 exact on crops, CER 0.2647; punctuation and spaces never emitted |
 | M4: datasets and evaluation design | verified, with documented limits | 872 validated samples across four sets; 38/38 regression tests pass |
 | M5-DEV: frozen baseline on the dev split | verified | 251 dev entries, 0 errors; exact matches: GNHK words 34/80, CVL digit strings 38/90, synthetic cheque fields 0/72; every synthetic amount pair goes to review |
-| M5 test, M6 onward: locked test, failure analysis, improvement, web demo | not started | |
+| M6: failure analysis and stress tests (dev) | verified | 3,675 paired corruption variants plus diagnostics. Upscaling recovers small synthetic numbers (0/8 to 5/8 exact) but harms genuine handwriting; severe contrast loss costs CVL 16.7 points |
+| M5 test, M7 onward: locked test, improvement, web demo | not started | |
 
 Each milestone has its evidence in `artifacts/<milestone>/` (summary JSON, commands, logs, hashes). `PROJECT_TRACKER.md` holds the running log, and `ROADMAP.md` describes every phase, its deliverables and the rules for contributors.
 

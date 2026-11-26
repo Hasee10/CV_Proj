@@ -1,0 +1,357 @@
+{
+ "DX-A": {
+  "n": 245,
+  "dark_ink_on_light_background": 245,
+  "polarity_undetermined": 0,
+  "uint8_range_0_255": true,
+  "pixel_scaling": "ToTensor divides by 255 (upstream); RGB channel order via PIL convert('RGB')",
+  "effective_dims_match_upstream_ScaleToLimitRange": "245/245",
+  "token_id_range": [
+   9,
+   90
+  ],
+  "vocab_size": 97,
+  "decoder": "beam 10, max_len 200, alpha 1.0 (checkpoint hyper-parameters, unchanged)",
+  "crop_alignment": "amount fields verified visually in M4-ONLINE/M4-FINAL; DX-C/DX-D crops viewed (AI check)"
+ },
+ "DX-B": {
+  "D1": {
+   "orig": {
+    "n": 8,
+    "exact": 4,
+    "cer": 0.2286,
+    "parseable": 1,
+    "value_exact": 0,
+    "median_effective_height": 80.0
+   },
+   "up2": {
+    "n": 8,
+    "exact": 3,
+    "cer": 0.3143,
+    "parseable": 1,
+    "value_exact": 0,
+    "median_effective_height": 160.0
+   },
+   "up4": {
+    "n": 8,
+    "exact": 3,
+    "cer": 0.3714,
+    "parseable": 1,
+    "value_exact": 0,
+    "median_effective_height": 256.0
+   }
+  },
+  "D4": {
+   "orig": {
+    "n": 8,
+    "exact": 4,
+    "cer": 0.1458,
+    "parseable": 8,
+    "value_exact": 4,
+    "median_effective_height": 71.5
+   },
+   "up2": {
+    "n": 8,
+    "exact": 1,
+    "cer": 0.25,
+    "parseable": 8,
+    "value_exact": 1,
+    "median_effective_height": 143.0
+   },
+   "up4": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.8958,
+    "parseable": 5,
+    "value_exact": 0,
+    "median_effective_height": 229.5
+   }
+  },
+  "D6_num_SYN": {
+   "orig": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.9062,
+    "parseable": 1,
+    "value_exact": 0,
+    "median_effective_height": 33.5
+   },
+   "up2": {
+    "n": 8,
+    "exact": 1,
+    "cer": 0.5,
+    "parseable": 6,
+    "value_exact": 1,
+    "median_effective_height": 67.0
+   },
+   "up4": {
+    "n": 8,
+    "exact": 5,
+    "cer": 0.4062,
+    "parseable": 6,
+    "value_exact": 5,
+    "median_effective_height": 134.0
+   }
+  },
+  "D6_words_SYN": {
+   "orig": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.8684,
+    "parseable": 0,
+    "value_exact": 0,
+    "median_effective_height": 32.0
+   },
+   "up2": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.7993,
+    "parseable": 0,
+    "value_exact": 0,
+    "median_effective_height": 64.0
+   },
+   "up4": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.7336,
+    "parseable": 0,
+    "value_exact": 0,
+    "median_effective_height": 119.0
+   }
+  }
+ },
+ "DX-C": {
+  "full_1x": {
+   "n": 8,
+   "exact": 0,
+   "cer": 0.8684,
+   "parseable": 0,
+   "value_exact": 0,
+   "wer": 1.0,
+   "examples": {
+    "SYN_0001_words": "mummisessing",
+    "SYN_0013_words": "comansinsuratimen",
+    "SYN_0031_words": "consinisuation"
+   }
+  },
+  "full_2x": {
+   "n": 8,
+   "exact": 0,
+   "cer": 0.7993,
+   "parseable": 0,
+   "value_exact": 0,
+   "wer": 1.0,
+   "examples": {
+    "SYN_0001_words": "meraramamonssessining",
+    "SYN_0013_words": "sesesesesisssorararansmissicen",
+    "SYN_0031_words": "arounduntinderation"
+   }
+  },
+  "seg1x": {
+   "n": 8,
+   "exact": 0,
+   "cer": 0.7961,
+   "parseable": 0,
+   "value_exact": 0,
+   "wer": 1.2449,
+   "examples": {
+    "SYN_0001_words": "T in T am in can I ay",
+    "SYN_0013_words": "ay may any mas amaing",
+    "SYN_0031_words": "EAR 3 has 2 in 5 hay A 9 the"
+   }
+  },
+  "seg2x": {
+   "n": 8,
+   "exact": 0,
+   "cer": 0.5822,
+   "parseable": 0,
+   "value_exact": 0,
+   "wer": 1.1633,
+   "examples": {
+    "SYN_0001_words": "T mee I hassand and EGATHS I mee",
+    "SYN_0013_words": "one mossand Soven Hendies andmisseen",
+    "SYN_0031_words": "Eift 2 Thaused 2 Thee 5 Himbled and 2 Tiable"
+   }
+  },
+  "oracle1x": {
+   "n": 8,
+   "exact": 0,
+   "cer": 0.7697,
+   "parseable": 0,
+   "value_exact": 0,
+   "wer": 1.0,
+   "examples": {
+    "SYN_0001_words": "mus ming in can mus",
+    "SYN_0013_words": "on may sim mas in ma in",
+    "SYN_0031_words": "en any ony they as ose"
+   }
+  },
+  "oracle2x": {
+   "n": 8,
+   "exact": 0,
+   "cer": 0.4572,
+   "parseable": 0,
+   "value_exact": 0,
+   "wer": 0.8367,
+   "examples": {
+    "SYN_0001_words": "Treee Thowand and Eanry Tmece",
+    "SYN_0013_words": "one Trowand soven Himades and mmy soven",
+    "SYN_0031_words": "Eint Thaused Then Thimis and Table"
+   }
+  },
+  "per_word_oracle": {
+   "oracle1x": {
+    "words": 49,
+    "exact_words": 0
+   },
+   "oracle2x": {
+    "words": 49,
+    "exact_words": 8
+   }
+  },
+  "geometric_segmentation_matched_word_count": "0/8"
+ },
+ "DX-D": {
+  "syn_num": {
+   "orig1x": {
+    "n": 8,
+    "exact": 0,
+    "cer": 1.0,
+    "parseable": 0,
+    "value_exact": 0
+   },
+   "orig2x": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.6875,
+    "parseable": 5,
+    "value_exact": 0
+   },
+   "clean1x": {
+    "n": 8,
+    "exact": 0,
+    "cer": 1.0312,
+    "parseable": 0,
+    "value_exact": 0
+   },
+   "clean2x": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.9062,
+    "parseable": 4,
+    "value_exact": 0
+   },
+   "removed_pixels_median": 183.0
+  },
+  "syn_words": {
+   "orig1x": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.8535,
+    "parseable": 0,
+    "value_exact": 0
+   },
+   "orig2x": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.7962,
+    "parseable": 0,
+    "value_exact": 0
+   },
+   "clean1x": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.8535,
+    "parseable": 0,
+    "value_exact": 0
+   },
+   "clean2x": {
+    "n": 8,
+    "exact": 0,
+    "cer": 0.8025,
+    "parseable": 0,
+    "value_exact": 0
+   },
+   "removed_pixels_median": 684.0
+  }
+ },
+ "DX-E": {
+  "clean": {
+   "digit_bearing_samples": 147,
+   "digit_substitutions": 75,
+   "decimal_missing_or_wrong": 2,
+   "punct_substitutions": 2,
+   "comma_missing_or_wrong": 5,
+   "zero_deletions": 1,
+   "value_parsed_both": 96,
+   "value_exact": 45,
+   "value_off_by_10x_or_more": 10,
+   "value_within_10pct_but_wrong": 29
+  },
+  "stress_by_corruption": {
+   "lowres": {
+    "digit_bearing_samples": 441,
+    "digit_substitutions": 213,
+    "zero_insertions": 5,
+    "decimal_missing_or_wrong": 6,
+    "punct_substitutions": 4,
+    "comma_missing_or_wrong": 15,
+    "zero_deletions": 4,
+    "value_parsed_both": 273,
+    "value_exact": 124,
+    "value_off_by_10x_or_more": 29,
+    "value_within_10pct_but_wrong": 79
+   },
+   "blur": {
+    "digit_bearing_samples": 441,
+    "digit_substitutions": 219,
+    "zero_insertions": 4,
+    "decimal_missing_or_wrong": 6,
+    "punct_substitutions": 2,
+    "comma_missing_or_wrong": 15,
+    "zero_deletions": 2,
+    "value_parsed_both": 278,
+    "value_exact": 128,
+    "value_off_by_10x_or_more": 26,
+    "value_within_10pct_but_wrong": 79
+   },
+   "illum": {
+    "digit_bearing_samples": 441,
+    "digit_substitutions": 235,
+    "zero_insertions": 2,
+    "decimal_missing_or_wrong": 6,
+    "punct_substitutions": 6,
+    "comma_missing_or_wrong": 15,
+    "zero_deletions": 1,
+    "value_parsed_both": 286,
+    "value_exact": 119,
+    "value_off_by_10x_or_more": 33,
+    "value_within_10pct_but_wrong": 98
+   },
+   "contrast": {
+    "digit_bearing_samples": 441,
+    "digit_substitutions": 222,
+    "zero_insertions": 7,
+    "decimal_missing_or_wrong": 8,
+    "punct_substitutions": 4,
+    "comma_missing_or_wrong": 15,
+    "value_parsed_both": 261,
+    "value_exact": 113,
+    "value_off_by_10x_or_more": 32,
+    "value_within_10pct_but_wrong": 67
+   },
+   "noise": {
+    "digit_bearing_samples": 441,
+    "digit_substitutions": 228,
+    "zero_insertions": 1,
+    "decimal_missing_or_wrong": 7,
+    "punct_substitutions": 6,
+    "comma_missing_or_wrong": 15,
+    "value_parsed_both": 288,
+    "value_exact": 133,
+    "value_off_by_10x_or_more": 31,
+    "value_within_10pct_but_wrong": 92
+   }
+  }
+ }
+}

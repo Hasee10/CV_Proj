@@ -1,0 +1,14 @@
+{
+  "cpu": "Intel Core i7-1265U, 10 torch threads, batch 1, torch 2.15.0+cpu",
+  "measured": {
+    "stress_pilot": {"variants": 120, "inference_seconds": 24.53, "median_latency_s": 0.1695},
+    "stress_full": {"variants": 3675, "unique_images": 3674, "computed": 3554, "reused_from_pilot": 120,
+                    "inference_seconds": 1972.03, "wall_seconds": 1988.63, "median_latency_s": 0.2574, "errors": 0},
+    "diagnostics": {"entries": 302, "unique_images": 284, "inference_seconds": 689.79, "wall_seconds": 694.08,
+                    "median_latency_s": 0.1685, "errors": 0, "note": "4x upscales reach the 256x1024 cap and decode slowly"},
+    "total_m6_inference_seconds": 2686.35,
+    "clean_dev_reused_from_M5": {"entries": 245, "inference_seconds_in_M5": 121.56}
+  },
+  "estimate_before_full_run": "pilot median 0.17 s -> about 12-25 min for 3,675 variants; actual 33 min (blur/low-res variants decode longer)",
+  "storage": {"data/stress": "113 MB (git-ignored)", "data/diagnostics": "about 7 MB (git-ignored)"}
+}

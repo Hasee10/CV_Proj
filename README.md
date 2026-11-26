@@ -15,7 +15,7 @@ This is an academic prototype for the Computer Vision course (FAST-NUCES, Fall 2
 | M4: datasets and evaluation design | verified, with documented limits | 872 validated samples across four sets; 38/38 regression tests pass |
 | M5 onward: baseline evaluation, failure analysis, improvement, web demo | not started | |
 
-Each milestone has its evidence in `artifacts/<milestone>/` (summary JSON, commands, logs, hashes). `PROJECT_TRACKER.md` holds the running log.
+Each milestone has its evidence in `artifacts/<milestone>/` (summary JSON, commands, logs, hashes). `PROJECT_TRACKER.md` holds the running log, and `ROADMAP.md` describes every phase, its deliverables and the rules for contributors.
 
 ## What the early experiments found
 

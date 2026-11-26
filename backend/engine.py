@@ -80,30 +80,37 @@ class Engine:
             raise ModelUnavailable("model not loaded")
         if mode == "proposed" and not self.proposed_cfg:
             raise ValueError("proposed mode is not configured (no frozen M7 configuration)")
-        import torch
         t0 = time.perf_counter()
         img, meta = (athn.apply(rgb, self.proposed_cfg) if mode == "proposed"
                      else (rgb, {"method": "baseline", "applied": False, "path": "identity"}))
         t1 = time.perf_counter()
+        # One slot per running model call; a call that outlives the HTTP timeout keeps its slot until it finishes
+        # (a running beam search cannot be interrupted), so running calls never exceed max_concurrency.
         if not self.sem.acquire(timeout=self.queue_timeout):
             raise EngineBusy("all inference slots busy")
         try:
-            with torch.inference_mode():
-                x, m = si.preprocess_array(img)
-                hyp = self.model.approximate_joint_search(x, m)[0]
+            t2 = time.perf_counter()
+            text, score, shape = self._forward(img)
+            t3 = time.perf_counter()
         finally:
             self.sem.release()
-        t2 = time.perf_counter()
-        text = "".join(self.vocab.indices2words(hyp.seq))
         value = em.numeric_value(text) if field == "numeric" else em.words_value(text)
         return {"field_type": field, "mode": mode, "raw_text": text, "parsed_value": None if value is None else f"{value:.2f}",
                 "parse_status": "parsed" if value is not None else "unparseable",
-                "beam_log_probability": round(float(hyp.score), 4),
+                "beam_log_probability": round(score, 4),
                 "preprocessing": {k: v for k, v in meta.items() if k in ("method", "applied", "path", "scale",
                                                                           "estimated_text_height", "input_hw", "output_hw")},
-                "model_input_shape": list(x.shape), "latency_seconds": {"preprocess": round(t1 - t0, 4),
-                                                                        "inference": round(t2 - t1, 4), "total": round(t2 - t0, 4)},
+                "model_input_shape": shape, "latency_seconds": {"preprocess": round(t1 - t0, 4), "queue_wait": round(t2 - t1, 4),
+                                                                "inference": round(t3 - t2, 4), "total": round(t3 - t0, 4)},
                 "_value": value}
+
+    def _forward(self, img):
+        """Model call only: upstream transform + bidirectional beam search (settings identical to the research runs)."""
+        import torch
+        with torch.inference_mode():
+            x, m = si.preprocess_array(img)
+            hyp = self.model.approximate_joint_search(x, m)[0]
+        return "".join(self.vocab.indices2words(hyp.seq)), float(hyp.score), list(x.shape)
 
 
 def decision_reasons(num, wr) -> tuple[str, list[str]]:

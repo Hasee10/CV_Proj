@@ -103,7 +103,9 @@ def create_app(engine: Engine | None = None, load_model: bool = True) -> FastAPI
         if app.state.engine is None:
             app.state.engine = Engine(max_concurrency=env("CV_MAX_CONCURRENCY", 1, int),
                                       torch_threads=env("CV_TORCH_THREADS", 0, int) or None,
-                                      queue_timeout=env("CV_QUEUE_TIMEOUT_S", 30.0, float))
+                                      # never wait for a slot longer than the caller waits for the answer, so an
+                                      # abandoned request cannot start a model call later
+                                      queue_timeout=min(env("CV_QUEUE_TIMEOUT_S", 30.0, float), TIMEOUT_S))
             if load_model:
                 await run_in_threadpool(app.state.engine.load)
         yield
@@ -149,7 +151,9 @@ def create_app(engine: Engine | None = None, load_model: bool = True) -> FastAPI
         try:
             return await asyncio.wait_for(run_in_threadpool(eng.recognize, rgb, field, mode), TIMEOUT_S)
         except asyncio.TimeoutError:
-            raise ApiError(504, "inference_timeout", f"recognition exceeded {TIMEOUT_S:.0f} s")
+            raise ApiError(504, "inference_timeout",
+                           f"recognition exceeded {TIMEOUT_S:g} s. The model call cannot be interrupted and keeps its "
+                           "inference slot until it finishes, so new requests may receive 503 busy meanwhile")
         except EngineBusy:
             raise ApiError(503, "busy", "all inference slots are busy; retry later")
         except ModelUnavailable:

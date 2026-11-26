@@ -168,3 +168,59 @@ def test_cors_configured_origin_only():
     bad = c.options("/api/recognize", headers={"Origin": "https://evil.example", "Access-Control-Request-Method": "POST"})
     assert ok.headers.get("access-control-allow-origin") == ba.CORS[0]
     assert "access-control-allow-origin" not in bad.headers
+
+
+class SlowEngine(be.Engine):
+    """Real Engine.recognize (slot handling, parsing); only the model call is replaced by a sleep."""
+
+    def __init__(self, delay, max_concurrency=1, queue_timeout=0.1):
+        super().__init__(max_concurrency=max_concurrency, queue_timeout=queue_timeout)
+        self.model, self.delay, self.active, self.peak = object(), delay, 0, 0
+        import threading
+        self.lock = threading.Lock()
+
+    def _forward(self, img):
+        import time
+        with self.lock:
+            self.active += 1
+            self.peak = max(self.peak, self.active)
+        time.sleep(self.delay)
+        with self.lock:
+            self.active -= 1
+        return "1250", -1.0, [1, 3, 32, 64]
+
+
+def test_timeout_returns_at_deadline_and_slot_stays_held(monkeypatch):
+    import time
+    eng = SlowEngine(delay=1.5)
+    c = TestClient(ba.create_app(engine=eng, load_model=False))
+    monkeypatch.setattr(ba, "TIMEOUT_S", 0.3)
+    t0 = time.perf_counter()
+    r = c.post("/api/recognize", files=files(image=png()), data={"field_type": "numeric", "mode": "baseline"})
+    assert r.status_code == 504 and time.perf_counter() - t0 < 1.0, "response must not wait for the model call"
+    assert "cannot be interrupted" in r.json()["error"]["message"]
+    busy = c.post("/api/recognize", files=files(image=png()), data={"field_type": "numeric", "mode": "baseline"})
+    assert busy.status_code == 503 and busy.json()["error"]["code"] == "busy" and eng.active == 1
+    deadline = time.perf_counter() + 5
+    while eng.active and time.perf_counter() < deadline:
+        time.sleep(0.05)
+    eng.delay = 0.0
+    ok = c.post("/api/recognize", files=files(image=png()), data={"field_type": "numeric", "mode": "baseline"})
+    assert ok.status_code == 200 and ok.json()["parsed_value"] == "1250.00" and eng.peak == 1
+
+
+def test_parallel_requests_never_exceed_inference_slots():
+    from concurrent.futures import ThreadPoolExecutor
+    eng = SlowEngine(delay=0.2, max_concurrency=1, queue_timeout=10)
+    with TestClient(ba.create_app(engine=eng, load_model=False)) as c:
+        post = lambda _: c.post("/api/recognize", files=files(image=png()), data={"field_type": "numeric", "mode": "baseline"}).status_code
+        with ThreadPoolExecutor(6) as ex:
+            codes = list(ex.map(post, range(6)))
+    assert codes == [200] * 6 and eng.peak == 1
+
+
+def test_queue_wait_never_exceeds_inference_timeout(monkeypatch):
+    monkeypatch.setenv("CV_QUEUE_TIMEOUT_S", "999")
+    app = ba.create_app(load_model=False)
+    with TestClient(app):
+        assert app.state.engine.queue_timeout == ba.TIMEOUT_S

@@ -11,7 +11,7 @@
   "error": {
    "code": "content_mismatch",
    "message": "image: file content does not match its declared type",
-   "request_id": "263d167937c6"
+   "request_id": "c84f3f32a0da"
   }
  }
 }

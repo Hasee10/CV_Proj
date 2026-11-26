@@ -8,7 +8,7 @@
   "error": {
    "code": "model_unavailable",
    "message": "the recognition model is not loaded",
-   "request_id": "55c6752570f1"
+   "request_id": "bc73c1a8f526"
   }
  }
 }

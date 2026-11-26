@@ -34,8 +34,9 @@
    ],
    "latency_seconds": {
     "preprocess": 0.0,
-    "inference": 0.101,
-    "total": 0.101
+    "queue_wait": 0.0,
+    "inference": 0.0977,
+    "total": 0.0977
    }
   },
   "written": {
@@ -58,13 +59,14 @@
    ],
    "latency_seconds": {
     "preprocess": 0.0,
-    "inference": 0.5267,
-    "total": 0.5267
+    "queue_wait": 0.0,
+    "inference": 0.5228,
+    "total": 0.5228
    }
   },
   "rois": null,
-  "total_latency_seconds": 0.6277,
+  "total_latency_seconds": 0.6205,
   "notice": "decision compares recognised values only; 'accept' is not proof of authenticity; review is required whenever either value cannot be parsed",
-  "request_id": "154ac70c3a9c"
+  "request_id": "91091ce5cd7b"
  }
 }

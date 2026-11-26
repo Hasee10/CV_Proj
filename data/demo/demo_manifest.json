@@ -1,0 +1,132 @@
+{
+ "note": "Build the demo sheets in data/demo/ from tracked DEV-split crops (no test data, no new images).\n\nEach sheet pastes one numeric-amount crop and one written-amount crop onto a white page and records the exact\nnormalised ROIs, so the full-image /api/verify flow can be shown without a real cheque. These are constructed\ncomposites, not cheques; the pairs are chosen to show each decision type, not to represent benchmark accuracy.",
+ "split": "dev",
+ "sheets": {
+  "sheet_accept": {
+   "file": "data/demo/sheet_accept.png",
+   "size_wh": [
+    900,
+    262
+   ],
+   "description": "genuine handwriting, constructed pair (two GNHK pages): 1 / one",
+   "numeric": {
+    "source_id": "GNHKP_eng_EU_310_w021",
+    "ground_truth": "1",
+    "licence": "GNHK, CC-BY-4.0",
+    "box_px": [
+     845,
+     40,
+     860,
+     66
+    ],
+    "roi": [
+     0.938889,
+     0.152672,
+     0.955556,
+     0.251908
+    ]
+   },
+   "written": {
+    "source_id": "GNHKP_eng_EU_117_w051",
+    "ground_truth": "one",
+    "licence": "GNHK, CC-BY-4.0",
+    "box_px": [
+     40,
+     106,
+     271,
+     182
+    ],
+    "roi": [
+     0.044444,
+     0.40458,
+     0.301111,
+     0.694656
+    ]
+   }
+  },
+  "sheet_flag": {
+   "file": "data/demo/sheet_flag.png",
+   "size_wh": [
+    900,
+    291
+   ],
+   "description": "genuine handwriting, constructed MISMATCH: 25000 / one",
+   "numeric": {
+    "source_id": "CVL_25000_0021_08",
+    "ground_truth": "25000",
+    "licence": "CVL digit strings, CC-BY-NC-4.0",
+    "box_px": [
+     655,
+     40,
+     860,
+     95
+    ],
+    "roi": [
+     0.727778,
+     0.137457,
+     0.955556,
+     0.32646
+    ]
+   },
+   "written": {
+    "source_id": "GNHKP_eng_EU_117_w051",
+    "ground_truth": "one",
+    "licence": "GNHK, CC-BY-4.0",
+    "box_px": [
+     40,
+     135,
+     271,
+     211
+    ],
+    "roi": [
+     0.044444,
+     0.463918,
+     0.301111,
+     0.725086
+    ]
+   }
+  },
+  "sheet_review": {
+   "file": "data/demo/sheet_review.png",
+   "size_wh": [
+    900,
+    262
+   ],
+   "description": "SYNTHETIC cheque fields from one synthetic cheque: 3083 / Three Thousand and Eighty Three",
+   "numeric": {
+    "source_id": "SYN_0001_num",
+    "ground_truth": "3083",
+    "licence": "HF arunchincheti/cheques_data, Apache-2.0 (declared); SYNTHETIC font-rendered text",
+    "box_px": [
+     727,
+     40,
+     860,
+     80
+    ],
+    "roi": [
+     0.807778,
+     0.152672,
+     0.955556,
+     0.305344
+    ]
+   },
+   "written": {
+    "source_id": "SYN_0001_words",
+    "ground_truth": "Three Thousand and Eighty Three",
+    "licence": "HF arunchincheti/cheques_data, Apache-2.0 (declared); SYNTHETIC font-rendered text",
+    "box_px": [
+     40,
+     120,
+     320,
+     182
+    ],
+    "roi": [
+     0.044444,
+     0.458015,
+     0.355556,
+     0.694656
+    ]
+   }
+  }
+ }
+}

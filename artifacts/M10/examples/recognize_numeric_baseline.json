@@ -28,13 +28,14 @@
   ],
   "latency_seconds": {
    "preprocess": 0.0,
-   "inference": 0.1829,
-   "total": 0.1829
+   "queue_wait": 0.0,
+   "inference": 0.1954,
+   "total": 0.1954
   },
   "image": {
    "width": 205,
    "height": 55
   },
-  "request_id": "0f6495da7a3e"
+  "request_id": "d8ffed31a9a5"
  }
 }

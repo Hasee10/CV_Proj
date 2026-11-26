@@ -1,0 +1,175 @@
+{
+ "D1_gnhk_words_genuine": {
+  "cer": {
+   "baseline": 0.296,
+   "proposed": 0.2521,
+   "delta": -0.0439
+  },
+  "exact": {
+   "baseline": 73,
+   "proposed": 78
+  },
+  "value": {},
+  "ci": [
+   -0.0954,
+   0.0046
+  ],
+  "mcn": {
+   "improved": 11,
+   "regressed": 6,
+   "p_value": 0.332
+  }
+ },
+ "D4_cvl_numeric_genuine": {
+  "cer": {
+   "baseline": 0.1406,
+   "proposed": 0.1429,
+   "delta": 0.0023
+  },
+  "exact": {
+   "baseline": 97,
+   "proposed": 97
+  },
+  "value": {
+   "n": 210,
+   "baseline": 97,
+   "proposed": 97,
+   "delta_pp": 0.0,
+   "parseable": {
+    "baseline": 199,
+    "proposed": 197
+   }
+  },
+  "ci": [
+   -0.0031,
+   0.0092
+  ],
+  "mcn": {
+   "improved": 2,
+   "regressed": 2,
+   "p_value": 1.0
+  }
+ },
+ "D5_gnhk_numeric_genuine": {
+  "cer": {
+   "baseline": 0.4118,
+   "proposed": 0.3529,
+   "delta": -0.0588
+  },
+  "exact": {
+   "baseline": 27,
+   "proposed": 30
+  },
+  "value": {
+   "n": 43,
+   "baseline": 27,
+   "proposed": 30,
+   "delta_pp": 7.0,
+   "parseable": {
+    "baseline": 33,
+    "proposed": 34
+   }
+  },
+  "ci": [
+   -0.16,
+   0.0351
+  ],
+  "mcn": {
+   "improved": 4,
+   "regressed": 1,
+   "p_value": 0.375
+  }
+ },
+ "D5_gnhk_words_genuine": {
+  "cer": {
+   "baseline": 0.2421,
+   "proposed": 0.2211,
+   "delta": -0.0211
+  },
+  "exact": {
+   "baseline": 11,
+   "proposed": 12
+  },
+  "value": {
+   "n": 26,
+   "baseline": 15,
+   "proposed": 16,
+   "delta_pp": 3.8,
+   "parseable": {
+    "baseline": 15,
+    "proposed": 16
+   }
+  },
+  "ci": [
+   -0.1091,
+   0.1316
+  ],
+  "mcn": {
+   "improved": 2,
+   "regressed": 1,
+   "p_value": 1.0
+  }
+ },
+ "D6_syn_numeric_SYNTHETIC": {
+  "cer": {
+   "baseline": 1.0135,
+   "proposed": 0.5993,
+   "delta": -0.4141
+  },
+  "exact": {
+   "baseline": 0,
+   "proposed": 17
+  },
+  "value": {
+   "n": 77,
+   "baseline": 0,
+   "proposed": 17,
+   "delta_pp": 22.1,
+   "parseable": {
+    "baseline": 5,
+    "proposed": 49
+   }
+  },
+  "ci": [
+   -0.534,
+   -0.2957
+  ],
+  "mcn": {
+   "improved": 17,
+   "regressed": 0,
+   "p_value": 1.53e-05
+  }
+ },
+ "D6_syn_words_SYNTHETIC": {
+  "cer": {
+   "baseline": 0.9225,
+   "proposed": 0.8274,
+   "delta": -0.0952
+  },
+  "exact": {
+   "baseline": 0,
+   "proposed": 0
+  },
+  "value": {
+   "n": 87,
+   "baseline": 0,
+   "proposed": 0,
+   "delta_pp": 0.0,
+   "parseable": {
+    "baseline": 0,
+    "proposed": 0
+   }
+  },
+  "ci": [
+   -0.2102,
+   0.0427
+  ],
+  "mcn": {
+   "improved": 0,
+   "regressed": 0,
+   "p_value": 1.0
+  }
+ }
+}
+{"gnhk_pairs_genuine_constructed": {"baseline": {"review": 28, "accept": 11, "flag": 13}, "proposed": {"review": 25, "flag": 15, "accept": 12}}, "syn_all_SYNTHETIC": {"baseline": {"review": 164}, "proposed": {"review": 164}}, "syn_natural_SYNTHETIC": {"baseline": {"review": 91}, "proposed": {"review": 91}}, "syn_constructed_SYNTHETIC": {"baseline": {"review": 73}, "proposed": {"review": 73}}}
+{"n_labelled": 198, "improved": 6, "regressed": 2, "p_value": 0.289} {"baseline": 0.2509, "proposed": 0.2936}

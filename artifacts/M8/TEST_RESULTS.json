@@ -1,0 +1,42 @@
+{
+  "total": 7,
+  "passed": 7,
+  "failed": 0,
+  "results": [
+    {
+      "test": "test_counts_match_frozen_manifests",
+      "status": "passed",
+      "seconds": 0.013
+    },
+    {
+      "test": "test_identical_inputs_and_frozen_config",
+      "status": "passed",
+      "seconds": 0.008
+    },
+    {
+      "test": "test_identity_rows_agree_between_methods",
+      "status": "passed",
+      "seconds": 0.007
+    },
+    {
+      "test": "test_comparison_matches_scored_metrics",
+      "status": "passed",
+      "seconds": 0.001
+    },
+    {
+      "test": "test_paired_statistics_recomputable",
+      "status": "passed",
+      "seconds": 0.049
+    },
+    {
+      "test": "test_figures_exist_and_are_newer_than_results",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "m7_m6_m5_m4_suites",
+      "status": "passed",
+      "detail": "9/9 passed"
+    }
+  ]
+}

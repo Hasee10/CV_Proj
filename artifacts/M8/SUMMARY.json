@@ -1,0 +1,100 @@
+{
+ "milestone": "M8",
+ "status": "VERIFIED",
+ "split": "test (locked; opened once after M7 freeze f836129)",
+ "counts": {
+  "entries": 621,
+  "eligible": 603,
+  "blank": 18,
+  "pairs": 216,
+  "pairs_gnhk": 52,
+  "pairs_synthetic": 164,
+  "pairs_unresolved": 18
+ },
+ "proposed_config": {
+  "id": "P1-A",
+  "method": "athn",
+  "band_lo": 24,
+  "band_hi": 72,
+  "target": 48,
+  "min_scale": 0.5,
+  "max_scale": 4.0
+ },
+ "headline": {
+  "D6_numeric_value_exact": [
+   0,
+   17,
+   77
+  ],
+  "D6_numeric_cer": [
+   1.0135,
+   0.5993
+  ],
+  "D1_cer": [
+   0.296,
+   0.2521
+  ],
+  "D4_cer": [
+   0.1406,
+   0.1429
+  ],
+  "all_genuine_cer_delta_ci95": [
+   -0.0153,
+   [
+    -0.0359,
+    0.0023
+   ]
+  ],
+  "genuine_exact_improved_regressed": [
+   19,
+   10
+  ],
+  "gnhk_pairs_decisions": {
+   "baseline": {
+    "review": 28,
+    "accept": 11,
+    "flag": 13
+   },
+   "proposed": {
+    "review": 25,
+    "flag": 15,
+    "accept": 12
+   }
+  },
+  "synthetic_pairs": "all 164 routed to review by both methods",
+  "incorrect_acceptance_rate": {
+   "gnhk": 0.0,
+   "synthetic": 0.0
+  },
+  "latency_median_s": [
+   0.2509,
+   0.2936
+  ],
+  "latency_p95_s": [
+   1.0404,
+   19.0139
+  ],
+  "proposed_inputs_over_120s": 5,
+  "proposed_max_latency_s": 419.36
+ },
+ "supplementary_stress": "not run (optional; skipped to keep compute on the locked comparison)",
+ "artifacts": [
+  "BASELINE_TEST_RESULTS.json",
+  "COMPARATIVE_METRICS.json",
+  "FINAL_EVALUATION_REPORT.md",
+  "PAIR_RESULTS.json",
+  "PROPOSED_TEST_RESULTS.json",
+  "RUNTIME_REPORT.json",
+  "STATISTICAL_ANALYSIS.json",
+  "compare_stdout.txt",
+  "SUMMARY.json",
+  "TEST_RESULTS.json",
+  "COMMANDS.md"
+ ],
+ "figures": [
+  "test_cer_delta_ci.png",
+  "test_cer_exact.png",
+  "test_latency.png",
+  "test_pair_decisions.png"
+ ]
+}

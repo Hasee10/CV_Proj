@@ -1,0 +1,180 @@
+{
+ "method": "cluster bootstrap over group_id, B=10000, seed=20261126; exact two-sided McNemar (binomial) on discordant items; no multiplicity correction (descriptive, report-level)",
+ "results": {
+  "D1_gnhk_words_genuine": {
+   "n_items": 160,
+   "n_clusters": 80,
+   "cer_delta": -0.0439,
+   "cer_delta_ci95": [
+    -0.0954,
+    0.0046
+   ],
+   "exact_delta": 5,
+   "exact_delta_ci95": [
+    -4,
+    15
+   ],
+   "exact_mcnemar": {
+    "improved": 11,
+    "regressed": 6,
+    "p_value": 0.332
+   }
+  },
+  "D4_cvl_numeric_genuine": {
+   "n_items": 210,
+   "n_clusters": 21,
+   "cer_delta": 0.0023,
+   "cer_delta_ci95": [
+    -0.0031,
+    0.0092
+   ],
+   "exact_delta": 0,
+   "exact_delta_ci95": [
+    -4,
+    4
+   ],
+   "exact_mcnemar": {
+    "improved": 2,
+    "regressed": 2,
+    "p_value": 1.0
+   },
+   "value_mcnemar": {
+    "n": 210,
+    "improved": 2,
+    "regressed": 2,
+    "p_value": 1.0
+   }
+  },
+  "D5_gnhk_numeric_genuine": {
+   "n_items": 43,
+   "n_clusters": 24,
+   "cer_delta": -0.0588,
+   "cer_delta_ci95": [
+    -0.16,
+    0.0351
+   ],
+   "exact_delta": 3,
+   "exact_delta_ci95": [
+    -2,
+    9
+   ],
+   "exact_mcnemar": {
+    "improved": 4,
+    "regressed": 1,
+    "p_value": 0.375
+   },
+   "value_mcnemar": {
+    "n": 43,
+    "improved": 4,
+    "regressed": 1,
+    "p_value": 0.375
+   }
+  },
+  "D5_gnhk_words_genuine": {
+   "n_items": 26,
+   "n_clusters": 11,
+   "cer_delta": -0.0211,
+   "cer_delta_ci95": [
+    -0.1091,
+    0.1316
+   ],
+   "exact_delta": 1,
+   "exact_delta_ci95": [
+    -2,
+    4
+   ],
+   "exact_mcnemar": {
+    "improved": 2,
+    "regressed": 1,
+    "p_value": 1.0
+   },
+   "value_mcnemar": {
+    "n": 26,
+    "improved": 2,
+    "regressed": 1,
+    "p_value": 1.0
+   }
+  },
+  "D6_syn_numeric_SYNTHETIC": {
+   "n_items": 77,
+   "n_clusters": 77,
+   "cer_delta": -0.4141,
+   "cer_delta_ci95": [
+    -0.534,
+    -0.2957
+   ],
+   "exact_delta": 17,
+   "exact_delta_ci95": [
+    10,
+    24
+   ],
+   "exact_mcnemar": {
+    "improved": 17,
+    "regressed": 0,
+    "p_value": 1.53e-05
+   },
+   "value_mcnemar": {
+    "n": 77,
+    "improved": 17,
+    "regressed": 0,
+    "p_value": 1.53e-05
+   }
+  },
+  "D6_syn_words_SYNTHETIC": {
+   "n_items": 87,
+   "n_clusters": 87,
+   "cer_delta": -0.0952,
+   "cer_delta_ci95": [
+    -0.2102,
+    0.0427
+   ],
+   "exact_delta": 0,
+   "exact_delta_ci95": [
+    0,
+    0
+   ],
+   "exact_mcnemar": {
+    "improved": 0,
+    "regressed": 0,
+    "p_value": 1.0
+   },
+   "value_mcnemar": {
+    "n": 87,
+    "improved": 0,
+    "regressed": 0,
+    "p_value": 1.0
+   }
+  },
+  "ALL_GENUINE": {
+   "n_items": 439,
+   "n_clusters": 106,
+   "cer_delta": -0.0153,
+   "cer_delta_ci95": [
+    -0.0359,
+    0.0023
+   ],
+   "exact_delta": 9,
+   "exact_delta_ci95": [
+    -2,
+    21
+   ],
+   "exact_mcnemar": {
+    "improved": 19,
+    "regressed": 10,
+    "p_value": 0.136
+   },
+   "value_mcnemar": {
+    "n": 279,
+    "improved": 8,
+    "regressed": 4,
+    "p_value": 0.388
+   }
+  },
+  "PAIRS_correct_automatic_decision": {
+   "n_labelled": 198,
+   "improved": 6,
+   "regressed": 2,
+   "p_value": 0.289
+  }
+ }
+}

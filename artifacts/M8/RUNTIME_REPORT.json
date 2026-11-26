@@ -1,0 +1,26 @@
+{
+ "baseline": {
+  "n": 621,
+  "median": 0.2509,
+  "p95": 1.0404,
+  "total": 239.97120000000007,
+  "computed_this_run": 607,
+  "wall_seconds": 243.29
+ },
+ "proposed": {
+  "n": 621,
+  "median": 0.2936,
+  "p95": 19.0139,
+  "total": 3506.4122000000007,
+  "computed_this_run": 285,
+  "wall_seconds": 3115.24
+ },
+ "proposed_preprocess_overhead": {
+  "n": 621,
+  "median": 0.0013,
+  "p95": 0.0031,
+  "total": 1.0032000000000008
+ },
+ "resized_by_proposed": 290,
+ "note": "latency = model forward + beam search per unique input; reused-cache rows keep their original latency"
+}

@@ -1,0 +1,43 @@
+{
+ "run": {
+  "entries": 621,
+  "computed_this_run": 607,
+  "wall_seconds": 243.29,
+  "checkpoint_sha256": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432"
+ },
+ "pilot": null,
+ "latency_all_unique_inputs": {
+  "n": 621,
+  "median": 0.2509,
+  "p95": 1.0404,
+  "total": 239.97120000000007
+ },
+ "latency_by_dataset": {
+  "D1": {
+   "n": 160,
+   "median": 0.261,
+   "p95": 1.3639,
+   "total": 69.7788
+  },
+  "D4": {
+   "n": 210,
+   "median": 0.274,
+   "p95": 0.3973,
+   "total": 58.7951
+  },
+  "D5": {
+   "n": 69,
+   "median": 0.1258,
+   "p95": 0.2542,
+   "total": 9.274700000000001
+  },
+  "D6": {
+   "n": 182,
+   "median": 0.18975,
+   "p95": 2.984,
+   "total": 102.12260000000002
+  }
+ },
+ "height_vs_latency_note": "latency grows with input size and decoded length (see slow list in METRICS)",
+ "cpu": "Intel Core i7-1265U, 10 torch threads, batch 1"
+}

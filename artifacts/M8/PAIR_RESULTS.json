@@ -1,0 +1,4652 @@
+{
+ "split": "test",
+ "n_pairs": 216,
+ "metrics": {
+  "gnhk_pairs_genuine_constructed": {
+   "baseline": {
+    "n_eligible": 52,
+    "unresolved": 0,
+    "confusion": {
+     "match->accept": 11,
+     "match->flag": 3,
+     "match->review": 12,
+     "mismatch->accept": 0,
+     "mismatch->flag": 10,
+     "mismatch->review": 16
+    },
+    "decisions": {
+     "review": 28,
+     "accept": 11,
+     "flag": 13
+    },
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.11538461538461539,
+    "review_rate": 0.5384615384615384,
+    "decision_coverage": 0.4615,
+    "explicit_mismatch_detection": 10,
+    "flag_or_review_prf": {
+     "tp": 26,
+     "fp": 15,
+     "fn": 0,
+     "precision": 0.6341463414634146,
+     "recall": 1.0,
+     "f1": 0.7761194029850745
+    },
+    "decided_only": {
+     "tp": 10,
+     "fp": 3,
+     "fn": 0,
+     "precision": 0.7692307692307693,
+     "recall": 1.0,
+     "f1": 0.8695652173913044,
+     "n_decided": 24
+    },
+    "auto_accepted_matches": 11,
+    "all_review": false
+   },
+   "proposed": {
+    "n_eligible": 52,
+    "unresolved": 0,
+    "confusion": {
+     "match->accept": 12,
+     "match->flag": 2,
+     "match->review": 12,
+     "mismatch->accept": 0,
+     "mismatch->flag": 13,
+     "mismatch->review": 13
+    },
+    "decisions": {
+     "review": 25,
+     "flag": 15,
+     "accept": 12
+    },
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.07692307692307693,
+    "review_rate": 0.4807692307692308,
+    "decision_coverage": 0.5192,
+    "explicit_mismatch_detection": 13,
+    "flag_or_review_prf": {
+     "tp": 26,
+     "fp": 14,
+     "fn": 0,
+     "precision": 0.65,
+     "recall": 1.0,
+     "f1": 0.787878787878788
+    },
+    "decided_only": {
+     "tp": 13,
+     "fp": 2,
+     "fn": 0,
+     "precision": 0.8666666666666667,
+     "recall": 1.0,
+     "f1": 0.9285714285714286,
+     "n_decided": 27
+    },
+    "auto_accepted_matches": 12,
+    "all_review": false
+   }
+  },
+  "syn_all_SYNTHETIC": {
+   "baseline": {
+    "n_eligible": 146,
+    "unresolved": 18,
+    "confusion": {
+     "match->accept": 0,
+     "match->flag": 0,
+     "match->review": 62,
+     "mismatch->accept": 0,
+     "mismatch->flag": 0,
+     "mismatch->review": 84
+    },
+    "decisions": {
+     "review": 164
+    },
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "review_rate": 1.0,
+    "decision_coverage": 0.0,
+    "explicit_mismatch_detection": 0,
+    "flag_or_review_prf": {
+     "tp": 84,
+     "fp": 62,
+     "fn": 0,
+     "precision": 0.5753424657534246,
+     "recall": 1.0,
+     "f1": 0.7304347826086955
+    },
+    "decided_only": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precision": null,
+     "recall": null,
+     "f1": null,
+     "n_decided": 0
+    },
+    "auto_accepted_matches": 0,
+    "all_review": true
+   },
+   "proposed": {
+    "n_eligible": 146,
+    "unresolved": 18,
+    "confusion": {
+     "match->accept": 0,
+     "match->flag": 0,
+     "match->review": 62,
+     "mismatch->accept": 0,
+     "mismatch->flag": 0,
+     "mismatch->review": 84
+    },
+    "decisions": {
+     "review": 164
+    },
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "review_rate": 1.0,
+    "decision_coverage": 0.0,
+    "explicit_mismatch_detection": 0,
+    "flag_or_review_prf": {
+     "tp": 84,
+     "fp": 62,
+     "fn": 0,
+     "precision": 0.5753424657534246,
+     "recall": 1.0,
+     "f1": 0.7304347826086955
+    },
+    "decided_only": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precision": null,
+     "recall": null,
+     "f1": null,
+     "n_decided": 0
+    },
+    "auto_accepted_matches": 0,
+    "all_review": true
+   }
+  },
+  "syn_natural_SYNTHETIC": {
+   "baseline": {
+    "n_eligible": 73,
+    "unresolved": 18,
+    "confusion": {
+     "match->accept": 0,
+     "match->flag": 0,
+     "match->review": 62,
+     "mismatch->accept": 0,
+     "mismatch->flag": 0,
+     "mismatch->review": 11
+    },
+    "decisions": {
+     "review": 91
+    },
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "review_rate": 1.0,
+    "decision_coverage": 0.0,
+    "explicit_mismatch_detection": 0,
+    "flag_or_review_prf": {
+     "tp": 11,
+     "fp": 62,
+     "fn": 0,
+     "precision": 0.1506849315068493,
+     "recall": 1.0,
+     "f1": 0.2619047619047619
+    },
+    "decided_only": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precision": null,
+     "recall": null,
+     "f1": null,
+     "n_decided": 0
+    },
+    "auto_accepted_matches": 0,
+    "all_review": true
+   },
+   "proposed": {
+    "n_eligible": 73,
+    "unresolved": 18,
+    "confusion": {
+     "match->accept": 0,
+     "match->flag": 0,
+     "match->review": 62,
+     "mismatch->accept": 0,
+     "mismatch->flag": 0,
+     "mismatch->review": 11
+    },
+    "decisions": {
+     "review": 91
+    },
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": 0.0,
+    "review_rate": 1.0,
+    "decision_coverage": 0.0,
+    "explicit_mismatch_detection": 0,
+    "flag_or_review_prf": {
+     "tp": 11,
+     "fp": 62,
+     "fn": 0,
+     "precision": 0.1506849315068493,
+     "recall": 1.0,
+     "f1": 0.2619047619047619
+    },
+    "decided_only": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precision": null,
+     "recall": null,
+     "f1": null,
+     "n_decided": 0
+    },
+    "auto_accepted_matches": 0,
+    "all_review": true
+   }
+  },
+  "syn_constructed_SYNTHETIC": {
+   "baseline": {
+    "n_eligible": 73,
+    "unresolved": 0,
+    "confusion": {
+     "match->accept": 0,
+     "match->flag": 0,
+     "match->review": 0,
+     "mismatch->accept": 0,
+     "mismatch->flag": 0,
+     "mismatch->review": 73
+    },
+    "decisions": {
+     "review": 73
+    },
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": null,
+    "review_rate": 1.0,
+    "decision_coverage": 0.0,
+    "explicit_mismatch_detection": 0,
+    "flag_or_review_prf": {
+     "tp": 73,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "decided_only": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precision": null,
+     "recall": null,
+     "f1": null,
+     "n_decided": 0
+    },
+    "auto_accepted_matches": 0,
+    "all_review": true
+   },
+   "proposed": {
+    "n_eligible": 73,
+    "unresolved": 0,
+    "confusion": {
+     "match->accept": 0,
+     "match->flag": 0,
+     "match->review": 0,
+     "mismatch->accept": 0,
+     "mismatch->flag": 0,
+     "mismatch->review": 73
+    },
+    "decisions": {
+     "review": 73
+    },
+    "incorrect_acceptance_rate": 0.0,
+    "incorrect_rejection_rate": null,
+    "review_rate": 1.0,
+    "decision_coverage": 0.0,
+    "explicit_mismatch_detection": 0,
+    "flag_or_review_prf": {
+     "tp": 73,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "decided_only": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "precision": null,
+     "recall": null,
+     "f1": null,
+     "n_decided": 0
+    },
+    "auto_accepted_matches": 0,
+    "all_review": true
+   }
+  }
+ },
+ "pairs": [
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w003_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "R",
+    "words_prediction": "One",
+    "num_value_pred": null,
+    "words_value_pred": "1",
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "R",
+    "words_prediction": "One",
+    "num_value_pred": null,
+    "words_value_pred": "1",
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w003_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "A",
+    "words_prediction": "One",
+    "num_value_pred": null,
+    "words_value_pred": "1",
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "One",
+    "num_value_pred": "2",
+    "words_value_pred": "1",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w007_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "2",
+    "words_prediction": "two",
+    "num_value_pred": "2",
+    "words_value_pred": "2",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "two",
+    "num_value_pred": "2",
+    "words_value_pred": "2",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w007_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "4",
+    "words_prediction": "two",
+    "num_value_pred": "4",
+    "words_value_pred": "2",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "4",
+    "words_prediction": "two",
+    "num_value_pred": "4",
+    "words_value_pred": "2",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w013_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "3",
+    "words_prediction": "three",
+    "num_value_pred": "3",
+    "words_value_pred": "3",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "3",
+    "words_prediction": "three",
+    "num_value_pred": "3",
+    "words_value_pred": "3",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w013_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "17",
+    "words_prediction": "three",
+    "num_value_pred": "17",
+    "words_value_pred": "3",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "17",
+    "words_prediction": "three",
+    "num_value_pred": "17",
+    "words_value_pred": "3",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w019_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "4",
+    "words_prediction": "Pow",
+    "num_value_pred": "4",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "4",
+    "words_prediction": "Fow",
+    "num_value_pred": "4",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w019_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "TH",
+    "words_prediction": "Pow",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "TH",
+    "words_prediction": "Fow",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w024_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "3",
+    "words_prediction": "Pive",
+    "num_value_pred": "3",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "5",
+    "words_prediction": "Five",
+    "num_value_pred": "5",
+    "words_value_pred": "5",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w024_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "Pive",
+    "num_value_pred": "1",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "Five",
+    "num_value_pred": "1",
+    "words_value_pred": "5",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w032_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "9",
+    "words_prediction": "Seven",
+    "num_value_pred": "9",
+    "words_value_pred": "7",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "9",
+    "words_prediction": "Seven",
+    "num_value_pred": "9",
+    "words_value_pred": "7",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w032_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "6",
+    "words_prediction": "Seven",
+    "num_value_pred": "6",
+    "words_value_pred": "7",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "6",
+    "words_prediction": "Seven",
+    "num_value_pred": "6",
+    "words_value_pred": "7",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w037_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "8",
+    "words_prediction": "Eight",
+    "num_value_pred": "8",
+    "words_value_pred": "8",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "8",
+    "words_prediction": "Eight",
+    "num_value_pred": "8",
+    "words_value_pred": "8",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w037_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "A",
+    "words_prediction": "Eight",
+    "num_value_pred": null,
+    "words_value_pred": "8",
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "Eight",
+    "num_value_pred": "2",
+    "words_value_pred": "8",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w046_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "9",
+    "words_prediction": "Bine",
+    "num_value_pred": "9",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "9",
+    "words_prediction": "Bine",
+    "num_value_pred": "9",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w046_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "Bine",
+    "num_value_pred": "1",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "Bine",
+    "num_value_pred": "1",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w053_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "10",
+    "words_prediction": "Ten",
+    "num_value_pred": "10",
+    "words_value_pred": "10",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "10",
+    "words_prediction": "Ten",
+    "num_value_pred": "10",
+    "words_value_pred": "10",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w053_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "4",
+    "words_prediction": "Ten",
+    "num_value_pred": "4",
+    "words_value_pred": "10",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "b",
+    "words_prediction": "Ten",
+    "num_value_pred": null,
+    "words_value_pred": "10",
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w057_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "H",
+    "words_prediction": "Elever",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "H",
+    "words_prediction": "Elever",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_095_w057_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "8",
+    "words_prediction": "Elever",
+    "num_value_pred": "8",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "8",
+    "words_prediction": "Elever",
+    "num_value_pred": "8",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_115_w050_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "one",
+    "num_value_pred": "1",
+    "words_value_pred": "1",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "one",
+    "num_value_pred": "1",
+    "words_value_pred": "1",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_115_w050_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "2",
+    "words_prediction": "one",
+    "num_value_pred": "2",
+    "words_value_pred": "1",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "one",
+    "num_value_pred": "2",
+    "words_value_pred": "1",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_115_w074_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "one",
+    "num_value_pred": "1",
+    "words_value_pred": "1",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "one",
+    "num_value_pred": "1",
+    "words_value_pred": "1",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AF_115_w074_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "12",
+    "words_prediction": "one",
+    "num_value_pred": "12",
+    "words_value_pred": "1",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "12",
+    "words_prediction": "one",
+    "num_value_pred": "12",
+    "words_value_pred": "1",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_030_w164_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "one",
+    "num_value_pred": "1",
+    "words_value_pred": "1",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "one",
+    "num_value_pred": "1",
+    "words_value_pred": "1",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_030_w164_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "Le",
+    "words_prediction": "one",
+    "num_value_pred": null,
+    "words_value_pred": "1",
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "Le",
+    "words_prediction": "one",
+    "num_value_pred": null,
+    "words_value_pred": "1",
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_030_w228_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "cay",
+    "num_value_pred": "1",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "ene",
+    "num_value_pred": "1",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_030_w228_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "2",
+    "words_prediction": "cay",
+    "num_value_pred": "2",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "ene",
+    "num_value_pred": "2",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_034_w070_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "2",
+    "words_prediction": "Two",
+    "num_value_pred": "2",
+    "words_value_pred": "2",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "Two",
+    "num_value_pred": "2",
+    "words_value_pred": "2",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_034_w070_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "Two",
+    "num_value_pred": "1",
+    "words_value_pred": "2",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "Two",
+    "num_value_pred": "1",
+    "words_value_pred": "2",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_034_w072_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "5",
+    "words_prediction": "Five",
+    "num_value_pred": "5",
+    "words_value_pred": "5",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "5",
+    "words_prediction": "Five",
+    "num_value_pred": "5",
+    "words_value_pred": "5",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_034_w072_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "2",
+    "words_prediction": "Five",
+    "num_value_pred": "2",
+    "words_value_pred": "5",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "Five",
+    "num_value_pred": "2",
+    "words_value_pred": "5",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_034_w108_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "one",
+    "num_value_pred": "1",
+    "words_value_pred": "1",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "ane",
+    "num_value_pred": "1",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_034_w108_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "A",
+    "words_prediction": "one",
+    "num_value_pred": null,
+    "words_value_pred": "1",
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "A",
+    "words_prediction": "ane",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_041_w008_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": ")",
+    "words_prediction": "me",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": ")",
+    "words_prediction": "one",
+    "num_value_pred": null,
+    "words_value_pred": "1",
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_041_w008_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "3",
+    "words_prediction": "me",
+    "num_value_pred": "3",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3",
+    "words_prediction": "one",
+    "num_value_pred": "3",
+    "words_value_pred": "1",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_041_w053_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "2",
+    "words_prediction": "fus",
+    "num_value_pred": "2",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "fus",
+    "num_value_pred": "2",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_041_w053_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "8D",
+    "words_prediction": "fus",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "80",
+    "words_prediction": "fus",
+    "num_value_pred": "80",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_041_w055_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "3",
+    "words_prediction": "thre",
+    "num_value_pred": "3",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "8",
+    "words_prediction": "thre",
+    "num_value_pred": "8",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_041_w055_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "thre",
+    "num_value_pred": "1",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "thre",
+    "num_value_pred": "1",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_045_w001_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "9",
+    "words_prediction": "seven",
+    "num_value_pred": "9",
+    "words_value_pred": "7",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "9",
+    "words_prediction": "seven",
+    "num_value_pred": "9",
+    "words_value_pred": "7",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_AS_045_w001_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "3",
+    "words_prediction": "seven",
+    "num_value_pred": "3",
+    "words_value_pred": "7",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "8",
+    "words_prediction": "seven",
+    "num_value_pred": "8",
+    "words_value_pred": "7",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_EU_068_w004_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "2",
+    "words_prediction": "to",
+    "num_value_pred": "2",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "bove",
+    "num_value_pred": "2",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_EU_068_w004_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "3",
+    "words_prediction": "to",
+    "num_value_pred": "3",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3",
+    "words_prediction": "bove",
+    "num_value_pred": "3",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_EU_184_w007_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "7",
+    "words_prediction": "two",
+    "num_value_pred": "7",
+    "words_value_pred": "2",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "two",
+    "num_value_pred": "2",
+    "words_value_pred": "2",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_EU_184_w007_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "9",
+    "words_prediction": "two",
+    "num_value_pred": "9",
+    "words_value_pred": "2",
+    "decision": "flag"
+   },
+   "proposed": {
+    "num_prediction": "9",
+    "words_prediction": "two",
+    "num_value_pred": "9",
+    "words_value_pred": "2",
+    "decision": "flag"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_EU_216_w024_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "B",
+    "words_prediction": "tmo",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "A",
+    "words_prediction": "tmo",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_EU_216_w024_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "the",
+    "words_prediction": "tmo",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "the",
+    "words_prediction": "tmo",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_NA_065_w083_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "Bhe",
+    "num_value_pred": "1",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "Bhe",
+    "num_value_pred": "1",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_NA_065_w083_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "A",
+    "words_prediction": "Bhe",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "2",
+    "words_prediction": "Bhe",
+    "num_value_pred": "2",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_NA_085_w072_match",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "1",
+    "words_prediction": "one",
+    "num_value_pred": "1",
+    "words_value_pred": "1",
+    "decision": "accept"
+   },
+   "proposed": {
+    "num_prediction": "1",
+    "words_prediction": "one",
+    "num_value_pred": "1",
+    "words_value_pred": "1",
+    "decision": "accept"
+   }
+  },
+  {
+   "pair_id": "P_GNHKP_eng_NA_085_w072_mismatch",
+   "dataset": "gnhk_pairs",
+   "construction": "constructed_cross_page",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "H",
+    "words_prediction": "one",
+    "num_value_pred": null,
+    "words_value_pred": "1",
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "H",
+    "words_prediction": "one",
+    "num_value_pred": null,
+    "words_value_pred": "1",
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0000",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "come",
+    "words_prediction": "and",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "goses",
+    "words_prediction": "and",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0002",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "then",
+    "words_prediction": "cominsisiming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "462",
+    "words_prediction": "istiopondnsurestention",
+    "num_value_pred": "462",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0002_x_SYN_0162",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "then",
+    "words_prediction": "ammimansiasion",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "462",
+    "words_prediction": "aroustransiondndurendendaven",
+    "num_value_pred": "462",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0005",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "incomamanssesession",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3888",
+    "words_prediction": "meserarestiondnderansisingne",
+    "num_value_pred": "3888",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0005_x_SYN_0089",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "commainising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3888",
+    "words_prediction": "insesereresionsndnsenterection",
+    "num_value_pred": "3888",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0006",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "The",
+    "words_prediction": "cummassimaran",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "The",
+    "words_prediction": "seramondnseremention",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0011",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "Bary",
+    "words_prediction": "isisemamintraminting",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "ssas",
+    "words_prediction": "imerestarestarondedementutive",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0011_x_SYN_0238",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "Bary",
+    "words_prediction": "smomen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "ssas",
+    "words_prediction": "Inouamandistisuation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0014",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "Bing",
+    "words_prediction": "mumasinamaman",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "97999",
+    "words_prediction": "merestresensoundnderantiriry",
+    "num_value_pred": "97999",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0014_x_SYN_0073",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "Bing",
+    "words_prediction": "mainsamaming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "97999",
+    "words_prediction": "isterandnderismention",
+    "num_value_pred": "97999",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0017",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "casse",
+    "words_prediction": "simatilatesesed",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "6436",
+    "words_prediction": "feroultararoundullantertisex",
+    "num_value_pred": "6436",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0017_x_SYN_0154",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "casse",
+    "words_prediction": "Intacesiseseserararesesesesed",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "6436",
+    "words_prediction": "Inderacoundendendesente",
+    "num_value_pred": "6436",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0020",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "mesissamen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "and",
+    "words_prediction": "imesiallllorambmstionsemation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0023",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "sising",
+    "words_prediction": "saresimesesentatice",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "6636",
+    "words_prediction": "sumansududuarandusuary",
+    "num_value_pred": "6636",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0023_x_SYN_0275",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "sising",
+    "words_prediction": "immaminaminama",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "6636",
+    "words_prediction": "raroustreseroundndnderensysix",
+    "num_value_pred": "6636",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0026",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "know",
+    "words_prediction": "and",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "sabor",
+    "words_prediction": "and",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0029",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "commesintion",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "ssays",
+    "words_prediction": "auaustuararanduauaduatarice",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0029_x_SYN_0119",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "mesinsomessing",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "ssays",
+    "words_prediction": "instaremesentinginting",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0030",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "sor",
+    "words_prediction": "mamminsimmeses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "9597",
+    "words_prediction": "ineseremamansondnsurenterented",
+    "num_value_pred": "9597",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0030_x_SYN_0224",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "sor",
+    "words_prediction": "ammomesimamin",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "9597",
+    "words_prediction": "susyramerondndestarinturnce",
+    "num_value_pred": "9597",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0034",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "the",
+    "words_prediction": "smmessery",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "githe",
+    "words_prediction": "Extimpmeditstimationtstsesemicafalllllaumimicimiciatiatimpmpmatsesestickitststskikikiatststicichckickimpmpmpmikikikiatststststststikikikipmpmpysysyskikikikikikikikikikikikikiststipmpmikikikikikipstst",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0034_x_SYN_0208",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "the",
+    "words_prediction": "recesementera",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "githe",
+    "words_prediction": "tuarallualutintuation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0035",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "ware",
+    "words_prediction": "ammaimasinimama",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1443",
+    "words_prediction": "memeremonstiondnderantormence",
+    "num_value_pred": "1443",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0035_x_SYN_0288",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "ware",
+    "words_prediction": "mamusumen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1443",
+    "words_prediction": "arauaustuatuauanduaractuation",
+    "num_value_pred": "1443",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0041",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "in",
+    "words_prediction": "taramimisisuntation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "grissem",
+    "words_prediction": "raroustrarouonduransterative",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0041_x_SYN_0272",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "in",
+    "words_prediction": "mussasing",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "grissem",
+    "words_prediction": "Inthdismabmatimanday",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0045",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "3242",
+    "words_prediction": "mmomomassining",
+    "num_value_pred": "3242",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3942",
+    "words_prediction": "mesestroraroundndestarontive",
+    "num_value_pred": "3942",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0045_x_SYN_0053",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "3242",
+    "words_prediction": "madinusingen",
+    "num_value_pred": "3242",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3942",
+    "words_prediction": "Juousilarandundenderictiate",
+    "num_value_pred": "3942",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0048",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "soss",
+    "words_prediction": "imaresinimation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "5558",
+    "words_prediction": "areququauausustreraramuntunderection",
+    "num_value_pred": "5558",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0048_x_SYN_0101",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "soss",
+    "words_prediction": "commisintion",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "5558",
+    "words_prediction": "impontamesntremention",
+    "num_value_pred": "5558",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0053",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "oway",
+    "words_prediction": "madinusingen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "18438",
+    "words_prediction": "Juousilarandundenderictiate",
+    "num_value_pred": "18438",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0053_x_SYN_0087",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "oway",
+    "words_prediction": "TANANISIONATID",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "18438",
+    "words_prediction": "deraranduararderection",
+    "num_value_pred": "18438",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0055",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "now",
+    "words_prediction": "actreseseses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "mose",
+    "words_prediction": "intiononturestelanting",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0055_x_SYN_0107",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "now",
+    "words_prediction": "cammiminationamangnini<sos><sos>siaiamiamam<sos><sos><sos><sos><sos><sos><sos><sos><sos><sos>mimiamiamamingngam",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "mose",
+    "words_prediction": "meroustarouondnderanturative",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0060",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "imen",
+    "words_prediction": "amunsuation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "varom",
+    "words_prediction": "susuanduareduatiatite",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0060_x_SYN_0183",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "imen",
+    "words_prediction": "mmassimamamen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "varom",
+    "words_prediction": "Inderoustararandntanderinginte",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0065",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "3000",
+    "words_prediction": "mumusinamatina",
+    "num_value_pred": "3000",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "35462",
+    "words_prediction": "merestrarerandnderantorysise",
+    "num_value_pred": "35462",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0065_x_SYN_0116",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "3000",
+    "words_prediction": "mmasominamimin",
+    "num_value_pred": "3000",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "35462",
+    "words_prediction": "roustarouondndurarententour",
+    "num_value_pred": "35462",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0071",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "Dike",
+    "words_prediction": "immisimasing",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "6422",
+    "words_prediction": "instaroustrundedention",
+    "num_value_pred": "6422",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0071_x_SYN_0260",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "Dike",
+    "words_prediction": "cammesimiseses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "6422",
+    "words_prediction": "cexesestremponsonsonterentented",
+    "num_value_pred": "6422",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0073",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "away",
+    "words_prediction": "mainsamaming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "193691",
+    "words_prediction": "isterandnderismention",
+    "num_value_pred": "193691",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0073_x_SYN_0189",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "away",
+    "words_prediction": "commesiseses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "193691",
+    "words_prediction": "crestesenstaramatses",
+    "num_value_pred": "193691",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0078",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "swo",
+    "words_prediction": "cumessesencalasiaseserysesesenac<sos><sos><sos><sos><sos><sos><sos><sos><sos><sos><sos><sos><sos>sinciararangngesesesese",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "10500",
+    "words_prediction": "aresestrararondnsestiangnsise",
+    "num_value_pred": "10500",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0078_x_SYN_0034",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "swo",
+    "words_prediction": "smmessery",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "10500",
+    "words_prediction": "Extimpmeditstimationtstsesemicafalllllaumimicimiciatiatimpmpmatsesestickitststskikikiatststicichckickimpmpmpmikikikiatststststststikikikipmpmpysysyskikikikikikikikikikikikikiststipmpmikikikikikipstst",
+    "num_value_pred": "10500",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0080",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "smomainames",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "and",
+    "words_prediction": "serestindnderemention",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0083",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "was",
+    "words_prediction": "immaremasinian",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "lages",
+    "words_prediction": "araroustrouondnduranderationk",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0083_x_SYN_0176",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "was",
+    "words_prediction": "cansimusinge",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "lages",
+    "words_prediction": "Instioundundentiation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0086",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "that",
+    "words_prediction": "cresisomention",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "that",
+    "words_prediction": "istarestndemementing",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0087",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "poson",
+    "words_prediction": "TANANISIONATID",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "20005",
+    "words_prediction": "deraranduararderection",
+    "num_value_pred": "20005",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0087_x_SYN_0174",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "poson",
+    "words_prediction": "simainsusinge",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "20005",
+    "words_prediction": "Juarararandndurandesentise",
+    "num_value_pred": "20005",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0088",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "memisising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "lastsing",
+    "words_prediction": "imisiondminstinsuation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0088_x_SYN_0246",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "cumminimasing",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "lastsing",
+    "words_prediction": "serestrerarousundenterented",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0089",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "gon",
+    "words_prediction": "commainising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "sast",
+    "words_prediction": "insesereresionsndnsenterection",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0089_x_SYN_0265",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "gon",
+    "words_prediction": "sarasamessesesicamen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "sast",
+    "words_prediction": "seseseronsonsterandndereseen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0100",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "THED",
+    "words_prediction": "with",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1846",
+    "words_prediction": "pmpmpmpmpmimimimpmpmimpmpmpmpmpmpmpmpmpmpmpmpmpmpmBITITITITITITITITITITITITITITITITIThTITITITITITINTITITITITITITITITITITITITITITITITITITITNTITITITITITITITITITITITITITITATINITITITITITINITITINompliking",
+    "num_value_pred": "1846",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0101",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "goor",
+    "words_prediction": "commisintion",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3005",
+    "words_prediction": "impontamesntremention",
+    "num_value_pred": "3005",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0101_x_SYN_0252",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "goor",
+    "words_prediction": "imestalesicale",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3005",
+    "words_prediction": "arerestararoualltandedalence",
+    "num_value_pred": "3005",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0102",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "with",
+    "words_prediction": "imiminsimation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1947",
+    "words_prediction": "reququaverousintionsomuntenderantion",
+    "num_value_pred": "1947",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0102_x_SYN_0109",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "with",
+    "words_prediction": "aressecuseded",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1947",
+    "words_prediction": "areranditidulandentione",
+    "num_value_pred": "1947",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0104",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "coos",
+    "words_prediction": "semossising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "10193",
+    "words_prediction": "insinomantionderation",
+    "num_value_pred": "10193",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0104_x_SYN_0289",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "coos",
+    "words_prediction": "tumesemssinalamandas",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "10193",
+    "words_prediction": "rarousisisoundnderantirigher",
+    "num_value_pred": "10193",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0107",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "mory",
+    "words_prediction": "cammiminationamangnini<sos><sos>siaiamiamam<sos><sos><sos><sos><sos><sos><sos><sos><sos><sos>mimiamiamamingngam",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "19245",
+    "words_prediction": "meroustarouondnderanturative",
+    "num_value_pred": "19245",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0107_x_SYN_0071",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "mory",
+    "words_prediction": "immisimasing",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "19245",
+    "words_prediction": "instaroustrundedention",
+    "num_value_pred": "19245",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0109",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "cary",
+    "words_prediction": "aressecuseded",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1801",
+    "words_prediction": "areranditidulandentione",
+    "num_value_pred": "1801",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0109_x_SYN_0253",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "cary",
+    "words_prediction": "mamansising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1801",
+    "words_prediction": "maysuamantaranderanted",
+    "num_value_pred": "1801",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0112",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "are",
+    "words_prediction": "smomansiming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "634",
+    "words_prediction": "starestandntriouration",
+    "num_value_pred": "634",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0112_x_SYN_0055",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "are",
+    "words_prediction": "actreseseses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "634",
+    "words_prediction": "intiononturestelanting",
+    "num_value_pred": "634",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0114",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "4383",
+    "words_prediction": "commisisiong",
+    "num_value_pred": "4383",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1933",
+    "words_prediction": "insinsomemonsterenting",
+    "num_value_pred": "1933",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0114_x_SYN_0045",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "4383",
+    "words_prediction": "mmomomassining",
+    "num_value_pred": "4383",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1933",
+    "words_prediction": "mesestroraroundndestarontive",
+    "num_value_pred": "1933",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0115",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "The",
+    "words_prediction": "manimamaminsemaration",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "The",
+    "words_prediction": "rarediduararanderandideright",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0116",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "thay",
+    "words_prediction": "mmasominamimin",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "M124",
+    "words_prediction": "roustarouondndurarententour",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0116_x_SYN_0181",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "thay",
+    "words_prediction": "cominsimeration",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "M124",
+    "words_prediction": "recremesencravavarereryauauquauquara<sos><sos><sos><sos><sos><sos><sos><sos>icererererereryauquary",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0117",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "coss",
+    "words_prediction": "mumanamamimin",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "19335",
+    "words_prediction": "meroustararounderandurintive",
+    "num_value_pred": "19335",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0117_x_SYN_0060",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "coss",
+    "words_prediction": "amunsuation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "19335",
+    "words_prediction": "susuanduareduatiatite",
+    "num_value_pred": "19335",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0119",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "this",
+    "words_prediction": "mesinsomessing",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1744",
+    "words_prediction": "instaremesentinginting",
+    "num_value_pred": "1744",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0119_x_SYN_0017",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "this",
+    "words_prediction": "simatilatesesed",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1744",
+    "words_prediction": "feroultararoundullantertisex",
+    "num_value_pred": "1744",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0124",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "that",
+    "words_prediction": "imaresesintiomen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "that",
+    "words_prediction": "incontamundenterented",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0126",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "smemessisises",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "INITITITIN",
+    "words_prediction": "serandendentuturence",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0129",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "imimaimansiman",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "and",
+    "words_prediction": "aroustrarouondnderandurusine",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0133",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "sing",
+    "words_prediction": "maresssesiming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "884",
+    "words_prediction": "revesestrereraresensentirence",
+    "num_value_pred": "884",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0133_x_SYN_0104",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "sing",
+    "words_prediction": "semossising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "884",
+    "words_prediction": "insinomantionderation",
+    "num_value_pred": "884",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0135",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "soal",
+    "words_prediction": "immimasintion",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "5000",
+    "words_prediction": "incomamandevintenty",
+    "num_value_pred": "5000",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0135_x_SYN_0137",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "soal",
+    "words_prediction": "smmainamaming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "5000",
+    "words_prediction": "aresestraronstisndedendmence",
+    "num_value_pred": "5000",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0136",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "Bay",
+    "words_prediction": "semasmames",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "130",
+    "words_prediction": "ironstaransterinting",
+    "num_value_pred": "130",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0136_x_SYN_0135",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "Bay",
+    "words_prediction": "immimasintion",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "130",
+    "words_prediction": "incomamandevintenty",
+    "num_value_pred": "130",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0137",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "soon",
+    "words_prediction": "smmainamaming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "5603",
+    "words_prediction": "aresestraronstisndedendmence",
+    "num_value_pred": "5603",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0137_x_SYN_0192",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "soon",
+    "words_prediction": "sammestares",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "5603",
+    "words_prediction": "standnderemation",
+    "num_value_pred": "5603",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0138",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "soor",
+    "words_prediction": "mamimintimation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3209",
+    "words_prediction": "averayrempondnsuramonterented",
+    "num_value_pred": "3209",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0138_x_SYN_0112",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "soor",
+    "words_prediction": "smomansiming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3209",
+    "words_prediction": "starestandntriouration",
+    "num_value_pred": "3209",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0146",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "sime",
+    "words_prediction": "seracomessserasining",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "yave",
+    "words_prediction": "resestrararoustoundnderensix",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0146_x_SYN_0005",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "sime",
+    "words_prediction": "incomamanssesession",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "yave",
+    "words_prediction": "meserarestiondnderansisingne",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0150",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "was",
+    "words_prediction": "with",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "whiss",
+    "words_prediction": "pmpmpmpmpmimimimpmpmimpmpmpmpmpmpmpmpmpmpmpmpmpmpmBITITITITITITITITITITITITITITITITIThTITITITITITINTITITITITITITITITITITITITITITITITITITITNTITITITITITITITITITITITITITITATINITITITITITINITITINompliking",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0154",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "sing",
+    "words_prediction": "Intacesiseseserararesesesesed",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "ssor",
+    "words_prediction": "Inderacoundendendesente",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0154_x_SYN_0133",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "sing",
+    "words_prediction": "maresssesiming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "ssor",
+    "words_prediction": "revesestrereraresensentirence",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0158",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "1002",
+    "words_prediction": "aressimentation",
+    "num_value_pred": "1002",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "15200",
+    "words_prediction": "exeranderaroundundendentince",
+    "num_value_pred": "15200",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0158_x_SYN_0078",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "1002",
+    "words_prediction": "cumessesencalasiaseserysesesenac<sos><sos><sos><sos><sos><sos><sos><sos><sos><sos><sos><sos><sos>sinciararangngesesesese",
+    "num_value_pred": "1002",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "15200",
+    "words_prediction": "aresestrararondnsestiangnsise",
+    "num_value_pred": "15200",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0162",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "comen",
+    "words_prediction": "ammimansiasion",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "180001",
+    "words_prediction": "aroustransiondndurendendaven",
+    "num_value_pred": "180001",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0162_x_SYN_0262",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "comen",
+    "words_prediction": "siminsomaining",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "180001",
+    "words_prediction": "deceserenderarararderandidence",
+    "num_value_pred": "180001",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0164",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "may",
+    "words_prediction": "sisimansiamen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "10707",
+    "words_prediction": "seraredndndeserention",
+    "num_value_pred": "10707",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0164_x_SYN_0002",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "may",
+    "words_prediction": "cominsisiming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "10707",
+    "words_prediction": "istiopondnsurestention",
+    "num_value_pred": "10707",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0167",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "gand",
+    "words_prediction": "sisesesintimen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "sose",
+    "words_prediction": "sudududatratucuatuary",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0167_x_SYN_0138",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "gand",
+    "words_prediction": "mamimintimation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "sose",
+    "words_prediction": "averayrempondnsuramonterented",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0168",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "that",
+    "words_prediction": "carremesiveses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "that",
+    "words_prediction": "cuareserestampomonconstemention",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0171",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "any",
+    "words_prediction": "mestrementamen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "GIHIT",
+    "words_prediction": "medestednderonstement",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0171_x_SYN_0048",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "any",
+    "words_prediction": "imaresinimation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "GIHIT",
+    "words_prediction": "areququauausustreraramuntunderection",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0174",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "way",
+    "words_prediction": "simainsusinge",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "4346",
+    "words_prediction": "Juarararandndurandesentise",
+    "num_value_pred": "4346",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0174_x_SYN_0117",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "way",
+    "words_prediction": "mumanamamimin",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "4346",
+    "words_prediction": "meroustararounderandurintive",
+    "num_value_pred": "4346",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0176",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "gise",
+    "words_prediction": "cansimusinge",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "5436",
+    "words_prediction": "Instioundundentiation",
+    "num_value_pred": "5436",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0176_x_SYN_0269",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "gise",
+    "words_prediction": "caratimesesen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "5436",
+    "words_prediction": "incifuestyreraronturestalentent",
+    "num_value_pred": "5436",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0180",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "are",
+    "words_prediction": "semassimiona",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "688",
+    "words_prediction": "treronsendnserymention",
+    "num_value_pred": "688",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0180_x_SYN_0244",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "are",
+    "words_prediction": "commomisising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "688",
+    "words_prediction": "inseraystreromondnserestanting",
+    "num_value_pred": "688",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0181",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "now",
+    "words_prediction": "cominsimeration",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "12759",
+    "words_prediction": "recremesencravavarereryauauquauquara<sos><sos><sos><sos><sos><sos><sos><sos>icererererereryauquary",
+    "num_value_pred": "12759",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0181_x_SYN_0023",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "now",
+    "words_prediction": "saresimesesentatice",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "12759",
+    "words_prediction": "sumansududuarandusuary",
+    "num_value_pred": "12759",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0183",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "asse",
+    "words_prediction": "mmassimamamen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "12838",
+    "words_prediction": "Inderoustararandntanderinginte",
+    "num_value_pred": "12838",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0183_x_SYN_0083",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "asse",
+    "words_prediction": "immaremasinian",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "12838",
+    "words_prediction": "araroustrouondnduranderationk",
+    "num_value_pred": "12838",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0184",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "acon",
+    "words_prediction": "comminamesina",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "absom",
+    "words_prediction": "ionstandnderantionsise",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0184_x_SYN_0230",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "acon",
+    "words_prediction": "simesemantimen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "absom",
+    "words_prediction": "seroustaresondndendenterence",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0189",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "commesiseses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "mem",
+    "words_prediction": "crestesenstaramatses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0189_x_SYN_0041",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "taramimisisuntation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "mem",
+    "words_prediction": "raroustrarouonduransterative",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0192",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "so",
+    "words_prediction": "sammestares",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "crom",
+    "words_prediction": "standnderemation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0192_x_SYN_0114",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "so",
+    "words_prediction": "commisisiong",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "crom",
+    "words_prediction": "insinsomemonsterenting",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0200",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "reseseramen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "14591",
+    "words_prediction": "tareranduludutifuction",
+    "num_value_pred": "14591",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0200_x_SYN_0102",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "imiminsimation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "14591",
+    "words_prediction": "reququaverousintionsomuntenderantion",
+    "num_value_pred": "14591",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0208",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "any",
+    "words_prediction": "recesementera",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "352",
+    "words_prediction": "tuarallualutintuation",
+    "num_value_pred": "352",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0208_x_SYN_0158",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "any",
+    "words_prediction": "aressimentation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "352",
+    "words_prediction": "exeranderaroundundendentince",
+    "num_value_pred": "352",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0209",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "giver",
+    "words_prediction": "commesimising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "they",
+    "words_prediction": "insesestreronsomonsunterection",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0209_x_SYN_0088",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "giver",
+    "words_prediction": "memisising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "they",
+    "words_prediction": "imisiondminstinsuation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0224",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "ass",
+    "words_prediction": "ammomesimamin",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "6333",
+    "words_prediction": "susyramerondndestarinturnce",
+    "num_value_pred": "6333",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0224_x_SYN_0029",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "ass",
+    "words_prediction": "commesintion",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "6333",
+    "words_prediction": "auaustuararanduauaduatarice",
+    "num_value_pred": "6333",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0230",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "may",
+    "words_prediction": "simesemantimen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "161/2",
+    "words_prediction": "seroustaresondndendenterence",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0230_x_SYN_0065",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "may",
+    "words_prediction": "mumusinamatina",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "161/2",
+    "words_prediction": "merestrarerandnderantorysise",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0238",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "away",
+    "words_prediction": "smomen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "100560",
+    "words_prediction": "Inouamandistisuation",
+    "num_value_pred": "100560",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0238_x_SYN_0200",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "away",
+    "words_prediction": "reseseramen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "100560",
+    "words_prediction": "tareranduludutifuction",
+    "num_value_pred": "100560",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0243",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "simamaminsimemation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "INITITITIN",
+    "words_prediction": "rerereveveserereserarandureranticever",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0244",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "Now",
+    "words_prediction": "commomisising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1550",
+    "words_prediction": "inseraystreromondnserestanting",
+    "num_value_pred": "1550",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0244_x_SYN_0180",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "Now",
+    "words_prediction": "semassimiona",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "1550",
+    "words_prediction": "treronsendnserymention",
+    "num_value_pred": "1550",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0246",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "more",
+    "words_prediction": "cumminimasing",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "150001",
+    "words_prediction": "serestrerarousundenterented",
+    "num_value_pred": "150001",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0246_x_SYN_0184",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "more",
+    "words_prediction": "comminamesina",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "150001",
+    "words_prediction": "ionstandnderantionsise",
+    "num_value_pred": "150001",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0252",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "Bor",
+    "words_prediction": "imestalesicale",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3501",
+    "words_prediction": "arerestararoualltandedalence",
+    "num_value_pred": "3501",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0252_x_SYN_0035",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "Bor",
+    "words_prediction": "ammaimasinimama",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "3501",
+    "words_prediction": "memeremonstiondnderantormence",
+    "num_value_pred": "3501",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0253",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "wan",
+    "words_prediction": "mamansising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "gase",
+    "words_prediction": "maysuamantaranderanted",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0253_x_SYN_0136",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "wan",
+    "words_prediction": "semasmames",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "gase",
+    "words_prediction": "ironstaransterinting",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0260",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "now",
+    "words_prediction": "cammesimiseses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "Thave",
+    "words_prediction": "cexesestremponsonsonterentented",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0260_x_SYN_0167",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "now",
+    "words_prediction": "sisesesintimen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "Thave",
+    "words_prediction": "sudududatratucuatuary",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0262",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "given",
+    "words_prediction": "siminsomaining",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "100001",
+    "words_prediction": "deceserenderarararderandidence",
+    "num_value_pred": "100001",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0262_x_SYN_0209",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "given",
+    "words_prediction": "commesimising",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "100001",
+    "words_prediction": "insesestreronsomonsunterection",
+    "num_value_pred": "100001",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0265",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "in",
+    "words_prediction": "sarasamessesesicamen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "blinge",
+    "words_prediction": "seseseronsonsterandndereseen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0265_x_SYN_0011",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "in",
+    "words_prediction": "isisemamintraminting",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "blinge",
+    "words_prediction": "imerestarestarondedementutive",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0266",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "now",
+    "words_prediction": "cancement",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "18000",
+    "words_prediction": "Indisuamalitinderation",
+    "num_value_pred": "18000",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0266_x_SYN_0146",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "now",
+    "words_prediction": "seracomessserasining",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "18000",
+    "words_prediction": "resestrararoustoundnderensix",
+    "num_value_pred": "18000",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0269",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "siss",
+    "words_prediction": "caratimesesen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "siss",
+    "words_prediction": "incifuestyreraronturestalentent",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0269_x_SYN_0266",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "siss",
+    "words_prediction": "cancement",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "siss",
+    "words_prediction": "Indisuamalitinderation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0271",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "secimessimeses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "and",
+    "words_prediction": "orestandnderonsmentem",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0272",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "the",
+    "words_prediction": "mussasing",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "2717",
+    "words_prediction": "Inthdismabmatimanday",
+    "num_value_pred": "2717",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0272_x_SYN_0171",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "the",
+    "words_prediction": "mestrementamen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "2717",
+    "words_prediction": "medestednderonstement",
+    "num_value_pred": "2717",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0275",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "15002",
+    "words_prediction": "immaminaminama",
+    "num_value_pred": "15002",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "43769",
+    "words_prediction": "raroustreseroundndnderensysix",
+    "num_value_pred": "43769",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0275_x_SYN_0014",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "15002",
+    "words_prediction": "mumasinamaman",
+    "num_value_pred": "15002",
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "43769",
+    "words_prediction": "merestresensoundnderantiriry",
+    "num_value_pred": "43769",
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0288",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "match",
+   "baseline": {
+    "num_prediction": "in",
+    "words_prediction": "mamusumen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "them",
+    "words_prediction": "arauaustuatuauanduaractuation",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0288_x_SYN_0030",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "in",
+    "words_prediction": "mamminsimmeses",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "them",
+    "words_prediction": "ineseremamansondnsurenterented",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0289",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "soon",
+    "words_prediction": "tumesemssinalamandas",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "zoom",
+    "words_prediction": "rarousisisoundnderantirigher",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0289_x_SYN_0164",
+   "dataset": "syn_cheques",
+   "construction": "constructed_cross_cheque",
+   "label": "mismatch",
+   "baseline": {
+    "num_prediction": "soon",
+    "words_prediction": "sisimansiamen",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "zoom",
+    "words_prediction": "seraredndndeserention",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0300",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "that",
+    "words_prediction": "immisiments",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "that",
+    "words_prediction": "Intrompmention",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0302",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "ammainamaming",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "INITITITIN",
+    "words_prediction": "seraronsondnsterandnsirisix",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  },
+  {
+   "pair_id": "P_SYN_0310",
+   "dataset": "syn_cheques",
+   "construction": "natural_same_cheque",
+   "label": "unresolved",
+   "baseline": {
+    "num_prediction": "and",
+    "words_prediction": "amsimusemin",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   },
+   "proposed": {
+    "num_prediction": "and",
+    "words_prediction": "auououlllluanduanduasulutice",
+    "num_value_pred": null,
+    "words_value_pred": null,
+    "decision": "review"
+   }
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+  "total": 11,
+  "passed": 11,
+  "failed": 0,
+  "results": [
+    {
+      "test": "test_numeric_ascii_digits_and_currencies",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_human_values_finite_nonnegative_two_decimals",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_duplicate_annotation_ids_not_collapsed",
+      "status": "passed",
+      "seconds": 0.002
+    },
+    {
+      "test": "test_validate_pairs_rules",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_exact_duplicate_only_cleared_for_reviewed_blank_fields",
+      "status": "passed",
+      "seconds": 0.007
+    },
+    {
+      "test": "test_ground_truth_not_from_evaluated_parser",
+      "status": "passed",
+      "seconds": 0.009
+    },
+    {
+      "test": "test_cvl_subset_integrity",
+      "status": "passed",
+      "seconds": 0.055
+    },
+    {
+      "test": "test_gnhk_pairs_respect_frozen_page_split",
+      "status": "passed",
+      "seconds": 0.001
+    },
+    {
+      "test": "test_synthetic_crops_reproducible_and_lineage",
+      "status": "passed",
+      "seconds": 0.049
+    },
+    {
+      "test": "test_full_validation_passes",
+      "status": "passed",
+      "seconds": 0.585
+    },
+    {
+      "test": "test_previous_suite_still_passes",
+      "status": "passed",
+      "seconds": 3.834
+    }
+  ]
+}

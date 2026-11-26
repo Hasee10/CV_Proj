@@ -1,0 +1,4515 @@
+{
+  "seed": 20261126,
+  "pairs": [
+    {
+      "pair_id": "P_GNHKP_eng_EU_117_w051_match",
+      "dataset": "gnhk_pairs",
+      "split": "dev",
+      "num_id": "GNHKP_eng_EU_310_w021",
+      "words_id": "GNHKP_eng_EU_117_w051",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_310",
+        "eng_EU_117"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_EU_117_w051_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "dev",
+      "num_id": "GNHKP_eng_EU_310_w016",
+      "words_id": "GNHKP_eng_EU_117_w051",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "7",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_310",
+        "eng_EU_117"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w003_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_047_w000",
+      "words_id": "GNHKP_eng_AF_095_w003",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "1",
+      "parents": [
+        "eng_AF_047",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w003_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_285_w063",
+      "words_id": "GNHKP_eng_AF_095_w003",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_285",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w007_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_NA_023_w073",
+      "words_id": "GNHKP_eng_AF_095_w007",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "2",
+      "parents": [
+        "eng_NA_023",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w007_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_041_w028",
+      "words_id": "GNHKP_eng_AF_095_w007",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "4",
+      "words_value": "2",
+      "parents": [
+        "eng_AF_041",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w013_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_167_w068",
+      "words_id": "GNHKP_eng_AF_095_w013",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "3",
+      "words_value": "3",
+      "parents": [
+        "eng_EU_167",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w013_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_083_w003",
+      "words_id": "GNHKP_eng_AF_095_w013",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "17",
+      "words_value": "3",
+      "parents": [
+        "eng_AF_083",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w019_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_137_w055",
+      "words_id": "GNHKP_eng_AF_095_w019",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "4",
+      "words_value": "4",
+      "parents": [
+        "eng_EU_137",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w019_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_047_w030",
+      "words_id": "GNHKP_eng_AF_095_w019",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "11",
+      "words_value": "4",
+      "parents": [
+        "eng_AF_047",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w024_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_285_w052",
+      "words_id": "GNHKP_eng_AF_095_w024",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "5",
+      "words_value": "5",
+      "parents": [
+        "eng_EU_285",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w024_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_272_w000",
+      "words_id": "GNHKP_eng_AF_095_w024",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "5",
+      "parents": [
+        "eng_EU_272",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w032_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_047_w015",
+      "words_id": "GNHKP_eng_AF_095_w032",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "7",
+      "words_value": "7",
+      "parents": [
+        "eng_AF_047",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w032_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_041_w057",
+      "words_id": "GNHKP_eng_AF_095_w032",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "6",
+      "words_value": "7",
+      "parents": [
+        "eng_AF_041",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w037_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_047_w022",
+      "words_id": "GNHKP_eng_AF_095_w037",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "8",
+      "words_value": "8",
+      "parents": [
+        "eng_AF_047",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w037_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_285_w063",
+      "words_id": "GNHKP_eng_AF_095_w037",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "8",
+      "parents": [
+        "eng_EU_285",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w046_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_041_w108",
+      "words_id": "GNHKP_eng_AF_095_w046",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "9",
+      "words_value": "9",
+      "parents": [
+        "eng_AF_041",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w046_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_065_w017",
+      "words_id": "GNHKP_eng_AF_095_w046",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "9",
+      "parents": [
+        "eng_AF_065",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w053_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_NA_107_w141",
+      "words_id": "GNHKP_eng_AF_095_w053",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "10",
+      "words_value": "10",
+      "parents": [
+        "eng_NA_107",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w053_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_285_w016",
+      "words_id": "GNHKP_eng_AF_095_w053",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "6",
+      "words_value": "10",
+      "parents": [
+        "eng_EU_285",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w057_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_NA_081_w000",
+      "words_id": "GNHKP_eng_AF_095_w057",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "11",
+      "words_value": "11",
+      "parents": [
+        "eng_NA_081",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_095_w057_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_NA_013_w089",
+      "words_id": "GNHKP_eng_AF_095_w057",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "18",
+      "words_value": "11",
+      "parents": [
+        "eng_NA_013",
+        "eng_AF_095"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_115_w050_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_285_w024",
+      "words_id": "GNHKP_eng_AF_115_w050",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_285",
+        "eng_AF_115"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_115_w050_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AS_030_w194",
+      "words_id": "GNHKP_eng_AF_115_w050",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "1",
+      "parents": [
+        "eng_AS_030",
+        "eng_AF_115"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_115_w074_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_094_w071",
+      "words_id": "GNHKP_eng_AF_115_w074",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_094",
+        "eng_AF_115"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AF_115_w074_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_137_w050",
+      "words_id": "GNHKP_eng_AF_115_w074",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "12",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_137",
+        "eng_AF_115"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_030_w164_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_065_w017",
+      "words_id": "GNHKP_eng_AS_030_w164",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "1",
+      "parents": [
+        "eng_AF_065",
+        "eng_AS_030"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_030_w164_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_243_w060",
+      "words_id": "GNHKP_eng_AS_030_w164",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "4",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_243",
+        "eng_AS_030"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_030_w228_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_198_w039",
+      "words_id": "GNHKP_eng_AS_030_w228",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_198",
+        "eng_AS_030"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_030_w228_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_NA_023_w024",
+      "words_id": "GNHKP_eng_AS_030_w228",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "1",
+      "parents": [
+        "eng_NA_023",
+        "eng_AS_030"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_034_w070_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_NA_054_w001",
+      "words_id": "GNHKP_eng_AS_034_w070",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "2",
+      "parents": [
+        "eng_NA_054",
+        "eng_AS_034"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_034_w070_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_NA_107_w158",
+      "words_id": "GNHKP_eng_AS_034_w070",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "2",
+      "parents": [
+        "eng_NA_107",
+        "eng_AS_034"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_034_w072_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_022_w036",
+      "words_id": "GNHKP_eng_AS_034_w072",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "5",
+      "words_value": "5",
+      "parents": [
+        "eng_AF_022",
+        "eng_AS_034"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_034_w072_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_115_w075",
+      "words_id": "GNHKP_eng_AS_034_w072",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "5",
+      "parents": [
+        "eng_AF_115",
+        "eng_AS_034"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_034_w108_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_NA_124_w002",
+      "words_id": "GNHKP_eng_AS_034_w108",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "1",
+      "parents": [
+        "eng_NA_124",
+        "eng_AS_034"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_034_w108_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AS_075_w007",
+      "words_id": "GNHKP_eng_AS_034_w108",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "4",
+      "words_value": "1",
+      "parents": [
+        "eng_AS_075",
+        "eng_AS_034"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_041_w008_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_198_w040",
+      "words_id": "GNHKP_eng_AS_041_w008",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_198",
+        "eng_AS_041"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_041_w008_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_167_w068",
+      "words_id": "GNHKP_eng_AS_041_w008",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "3",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_167",
+        "eng_AS_041"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_041_w053_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_094_w080",
+      "words_id": "GNHKP_eng_AS_041_w053",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "2",
+      "parents": [
+        "eng_EU_094",
+        "eng_AS_041"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_041_w053_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_065_w029",
+      "words_id": "GNHKP_eng_AS_041_w053",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "80",
+      "words_value": "2",
+      "parents": [
+        "eng_AF_065",
+        "eng_AS_041"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_041_w055_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_022_w022",
+      "words_id": "GNHKP_eng_AS_041_w055",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "3",
+      "words_value": "3",
+      "parents": [
+        "eng_AF_022",
+        "eng_AS_041"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_041_w055_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_038_w055",
+      "words_id": "GNHKP_eng_AS_041_w055",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "3",
+      "parents": [
+        "eng_EU_038",
+        "eng_AS_041"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_045_w001_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_047_w015",
+      "words_id": "GNHKP_eng_AS_045_w001",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "7",
+      "words_value": "7",
+      "parents": [
+        "eng_AF_047",
+        "eng_AS_045"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_AS_045_w001_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_022_w022",
+      "words_id": "GNHKP_eng_AS_045_w001",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "3",
+      "words_value": "7",
+      "parents": [
+        "eng_AF_022",
+        "eng_AS_045"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_EU_068_w004_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_077_w026",
+      "words_id": "GNHKP_eng_EU_068_w004",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "2",
+      "parents": [
+        "eng_AF_077",
+        "eng_EU_068"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_EU_068_w004_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_137_w054",
+      "words_id": "GNHKP_eng_EU_068_w004",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "3",
+      "words_value": "2",
+      "parents": [
+        "eng_EU_137",
+        "eng_EU_068"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_EU_184_w007_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_038_w051",
+      "words_id": "GNHKP_eng_EU_184_w007",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "2",
+      "parents": [
+        "eng_EU_038",
+        "eng_EU_184"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_EU_184_w007_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_047_w015",
+      "words_id": "GNHKP_eng_EU_184_w007",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "7",
+      "words_value": "2",
+      "parents": [
+        "eng_AF_047",
+        "eng_EU_184"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_EU_216_w024_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_077_w015",
+      "words_id": "GNHKP_eng_EU_216_w024",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "2",
+      "parents": [
+        "eng_AF_077",
+        "eng_EU_216"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_EU_216_w024_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_AF_041_w128",
+      "words_id": "GNHKP_eng_EU_216_w024",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "16",
+      "words_value": "2",
+      "parents": [
+        "eng_AF_041",
+        "eng_EU_216"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_NA_065_w083_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_094_w071",
+      "words_id": "GNHKP_eng_NA_065_w083",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_094",
+        "eng_NA_065"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_NA_065_w083_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_285_w063",
+      "words_id": "GNHKP_eng_NA_065_w083",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "2",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_285",
+        "eng_NA_065"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_NA_085_w072_match",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_EU_227_w040",
+      "words_id": "GNHKP_eng_NA_085_w072",
+      "label": "match",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "1",
+      "words_value": "1",
+      "parents": [
+        "eng_EU_227",
+        "eng_NA_085"
+      ]
+    },
+    {
+      "pair_id": "P_GNHKP_eng_NA_085_w072_mismatch",
+      "dataset": "gnhk_pairs",
+      "split": "test",
+      "num_id": "GNHKP_eng_NA_081_w000",
+      "words_id": "GNHKP_eng_NA_085_w072",
+      "label": "mismatch",
+      "construction": "constructed_cross_page",
+      "genuine_handwriting": true,
+      "num_value": "11",
+      "words_value": "1",
+      "parents": [
+        "eng_NA_081",
+        "eng_NA_085"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0000",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0000_num",
+      "words_id": "SYN_0000_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8963",
+      "words_value": null,
+      "parents": [
+        "SYN_0000"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0001",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0001_num",
+      "words_id": "SYN_0001_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3083",
+      "words_value": "3083",
+      "parents": [
+        "SYN_0001"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0002",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0002_num",
+      "words_id": "SYN_0002_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "462",
+      "words_value": "462",
+      "parents": [
+        "SYN_0002"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0005",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0005_num",
+      "words_id": "SYN_0005_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3388",
+      "words_value": "3388",
+      "parents": [
+        "SYN_0005"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0006",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0006_num",
+      "words_id": "SYN_0006_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "7071",
+      "parents": [
+        "SYN_0006"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0011",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0011_num",
+      "words_id": "SYN_0011_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8395",
+      "words_value": "8395",
+      "parents": [
+        "SYN_0011"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0013",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0013_num",
+      "words_id": "SYN_0013_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1737",
+      "words_value": "1737",
+      "parents": [
+        "SYN_0013"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0014",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0014_num",
+      "words_id": "SYN_0014_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9799",
+      "words_value": "3730",
+      "parents": [
+        "SYN_0014"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0017",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0017_num",
+      "words_id": "SYN_0017_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6436",
+      "words_value": "6436",
+      "parents": [
+        "SYN_0017"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0020",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0020_num",
+      "words_id": "SYN_0020_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "3217",
+      "parents": [
+        "SYN_0020"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0023",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0023_num",
+      "words_id": "SYN_0023_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6636",
+      "words_value": "6636",
+      "parents": [
+        "SYN_0023"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0026",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0026_num",
+      "words_id": "SYN_0026_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8206",
+      "words_value": null,
+      "parents": [
+        "SYN_0026"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0029",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0029_num",
+      "words_id": "SYN_0029_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5523",
+      "words_value": "5523",
+      "parents": [
+        "SYN_0029"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0030",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0030_num",
+      "words_id": "SYN_0030_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9597",
+      "words_value": "9597",
+      "parents": [
+        "SYN_0030"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0031",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0031_num",
+      "words_id": "SYN_0031_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8312",
+      "words_value": "8312",
+      "parents": [
+        "SYN_0031"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0032",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0032_num",
+      "words_id": "SYN_0032_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6815",
+      "words_value": "6815",
+      "parents": [
+        "SYN_0032"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0034",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0034_num",
+      "words_id": "SYN_0034_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8442",
+      "words_value": "8442",
+      "parents": [
+        "SYN_0034"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0035",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0035_num",
+      "words_id": "SYN_0035_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1143",
+      "words_value": "1143",
+      "parents": [
+        "SYN_0035"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0036",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0036_num",
+      "words_id": "SYN_0036_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9981",
+      "words_value": "9981",
+      "parents": [
+        "SYN_0036"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0037",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0037_num",
+      "words_id": "SYN_0037_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5073",
+      "words_value": "5073",
+      "parents": [
+        "SYN_0037"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0041",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0041_num",
+      "words_id": "SYN_0041_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4255",
+      "words_value": "4255",
+      "parents": [
+        "SYN_0041"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0042",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0042_num",
+      "words_id": "SYN_0042_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3187",
+      "words_value": "3187",
+      "parents": [
+        "SYN_0042"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0045",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0045_num",
+      "words_id": "SYN_0045_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3442",
+      "words_value": "3442",
+      "parents": [
+        "SYN_0045"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0048",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0048_num",
+      "words_id": "SYN_0048_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5558",
+      "words_value": "5558",
+      "parents": [
+        "SYN_0048"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0051",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0051_num",
+      "words_id": "SYN_0051_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3490",
+      "words_value": "3490",
+      "parents": [
+        "SYN_0051"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0053",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0053_num",
+      "words_id": "SYN_0053_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8433",
+      "words_value": "5998",
+      "parents": [
+        "SYN_0053"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0055",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0055_num",
+      "words_id": "SYN_0055_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1550",
+      "words_value": "1550",
+      "parents": [
+        "SYN_0055"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0060",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0060_num",
+      "words_id": "SYN_0060_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6908",
+      "words_value": "6908",
+      "parents": [
+        "SYN_0060"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0065",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0065_num",
+      "words_id": "SYN_0065_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3546",
+      "words_value": "3546",
+      "parents": [
+        "SYN_0065"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0068",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0068_num",
+      "words_id": "SYN_0068_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8955",
+      "words_value": "8955",
+      "parents": [
+        "SYN_0068"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0071",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0071_num",
+      "words_id": "SYN_0071_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6422",
+      "words_value": "6422",
+      "parents": [
+        "SYN_0071"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0073",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0073_num",
+      "words_id": "SYN_0073_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "936",
+      "words_value": "936",
+      "parents": [
+        "SYN_0073"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0078",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0078_num",
+      "words_id": "SYN_0078_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7050",
+      "words_value": "5686",
+      "parents": [
+        "SYN_0078"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0080",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0080_num",
+      "words_id": "SYN_0080_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "790",
+      "parents": [
+        "SYN_0080"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0083",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0083_num",
+      "words_id": "SYN_0083_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4448",
+      "words_value": "4448",
+      "parents": [
+        "SYN_0083"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0086",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0086_num",
+      "words_id": "SYN_0086_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "503",
+      "parents": [
+        "SYN_0086"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0087",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0087_num",
+      "words_id": "SYN_0087_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2005",
+      "words_value": "2005",
+      "parents": [
+        "SYN_0087"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0088",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0088_num",
+      "words_id": "SYN_0088_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9587",
+      "words_value": "9587",
+      "parents": [
+        "SYN_0088"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0089",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0089_num",
+      "words_id": "SYN_0089_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8987",
+      "words_value": "8987",
+      "parents": [
+        "SYN_0089"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0097",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0097_num",
+      "words_id": "SYN_0097_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9355",
+      "words_value": "9355",
+      "parents": [
+        "SYN_0097"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0099",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0099_num",
+      "words_id": "SYN_0099_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3750",
+      "words_value": "3750",
+      "parents": [
+        "SYN_0099"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0100",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0100_num",
+      "words_id": "SYN_0100_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7846",
+      "words_value": null,
+      "parents": [
+        "SYN_0100"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0101",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0101_num",
+      "words_id": "SYN_0101_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3005",
+      "words_value": "3005",
+      "parents": [
+        "SYN_0101"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0102",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0102_num",
+      "words_id": "SYN_0102_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2947",
+      "words_value": "2947",
+      "parents": [
+        "SYN_0102"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0104",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0104_num",
+      "words_id": "SYN_0104_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6193",
+      "words_value": "6193",
+      "parents": [
+        "SYN_0104"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0107",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0107_num",
+      "words_id": "SYN_0107_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9245",
+      "words_value": "9245",
+      "parents": [
+        "SYN_0107"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0109",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0109_num",
+      "words_id": "SYN_0109_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1801",
+      "words_value": "1801",
+      "parents": [
+        "SYN_0109"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0112",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0112_num",
+      "words_id": "SYN_0112_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "634",
+      "words_value": "634",
+      "parents": [
+        "SYN_0112"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0113",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0113_num",
+      "words_id": "SYN_0113_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4981",
+      "words_value": "4981",
+      "parents": [
+        "SYN_0113"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0114",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0114_num",
+      "words_id": "SYN_0114_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4933",
+      "words_value": "4933",
+      "parents": [
+        "SYN_0114"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0115",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0115_num",
+      "words_id": "SYN_0115_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "5858",
+      "parents": [
+        "SYN_0115"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0116",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0116_num",
+      "words_id": "SYN_0116_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2124",
+      "words_value": "2124",
+      "parents": [
+        "SYN_0116"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0117",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0117_num",
+      "words_id": "SYN_0117_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9335",
+      "words_value": "9335",
+      "parents": [
+        "SYN_0117"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0119",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0119_num",
+      "words_id": "SYN_0119_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1714",
+      "words_value": "398",
+      "parents": [
+        "SYN_0119"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0121",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0121_num",
+      "words_id": "SYN_0121_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4374",
+      "words_value": "4374",
+      "parents": [
+        "SYN_0121"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0124",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0124_num",
+      "words_id": "SYN_0124_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "3889",
+      "parents": [
+        "SYN_0124"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0125",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0125_num",
+      "words_id": "SYN_0125_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4092",
+      "words_value": "3712",
+      "parents": [
+        "SYN_0125"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0126",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0126_num",
+      "words_id": "SYN_0126_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "735",
+      "parents": [
+        "SYN_0126"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0129",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0129_num",
+      "words_id": "SYN_0129_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "4769",
+      "parents": [
+        "SYN_0129"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0133",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0133_num",
+      "words_id": "SYN_0133_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "884",
+      "words_value": "275",
+      "parents": [
+        "SYN_0133"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0134",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0134_num",
+      "words_id": "SYN_0134_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5790",
+      "words_value": "5790",
+      "parents": [
+        "SYN_0134"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0135",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0135_num",
+      "words_id": "SYN_0135_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5090",
+      "words_value": "5090",
+      "parents": [
+        "SYN_0135"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0136",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0136_num",
+      "words_id": "SYN_0136_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "430",
+      "words_value": "430",
+      "parents": [
+        "SYN_0136"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0137",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0137_num",
+      "words_id": "SYN_0137_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5603",
+      "words_value": "5603",
+      "parents": [
+        "SYN_0137"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0138",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0138_num",
+      "words_id": "SYN_0138_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3209",
+      "words_value": "3209",
+      "parents": [
+        "SYN_0138"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0140",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0140_num",
+      "words_id": "SYN_0140_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "3416",
+      "parents": [
+        "SYN_0140"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0144",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0144_num",
+      "words_id": "SYN_0144_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1173",
+      "words_value": "1173",
+      "parents": [
+        "SYN_0144"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0146",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0146_num",
+      "words_id": "SYN_0146_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4496",
+      "words_value": "4496",
+      "parents": [
+        "SYN_0146"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0150",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0150_num",
+      "words_id": "SYN_0150_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6255",
+      "words_value": null,
+      "parents": [
+        "SYN_0150"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0154",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0154_num",
+      "words_id": "SYN_0154_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5808",
+      "words_value": "5808",
+      "parents": [
+        "SYN_0154"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0156",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0156_num",
+      "words_id": "SYN_0156_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4319",
+      "words_value": "4319",
+      "parents": [
+        "SYN_0156"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0157",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0157_num",
+      "words_id": "SYN_0157_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6586",
+      "words_value": "6586",
+      "parents": [
+        "SYN_0157"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0158",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0158_num",
+      "words_id": "SYN_0158_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1520",
+      "words_value": "1520",
+      "parents": [
+        "SYN_0158"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0162",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0162_num",
+      "words_id": "SYN_0162_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8907",
+      "words_value": "8907",
+      "parents": [
+        "SYN_0162"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0164",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0164_num",
+      "words_id": "SYN_0164_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "707",
+      "words_value": "707",
+      "parents": [
+        "SYN_0164"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0167",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0167_num",
+      "words_id": "SYN_0167_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3040",
+      "words_value": "643",
+      "parents": [
+        "SYN_0167"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0168",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0168_num",
+      "words_id": "SYN_0168_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "5040",
+      "parents": [
+        "SYN_0168"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0171",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0171_num",
+      "words_id": "SYN_0171_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6171",
+      "words_value": "940",
+      "parents": [
+        "SYN_0171"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0174",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0174_num",
+      "words_id": "SYN_0174_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4376",
+      "words_value": "4376",
+      "parents": [
+        "SYN_0174"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0176",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0176_num",
+      "words_id": "SYN_0176_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5436",
+      "words_value": "5436",
+      "parents": [
+        "SYN_0176"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0180",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0180_num",
+      "words_id": "SYN_0180_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "688",
+      "words_value": "479",
+      "parents": [
+        "SYN_0180"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0181",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0181_num",
+      "words_id": "SYN_0181_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2759",
+      "words_value": "2759",
+      "parents": [
+        "SYN_0181"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0183",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0183_num",
+      "words_id": "SYN_0183_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2838",
+      "words_value": "2838",
+      "parents": [
+        "SYN_0183"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0184",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0184_num",
+      "words_id": "SYN_0184_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9680",
+      "words_value": "8186",
+      "parents": [
+        "SYN_0184"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0188",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0188_num",
+      "words_id": "SYN_0188_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "137",
+      "words_value": "87",
+      "parents": [
+        "SYN_0188"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0189",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0189_num",
+      "words_id": "SYN_0189_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1270",
+      "words_value": "104",
+      "parents": [
+        "SYN_0189"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0192",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0192_num",
+      "words_id": "SYN_0192_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "610",
+      "words_value": "610",
+      "parents": [
+        "SYN_0192"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0198",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0198_num",
+      "words_id": "SYN_0198_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4820",
+      "words_value": "4820",
+      "parents": [
+        "SYN_0198"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0200",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0200_num",
+      "words_id": "SYN_0200_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "459",
+      "words_value": "459",
+      "parents": [
+        "SYN_0200"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0202",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0202_num",
+      "words_id": "SYN_0202_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8939",
+      "words_value": "8939",
+      "parents": [
+        "SYN_0202"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0205",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0205_num",
+      "words_id": "SYN_0205_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1435",
+      "words_value": "1435",
+      "parents": [
+        "SYN_0205"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0208",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0208_num",
+      "words_id": "SYN_0208_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "532",
+      "words_value": "532",
+      "parents": [
+        "SYN_0208"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0209",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0209_num",
+      "words_id": "SYN_0209_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7246",
+      "words_value": "7246",
+      "parents": [
+        "SYN_0209"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0219",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0219_num",
+      "words_id": "SYN_0219_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "399",
+      "parents": [
+        "SYN_0219"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0224",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0224_num",
+      "words_id": "SYN_0224_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6333",
+      "words_value": "6333",
+      "parents": [
+        "SYN_0224"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0226",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0226_num",
+      "words_id": "SYN_0226_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9986",
+      "words_value": "9558",
+      "parents": [
+        "SYN_0226"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0230",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0230_num",
+      "words_id": "SYN_0230_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6112",
+      "words_value": "6112",
+      "parents": [
+        "SYN_0230"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0233",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0233_num",
+      "words_id": "SYN_0233_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4731",
+      "words_value": "4731",
+      "parents": [
+        "SYN_0233"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0238",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0238_num",
+      "words_id": "SYN_0238_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6056",
+      "words_value": "6056",
+      "parents": [
+        "SYN_0238"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0243",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0243_num",
+      "words_id": "SYN_0243_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "7711",
+      "parents": [
+        "SYN_0243"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0244",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0244_num",
+      "words_id": "SYN_0244_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1550",
+      "words_value": "1550",
+      "parents": [
+        "SYN_0244"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0246",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0246_num",
+      "words_id": "SYN_0246_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7500",
+      "words_value": "7500",
+      "parents": [
+        "SYN_0246"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0249",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0249_num",
+      "words_id": "SYN_0249_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9929",
+      "words_value": "9929",
+      "parents": [
+        "SYN_0249"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0252",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0252_num",
+      "words_id": "SYN_0252_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3501",
+      "words_value": "3501",
+      "parents": [
+        "SYN_0252"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0253",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0253_num",
+      "words_id": "SYN_0253_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9286",
+      "words_value": "9286",
+      "parents": [
+        "SYN_0253"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0254",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0254_num",
+      "words_id": "SYN_0254_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "733",
+      "parents": [
+        "SYN_0254"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0258",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0258_num",
+      "words_id": "SYN_0258_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6362",
+      "words_value": "6362",
+      "parents": [
+        "SYN_0258"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0260",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0260_num",
+      "words_id": "SYN_0260_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7100",
+      "words_value": "7100",
+      "parents": [
+        "SYN_0260"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0261",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0261_num",
+      "words_id": "SYN_0261_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2610",
+      "words_value": "2610",
+      "parents": [
+        "SYN_0261"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0262",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0262_num",
+      "words_id": "SYN_0262_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7606",
+      "words_value": "7606",
+      "parents": [
+        "SYN_0262"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0263",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0263_num",
+      "words_id": "SYN_0263_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3203",
+      "words_value": "3203",
+      "parents": [
+        "SYN_0263"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0265",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0265_num",
+      "words_id": "SYN_0265_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6119",
+      "words_value": "6119",
+      "parents": [
+        "SYN_0265"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0266",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0266_num",
+      "words_id": "SYN_0266_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7800",
+      "words_value": "7800",
+      "parents": [
+        "SYN_0266"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0269",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0269_num",
+      "words_id": "SYN_0269_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5285",
+      "words_value": "5285",
+      "parents": [
+        "SYN_0269"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0271",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0271_num",
+      "words_id": "SYN_0271_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "149",
+      "parents": [
+        "SYN_0271"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0272",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0272_num",
+      "words_id": "SYN_0272_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "271",
+      "words_value": "271",
+      "parents": [
+        "SYN_0272"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0273",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0273_num",
+      "words_id": "SYN_0273_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5369",
+      "words_value": null,
+      "parents": [
+        "SYN_0273"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0275",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0275_num",
+      "words_id": "SYN_0275_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4376",
+      "words_value": "4376",
+      "parents": [
+        "SYN_0275"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0285",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0285_num",
+      "words_id": "SYN_0285_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "221",
+      "parents": [
+        "SYN_0285"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0287",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0287_num",
+      "words_id": "SYN_0287_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8304",
+      "words_value": "8304",
+      "parents": [
+        "SYN_0287"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0288",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0288_num",
+      "words_id": "SYN_0288_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4212",
+      "words_value": "4212",
+      "parents": [
+        "SYN_0288"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0289",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0289_num",
+      "words_id": "SYN_0289_words",
+      "label": "mismatch",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7002",
+      "words_value": "4838",
+      "parents": [
+        "SYN_0289"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0294",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0294_num",
+      "words_id": "SYN_0294_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2181",
+      "words_value": null,
+      "parents": [
+        "SYN_0294"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0299",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0299_num",
+      "words_id": "SYN_0299_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5220",
+      "words_value": "5220",
+      "parents": [
+        "SYN_0299"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0300",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0300_num",
+      "words_id": "SYN_0300_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "24",
+      "parents": [
+        "SYN_0300"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0301",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0301_num",
+      "words_id": "SYN_0301_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "248",
+      "words_value": "248",
+      "parents": [
+        "SYN_0301"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0302",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0302_num",
+      "words_id": "SYN_0302_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "6136",
+      "parents": [
+        "SYN_0302"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0304",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0304_num",
+      "words_id": "SYN_0304_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "957",
+      "words_value": "957",
+      "parents": [
+        "SYN_0304"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0308",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0308_num",
+      "words_id": "SYN_0308_words",
+      "label": "match",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5227",
+      "words_value": "5227",
+      "parents": [
+        "SYN_0308"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0310",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0310_num",
+      "words_id": "SYN_0310_words",
+      "label": "unresolved",
+      "construction": "natural_same_cheque",
+      "genuine_handwriting": false,
+      "num_value": null,
+      "words_value": "1779",
+      "parents": [
+        "SYN_0310"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0001_x_SYN_0125",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0001_num",
+      "words_id": "SYN_0125_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3083",
+      "words_value": "3712",
+      "parents": [
+        "SYN_0001",
+        "SYN_0125"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0013_x_SYN_0156",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0013_num",
+      "words_id": "SYN_0156_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1737",
+      "words_value": "4319",
+      "parents": [
+        "SYN_0013",
+        "SYN_0156"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0031_x_SYN_0263",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0031_num",
+      "words_id": "SYN_0263_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8312",
+      "words_value": "3203",
+      "parents": [
+        "SYN_0031",
+        "SYN_0263"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0032_x_SYN_0037",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0032_num",
+      "words_id": "SYN_0037_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6815",
+      "words_value": "5073",
+      "parents": [
+        "SYN_0032",
+        "SYN_0037"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0036_x_SYN_0097",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0036_num",
+      "words_id": "SYN_0097_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9981",
+      "words_value": "9355",
+      "parents": [
+        "SYN_0036",
+        "SYN_0097"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0037_x_SYN_0157",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0037_num",
+      "words_id": "SYN_0157_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5073",
+      "words_value": "6586",
+      "parents": [
+        "SYN_0037",
+        "SYN_0157"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0042_x_SYN_0301",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0042_num",
+      "words_id": "SYN_0301_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3187",
+      "words_value": "248",
+      "parents": [
+        "SYN_0042",
+        "SYN_0301"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0051_x_SYN_0304",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0051_num",
+      "words_id": "SYN_0304_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3490",
+      "words_value": "957",
+      "parents": [
+        "SYN_0051",
+        "SYN_0304"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0068_x_SYN_0233",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0068_num",
+      "words_id": "SYN_0233_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8955",
+      "words_value": "4731",
+      "parents": [
+        "SYN_0068",
+        "SYN_0233"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0097_x_SYN_0113",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0097_num",
+      "words_id": "SYN_0113_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9355",
+      "words_value": "4981",
+      "parents": [
+        "SYN_0097",
+        "SYN_0113"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0099_x_SYN_0261",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0099_num",
+      "words_id": "SYN_0261_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3750",
+      "words_value": "2610",
+      "parents": [
+        "SYN_0099",
+        "SYN_0261"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0113_x_SYN_0261",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0113_num",
+      "words_id": "SYN_0261_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4981",
+      "words_value": "2610",
+      "parents": [
+        "SYN_0113",
+        "SYN_0261"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0121_x_SYN_0144",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0121_num",
+      "words_id": "SYN_0144_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4374",
+      "words_value": "1173",
+      "parents": [
+        "SYN_0121",
+        "SYN_0144"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0125_x_SYN_0121",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0125_num",
+      "words_id": "SYN_0121_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4092",
+      "words_value": "4374",
+      "parents": [
+        "SYN_0125",
+        "SYN_0121"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0134_x_SYN_0249",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0134_num",
+      "words_id": "SYN_0249_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5790",
+      "words_value": "9929",
+      "parents": [
+        "SYN_0134",
+        "SYN_0249"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0144_x_SYN_0198",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0144_num",
+      "words_id": "SYN_0198_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1173",
+      "words_value": "4820",
+      "parents": [
+        "SYN_0144",
+        "SYN_0198"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0156_x_SYN_0001",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0156_num",
+      "words_id": "SYN_0001_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4319",
+      "words_value": "3083",
+      "parents": [
+        "SYN_0156",
+        "SYN_0001"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0157_x_SYN_0287",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0157_num",
+      "words_id": "SYN_0287_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6586",
+      "words_value": "8304",
+      "parents": [
+        "SYN_0157",
+        "SYN_0287"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0188_x_SYN_0202",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0188_num",
+      "words_id": "SYN_0202_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "137",
+      "words_value": "8939",
+      "parents": [
+        "SYN_0188",
+        "SYN_0202"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0198_x_SYN_0205",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0198_num",
+      "words_id": "SYN_0205_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4820",
+      "words_value": "1435",
+      "parents": [
+        "SYN_0198",
+        "SYN_0205"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0202_x_SYN_0013",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0202_num",
+      "words_id": "SYN_0013_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8939",
+      "words_value": "1737",
+      "parents": [
+        "SYN_0202",
+        "SYN_0013"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0205_x_SYN_0188",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0205_num",
+      "words_id": "SYN_0188_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1435",
+      "words_value": "87",
+      "parents": [
+        "SYN_0205",
+        "SYN_0188"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0226_x_SYN_0308",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0226_num",
+      "words_id": "SYN_0308_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9986",
+      "words_value": "5227",
+      "parents": [
+        "SYN_0226",
+        "SYN_0308"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0233_x_SYN_0299",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0233_num",
+      "words_id": "SYN_0299_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4731",
+      "words_value": "5220",
+      "parents": [
+        "SYN_0233",
+        "SYN_0299"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0249_x_SYN_0032",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0249_num",
+      "words_id": "SYN_0032_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9929",
+      "words_value": "6815",
+      "parents": [
+        "SYN_0249",
+        "SYN_0032"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0258_x_SYN_0031",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0258_num",
+      "words_id": "SYN_0031_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6362",
+      "words_value": "8312",
+      "parents": [
+        "SYN_0258",
+        "SYN_0031"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0261_x_SYN_0051",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0261_num",
+      "words_id": "SYN_0051_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2610",
+      "words_value": "3490",
+      "parents": [
+        "SYN_0261",
+        "SYN_0051"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0263_x_SYN_0134",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0263_num",
+      "words_id": "SYN_0134_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3203",
+      "words_value": "5790",
+      "parents": [
+        "SYN_0263",
+        "SYN_0134"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0287_x_SYN_0036",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0287_num",
+      "words_id": "SYN_0036_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8304",
+      "words_value": "9981",
+      "parents": [
+        "SYN_0287",
+        "SYN_0036"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0299_x_SYN_0226",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0299_num",
+      "words_id": "SYN_0226_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5220",
+      "words_value": "9558",
+      "parents": [
+        "SYN_0299",
+        "SYN_0226"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0301_x_SYN_0258",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0301_num",
+      "words_id": "SYN_0258_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "248",
+      "words_value": "6362",
+      "parents": [
+        "SYN_0301",
+        "SYN_0258"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0304_x_SYN_0068",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0304_num",
+      "words_id": "SYN_0068_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "957",
+      "words_value": "8955",
+      "parents": [
+        "SYN_0304",
+        "SYN_0068"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0308_x_SYN_0042",
+      "dataset": "syn_cheques",
+      "split": "dev",
+      "num_id": "SYN_0308_num",
+      "words_id": "SYN_0042_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5227",
+      "words_value": "3187",
+      "parents": [
+        "SYN_0308",
+        "SYN_0042"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0002_x_SYN_0162",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0002_num",
+      "words_id": "SYN_0162_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "462",
+      "words_value": "8907",
+      "parents": [
+        "SYN_0002",
+        "SYN_0162"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0005_x_SYN_0089",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0005_num",
+      "words_id": "SYN_0089_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3388",
+      "words_value": "8987",
+      "parents": [
+        "SYN_0005",
+        "SYN_0089"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0011_x_SYN_0238",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0011_num",
+      "words_id": "SYN_0238_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8395",
+      "words_value": "6056",
+      "parents": [
+        "SYN_0011",
+        "SYN_0238"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0014_x_SYN_0073",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0014_num",
+      "words_id": "SYN_0073_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9799",
+      "words_value": "936",
+      "parents": [
+        "SYN_0014",
+        "SYN_0073"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0017_x_SYN_0154",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0017_num",
+      "words_id": "SYN_0154_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6436",
+      "words_value": "5808",
+      "parents": [
+        "SYN_0017",
+        "SYN_0154"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0023_x_SYN_0275",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0023_num",
+      "words_id": "SYN_0275_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6636",
+      "words_value": "4376",
+      "parents": [
+        "SYN_0023",
+        "SYN_0275"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0029_x_SYN_0119",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0029_num",
+      "words_id": "SYN_0119_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5523",
+      "words_value": "398",
+      "parents": [
+        "SYN_0029",
+        "SYN_0119"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0030_x_SYN_0224",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0030_num",
+      "words_id": "SYN_0224_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9597",
+      "words_value": "6333",
+      "parents": [
+        "SYN_0030",
+        "SYN_0224"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0034_x_SYN_0208",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0034_num",
+      "words_id": "SYN_0208_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8442",
+      "words_value": "532",
+      "parents": [
+        "SYN_0034",
+        "SYN_0208"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0035_x_SYN_0288",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0035_num",
+      "words_id": "SYN_0288_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1143",
+      "words_value": "4212",
+      "parents": [
+        "SYN_0035",
+        "SYN_0288"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0041_x_SYN_0272",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0041_num",
+      "words_id": "SYN_0272_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4255",
+      "words_value": "271",
+      "parents": [
+        "SYN_0041",
+        "SYN_0272"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0045_x_SYN_0053",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0045_num",
+      "words_id": "SYN_0053_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3442",
+      "words_value": "5998",
+      "parents": [
+        "SYN_0045",
+        "SYN_0053"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0048_x_SYN_0101",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0048_num",
+      "words_id": "SYN_0101_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5558",
+      "words_value": "3005",
+      "parents": [
+        "SYN_0048",
+        "SYN_0101"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0053_x_SYN_0087",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0053_num",
+      "words_id": "SYN_0087_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8433",
+      "words_value": "2005",
+      "parents": [
+        "SYN_0053",
+        "SYN_0087"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0055_x_SYN_0107",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0055_num",
+      "words_id": "SYN_0107_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1550",
+      "words_value": "9245",
+      "parents": [
+        "SYN_0055",
+        "SYN_0107"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0060_x_SYN_0183",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0060_num",
+      "words_id": "SYN_0183_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6908",
+      "words_value": "2838",
+      "parents": [
+        "SYN_0060",
+        "SYN_0183"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0065_x_SYN_0116",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0065_num",
+      "words_id": "SYN_0116_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3546",
+      "words_value": "2124",
+      "parents": [
+        "SYN_0065",
+        "SYN_0116"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0071_x_SYN_0260",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0071_num",
+      "words_id": "SYN_0260_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6422",
+      "words_value": "7100",
+      "parents": [
+        "SYN_0071",
+        "SYN_0260"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0073_x_SYN_0189",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0073_num",
+      "words_id": "SYN_0189_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "936",
+      "words_value": "104",
+      "parents": [
+        "SYN_0073",
+        "SYN_0189"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0078_x_SYN_0034",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0078_num",
+      "words_id": "SYN_0034_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7050",
+      "words_value": "8442",
+      "parents": [
+        "SYN_0078",
+        "SYN_0034"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0083_x_SYN_0176",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0083_num",
+      "words_id": "SYN_0176_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4448",
+      "words_value": "5436",
+      "parents": [
+        "SYN_0083",
+        "SYN_0176"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0087_x_SYN_0174",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0087_num",
+      "words_id": "SYN_0174_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2005",
+      "words_value": "4376",
+      "parents": [
+        "SYN_0087",
+        "SYN_0174"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0088_x_SYN_0246",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0088_num",
+      "words_id": "SYN_0246_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9587",
+      "words_value": "7500",
+      "parents": [
+        "SYN_0088",
+        "SYN_0246"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0089_x_SYN_0265",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0089_num",
+      "words_id": "SYN_0265_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8987",
+      "words_value": "6119",
+      "parents": [
+        "SYN_0089",
+        "SYN_0265"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0101_x_SYN_0252",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0101_num",
+      "words_id": "SYN_0252_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3005",
+      "words_value": "3501",
+      "parents": [
+        "SYN_0101",
+        "SYN_0252"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0102_x_SYN_0109",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0102_num",
+      "words_id": "SYN_0109_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2947",
+      "words_value": "1801",
+      "parents": [
+        "SYN_0102",
+        "SYN_0109"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0104_x_SYN_0289",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0104_num",
+      "words_id": "SYN_0289_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6193",
+      "words_value": "4838",
+      "parents": [
+        "SYN_0104",
+        "SYN_0289"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0107_x_SYN_0071",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0107_num",
+      "words_id": "SYN_0071_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9245",
+      "words_value": "6422",
+      "parents": [
+        "SYN_0107",
+        "SYN_0071"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0109_x_SYN_0253",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0109_num",
+      "words_id": "SYN_0253_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1801",
+      "words_value": "9286",
+      "parents": [
+        "SYN_0109",
+        "SYN_0253"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0112_x_SYN_0055",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0112_num",
+      "words_id": "SYN_0055_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "634",
+      "words_value": "1550",
+      "parents": [
+        "SYN_0112",
+        "SYN_0055"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0114_x_SYN_0045",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0114_num",
+      "words_id": "SYN_0045_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4933",
+      "words_value": "3442",
+      "parents": [
+        "SYN_0114",
+        "SYN_0045"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0116_x_SYN_0181",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0116_num",
+      "words_id": "SYN_0181_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2124",
+      "words_value": "2759",
+      "parents": [
+        "SYN_0116",
+        "SYN_0181"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0117_x_SYN_0060",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0117_num",
+      "words_id": "SYN_0060_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9335",
+      "words_value": "6908",
+      "parents": [
+        "SYN_0117",
+        "SYN_0060"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0119_x_SYN_0017",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0119_num",
+      "words_id": "SYN_0017_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1714",
+      "words_value": "6436",
+      "parents": [
+        "SYN_0119",
+        "SYN_0017"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0133_x_SYN_0104",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0133_num",
+      "words_id": "SYN_0104_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "884",
+      "words_value": "6193",
+      "parents": [
+        "SYN_0133",
+        "SYN_0104"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0135_x_SYN_0137",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0135_num",
+      "words_id": "SYN_0137_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5090",
+      "words_value": "5603",
+      "parents": [
+        "SYN_0135",
+        "SYN_0137"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0136_x_SYN_0135",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0136_num",
+      "words_id": "SYN_0135_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "430",
+      "words_value": "5090",
+      "parents": [
+        "SYN_0136",
+        "SYN_0135"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0137_x_SYN_0192",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0137_num",
+      "words_id": "SYN_0192_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5603",
+      "words_value": "610",
+      "parents": [
+        "SYN_0137",
+        "SYN_0192"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0138_x_SYN_0112",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0138_num",
+      "words_id": "SYN_0112_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3209",
+      "words_value": "634",
+      "parents": [
+        "SYN_0138",
+        "SYN_0112"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0146_x_SYN_0005",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0146_num",
+      "words_id": "SYN_0005_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4496",
+      "words_value": "3388",
+      "parents": [
+        "SYN_0146",
+        "SYN_0005"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0154_x_SYN_0133",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0154_num",
+      "words_id": "SYN_0133_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5808",
+      "words_value": "275",
+      "parents": [
+        "SYN_0154",
+        "SYN_0133"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0158_x_SYN_0078",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0158_num",
+      "words_id": "SYN_0078_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1520",
+      "words_value": "5686",
+      "parents": [
+        "SYN_0158",
+        "SYN_0078"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0162_x_SYN_0262",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0162_num",
+      "words_id": "SYN_0262_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "8907",
+      "words_value": "7606",
+      "parents": [
+        "SYN_0162",
+        "SYN_0262"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0164_x_SYN_0002",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0164_num",
+      "words_id": "SYN_0002_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "707",
+      "words_value": "462",
+      "parents": [
+        "SYN_0164",
+        "SYN_0002"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0167_x_SYN_0138",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0167_num",
+      "words_id": "SYN_0138_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3040",
+      "words_value": "3209",
+      "parents": [
+        "SYN_0167",
+        "SYN_0138"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0171_x_SYN_0048",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0171_num",
+      "words_id": "SYN_0048_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6171",
+      "words_value": "5558",
+      "parents": [
+        "SYN_0171",
+        "SYN_0048"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0174_x_SYN_0117",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0174_num",
+      "words_id": "SYN_0117_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4376",
+      "words_value": "9335",
+      "parents": [
+        "SYN_0174",
+        "SYN_0117"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0176_x_SYN_0269",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0176_num",
+      "words_id": "SYN_0269_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5436",
+      "words_value": "5285",
+      "parents": [
+        "SYN_0176",
+        "SYN_0269"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0180_x_SYN_0244",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0180_num",
+      "words_id": "SYN_0244_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "688",
+      "words_value": "1550",
+      "parents": [
+        "SYN_0180",
+        "SYN_0244"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0181_x_SYN_0023",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0181_num",
+      "words_id": "SYN_0023_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2759",
+      "words_value": "6636",
+      "parents": [
+        "SYN_0181",
+        "SYN_0023"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0183_x_SYN_0083",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0183_num",
+      "words_id": "SYN_0083_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "2838",
+      "words_value": "4448",
+      "parents": [
+        "SYN_0183",
+        "SYN_0083"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0184_x_SYN_0230",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0184_num",
+      "words_id": "SYN_0230_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9680",
+      "words_value": "6112",
+      "parents": [
+        "SYN_0184",
+        "SYN_0230"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0189_x_SYN_0041",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0189_num",
+      "words_id": "SYN_0041_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1270",
+      "words_value": "4255",
+      "parents": [
+        "SYN_0189",
+        "SYN_0041"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0192_x_SYN_0114",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0192_num",
+      "words_id": "SYN_0114_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "610",
+      "words_value": "4933",
+      "parents": [
+        "SYN_0192",
+        "SYN_0114"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0200_x_SYN_0102",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0200_num",
+      "words_id": "SYN_0102_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "459",
+      "words_value": "2947",
+      "parents": [
+        "SYN_0200",
+        "SYN_0102"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0208_x_SYN_0158",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0208_num",
+      "words_id": "SYN_0158_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "532",
+      "words_value": "1520",
+      "parents": [
+        "SYN_0208",
+        "SYN_0158"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0209_x_SYN_0088",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0209_num",
+      "words_id": "SYN_0088_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7246",
+      "words_value": "9587",
+      "parents": [
+        "SYN_0209",
+        "SYN_0088"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0224_x_SYN_0029",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0224_num",
+      "words_id": "SYN_0029_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6333",
+      "words_value": "5523",
+      "parents": [
+        "SYN_0224",
+        "SYN_0029"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0230_x_SYN_0065",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0230_num",
+      "words_id": "SYN_0065_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6112",
+      "words_value": "3546",
+      "parents": [
+        "SYN_0230",
+        "SYN_0065"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0238_x_SYN_0200",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0238_num",
+      "words_id": "SYN_0200_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6056",
+      "words_value": "459",
+      "parents": [
+        "SYN_0238",
+        "SYN_0200"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0244_x_SYN_0180",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0244_num",
+      "words_id": "SYN_0180_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "1550",
+      "words_value": "479",
+      "parents": [
+        "SYN_0244",
+        "SYN_0180"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0246_x_SYN_0184",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0246_num",
+      "words_id": "SYN_0184_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7500",
+      "words_value": "8186",
+      "parents": [
+        "SYN_0246",
+        "SYN_0184"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0252_x_SYN_0035",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0252_num",
+      "words_id": "SYN_0035_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "3501",
+      "words_value": "1143",
+      "parents": [
+        "SYN_0252",
+        "SYN_0035"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0253_x_SYN_0136",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0253_num",
+      "words_id": "SYN_0136_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "9286",
+      "words_value": "430",
+      "parents": [
+        "SYN_0253",
+        "SYN_0136"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0260_x_SYN_0167",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0260_num",
+      "words_id": "SYN_0167_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7100",
+      "words_value": "643",
+      "parents": [
+        "SYN_0260",
+        "SYN_0167"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0262_x_SYN_0209",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0262_num",
+      "words_id": "SYN_0209_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7606",
+      "words_value": "7246",
+      "parents": [
+        "SYN_0262",
+        "SYN_0209"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0265_x_SYN_0011",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0265_num",
+      "words_id": "SYN_0011_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "6119",
+      "words_value": "8395",
+      "parents": [
+        "SYN_0265",
+        "SYN_0011"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0266_x_SYN_0146",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0266_num",
+      "words_id": "SYN_0146_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7800",
+      "words_value": "4496",
+      "parents": [
+        "SYN_0266",
+        "SYN_0146"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0269_x_SYN_0266",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0269_num",
+      "words_id": "SYN_0266_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "5285",
+      "words_value": "7800",
+      "parents": [
+        "SYN_0269",
+        "SYN_0266"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0272_x_SYN_0171",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0272_num",
+      "words_id": "SYN_0171_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "271",
+      "words_value": "940",
+      "parents": [
+        "SYN_0272",
+        "SYN_0171"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0275_x_SYN_0014",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0275_num",
+      "words_id": "SYN_0014_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4376",
+      "words_value": "3730",
+      "parents": [
+        "SYN_0275",
+        "SYN_0014"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0288_x_SYN_0030",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0288_num",
+      "words_id": "SYN_0030_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "4212",
+      "words_value": "9597",
+      "parents": [
+        "SYN_0288",
+        "SYN_0030"
+      ]
+    },
+    {
+      "pair_id": "P_SYN_0289_x_SYN_0164",
+      "dataset": "syn_cheques",
+      "split": "test",
+      "num_id": "SYN_0289_num",
+      "words_id": "SYN_0164_words",
+      "label": "mismatch",
+      "construction": "constructed_cross_cheque",
+      "genuine_handwriting": false,
+      "num_value": "7002",
+      "words_value": "707",
+      "parents": [
+        "SYN_0289",
+        "SYN_0164"
+      ]
+    }
+  ]
+}

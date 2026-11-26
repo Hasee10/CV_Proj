@@ -1,0 +1,35 @@
+{
+  "milestone": "M4-ONLINE online banking dataset acquisition (revised M4 strategy)",
+  "date": "2026-11-26",
+  "status": "VERIFIED",
+  "m4_status": "VERIFIED (revised strategy, with documented limitations)",
+  "status_scope": "Strongest available controlled benchmark acquired, validated and split. No openly accessible genuine English handwritten cheque dataset was obtainable (IDRBT unreachable, ORAND-CAR gated); cheque-level paired fields are SYNTHETIC. Genuine and synthetic sets are separated throughout.",
+  "strategy_change": "custom handwriting collection retired by student decision; ArUco sheet workflow kept as optional utility; M4-PILOT superseded (not passed)",
+  "datasets_investigated": ["IDRBT (unreachable)", "HF arunchincheti/cheques_data (synthetic, used)", "HF arunchincheti/handwritten_and_cheques_dataset (synthetic + IAM lines, not used)", "SSBI (synthetic, unclear licence, not used)", "ORAND-CAR HF mirrors (gated)", "CVL Digit Strings ICDAR2013 (genuine, used)", "GNHK number words (genuine, used)", "other HF cheque sets (synthetic/no licence)", "AnanOmri numbers (no licence)", "Zenodo/GitHub/HF searches", "Kaggle and Google Dataset Search not queried (account / JS app)"],
+  "selected": {
+    "D4_cvl_numeric": {"genuine": true, "license": "CC-BY-NC-4.0", "download_bytes": 15782070, "samples": 300, "writers": 30, "split": {"dev": 90, "test": 210}},
+    "D5_gnhk_number_pairs": {"genuine": true, "license": "CC-BY-4.0", "download_bytes": 0, "samples": 72, "words": 27, "integers": 45, "split": {"dev": 3, "test": 69}, "pairs": {"match": 27, "mismatch": 27, "dev": 2, "test": 52}},
+    "D6_synthetic_cheques": {"genuine": false, "license": "Apache-2.0 (declared)", "download_bytes_approx": 2700000, "cheques": 130, "samples": 260, "split": {"dev": 78, "test": 182}, "pairs": {"natural_match": 92, "natural_mismatch": 14, "unresolved_blank": 24, "constructed_mismatch": 106, "dev": 72, "test": 164}},
+    "D1_gnhk_subset": {"genuine": true, "samples": 240, "split": {"dev": 80, "test": 160}, "status": "unchanged and re-validated"}
+  },
+  "genuine_vs_synthetic": {"genuine_new_samples": 372, "synthetic_samples": 260, "genuine_numeric": 345, "genuine_words": 27, "synthetic_numeric": 130, "synthetic_words": 130},
+  "pairs_total": {"all": 290, "match": 119, "mismatch": 147, "unresolved": 24, "natural": 130, "constructed": 160},
+  "ground_truth": "dataset annotations; values from int(digits), an explicit number-word table, or an independent verbaliser lookup; never LoGo-HTR, never the evaluated parsers; no human verification claimed",
+  "annotation_findings": ["D6 annotations match the rendered text for all 130 cheques viewed (AI visual check)", "D6 has 14 natural numeric/words discrepancies and 24 blank fields", "D5 possible label noise (stroke-like '1', '80' vs '82', tiny crops); not relabelled", "CVL writer ids inferred (121/127 ids hold exactly one of each string)"],
+  "validation": {"report": "artifacts/M4_ONLINE/VALIDATION_REPORT.json", "passed": true, "samples": 872, "errors": 0, "groups": 287, "duplicate_candidates": 227, "resolved_by_rule": {"not_duplicate": 213, "blank_field": 14}, "pair_check": {"pairs": 290, "errors": 0}},
+  "tests": {"m4_online": {"total": 11, "passed": 11, "failed": 0, "file": "artifacts/M4_ONLINE/TEST_RESULTS.json"}, "m4_audit_suite_rerun": {"total": 27, "passed": 27}},
+  "pending_audit_fixes_resolved": ["duplicate annotation ids raise instead of collapsing", "human values finite, >= 0, <= 2 decimals", "numeric grammar ASCII [0-9] only; supported currencies Rs/Rs./PKR only"],
+  "baseline_update": "region extraction = dataset-provided images (CVL), annotation polygon boxes (GNHK), template oracle boxes (synthetic); recogniser unchanged",
+  "manifest_sha256": {
+    "data/benchmarks/cvl_numeric/manifest.json": "1a98f00bd7e399e6c180d56b741dcc70c1b202cc36576600c2621d83e98e0db8",
+    "data/benchmarks/gnhk_pairs/manifest.json": "212621826eac3a7ff0c465819ceb530438036e380b6e1f3108425150b7df9dfe",
+    "data/benchmarks/syn_cheques/manifest.json": "ca62710efe8446d104ff56a65155d2d79ead46b0c86f1b7d70c6d03f980e7226",
+    "data/benchmarks/amount_pairs.json": "07522b2a95fd76c88b7bc038d6ca0138c8fac255db4a0a2ae7f71ea8457618eb",
+    "data/public/gnhk/subset/manifest.json": "13450762dd5508154fe05878554d4867d7df94e9a30a614f2b80385371c0af56"
+  },
+  "remaining_blockers": [],
+  "key_limitations": ["no genuine handwritten cheque with both amount fields", "genuine written amounts limited to 27 single number words (1-11)", "cheque-level pairs are synthetic font renders", "constructed pairs reuse crops", "D5 dev has 1 word crop", "CVL: 10 fixed strings, no punctuation/currency, non-commercial licence", "no human verification of online labels", "checkpoint training overlap unknown"],
+  "inference_run": false,
+  "training": false,
+  "next_milestone_authorized": false
+}

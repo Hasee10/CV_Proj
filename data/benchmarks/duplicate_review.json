@@ -1,0 +1,2045 @@
+[
+ {
+  "pair": [
+   "SYN_0000_num",
+   "SYN_0032_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8963' vs '6815'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0000_num",
+   "SYN_0125_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8963' vs '4092'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0000_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8963' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0000_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8963' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0000_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8963' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0000_words",
+   "SYN_0273_words"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0001_num",
+   "SYN_0138_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3083' vs '3209'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0001_words",
+   "SYN_0002_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand and Eighty Three' vs 'Four Hundred and Sixty Two'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0001_words",
+   "SYN_0119_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand and Eighty Three' vs 'Three Hundred and Ninety Eight'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0001_words",
+   "SYN_0244_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand and Eighty Three' vs 'One Thousand Five Hundred and Fifty'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0001_words",
+   "SYN_0260_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand and Eighty Three' vs 'Seven Thousand One Hundred'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0001_words",
+   "SYN_0269_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand and Eighty Three' vs 'Five Thousand Two Hundred and Eighty Five'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0002_num",
+   "SYN_0188_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '462' vs '137'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0002_num",
+   "SYN_0202_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '462' vs '8939'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0002_words",
+   "SYN_0188_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Four Hundred and Sixty Two' vs 'Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0005_num",
+   "SYN_0032_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3388' vs '6815'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0005_num",
+   "SYN_0099_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3388' vs '3750'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0005_num",
+   "SYN_0125_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3388' vs '4092'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0005_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3388' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0005_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3388' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0005_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3388' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0011_num",
+   "SYN_0031_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8395' vs '8312'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0013_num",
+   "SYN_0029_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1737' vs '5523'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0013_num",
+   "SYN_0065_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1737' vs '3546'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0013_num",
+   "SYN_0154_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1737' vs '5808'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0013_num",
+   "SYN_0266_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1737' vs '7800'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0020_num",
+   "SYN_0226_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '' vs '9986'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0023_num",
+   "SYN_0032_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6636' vs '6815'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0023_num",
+   "SYN_0125_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6636' vs '4092'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0023_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6636' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0023_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6636' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0023_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6636' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0026_num",
+   "SYN_0205_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8206' vs '1435'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0029_num",
+   "SYN_0032_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5523' vs '6815'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0029_num",
+   "SYN_0099_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5523' vs '3750'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0029_num",
+   "SYN_0125_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5523' vs '4092'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0029_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5523' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0029_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5523' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0029_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5523' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0031_num",
+   "SYN_0112_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8312' vs '634'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0031_num",
+   "SYN_0171_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8312' vs '6171'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0031_num",
+   "SYN_0272_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8312' vs '271'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0041_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '4255'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0060_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '6908'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0065_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '3546'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0078_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '7050'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0146_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '4496'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0154_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '5808'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0167_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '3040'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0176_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '5436'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0184_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '9680'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0189_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '1270'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0192_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '610'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0262_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '7606'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0265_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '6119'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0266_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '7800'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0288_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '4212'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0032_num",
+   "SYN_0289_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6815' vs '7002'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0034_num",
+   "SYN_0042_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8442' vs '3187'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0034_num",
+   "SYN_0202_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8442' vs '8939'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0034_words",
+   "SYN_0188_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Eight Thousand Four Hundred and Forty Two' vs 'Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0036_num",
+   "SYN_0112_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9981' vs '634'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0036_num",
+   "SYN_0158_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9981' vs '1520'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0036_num",
+   "SYN_0171_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9981' vs '6171'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0036_num",
+   "SYN_0180_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9981' vs '688'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0037_num",
+   "SYN_0164_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5073' vs '707'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0037_num",
+   "SYN_0200_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5073' vs '459'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0041_num",
+   "SYN_0125_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4255' vs '4092'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0041_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4255' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0041_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4255' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0041_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4255' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_num",
+   "SYN_0089_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3187' vs '8987'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_num",
+   "SYN_0102_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3187' vs '2947'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_num",
+   "SYN_0119_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3187' vs '1714'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_num",
+   "SYN_0244_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3187' vs '1550'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_num",
+   "SYN_0260_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3187' vs '7100'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_words",
+   "SYN_0048_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand One Hundred and Eighty Seven' vs 'Five Thousand Five Hundred and Fifty Eight'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_words",
+   "SYN_0086_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand One Hundred and Eighty Seven' vs 'Five Hundred and Three'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_words",
+   "SYN_0089_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand One Hundred and Eighty Seven' vs 'Eight Thousand Nine Hundred and Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_words",
+   "SYN_0101_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand One Hundred and Eighty Seven' vs 'Three Thousand and Five'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_words",
+   "SYN_0102_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand One Hundred and Eighty Seven' vs 'Two Thousand Nine Hundred and Forty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_words",
+   "SYN_0114_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand One Hundred and Eighty Seven' vs 'Four Thousand Nine Hundred and Thirty Three'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_words",
+   "SYN_0124_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand One Hundred and Eighty Seven' vs 'Three Thousand Eight Hundred and Eighty Nine'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_words",
+   "SYN_0168_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand One Hundred and Eighty Seven' vs 'Five Thousand and Forty'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_words",
+   "SYN_0209_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand One Hundred and Eighty Seven' vs 'Seven Thousand Two Hundred and Forty Six'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0042_words",
+   "SYN_0260_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand One Hundred and Eighty Seven' vs 'Seven Thousand One Hundred'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0048_words",
+   "SYN_0134_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Five Thousand Five Hundred and Fifty Eight' vs 'Five Thousand Seven Hundred and Ninety'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0048_words",
+   "SYN_0202_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Five Thousand Five Hundred and Fifty Eight' vs 'Eight Thousand Nine Hundred and Thirty Nine'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0060_num",
+   "SYN_0125_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6908' vs '4092'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0060_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6908' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0060_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6908' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0065_num",
+   "SYN_0125_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3546' vs '4092'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0065_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3546' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0065_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3546' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0071_num",
+   "SYN_0134_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6422' vs '5790'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0071_num",
+   "SYN_0188_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6422' vs '137'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0073_num",
+   "SYN_0097_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '936' vs '9355'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0073_num",
+   "SYN_0226_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '936' vs '9986'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0078_num",
+   "SYN_0125_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7050' vs '4092'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0078_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7050' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0078_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7050' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0080_num",
+   "SYN_0226_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '' vs '9986'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0086_num",
+   "SYN_0188_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '' vs 'Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0086_words",
+   "SYN_0134_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Five Hundred and Three' vs 'Five Thousand Seven Hundred and Ninety'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0086_words",
+   "SYN_0188_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Five Hundred and Three' vs 'Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0088_num",
+   "SYN_0097_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9587' vs '9355'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0088_num",
+   "SYN_0121_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9587' vs '4374'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0089_num",
+   "SYN_0188_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8987' vs '137'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0089_num",
+   "SYN_0202_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8987' vs '8939'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0089_words",
+   "SYN_0134_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Eight Thousand Nine Hundred and Eighty Seven' vs 'Five Thousand Seven Hundred and Ninety'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0089_words",
+   "SYN_0202_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Eight Thousand Nine Hundred and Eighty Seven' vs 'Eight Thousand Nine Hundred and Thirty Nine'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0097_num",
+   "SYN_0164_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9355' vs '707'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0097_num",
+   "SYN_0200_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9355' vs '459'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0097_num",
+   "SYN_0208_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9355' vs '532'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0097_num",
+   "SYN_0230_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9355' vs '6112'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0097_words",
+   "SYN_0117_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Nine Thousand Three Hundred and Fifty Five' vs 'Nine Thousand Three Hundred and Thirty Five'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0099_num",
+   "SYN_0146_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3750' vs '4496'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0099_num",
+   "SYN_0266_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3750' vs '7800'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0100_num",
+   "SYN_0188_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7846' vs '137'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0100_words",
+   "SYN_0140_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0100_words",
+   "SYN_0188_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '' vs 'Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0101_words",
+   "SYN_0134_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand and Five' vs 'Five Thousand Seven Hundred and Ninety'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0101_words",
+   "SYN_0188_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand and Five' vs 'Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0102_num",
+   "SYN_0188_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '2947' vs '137'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0102_num",
+   "SYN_0202_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '2947' vs '8939'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0102_words",
+   "SYN_0134_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Two Thousand Nine Hundred and Forty Seven' vs 'Five Thousand Seven Hundred and Ninety'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0102_words",
+   "SYN_0202_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Two Thousand Nine Hundred and Forty Seven' vs 'Eight Thousand Nine Hundred and Thirty Nine'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0107_num",
+   "SYN_0287_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9245' vs '8304'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0109_num",
+   "SYN_0144_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1801' vs '1173'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0109_num",
+   "SYN_0249_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1801' vs '9929'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0114_num",
+   "SYN_0188_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4933' vs '137'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0114_words",
+   "SYN_0134_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Four Thousand Nine Hundred and Thirty Three' vs 'Five Thousand Seven Hundred and Ninety'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0114_words",
+   "SYN_0202_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Four Thousand Nine Hundred and Thirty Three' vs 'Eight Thousand Nine Hundred and Thirty Nine'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0119_num",
+   "SYN_0188_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1714' vs '137'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0119_num",
+   "SYN_0202_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1714' vs '8939'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0121_num",
+   "SYN_0164_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4374' vs '707'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0121_num",
+   "SYN_0200_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4374' vs '459'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0121_words",
+   "SYN_0275_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Four Thousand Three Hundred and Seventy Four' vs 'Four Thousand Three Hundred and Seventy Six'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0124_num",
+   "SYN_0188_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '' vs 'Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0125_num",
+   "SYN_0146_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4092' vs '4496'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0125_num",
+   "SYN_0154_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4092' vs '5808'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0125_num",
+   "SYN_0184_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4092' vs '9680'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0125_num",
+   "SYN_0189_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4092' vs '1270'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0125_num",
+   "SYN_0192_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4092' vs '610'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0125_num",
+   "SYN_0262_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4092' vs '7606'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0125_num",
+   "SYN_0265_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4092' vs '6119'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0125_num",
+   "SYN_0266_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4092' vs '7800'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0125_num",
+   "SYN_0288_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4092' vs '4212'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0125_num",
+   "SYN_0289_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4092' vs '7002'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0129_num",
+   "SYN_0226_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '' vs '9986'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0133_words",
+   "SYN_0261_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Two Hundred and Seventy Five' vs 'Two Thousand Six Hundred and Ten'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0134_words",
+   "SYN_0168_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Five Thousand Seven Hundred and Ninety' vs 'Five Thousand and Forty'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0137_words",
+   "SYN_0157_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Five Thousand Six Hundred and Three' vs 'Six Thousand Five Hundred and Eighty Six'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0140_num",
+   "SYN_0150_words"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0140_num",
+   "SYN_0300_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '' vs 'Twenty Four'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0140_words",
+   "SYN_0209_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Three Thousand Four Hundred and Sixteen' vs 'Seven Thousand Two Hundred and Forty Six'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0144_num",
+   "SYN_0171_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1173' vs '6171'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0144_words",
+   "SYN_0158_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'One Thousand One Hundred and Seventy Three' vs 'One Thousand Five Hundred and Twenty'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0146_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4496' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0146_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4496' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0150_num",
+   "SYN_0188_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6255' vs '137'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0150_num",
+   "SYN_0202_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6255' vs '8939'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0150_words",
+   "SYN_0188_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '' vs 'Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0154_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5808' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0154_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5808' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0154_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5808' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0156_words",
+   "SYN_0275_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Four Thousand Three Hundred and Nineteen' vs 'Four Thousand Three Hundred and Seventy Six'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0158_num",
+   "SYN_0205_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1520' vs '1435'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0158_num",
+   "SYN_0249_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1520' vs '9929'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0162_num",
+   "SYN_0287_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8907' vs '8304'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0164_num",
+   "SYN_0226_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '707' vs '9986'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0167_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3040' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0167_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3040' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0168_num",
+   "SYN_0188_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '' vs 'Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0168_words",
+   "SYN_0188_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Five Thousand and Forty' vs 'Eighty Seven'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0180_words",
+   "SYN_0219_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Four Hundred and Seventy Nine' vs 'Three Hundred and Ninety Nine'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0184_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9680' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0184_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9680' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0184_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9680' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0188_num",
+   "SYN_0209_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '137' vs '7246'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0188_num",
+   "SYN_0260_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '137' vs '7100'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0188_num",
+   "SYN_0269_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '137' vs '5285'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0188_words",
+   "SYN_0300_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Eighty Seven' vs ''",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0188_words",
+   "SYN_0300_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Eighty Seven' vs 'Twenty Four'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0189_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1270' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0189_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1270' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0189_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '1270' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0192_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '610' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0192_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '610' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0192_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '610' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0192_words",
+   "SYN_0273_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Six Hundred and Ten' vs ''",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0202_num",
+   "SYN_0269_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '8939' vs '5285'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0202_words",
+   "SYN_0209_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Eight Thousand Nine Hundred and Thirty Nine' vs 'Seven Thousand Two Hundred and Forty Six'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0202_words",
+   "SYN_0244_words"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: 'Eight Thousand Nine Hundred and Thirty Nine' vs 'One Thousand Five Hundred and Fifty'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0208_num",
+   "SYN_0226_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '532' vs '9986'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0226_num",
+   "SYN_0230_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9986' vs '6112'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0226_num",
+   "SYN_0271_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9986' vs ''",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0226_num",
+   "SYN_0310_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '9986' vs ''",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0246_num",
+   "SYN_0287_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7500' vs '8304'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0246_num",
+   "SYN_0299_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7500' vs '5220'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0246_num",
+   "SYN_0304_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7500' vs '957'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0262_num",
+   "SYN_0263_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7606' vs '3203'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0262_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7606' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0262_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7606' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0263_num",
+   "SYN_0265_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3203' vs '6119'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0263_num",
+   "SYN_0266_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3203' vs '7800'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0263_num",
+   "SYN_0288_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3203' vs '4212'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0263_num",
+   "SYN_0289_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '3203' vs '7002'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0265_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6119' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0265_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '6119' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0266_num",
+   "SYN_0273_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7800' vs '5369'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0266_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7800' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0273_num",
+   "SYN_0288_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5369' vs '4212'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0273_num",
+   "SYN_0289_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '5369' vs '7002'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0288_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '4212' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0289_num",
+   "SYN_0301_num"
+  ],
+  "decision": "not_duplicate",
+  "basis": "different ground truth: '7002' vs '248'",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0006_num",
+   "SYN_0254_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0006_num",
+   "SYN_0285_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0086_num",
+   "SYN_0140_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0115_num",
+   "SYN_0254_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0115_num",
+   "SYN_0285_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0124_num",
+   "SYN_0140_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0126_num",
+   "SYN_0219_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0140_num",
+   "SYN_0168_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0140_num",
+   "SYN_0300_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0219_num",
+   "SYN_0243_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ },
+ {
+  "pair": [
+   "SYN_0219_num",
+   "SYN_0302_num"
+  ],
+  "decision": "blank_field",
+  "basis": "both verified blank fields",
+  "reviewer": "rule (automated, not human)"
+ }
+]

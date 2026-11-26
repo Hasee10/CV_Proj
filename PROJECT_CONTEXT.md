@@ -91,3 +91,10 @@ This section supersedes conflicting status lines above. Earlier text is kept as 
 - **Final datasets are frozen** (hashes in `artifacts/M4_FINAL/SUMMARY.json`). IDRBT could not be downloaded (DNS failure), so the genuine multiword written-amount gap remains.
 - **Blank synthetic fields** (24) are excluded from recognition metrics. Unresolved pairs are reported separately.
 - **M4 status:** VERIFIED WITH DOCUMENTED LIMITATIONS.
+
+## Decisions update (2026-11-26, M5-DEV)
+- The development baseline is established (`artifacts/M5_DEV/`).
+  - Genuine words: about 42% exact.
+  - CVL numeric strings: 42% exact, CER 0.185.
+  - Synthetic cheque fields: 0% exact, and every synthetic pair goes to review.
+- The locked test split has not been run. M6 (stress tests and failure analysis) awaits authorisation.

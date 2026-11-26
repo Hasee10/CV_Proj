@@ -1,0 +1,51 @@
+{
+ "run": {
+  "torch": "2.15.0+cpu",
+  "threads": 10,
+  "python": "3.11.9",
+  "checkpoint_sha256": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432",
+  "model_load_seconds": 1.696,
+  "warmup_seconds": 0.179,
+  "entries": 251,
+  "unique_inputs": 250,
+  "computed_this_run": 232,
+  "reused_from_cache": 18,
+  "wall_seconds": 123.94,
+  "inference_seconds_computed": 121.56
+ },
+ "pilot": "artifacts/M5_DEV/BASELINE_RESULTS_pilot5.json (18 entries, 4.98 s inference, median 0.1507 s; reused in full run)",
+ "latency_all_unique_inputs": {
+  "n": 251,
+  "median": 0.2909,
+  "p95": 1.7044,
+  "total": 126.69440000000002
+ },
+ "latency_by_dataset": {
+  "D1": {
+   "n": 80,
+   "median": 0.25095,
+   "p95": 1.5279,
+   "total": 44.510600000000004
+  },
+  "D4": {
+   "n": 90,
+   "median": 0.3093,
+   "p95": 0.4792,
+   "total": 28.909699999999997
+  },
+  "D5": {
+   "n": 3,
+   "median": 0.0742,
+   "p95": 0.1341,
+   "total": 0.2502
+  },
+  "D6": {
+   "n": 77,
+   "median": 0.1833,
+   "p95": 3.3154,
+   "total": 52.87349999999999
+  }
+ },
+ "height_vs_latency_note": "latency grows with input size and decoded length (see slow list in METRICS)",
+ "cpu": "Intel Core i7-1265U, 10 torch threads, batch 1"
+}

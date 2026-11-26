@@ -1,0 +1,47 @@
+{
+  "total": 8,
+  "passed": 8,
+  "failed": 0,
+  "results": [
+    {
+      "test": "test_every_dev_entry_once_and_no_test_samples",
+      "status": "passed",
+      "seconds": 0.007
+    },
+    {
+      "test": "test_input_hashes_and_checkpoint",
+      "status": "passed",
+      "seconds": 0.068
+    },
+    {
+      "test": "test_metrics_reproducible_from_saved_predictions",
+      "status": "passed",
+      "seconds": 0.029
+    },
+    {
+      "test": "test_pairs_map_to_field_predictions",
+      "status": "passed",
+      "seconds": 0.001
+    },
+    {
+      "test": "test_ground_truth_not_passed_to_recognition",
+      "status": "passed",
+      "seconds": 0.0
+    },
+    {
+      "test": "test_test_split_refused_without_authorisation",
+      "status": "passed",
+      "seconds": 0.173
+    },
+    {
+      "test": "test_fresh_reinference_matches_cache",
+      "status": "passed",
+      "seconds": 3.094
+    },
+    {
+      "test": "m4_online_and_audit_suites",
+      "status": "passed",
+      "detail": "11/11 passed"
+    }
+  ]
+}

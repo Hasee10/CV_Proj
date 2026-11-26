@@ -1,0 +1,1396 @@
+{
+ "base_url": "http://127.0.0.1:8001",
+ "server": "uvicorn backend.app:app (real checkpoint, CPU)",
+ "images": "dev split only: tracked crops and data/demo composite sheets",
+ "passed": 16,
+ "total": 16,
+ "checks": [
+  {
+   "name": "health",
+   "request": "GET /health",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.006,
+   "x_request_id": "3fdbf6b29741",
+   "response": {
+    "status": "ok",
+    "model_loaded": true
+   }
+  },
+  {
+   "name": "model_info",
+   "request": "GET /api/model-info",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.002,
+   "x_request_id": "99dc159f55ba",
+   "response": {
+    "model": "LoGo-HTR downstream checkpoint (official release, unmodified weights)",
+    "checkpoint_sha256": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432",
+    "upstream_commit": "9eaea5fe",
+    "parameter_count": 6385537,
+    "dictionary": "SSL_HWD_Dict.txt",
+    "preprocessing": "upstream test transform: PIL RGB, ScaleToLimitRange(w 16-1024, h 16-256), ToTensor, batch 1, no padding",
+    "decoding": "upstream bidirectional beam search: beam 10, max_len 200, alpha 1.0, temperature 1.0, early_stopping False",
+    "device": "cpu",
+    "modes": {
+     "baseline": "upstream transform only",
+     "proposed": {
+      "method": "ATHN (adaptive text-height normalisation, training-free)",
+      "config": {
+       "id": "P1-A",
+       "method": "athn",
+       "band_lo": 24,
+       "band_hi": 72,
+       "target": 48,
+       "min_scale": 0.5,
+       "max_scale": 4.0
+      },
+      "status": "VERIFIED"
+     }
+    },
+    "default_mode": "proposed",
+    "ready": true,
+    "limitations": [
+     "research prototype for human review, not certified bank clearing software",
+     "score is an uncalibrated beam log-probability, not a confidence",
+     "an 'accept' decision means the two recognised values agree; it is not proof of authenticity",
+     "supported currency markers: Rs, Rs., PKR or none; anything else is routed to review"
+    ]
+   }
+  },
+  {
+   "name": "docs_page",
+   "request": "GET /docs",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.001,
+   "x_request_id": "226ccacba691",
+   "response": "\n    <!DOCTYPE html>\n    <html>\n    <head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swag"
+  },
+  {
+   "name": "openapi",
+   "request": "GET /openapi.json",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.006,
+   "x_request_id": "849860698129",
+   "response": {
+    "paths": [
+     "/api/benchmark",
+     "/api/model-info",
+     "/api/recognize",
+     "/api/verify",
+     "/health"
+    ]
+   }
+  },
+  {
+   "name": "recognize_numeric_proposed_synthetic",
+   "request": "POST /api/recognize",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.298,
+   "x_request_id": "0fa4ed6c8798",
+   "response": {
+    "field_type": "numeric",
+    "mode": "proposed",
+    "raw_text": "3083",
+    "parsed_value": "3083.00",
+    "parse_status": "parsed",
+    "beam_log_probability": -0.1083,
+    "preprocessing": {
+     "method": "ATHN",
+     "estimated_text_height": 15.8,
+     "input_hw": [
+      40,
+      133
+     ],
+     "scale": 3.038,
+     "applied": true,
+     "path": "resized",
+     "output_hw": [
+      122,
+      404
+     ]
+    },
+    "model_input_shape": [
+     1,
+     3,
+     122,
+     404
+    ],
+    "latency_seconds": {
+     "preprocess": 0.0065,
+     "queue_wait": 0.0,
+     "inference": 0.2851,
+     "total": 0.2916
+    },
+    "image": {
+     "width": 133,
+     "height": 40
+    },
+    "request_id": "0fa4ed6c8798"
+   }
+  },
+  {
+   "name": "recognize_numeric_baseline_synthetic",
+   "request": "POST /api/recognize",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.097,
+   "x_request_id": "13e15e273b09",
+   "response": {
+    "field_type": "numeric",
+    "mode": "baseline",
+    "raw_text": "3003",
+    "parsed_value": "3003.00",
+    "parse_status": "parsed",
+    "beam_log_probability": -0.7748,
+    "preprocessing": {
+     "method": "baseline",
+     "applied": false,
+     "path": "identity"
+    },
+    "model_input_shape": [
+     1,
+     3,
+     40,
+     133
+    ],
+    "latency_seconds": {
+     "preprocess": 0.0,
+     "queue_wait": 0.0,
+     "inference": 0.0936,
+     "total": 0.0936
+    },
+    "image": {
+     "width": 133,
+     "height": 40
+    },
+    "request_id": "13e15e273b09"
+   }
+  },
+  {
+   "name": "recognize_written_genuine",
+   "request": "POST /api/recognize",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.139,
+   "x_request_id": "ace92dc25aae",
+   "response": {
+    "field_type": "written",
+    "mode": "proposed",
+    "raw_text": "one",
+    "parsed_value": "1.00",
+    "parse_status": "parsed",
+    "beam_log_probability": -0.8698,
+    "preprocessing": {
+     "method": "ATHN",
+     "estimated_text_height": 49.400000000000006,
+     "input_hw": [
+      76,
+      231
+     ],
+     "scale": 1.0,
+     "applied": false,
+     "path": "identity"
+    },
+    "model_input_shape": [
+     1,
+     3,
+     76,
+     231
+    ],
+    "latency_seconds": {
+     "preprocess": 0.0008,
+     "queue_wait": 0.0,
+     "inference": 0.1336,
+     "total": 0.1344
+    },
+    "image": {
+     "width": 231,
+     "height": 76
+    },
+    "request_id": "ace92dc25aae"
+   }
+  },
+  {
+   "name": "verify_two_genuine_crops",
+   "request": "POST /api/verify",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.17,
+   "x_request_id": "0f501695782f",
+   "response": {
+    "decision": "accept",
+    "reasons": [
+     "values_agree: recognised numeric and written values are equal"
+    ],
+    "mode": "proposed",
+    "numeric": {
+     "field_type": "numeric",
+     "mode": "proposed",
+     "raw_text": "1",
+     "parsed_value": "1.00",
+     "parse_status": "parsed",
+     "beam_log_probability": -0.2485,
+     "preprocessing": {
+      "method": "ATHN",
+      "estimated_text_height": 23.0,
+      "input_hw": [
+       26,
+       15
+      ],
+      "scale": 2.087,
+      "applied": true,
+      "path": "resized",
+      "output_hw": [
+       54,
+       31
+      ]
+     },
+     "model_input_shape": [
+      1,
+      3,
+      54,
+      31
+     ],
+     "latency_seconds": {
+      "preprocess": 0.0006,
+      "queue_wait": 0.0,
+      "inference": 0.0529,
+      "total": 0.0534
+     }
+    },
+    "written": {
+     "field_type": "written",
+     "mode": "proposed",
+     "raw_text": "one",
+     "parsed_value": "1.00",
+     "parse_status": "parsed",
+     "beam_log_probability": -0.8698,
+     "preprocessing": {
+      "method": "ATHN",
+      "estimated_text_height": 49.400000000000006,
+      "input_hw": [
+       76,
+       231
+      ],
+      "scale": 1.0,
+      "applied": false,
+      "path": "identity"
+     },
+     "model_input_shape": [
+      1,
+      3,
+      76,
+      231
+     ],
+     "latency_seconds": {
+      "preprocess": 0.001,
+      "queue_wait": 0.0,
+      "inference": 0.1093,
+      "total": 0.1102
+     }
+    },
+    "rois": null,
+    "total_latency_seconds": 0.1636,
+    "notice": "decision compares recognised values only; 'accept' is not proof of authenticity; review is required whenever either value cannot be parsed",
+    "request_id": "0f501695782f"
+   }
+  },
+  {
+   "name": "verify_demo_sheet_accept_baseline",
+   "request": "POST /api/verify",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.172,
+   "x_request_id": "85341b7e5acf",
+   "response": {
+    "decision": "accept",
+    "reasons": [
+     "values_agree: recognised numeric and written values are equal"
+    ],
+    "mode": "baseline",
+    "numeric": {
+     "field_type": "numeric",
+     "mode": "baseline",
+     "raw_text": "1",
+     "parsed_value": "1.00",
+     "parse_status": "parsed",
+     "beam_log_probability": -0.2162,
+     "preprocessing": {
+      "method": "baseline",
+      "applied": false,
+      "path": "identity"
+     },
+     "model_input_shape": [
+      1,
+      3,
+      28,
+      16
+     ],
+     "latency_seconds": {
+      "preprocess": 0.0,
+      "queue_wait": 0.0,
+      "inference": 0.0568,
+      "total": 0.0569
+     }
+    },
+    "written": {
+     "field_type": "written",
+     "mode": "baseline",
+     "raw_text": "one",
+     "parsed_value": "1.00",
+     "parse_status": "parsed",
+     "beam_log_probability": -0.8698,
+     "preprocessing": {
+      "method": "baseline",
+      "applied": false,
+      "path": "identity"
+     },
+     "model_input_shape": [
+      1,
+      3,
+      76,
+      231
+     ],
+     "latency_seconds": {
+      "preprocess": 0.0,
+      "queue_wait": 0.0,
+      "inference": 0.1096,
+      "total": 0.1096
+     }
+    },
+    "rois": {
+     "numeric_px": [
+      845,
+      40,
+      860,
+      66
+     ],
+     "written_px": [
+      40,
+      106,
+      271,
+      182
+     ]
+    },
+    "total_latency_seconds": 0.1665,
+    "notice": "decision compares recognised values only; 'accept' is not proof of authenticity; review is required whenever either value cannot be parsed",
+    "request_id": "85341b7e5acf"
+   }
+  },
+  {
+   "name": "verify_demo_sheet_flag_baseline",
+   "request": "POST /api/verify",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.271,
+   "x_request_id": "285dd50314db",
+   "response": {
+    "decision": "flag",
+    "reasons": [
+     "values_disagree: numeric 25000.00 != written 1.00"
+    ],
+    "mode": "baseline",
+    "numeric": {
+     "field_type": "numeric",
+     "mode": "baseline",
+     "raw_text": "25000",
+     "parsed_value": "25000.00",
+     "parse_status": "parsed",
+     "beam_log_probability": -0.0116,
+     "preprocessing": {
+      "method": "baseline",
+      "applied": false,
+      "path": "identity"
+     },
+     "model_input_shape": [
+      1,
+      3,
+      55,
+      205
+     ],
+     "latency_seconds": {
+      "preprocess": 0.0,
+      "queue_wait": 0.0,
+      "inference": 0.1517,
+      "total": 0.1517
+     }
+    },
+    "written": {
+     "field_type": "written",
+     "mode": "baseline",
+     "raw_text": "one",
+     "parsed_value": "1.00",
+     "parse_status": "parsed",
+     "beam_log_probability": -0.8698,
+     "preprocessing": {
+      "method": "baseline",
+      "applied": false,
+      "path": "identity"
+     },
+     "model_input_shape": [
+      1,
+      3,
+      76,
+      231
+     ],
+     "latency_seconds": {
+      "preprocess": 0.0,
+      "queue_wait": 0.0,
+      "inference": 0.1138,
+      "total": 0.1138
+     }
+    },
+    "rois": {
+     "numeric_px": [
+      655,
+      40,
+      860,
+      95
+     ],
+     "written_px": [
+      40,
+      135,
+      271,
+      211
+     ]
+    },
+    "total_latency_seconds": 0.2655,
+    "notice": "decision compares recognised values only; 'accept' is not proof of authenticity; review is required whenever either value cannot be parsed",
+    "request_id": "285dd50314db"
+   }
+  },
+  {
+   "name": "verify_demo_sheet_review_baseline",
+   "request": "POST /api/verify",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.586,
+   "x_request_id": "0acc1017d06f",
+   "response": {
+    "decision": "review",
+    "reasons": [
+     "written_amount_unparseable: recognised text does not satisfy the strict English amount grammar"
+    ],
+    "mode": "baseline",
+    "numeric": {
+     "field_type": "numeric",
+     "mode": "baseline",
+     "raw_text": "3003",
+     "parsed_value": "3003.00",
+     "parse_status": "parsed",
+     "beam_log_probability": -0.7748,
+     "preprocessing": {
+      "method": "baseline",
+      "applied": false,
+      "path": "identity"
+     },
+     "model_input_shape": [
+      1,
+      3,
+      40,
+      133
+     ],
+     "latency_seconds": {
+      "preprocess": 0.0,
+      "queue_wait": 0.0,
+      "inference": 0.0788,
+      "total": 0.0788
+     }
+    },
+    "written": {
+     "field_type": "written",
+     "mode": "baseline",
+     "raw_text": "mummisessing",
+     "parsed_value": null,
+     "parse_status": "unparseable",
+     "beam_log_probability": -1.8863,
+     "preprocessing": {
+      "method": "baseline",
+      "applied": false,
+      "path": "identity"
+     },
+     "model_input_shape": [
+      1,
+      3,
+      62,
+      280
+     ],
+     "latency_seconds": {
+      "preprocess": 0.0,
+      "queue_wait": 0.0,
+      "inference": 0.5017,
+      "total": 0.5017
+     }
+    },
+    "rois": {
+     "numeric_px": [
+      727,
+      40,
+      860,
+      80
+     ],
+     "written_px": [
+      40,
+      120,
+      320,
+      182
+     ]
+    },
+    "total_latency_seconds": 0.5805,
+    "notice": "decision compares recognised values only; 'accept' is not proof of authenticity; review is required whenever either value cannot be parsed",
+    "request_id": "0acc1017d06f"
+   }
+  },
+  {
+   "name": "verify_demo_sheet_review_proposed_slow_path",
+   "request": "POST /api/verify",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 30.62,
+   "x_request_id": "f92c31a08dbc",
+   "response": {
+    "decision": "review",
+    "reasons": [
+     "written_amount_unparseable: recognised text does not satisfy the strict English amount grammar"
+    ],
+    "mode": "proposed",
+    "numeric": {
+     "field_type": "numeric",
+     "mode": "proposed",
+     "raw_text": "3083",
+     "parsed_value": "3083.00",
+     "parse_status": "parsed",
+     "beam_log_probability": -0.1083,
+     "preprocessing": {
+      "method": "ATHN",
+      "estimated_text_height": 15.8,
+      "input_hw": [
+       40,
+       133
+      ],
+      "scale": 3.038,
+      "applied": true,
+      "path": "resized",
+      "output_hw": [
+       122,
+       404
+      ]
+     },
+     "model_input_shape": [
+      1,
+      3,
+      122,
+      404
+     ],
+     "latency_seconds": {
+      "preprocess": 0.0009,
+      "queue_wait": 0.0,
+      "inference": 0.256,
+      "total": 0.2569
+     }
+    },
+    "written": {
+     "field_type": "written",
+     "mode": "proposed",
+     "raw_text": "mesinomantamentinting",
+     "parsed_value": null,
+     "parse_status": "unparseable",
+     "beam_log_probability": -3.0339,
+     "preprocessing": {
+      "method": "ATHN",
+      "estimated_text_height": 10.600000000000001,
+      "input_hw": [
+       62,
+       280
+      ],
+      "scale": 3.6571,
+      "applied": true,
+      "path": "resized",
+      "output_hw": [
+       227,
+       1024
+      ]
+     },
+     "model_input_shape": [
+      1,
+      3,
+      227,
+      1024
+     ],
+     "latency_seconds": {
+      "preprocess": 0.0018,
+      "queue_wait": 0.0,
+      "inference": 30.3565,
+      "total": 30.3583
+     }
+    },
+    "rois": {
+     "numeric_px": [
+      727,
+      40,
+      860,
+      80
+     ],
+     "written_px": [
+      40,
+      120,
+      320,
+      182
+     ]
+    },
+    "total_latency_seconds": 30.6152,
+    "notice": "decision compares recognised values only; 'accept' is not proof of authenticity; review is required whenever either value cannot be parsed",
+    "request_id": "f92c31a08dbc"
+   }
+  },
+  {
+   "name": "error_gif_rejected",
+   "request": "POST /api/recognize",
+   "status": 415,
+   "expected": 415,
+   "ok": true,
+   "client_seconds": 0.002,
+   "x_request_id": "be43d5941b30",
+   "response": {
+    "error": {
+     "code": "unsupported_media_type",
+     "message": "image: only image/png and image/jpeg are accepted",
+     "request_id": "be43d5941b30"
+    }
+   }
+  },
+  {
+   "name": "error_bad_roi",
+   "request": "POST /api/verify",
+   "status": 422,
+   "expected": 422,
+   "ok": true,
+   "client_seconds": 0.002,
+   "x_request_id": "f3853f5bfa11",
+   "response": {
+    "error": {
+     "code": "invalid_roi",
+     "message": "numeric_roi: expected JSON [x0, y0, x1, y1] normalised to 0..1 with x0<x1, y0<y1",
+     "request_id": "f3853f5bfa11"
+    }
+   }
+  },
+  {
+   "name": "error_bad_field_type",
+   "request": "POST /api/recognize",
+   "status": 422,
+   "expected": 422,
+   "ok": true,
+   "client_seconds": 0.002,
+   "x_request_id": "a8e8f561a512",
+   "response": {
+    "error": {
+     "code": "invalid_parameter",
+     "message": "field_type: must be one of ['numeric', 'written']",
+     "request_id": "a8e8f561a512"
+    }
+   }
+  },
+  {
+   "name": "benchmark_saved_results",
+   "request": "GET /api/benchmark",
+   "status": 200,
+   "expected": 200,
+   "ok": true,
+   "client_seconds": 0.004,
+   "x_request_id": "b3bee065d0e0",
+   "response": {
+    "source": "artifacts/M8/COMPARATIVE_METRICS.json",
+    "split": "test",
+    "datasets": {
+     "D1_gnhk_words_genuine": {
+      "n_eligible": 160,
+      "blank_fields": 0,
+      "cer": {
+       "baseline": 0.296,
+       "proposed": 0.2521,
+       "delta": -0.0439
+      },
+      "wer": {
+       "baseline": 0.5437,
+       "proposed": 0.5125,
+       "delta": -0.0312
+      },
+      "exact_rate": {
+       "baseline": 0.4562,
+       "proposed": 0.4875,
+       "delta": 0.0312,
+       "delta_pp": 3.1
+      },
+      "exact": {
+       "baseline": 73,
+       "proposed": 78
+      },
+      "relative_cer_reduction": 0.1483,
+      "punctuation": {
+       "baseline": {
+        "precision": 0.5,
+        "recall": 0.13043478260869565
+       },
+       "proposed": {
+        "precision": 0.5,
+        "recall": 0.21739130434782608
+       }
+      },
+      "coverage": {
+       "baseline": 1.0,
+       "proposed": 1.0
+      },
+      "failure_rate": {
+       "baseline": 0.0,
+       "proposed": 0.0
+      }
+     },
+     "D4_cvl_numeric_genuine": {
+      "n_eligible": 210,
+      "blank_fields": 0,
+      "cer": {
+       "baseline": 0.1406,
+       "proposed": 0.1429,
+       "delta": 0.0023
+      },
+      "wer": {
+       "baseline": 0.5381,
+       "proposed": 0.5381,
+       "delta": 0.0
+      },
+      "exact_rate": {
+       "baseline": 0.4619,
+       "proposed": 0.4619,
+       "delta": 0.0,
+       "delta_pp": 0.0
+      },
+      "exact": {
+       "baseline": 97,
+       "proposed": 97
+      },
+      "relative_cer_reduction": -0.0164,
+      "punctuation": {
+       "baseline": {
+        "precision": null,
+        "recall": null
+       },
+       "proposed": {
+        "precision": null,
+        "recall": null
+       }
+      },
+      "coverage": {
+       "baseline": 1.0,
+       "proposed": 1.0
+      },
+      "failure_rate": {
+       "baseline": 0.0,
+       "proposed": 0.0
+      },
+      "value_exact": {
+       "n": 210,
+       "baseline": 97,
+       "proposed": 97,
+       "delta_pp": 0.0,
+       "parseable": {
+        "baseline": 199,
+        "proposed": 197
+       }
+      }
+     },
+     "D5_gnhk_numeric_genuine": {
+      "n_eligible": 43,
+      "blank_fields": 0,
+      "cer": {
+       "baseline": 0.4118,
+       "proposed": 0.3529,
+       "delta": -0.0588
+      },
+      "wer": {
+       "baseline": 0.3721,
+       "proposed": 0.3023,
+       "delta": -0.0698
+      },
+      "exact_rate": {
+       "baseline": 0.6279,
+       "proposed": 0.6977,
+       "delta": 0.0698,
+       "delta_pp": 7.0
+      },
+      "exact": {
+       "baseline": 27,
+       "proposed": 30
+      },
+      "relative_cer_reduction": 0.1429,
+      "punctuation": {
+       "baseline": {
+        "precision": null,
+        "recall": null
+       },
+       "proposed": {
+        "precision": null,
+        "recall": null
+       }
+      },
+      "coverage": {
+       "baseline": 1.0,
+       "proposed": 1.0
+      },
+      "failure_rate": {
+       "baseline": 0.0,
+       "proposed": 0.0
+      },
+      "value_exact": {
+       "n": 43,
+       "baseline": 27,
+       "proposed": 30,
+       "delta_pp": 7.0,
+       "parseable": {
+        "baseline": 33,
+        "proposed": 34
+       }
+      }
+     },
+     "D5_gnhk_words_genuine": {
+      "n_eligible": 26,
+      "blank_fields": 0,
+      "cer": {
+       "baseline": 0.2421,
+       "proposed": 0.2211,
+       "delta": -0.0211
+      },
+      "wer": {
+       "baseline": 0.5769,
+       "proposed": 0.5385,
+       "delta": -0.0385
+      },
+      "exact_rate": {
+       "baseline": 0.4231,
+       "proposed": 0.4615,
+       "delta": 0.0385,
+       "delta_pp": 3.8
+      },
+      "exact": {
+       "baseline": 11,
+       "proposed": 12
+      },
+      "relative_cer_reduction": 0.087,
+      "punctuation": {
+       "baseline": {
+        "precision": null,
+        "recall": null
+       },
+       "proposed": {
+        "precision": null,
+        "recall": null
+       }
+      },
+      "coverage": {
+       "baseline": 1.0,
+       "proposed": 1.0
+      },
+      "failure_rate": {
+       "baseline": 0.0,
+       "proposed": 0.0
+      },
+      "value_exact": {
+       "n": 26,
+       "baseline": 15,
+       "proposed": 16,
+       "delta_pp": 3.8,
+       "parseable": {
+        "baseline": 15,
+        "proposed": 16
+       }
+      }
+     },
+     "D6_syn_numeric_SYNTHETIC": {
+      "n_eligible": 77,
+      "blank_fields": 14,
+      "cer": {
+       "baseline": 1.0135,
+       "proposed": 0.5993,
+       "delta": -0.4141
+      },
+      "wer": {
+       "baseline": 1.0,
+       "proposed": 0.7792,
+       "delta": -0.2208
+      },
+      "exact_rate": {
+       "baseline": 0.0,
+       "proposed": 0.2208,
+       "delta": 0.2208,
+       "delta_pp": 22.1
+      },
+      "exact": {
+       "baseline": 0,
+       "proposed": 17
+      },
+      "relative_cer_reduction": 0.4086,
+      "punctuation": {
+       "baseline": {
+        "precision": null,
+        "recall": null
+       },
+       "proposed": {
+        "precision": 0.0,
+        "recall": null
+       }
+      },
+      "coverage": {
+       "baseline": 1.0,
+       "proposed": 1.0
+      },
+      "failure_rate": {
+       "baseline": 0.0,
+       "proposed": 0.0
+      },
+      "value_exact": {
+       "n": 77,
+       "baseline": 0,
+       "proposed": 17,
+       "delta_pp": 22.1,
+       "parseable": {
+        "baseline": 5,
+        "proposed": 49
+       }
+      }
+     },
+     "D6_syn_words_SYNTHETIC": {
+      "n_eligible": 87,
+      "blank_fields": 4,
+      "cer": {
+       "baseline": 0.9225,
+       "proposed": 0.8274,
+       "delta": -0.0952
+      },
+      "wer": {
+       "baseline": 1.0,
+       "proposed": 1.0,
+       "delta": 0.0
+      },
+      "exact_rate": {
+       "baseline": 0.0,
+       "proposed": 0.0,
+       "delta": 0.0,
+       "delta_pp": 0.0
+      },
+      "exact": {
+       "baseline": 0,
+       "proposed": 0
+      },
+      "relative_cer_reduction": 0.1032,
+      "punctuation": {
+       "baseline": {
+        "precision": null,
+        "recall": null
+       },
+       "proposed": {
+        "precision": null,
+        "recall": null
+       }
+      },
+      "coverage": {
+       "baseline": 1.0,
+       "proposed": 1.0
+      },
+      "failure_rate": {
+       "baseline": 0.0,
+       "proposed": 0.0
+      },
+      "value_exact": {
+       "n": 87,
+       "baseline": 0,
+       "proposed": 0,
+       "delta_pp": 0.0,
+       "parseable": {
+        "baseline": 0,
+        "proposed": 0
+       }
+      }
+     }
+    },
+    "pairs": {
+     "gnhk_pairs_genuine_constructed": {
+      "baseline": {
+       "n_eligible": 52,
+       "unresolved": 0,
+       "confusion": {
+        "match->accept": 11,
+        "match->flag": 3,
+        "match->review": 12,
+        "mismatch->accept": 0,
+        "mismatch->flag": 10,
+        "mismatch->review": 16
+       },
+       "decisions": {
+        "review": 28,
+        "accept": 11,
+        "flag": 13
+       },
+       "incorrect_acceptance_rate": 0.0,
+       "incorrect_rejection_rate": 0.11538461538461539,
+       "review_rate": 0.5384615384615384,
+       "decision_coverage": 0.4615,
+       "explicit_mismatch_detection": 10,
+       "flag_or_review_prf": {
+        "tp": 26,
+        "fp": 15,
+        "fn": 0,
+        "precision": 0.6341463414634146,
+        "recall": 1.0,
+        "f1": 0.7761194029850745
+       },
+       "decided_only": {
+        "tp": 10,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.7692307692307693,
+        "recall": 1.0,
+        "f1": 0.8695652173913044,
+        "n_decided": 24
+       },
+       "auto_accepted_matches": 11,
+       "all_review": false
+      },
+      "proposed": {
+       "n_eligible": 52,
+       "unresolved": 0,
+       "confusion": {
+        "match->accept": 12,
+        "match->flag": 2,
+        "match->review": 12,
+        "mismatch->accept": 0,
+        "mismatch->flag": 13,
+        "mismatch->review": 13
+       },
+       "decisions": {
+        "review": 25,
+        "flag": 15,
+        "accept": 12
+       },
+       "incorrect_acceptance_rate": 0.0,
+       "incorrect_rejection_rate": 0.07692307692307693,
+       "review_rate": 0.4807692307692308,
+       "decision_coverage": 0.5192,
+       "explicit_mismatch_detection": 13,
+       "flag_or_review_prf": {
+        "tp": 26,
+        "fp": 14,
+        "fn": 0,
+        "precision": 0.65,
+        "recall": 1.0,
+        "f1": 0.787878787878788
+       },
+       "decided_only": {
+        "tp": 13,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.8666666666666667,
+        "recall": 1.0,
+        "f1": 0.9285714285714286,
+        "n_decided": 27
+       },
+       "auto_accepted_matches": 12,
+       "all_review": false
+      }
+     },
+     "syn_all_SYNTHETIC": {
+      "baseline": {
+       "n_eligible": 146,
+       "unresolved": 18,
+       "confusion": {
+        "match->accept": 0,
+        "match->flag": 0,
+        "match->review": 62,
+        "mismatch->accept": 0,
+        "mismatch->flag": 0,
+        "mismatch->review": 84
+       },
+       "decisions": {
+        "review": 164
+       },
+       "incorrect_acceptance_rate": 0.0,
+       "incorrect_rejection_rate": 0.0,
+       "review_rate": 1.0,
+       "decision_coverage": 0.0,
+       "explicit_mismatch_detection": 0,
+       "flag_or_review_prf": {
+        "tp": 84,
+        "fp": 62,
+        "fn": 0,
+        "precision": 0.5753424657534246,
+        "recall": 1.0,
+        "f1": 0.7304347826086955
+       },
+       "decided_only": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "n_decided": 0
+       },
+       "auto_accepted_matches": 0,
+       "all_review": true
+      },
+      "proposed": {
+       "n_eligible": 146,
+       "unresolved": 18,
+       "confusion": {
+        "match->accept": 0,
+        "match->flag": 0,
+        "match->review": 62,
+        "mismatch->accept": 0,
+        "mismatch->flag": 0,
+        "mismatch->review": 84
+       },
+       "decisions": {
+        "review": 164
+       },
+       "incorrect_acceptance_rate": 0.0,
+       "incorrect_rejection_rate": 0.0,
+       "review_rate": 1.0,
+       "decision_coverage": 0.0,
+       "explicit_mismatch_detection": 0,
+       "flag_or_review_prf": {
+        "tp": 84,
+        "fp": 62,
+        "fn": 0,
+        "precision": 0.5753424657534246,
+        "recall": 1.0,
+        "f1": 0.7304347826086955
+       },
+       "decided_only": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "n_decided": 0
+       },
+       "auto_accepted_matches": 0,
+       "all_review": true
+      }
+     },
+     "syn_natural_SYNTHETIC": {
+      "baseline": {
+       "n_eligible": 73,
+       "unresolved": 18,
+       "confusion": {
+        "match->accept": 0,
+        "match->flag": 0,
+        "match->review": 62,
+        "mismatch->accept": 0,
+        "mismatch->flag": 0,
+        "mismatch->review": 11
+       },
+       "decisions": {
+        "review": 91
+       },
+       "incorrect_acceptance_rate": 0.0,
+       "incorrect_rejection_rate": 0.0,
+       "review_rate": 1.0,
+       "decision_coverage": 0.0,
+       "explicit_mismatch_detection": 0,
+       "flag_or_review_prf": {
+        "tp": 11,
+        "fp": 62,
+        "fn": 0,
+        "precision": 0.1506849315068493,
+        "recall": 1.0,
+        "f1": 0.2619047619047619
+       },
+       "decided_only": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "n_decided": 0
+       },
+       "auto_accepted_matches": 0,
+       "all_review": true
+      },
+      "proposed": {
+       "n_eligible": 73,
+       "unresolved": 18,
+       "confusion": {
+        "match->accept": 0,
+        "match->flag": 0,
+        "match->review": 62,
+        "mismatch->accept": 0,
+        "mismatch->flag": 0,
+        "mismatch->review": 11
+       },
+       "decisions": {
+        "review": 91
+       },
+       "incorrect_acceptance_rate": 0.0,
+       "incorrect_rejection_rate": 0.0,
+       "review_rate": 1.0,
+       "decision_coverage": 0.0,
+       "explicit_mismatch_detection": 0,
+       "flag_or_review_prf": {
+        "tp": 11,
+        "fp": 62,
+        "fn": 0,
+        "precision": 0.1506849315068493,
+        "recall": 1.0,
+        "f1": 0.2619047619047619
+       },
+       "decided_only": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "n_decided": 0
+       },
+       "auto_accepted_matches": 0,
+       "all_review": true
+      }
+     },
+     "syn_constructed_SYNTHETIC": {
+      "baseline": {
+       "n_eligible": 73,
+       "unresolved": 0,
+       "confusion": {
+        "match->accept": 0,
+        "match->flag": 0,
+        "match->review": 0,
+        "mismatch->accept": 0,
+        "mismatch->flag": 0,
+        "mismatch->review": 73
+       },
+       "decisions": {
+        "review": 73
+       },
+       "incorrect_acceptance_rate": 0.0,
+       "incorrect_rejection_rate": null,
+       "review_rate": 1.0,
+       "decision_coverage": 0.0,
+       "explicit_mismatch_detection": 0,
+       "flag_or_review_prf": {
+        "tp": 73,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+       },
+       "decided_only": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "n_decided": 0
+       },
+       "auto_accepted_matches": 0,
+       "all_review": true
+      },
+      "proposed": {
+       "n_eligible": 73,
+       "unresolved": 0,
+       "confusion": {
+        "match->accept": 0,
+        "match->flag": 0,
+        "match->review": 0,
+        "mismatch->accept": 0,
+        "mismatch->flag": 0,
+        "mismatch->review": 73
+       },
+       "decisions": {
+        "review": 73
+       },
+       "incorrect_acceptance_rate": 0.0,
+       "incorrect_rejection_rate": null,
+       "review_rate": 1.0,
+       "decision_coverage": 0.0,
+       "explicit_mismatch_detection": 0,
+       "flag_or_review_prf": {
+        "tp": 73,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+       },
+       "decided_only": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "n_decided": 0
+       },
+       "auto_accepted_matches": 0,
+       "all_review": true
+      }
+     }
+    },
+    "improvements_vs_regressions": {
+     "D1_gnhk_words_genuine": {
+      "exact_regressions": 6,
+      "exact_improvements": 11
+     },
+     "D4_cvl_numeric_genuine": {
+      "exact_regressions": 2,
+      "exact_improvements": 2
+     },
+     "D5_gnhk_numeric_genuine": {
+      "exact_regressions": 1,
+      "exact_improvements": 4
+     },
+     "D5_gnhk_words_genuine": {
+      "exact_regressions": 1,
+      "exact_improvements": 2
+     },
+     "D6_syn_numeric_SYNTHETIC": {
+      "exact_regressions": 0,
+      "exact_improvements": 17
+     },
+     "D6_syn_words_SYNTHETIC": {
+      "exact_regressions": 0,
+      "exact_improvements": 0
+     }
+    },
+    "proposed_config": {
+     "id": "P1-A",
+     "method": "athn",
+     "band_lo": 24,
+     "band_hi": 72,
+     "target": 48,
+     "min_scale": 0.5,
+     "max_scale": 4.0
+    }
+   }
+  }
+ ]
+}

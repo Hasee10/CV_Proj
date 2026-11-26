@@ -117,3 +117,11 @@ This section supersedes conflicting status lines above. Earlier text is kept as 
 - **Latency limitation.** Median latency rose from 0.251 to 0.294 s per crop, but 5 of 89 enlarged synthetic written lines took over 120 s (maximum 419 s). The optional stress subset was not run.
 - **Backend (M9-A, commit 56b9df1; M10-A handover).** FastAPI service in `backend/`. Its default mode is proposed (ATHN), as declared in `artifacts/M7/FROZEN_CONFIG.json` before M8. 17 unit tests and 7 integration tests pass, and 13/13 live HTTP checks passed (`artifacts/M10/LIVE_HTTP_CHECK.json`). Handover files: `HANDOVER.md`, `API_CONTRACT.md`, `FRONTEND_REQUIREMENTS.md`, `openapi.json`, `.env.example`, `requirements-backend.txt`. Nothing is pushed to GitHub; the collaborator pushes.
 - **Next step.** The collaborator builds the frontend against the API contract. A numeric-only ATHN variant is a possible future method; it would need its own dev selection under a new frozen protocol before any test use.
+
+## Final backend handover (2026-11-27)
+- **Scope.** The research and backend are frozen. No method, weight, parameter, manifest or result changed in this step.
+- **Timeout audit.** A 504 is sent at the deadline, but a running beam search cannot be interrupted. It keeps its inference slot until it finishes. Running calls never exceed `CV_MAX_CONCURRENCY`, and the queue wait is capped at the inference timeout, so an abandoned request never starts a model call later. Fixed and tested in 1448d7a.
+- **Reproduction.** A fresh clone passed: backend tests 20/20 and 7/7, live HTTP 16/16, and the OpenAPI schema is identical. External dependencies came from local caches; a cold install was not tested. Line endings broke recorded hashes in clones; fixed with `.gitattributes` in 9ca5789. Evidence: `artifacts/FINAL_BACKEND_HANDOVER/`.
+- **Handover.** `HANDOVER.md` is the entry point, with `SETUP_GUIDE.md`, `DEMO_GUIDE.md`, `API_CONTRACT.md`, `FRONTEND_REQUIREMENTS.md` and `FRONTEND_PROMPT.md`. Demo inputs are in `data/demo/`.
+- **GitHub.** The student authorised the push. All backend commits were pushed to origin/main (https://github.com/Hasee10/CV_Proj).
+- **Remaining.** M9-B frontend (collaborator), M10-B full application integration, the report (3 Dec), and the presentation with live demo (4 Dec). The project as a whole is not complete.

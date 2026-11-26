@@ -37,15 +37,15 @@
    404
   ],
   "latency_seconds": {
-   "preprocess": 0.0064,
+   "preprocess": 0.0053,
    "queue_wait": 0.0,
-   "inference": 0.2689,
-   "total": 0.2753
+   "inference": 0.2906,
+   "total": 0.2959
   },
   "image": {
    "width": 133,
    "height": 40
   },
-  "request_id": "422f111fd656"
+  "request_id": "090b14167098"
  }
 }

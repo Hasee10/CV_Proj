@@ -27,9 +27,9 @@ The course requires a reproducible baseline from the selected paper, standard an
 | M7 | Improvement (design and implementation) | done: adaptive text-height normalisation | 29 Nov | |
 | M8 | Baseline vs improved comparison and ablations | done | 30 Nov | |
 | M9-A | Backend (FastAPI) | done | 30 Nov – 1 Dec | |
-| M10-A | Backend handover | done | 1 Dec | |
+| M10-A | Backend integration and handover (fresh-clone check passed) | done | 1 Dec | |
 | M9-B | Frontend demo | upcoming (collaborator) | 30 Nov – 1 Dec | |
-| M10-B | Reproducibility pass from a fresh clone | upcoming | 1 Dec | |
+| M10-B | Full application integration (frontend + backend end to end) | upcoming | 1–2 Dec | |
 | M11 | Research report | planned | 2–3 Dec | |
 | M12 | Slides and live demo | planned | 3–4 Dec | |
 
@@ -58,7 +58,7 @@ Metric code, amount parsers and stress corruptions are frozen, with 38 regressio
 
 **M8** (`artifacts/M8/`, commit 5520d75). The locked test ran once. Synthetic numeric value-exact went from 0/77 to 17/77. Across all 439 genuine items the CER change was -0.015 [-0.036, 0.002], so no measurable harm. Five of 89 enlarged synthetic written lines took over 120 s.
 
-**M9-A and M10-A** (commit 56b9df1 and the handover commit). FastAPI backend in `backend/`, 17 unit and 7 integration tests passing, 13/13 live HTTP checks (`artifacts/M10/LIVE_HTTP_CHECK.json`). `HANDOVER.md`, `API_CONTRACT.md` and `FRONTEND_REQUIREMENTS.md` describe what the frontend needs. The frontend, the fresh-clone reproduction pass, the report and the presentation with live demo (3-4 Dec) are still upcoming.
+**M9-A and M10-A** (commit 56b9df1 and the handover commit). FastAPI backend in `backend/`, 20 unit and 7 integration tests passing, 16/16 live HTTP checks, and the same checks passing from a fresh clone (`artifacts/FINAL_BACKEND_HANDOVER/`). `HANDOVER.md` is the entry point for the collaborator. The frontend (M9-B), full application integration (M10-B), the report and the presentation with live demo (3-4 Dec) are still upcoming.
 
 ## M5: baseline evaluation
 

@@ -17,9 +17,11 @@ This is an academic prototype for the Computer Vision course (FAST-NUCES, Fall 2
 | M6: failure analysis and stress tests (dev) | verified | 3,675 paired corruption variants plus diagnostics. Upscaling recovers small synthetic numbers (0/8 to 5/8 exact) but harms genuine handwriting; severe contrast loss costs CVL 16.7 points |
 | M7: training-free improvement (dev) | verified | Adaptive text-height normalisation (ATHN), config P1-A, chosen on the dev split under a protocol frozen before inference. Synthetic numeric value-exact 0/35 to 18/35; GNHK words exact 34 to 36; CVL digits exact 38 to 36 (at the guardrail limit). Uniform 2x upscaling failed the genuine-data guardrails; word segmentation was rejected by the frozen rule |
 | M8: locked test, baseline vs ATHN | verified | Run once on 621 entries (216 pairs). Synthetic numeric value-exact 0/77 to 17/77, CER 1.014 to 0.599; genuine handwriting (439 items) CER change -0.015 [-0.036, 0.002], so no measurable harm and a possible small gain. Latency has a long tail on enlarged written lines |
-| M9-A: backend | verified | FastAPI service in `backend/` with recognise, verify and saved-benchmark endpoints; 17 unit tests and 7 integration tests (real checkpoint) pass |
-| M10-A: handover | verified | Real server, 13/13 live HTTP checks passed (`artifacts/M10/LIVE_HTTP_CHECK.json`); `HANDOVER.md`, `API_CONTRACT.md`, `FRONTEND_REQUIREMENTS.md`, `openapi.json` |
-| Frontend demo | not started | requirements in `FRONTEND_REQUIREMENTS.md` |
+| M9-A: backend | verified | FastAPI service in `backend/` with recognise, verify and saved-benchmark endpoints; 20 unit tests and 7 integration tests (real checkpoint) pass |
+| M10-A: backend integration and handover | verified | 16/16 live HTTP checks, also from a fresh clone (`artifacts/FINAL_BACKEND_HANDOVER/`); start with `HANDOVER.md` |
+| M9-B: frontend demo | not started | `FRONTEND_REQUIREMENTS.md`, `FRONTEND_PROMPT.md` |
+| M10-B: full application integration | not started | |
+| Report and presentation | not started | |
 
 Each milestone has its evidence in `artifacts/<milestone>/` (summary JSON, commands, logs, hashes). `PROJECT_TRACKER.md` holds the running log, and `ROADMAP.md` describes every phase, its deliverables and the rules for contributors.
 

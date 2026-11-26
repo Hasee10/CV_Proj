@@ -1,0 +1,174 @@
+{
+ "milestone": "FINAL-BACKEND-HANDOVER",
+ "date": "2026-11-27",
+ "status": "VERIFIED (backend); project NOT complete",
+ "repository": "https://github.com/Hasee10/CV_Proj",
+ "branch": "main",
+ "commits_in_push": [
+  "f836129 M7",
+  "5520d75 M8",
+  "56b9df1 M9-A",
+  "1ad9199 M10-A",
+  "1448d7a backend timeout fix + demo inputs",
+  "9ca5789 line-ending pinning",
+  "final: chore: finalize verified backend and frontend handover"
+ ],
+ "push_status": "authorised by the student; performed immediately after the final commit; remote verification is reported in the session's final response",
+ "frozen_method": {
+  "name": "ATHN",
+  "config": {
+   "id": "P1-A",
+   "method": "athn",
+   "band_lo": 24,
+   "band_hi": 72,
+   "target": 48,
+   "min_scale": 0.5,
+   "max_scale": 4.0
+  },
+  "config_sha256": "49bde3460efac522f9a34b8039ff6f80156b8888b4db7a62680463a7257cf53b",
+  "checkpoint_sha256": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432",
+  "upstream_commit": "9eaea5fe",
+  "integrity": "test_m7 frozen-source/config hash checks pass in the working copy and in a fresh clone; no research file changed in this milestone"
+ },
+ "verified_results_locked_test": {
+  "synthetic_numeric_cer": [
+   1.014,
+   0.599
+  ],
+  "synthetic_numeric_correct_values": "0/77 -> 17/77",
+  "gnhk_cer": [
+   0.296,
+   0.252
+  ],
+  "gnhk_exact": "73/160 -> 78/160",
+  "cvl_exact": "97/210 both",
+  "cvl_cer": [
+   0.141,
+   0.143
+  ],
+  "genuine_aggregate_cer_change": -0.015,
+  "genuine_aggregate_ci95": [
+   -0.036,
+   0.002
+  ],
+  "gnhk_constructed_pairs_decided": "24/52 -> 27/52",
+  "synthetic_verification": "all review (both methods)",
+  "synthetic_written_value_accuracy": "0 (both methods)",
+  "check": "14/14 claims match the saved evidence",
+  "interpretation": "genuine-handwriting change not significant; this is not evidence of equivalence or non-inferiority. No fraud-detection claim."
+ },
+ "backend_audit": {
+  "model_load": "once per process, SHA-256 checked, weights_only",
+  "inference_config": "identical to research runs (integration tests reproduce offline predictions exactly)",
+  "timeout": "504 returned at the deadline; running beam search cannot be interrupted and keeps its slot until done",
+  "concurrency": "running model calls <= CV_MAX_CONCURRENCY (default 1); queue wait capped at the inference timeout so abandoned requests never start inference",
+  "bugs_fixed": [
+   "queue wait could exceed the inference timeout when configured that way, letting an abandoned request start inference later (fixed: capped)",
+   "504 message did not state that computation continues (fixed)",
+   "latency mixed queue wait into inference time (fixed: separate queue_wait field)",
+   "recorded SHA-256 checks failed in clones because of line-ending conversion (fixed: .gitattributes)",
+   "full-image demo relied on an untracked dataset image (fixed: tracked composite demo sheets in data/demo/)"
+  ],
+  "security": [
+   "upload byte/side/pixel limits",
+   "MIME + magic bytes + decode validation",
+   "ROI validation",
+   "in-memory only, no retention",
+   "logs without image content or recognised text",
+   "configurable CORS",
+   "structured errors",
+   "503 when model unavailable",
+   "Decimal amounts, strict grammars, no digit repair"
+  ]
+ },
+ "tests": {
+  "date": "2026-11-27",
+  "machine": "Windows 11 Pro, i7-1265U, CPU only, Python 3.11.9",
+  "original_working_copy": {
+   "research_chain": {
+    "entry": "tests/test_m8.py (runs test_m7 -> test_m6 -> test_m5_dev -> test_m4_online + test_m4_audit)",
+    "m8": "7/7",
+    "nested": {
+     "test_m7": "9/9",
+     "test_m6": "7/7",
+     "test_m5_dev": "8/8",
+     "test_m4_online": "11/11",
+     "test_m4_audit": "27/27"
+    },
+    "failed": []
+   },
+   "backend_unit_mocked": {
+    "total": 20,
+    "passed": 20,
+    "failed": []
+   },
+   "backend_integration_real_checkpoint": {
+    "total": 7,
+    "passed": 7,
+    "failed": []
+   },
+   "live_http": "16/16",
+   "openapi_matches_live_server": true,
+   "reported_numbers_vs_evidence": "14/14 claims match the saved evidence"
+  },
+  "fresh_clone_1": {
+   "what": "git clone of the committed repo at 1448d7a; upstream code cloned from the local copy at 9eaea5fe; checkpoint copied and SHA-256 verified; existing venv (58 packages == the three requirement files)",
+   "backend_unit_mocked": "20/20",
+   "backend_integration_real_checkpoint": "7/7",
+   "live_http": "16/16",
+   "openapi_matches_committed": true
+  },
+  "fresh_clone_2": {
+   "what": "git clone at 9ca5789 (with .gitattributes); upstream from local copy; no checkpoint, no git-ignored data",
+   "tracked_files_byte_identical_to_verified_working_copy": "1164/1165 (the one difference: FRONTEND_REQUIREMENTS.md, uncommitted edits at the time)",
+   "research_suites": {
+    "test_m4_audit": "27/27",
+    "test_m7_own_tests": "8/8 (frozen-hash check passes after the .gitattributes fix)",
+    "test_m8_own_tests": "6/6",
+    "expected_failures_missing_gitignored_inputs": {
+     "test_m4_online": "3 (CVL cache, raw HF cheque images)",
+     "test_m5_dev": "2 (checkpoint not copied) + nested",
+     "test_m6": "3 (data/stress, data/diagnostics) + nested"
+    }
+   }
+  },
+  "not_run": [
+   "cold install on a new machine (packages downloaded from PyPI)",
+   "Linux/macOS",
+   "locked test benchmark (deliberately not rerun)",
+   "optional M8 stress subset"
+  ]
+ },
+ "handover_documents": [
+  "HANDOVER.md (entry point)",
+  "SETUP_GUIDE.md",
+  "DEMO_GUIDE.md",
+  "API_CONTRACT.md",
+  "FRONTEND_REQUIREMENTS.md",
+  "FRONTEND_PROMPT.md",
+  "openapi.json",
+  ".env.example",
+  "requirements-backend.txt",
+  "data/demo/ + demo_manifest.json",
+  "artifacts/M10/examples/"
+ ],
+ "startup_command": ".venv\\Scripts\\python.exe -X utf8 -m uvicorn backend.app:app --host 127.0.0.1 --port 8000",
+ "milestone_states": {
+  "M7": "complete (technical contribution)",
+  "M8": "complete (comparative evaluation)",
+  "M9-A": "complete (backend)",
+  "M10-A": "complete (backend integration; fresh-clone reproduction passed with cached dependencies)",
+  "M9-B": "pending (frontend, collaborator)",
+  "M10-B": "pending (full application integration)",
+  "report": "pending (3 Dec)",
+  "presentation_and_live_demo": "pending (4 Dec)"
+ },
+ "limitations": [
+  "proposed mode on enlarged written lines: 75/89 test lines >10 s, 5 >120 s, max 419 s; a timed-out call keeps the single slot",
+  "synthetic written amounts never parse -> synthetic verification all-review",
+  "gains on genuine handwriting not significant",
+  "synthetic data from one font-rendered set; no real cheques",
+  "cold install on a new machine and Linux/macOS not tested",
+  "Windows user name present in two historical M3-A evidence logs (public since earlier push; not a credential)"
+ ]
+}

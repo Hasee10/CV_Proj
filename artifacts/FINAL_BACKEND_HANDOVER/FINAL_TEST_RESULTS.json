@@ -1,0 +1,58 @@
+{
+ "date": "2026-11-27",
+ "machine": "Windows 11 Pro, i7-1265U, CPU only, Python 3.11.9",
+ "original_working_copy": {
+  "research_chain": {
+   "entry": "tests/test_m8.py (runs test_m7 -> test_m6 -> test_m5_dev -> test_m4_online + test_m4_audit)",
+   "m8": "7/7",
+   "nested": {
+    "test_m7": "9/9",
+    "test_m6": "7/7",
+    "test_m5_dev": "8/8",
+    "test_m4_online": "11/11",
+    "test_m4_audit": "27/27"
+   },
+   "failed": []
+  },
+  "backend_unit_mocked": {
+   "total": 20,
+   "passed": 20,
+   "failed": []
+  },
+  "backend_integration_real_checkpoint": {
+   "total": 7,
+   "passed": 7,
+   "failed": []
+  },
+  "live_http": "16/16",
+  "openapi_matches_live_server": true,
+  "reported_numbers_vs_evidence": "14/14 claims match the saved evidence"
+ },
+ "fresh_clone_1": {
+  "what": "git clone of the committed repo at 1448d7a; upstream code cloned from the local copy at 9eaea5fe; checkpoint copied and SHA-256 verified; existing venv (58 packages == the three requirement files)",
+  "backend_unit_mocked": "20/20",
+  "backend_integration_real_checkpoint": "7/7",
+  "live_http": "16/16",
+  "openapi_matches_committed": true
+ },
+ "fresh_clone_2": {
+  "what": "git clone at 9ca5789 (with .gitattributes); upstream from local copy; no checkpoint, no git-ignored data",
+  "tracked_files_byte_identical_to_verified_working_copy": "1164/1165 (the one difference: FRONTEND_REQUIREMENTS.md, uncommitted edits at the time)",
+  "research_suites": {
+   "test_m4_audit": "27/27",
+   "test_m7_own_tests": "8/8 (frozen-hash check passes after the .gitattributes fix)",
+   "test_m8_own_tests": "6/6",
+   "expected_failures_missing_gitignored_inputs": {
+    "test_m4_online": "3 (CVL cache, raw HF cheque images)",
+    "test_m5_dev": "2 (checkpoint not copied) + nested",
+    "test_m6": "3 (data/stress, data/diagnostics) + nested"
+   }
+  }
+ },
+ "not_run": [
+  "cold install on a new machine (packages downloaded from PyPI)",
+  "Linux/macOS",
+  "locked test benchmark (deliberately not rerun)",
+  "optional M8 stress subset"
+ ]
+}

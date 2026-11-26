@@ -1,0 +1,5 @@
+sample_id,writer_id,sheet,item_id,field,source_photo,source_sha256,crop_file,crop_sha256,prompt_text,prompt_value,verification_status,deviation,verified_text,verified_value,ambiguity_note,unresolved_reason,verifier,reverify_reason,history
+W02_A01_num,W02,A,A01,num,W02_A.jpg,<extract>,data/custom/crops/W02_A01_num.png,<extract>,500,500,verified,no,,,,,AB,,
+W02_A03_num,W02,A,A03,num,W02_A.jpg,<extract>,data/custom/crops/W02_A03_num.png,<extract>,"12,500",12500,verified,yes,"12,000",12000,,,AB,,
+W02_A06_num,W02,A,A06,num,W02_A.jpg,<extract>,data/custom/crops/W02_A06_num.png,<extract>,"1,250.00",1250.00,verified,no,,,separator looks like . or -,,AB,,
+W02_A07_words,W02,A,A07,words,W02_A.jpg,<extract>,data/custom/crops/W02_A07_words.png,<extract>,Seven thousand only,7000,unresolved,,,,,second word illegible,AB,,

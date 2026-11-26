@@ -1,0 +1,6069 @@
+{
+  "dataset": "GNHK test split (Lee, Chung, Lee, ICDAR 2021), word subset",
+  "license": "CC-BY-4.0 (github.com/GoodNotes/GNHK-dataset)",
+  "source": "https://huggingface.co/datasets/staghado/GNHK-Dataset (mirror; official goodnotes.com/gnhk no longer serves data)",
+  "source_revision": "eaa67d396fd29b8b04e38d630da79f67db11b212",
+  "archive": {
+    "name": "test_data.zip",
+    "sha256": "6f3d65d91535d1665050afd83a9f3831394d80accfae88c5b91bbb990781eacb",
+    "bytes": 285995725,
+    "crc32": 1897843626
+  },
+  "selection_rule": [
+    "Rule (fixed before any inference, independent of model output):",
+    "  1. Split the 172 official TEST pages: sort page ids, shuffle with SEED, first 30% -> dev, rest -> test.",
+    "  2. Eligible words: type 'H' (handwritten), not a %special% token, every character in SSL_HWD_Dict.txt.",
+    "  3. Per split, shuffle eligible words with SEED and take the first N per stratum",
+    "     (digit-containing / other), at most PAGE_CAP words per page.",
+    "  4. Crop = axis-aligned bounding box of the official word polygon on the EXIF-transposed page. No margin,",
+    "     no enhancement. These are annotation (oracle) crops, not an automatic segmentation method."
+  ],
+  "seed": 20261126,
+  "dev_fraction_pages": 0.3,
+  "page_cap": 3,
+  "targets": {
+    "dev": {
+      "digit": 20,
+      "other": 60
+    },
+    "test": {
+      "digit": 40,
+      "other": 120
+    }
+  },
+  "counts": {
+    "words": 10066,
+    "printed": 867,
+    "special": 369,
+    "out_of_vocab": 1,
+    "eligible": 8829
+  },
+  "pages_total": 172,
+  "pages_dev": 52,
+  "pages_test": 120,
+  "writer_ids": "not provided by GNHK; page id used as group id (writer-disjointness NOT verifiable)",
+  "pages": {
+    "eng_AF_007": {
+      "source_file": "test/eng_AF_007.jpg",
+      "sha256": "7f76f4b36e49d87be3d06452d055a295111b1d466b861186a02efdde94ac4c5e",
+      "exif_orientation": 1,
+      "transposed_size": [
+        1280,
+        1706
+      ],
+      "split": "test"
+    },
+    "eng_AF_010": {
+      "source_file": "test/eng_AF_010.jpg",
+      "sha256": "37c244c416e7af305bf35aeaf353b48650e6ef0c320b4c0ce98ca229ebb8f997",
+      "exif_orientation": 6,
+      "transposed_size": [
+        2000,
+        1371
+      ],
+      "split": "dev"
+    },
+    "eng_AF_011": {
+      "source_file": "test/eng_AF_011.jpg",
+      "sha256": "9efcaded239a63e5dc20bccafbf5576746895bf9d857c42843fde611659ba425",
+      "exif_orientation": null,
+      "transposed_size": [
+        1500,
+        1500
+      ],
+      "split": "dev"
+    },
+    "eng_AF_016": {
+      "source_file": "test/eng_AF_016.jpg",
+      "sha256": "4bcc0d1a3a58463b6af6a0bdacd5bb763d077a886f702cde774015557e1bd3ad",
+      "exif_orientation": null,
+      "transposed_size": [
+        1700,
+        2338
+      ],
+      "split": "dev"
+    },
+    "eng_AF_022": {
+      "source_file": "test/eng_AF_022.jpg",
+      "sha256": "c5679bd8f20f3a32b59a9b31bdb6d3706c3a4b16b3be812e50fe7ce0af79204b",
+      "exif_orientation": 1,
+      "transposed_size": [
+        1280,
+        1706
+      ],
+      "split": "test"
+    },
+    "eng_AF_027": {
+      "source_file": "test/eng_AF_027.jpg",
+      "sha256": "3a8ef4490f27580c04918a7571ee10701d576b5f38d378c2e55cd1a9cfa1264b",
+      "exif_orientation": 1,
+      "transposed_size": [
+        1280,
+        1706
+      ],
+      "split": "dev"
+    },
+    "eng_AF_031": {
+      "source_file": "test/eng_AF_031.jpg",
+      "sha256": "082051b84d5a725b8a0e605a36596246c69b39cd66df2d48d98475019a082223",
+      "exif_orientation": null,
+      "transposed_size": [
+        4608,
+        1699
+      ],
+      "split": "test"
+    },
+    "eng_AF_036": {
+      "source_file": "test/eng_AF_036.jpg",
+      "sha256": "aeec1e9a44714f5b1c8698f7d70ce412830e7661bcda34b39e416d795f3df06f",
+      "exif_orientation": 6,
+      "transposed_size": [
+        2322,
+        4128
+      ],
+      "split": "test"
+    },
+    "eng_AF_041": {
+      "source_file": "test/eng_AF_041.jpg",
+      "sha256": "6b0e19a1dea8e0160d6c0c0b0207d86e617715d234ecc5f8a6048fb0df8a5ec5",
+      "exif_orientation": 8,
+      "transposed_size": [
+        1944,
+        2592
+      ],
+      "split": "test"
+    },
+    "eng_AF_046": {
+      "source_file": "test/eng_AF_046.jpg",
+      "sha256": "bde924bc80595f50a61aa6ee0aba97e98a908b17faeebf06ea0304c819ce2c64",
+      "exif_orientation": null,
+      "transposed_size": [
+        1280,
+        1285
+      ],
+      "split": "test"
+    },
+    "eng_AF_047": {
+      "source_file": "test/eng_AF_047.jpg",
+      "sha256": "39f2512b2ff0ebfdeacebbd0884cfb03a6f6197895094235b1fd02f20e5301c9",
+      "exif_orientation": 1,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_AF_061": {
+      "source_file": "test/eng_AF_061.jpg",
+      "sha256": "74a50b2d01837a9b4d6e55d6727a5ecadcdfc2da3f09eb65c66d02d7b340421d",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "dev"
+    },
+    "eng_AF_065": {
+      "source_file": "test/eng_AF_065.jpg",
+      "sha256": "badc0a55df163b1460356b966619dc7f097be7ccaddb114a96003e49c7c686a6",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4128,
+        2322
+      ],
+      "split": "test"
+    },
+    "eng_AF_069": {
+      "source_file": "test/eng_AF_069.jpg",
+      "sha256": "0957dee0cbdbd2aa675407c929ae665510289d574937d5c5448fb8170f2868f1",
+      "exif_orientation": null,
+      "transposed_size": [
+        1280,
+        1534
+      ],
+      "split": "dev"
+    },
+    "eng_AF_077": {
+      "source_file": "test/eng_AF_077.jpg",
+      "sha256": "560459838219d569404c40c510ee90164e4cf4964fb1da6590f312b94132b958",
+      "exif_orientation": 1,
+      "transposed_size": [
+        3264,
+        2448
+      ],
+      "split": "test"
+    },
+    "eng_AF_085": {
+      "source_file": "test/eng_AF_085.jpg",
+      "sha256": "b8dccbdfc2e083e4799eea2d4e17d9229c33886d8bcc735257f9492e32660bac",
+      "exif_orientation": 8,
+      "transposed_size": [
+        3264,
+        2448
+      ],
+      "split": "test"
+    },
+    "eng_AF_095": {
+      "source_file": "test/eng_AF_095.jpg",
+      "sha256": "0537eb8b71b98db7f7e3ff550f789fda4cea4845df48c85d2a2c074fede48b7c",
+      "exif_orientation": 1,
+      "transposed_size": [
+        1280,
+        1706
+      ],
+      "split": "test"
+    },
+    "eng_AF_112": {
+      "source_file": "test/eng_AF_112.jpg",
+      "sha256": "252b28fff11ddbd1aba794424abcecf73a7585f3cef582e50901cffc73aaf71a",
+      "exif_orientation": null,
+      "transposed_size": [
+        2103,
+        1627
+      ],
+      "split": "dev"
+    },
+    "eng_AF_113": {
+      "source_file": "test/eng_AF_113.jpg",
+      "sha256": "f619acb8389790fe9bacb8de2a4854772fa6214b9c2967ee8a7de5eb455e78d1",
+      "exif_orientation": 1,
+      "transposed_size": [
+        2448,
+        1700
+      ],
+      "split": "dev"
+    },
+    "eng_AF_115": {
+      "source_file": "test/eng_AF_115.jpg",
+      "sha256": "63f30eec3601de51f975d3ebd6920a5ddd63bbd5382c06588a1d515744a62bf1",
+      "exif_orientation": null,
+      "transposed_size": [
+        1783,
+        1991
+      ],
+      "split": "test"
+    },
+    "eng_AF_126": {
+      "source_file": "test/eng_AF_126.jpg",
+      "sha256": "c1e8c2829e7b00c7d84d7b887b8ad2d905777118e75cb3421241a0deacd409fd",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3024,
+        4032
+      ],
+      "split": "test"
+    },
+    "eng_AF_127": {
+      "source_file": "test/eng_AF_127.jpg",
+      "sha256": "e00636854dc9367dff7d1bb2af8e2bb75c5085b0e1ee4643cf2409e52bb66b8e",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3024,
+        4032
+      ],
+      "split": "test"
+    },
+    "eng_AS_007": {
+      "source_file": "test/eng_AS_007.jpg",
+      "sha256": "27d21603cda4dcdaeccc8360cfcea610129b3f88fd940e11e3bd51a29b98a4f8",
+      "exif_orientation": null,
+      "transposed_size": [
+        1080,
+        1920
+      ],
+      "split": "dev"
+    },
+    "eng_AS_016": {
+      "source_file": "test/eng_AS_016.jpg",
+      "sha256": "4f31f837b177db65c17acd9131ef88c579cb725a6a1f1e38d1e8eb2407876471",
+      "exif_orientation": 8,
+      "transposed_size": [
+        1536,
+        2048
+      ],
+      "split": "dev"
+    },
+    "eng_AS_022": {
+      "source_file": "test/eng_AS_022.jpg",
+      "sha256": "94ffaa2e3a4536c2f0611f24fe35f239eb6f2bfe56e3509aef79a2861818ac07",
+      "exif_orientation": null,
+      "transposed_size": [
+        1536,
+        2048
+      ],
+      "split": "test"
+    },
+    "eng_AS_030": {
+      "source_file": "test/eng_AS_030.jpg",
+      "sha256": "4307f8393e88ceeb28a34c89ed876b319857ce15d168ba5c443c0f1a1c23d2b2",
+      "exif_orientation": 8,
+      "transposed_size": [
+        720,
+        1280
+      ],
+      "split": "test"
+    },
+    "eng_AS_034": {
+      "source_file": "test/eng_AS_034.jpg",
+      "sha256": "9d0ca6171fc365571d5594b424da2a2ec05d8ed9b433f18655746dbbd0a9e1fe",
+      "exif_orientation": null,
+      "transposed_size": [
+        1536,
+        2048
+      ],
+      "split": "test"
+    },
+    "eng_AS_036": {
+      "source_file": "test/eng_AS_036.jpg",
+      "sha256": "2615f5497ef749558c4595f6b4ae9bf23f7b4d2fbafd9fe20cc5725731336c0e",
+      "exif_orientation": 8,
+      "transposed_size": [
+        2048,
+        1536
+      ],
+      "split": "test"
+    },
+    "eng_AS_037": {
+      "source_file": "test/eng_AS_037.jpg",
+      "sha256": "6795a468244d6c0e120c490cf23cd9f9507ec07e407ae03741821430a599eb8b",
+      "exif_orientation": null,
+      "transposed_size": [
+        540,
+        960
+      ],
+      "split": "dev"
+    },
+    "eng_AS_038": {
+      "source_file": "test/eng_AS_038.jpg",
+      "sha256": "0c39463ad24797d905b136166bd65d1d7cd3de08cf704dd23d22f3b0c3fe6eef",
+      "exif_orientation": null,
+      "transposed_size": [
+        1536,
+        2048
+      ],
+      "split": "dev"
+    },
+    "eng_AS_041": {
+      "source_file": "test/eng_AS_041.jpg",
+      "sha256": "df119eec5cfb481a0ef2fdbe28a2278f269e5f44320af438141b194991936819",
+      "exif_orientation": 8,
+      "transposed_size": [
+        1536,
+        2048
+      ],
+      "split": "test"
+    },
+    "eng_AS_042": {
+      "source_file": "test/eng_AS_042.jpg",
+      "sha256": "6cf331ef53fc74916dbad05564ec2af215bd6c0061b9d4ac71acf3ae9a8b0f75",
+      "exif_orientation": null,
+      "transposed_size": [
+        486,
+        960
+      ],
+      "split": "test"
+    },
+    "eng_AS_045": {
+      "source_file": "test/eng_AS_045.jpg",
+      "sha256": "6dd7aeb8649cbae4861b56d487b993b672350e5461ed612ad24f428a2ecd6756",
+      "exif_orientation": null,
+      "transposed_size": [
+        1536,
+        2048
+      ],
+      "split": "test"
+    },
+    "eng_AS_051": {
+      "source_file": "test/eng_AS_051.jpg",
+      "sha256": "6f22151bbeadeb60ef57aa013c8c99b304891c809a8da01fe22b53c7efb78ca5",
+      "exif_orientation": null,
+      "transposed_size": [
+        999,
+        1776
+      ],
+      "split": "test"
+    },
+    "eng_AS_054": {
+      "source_file": "test/eng_AS_054.jpg",
+      "sha256": "34d1ad130b2719a0bcf6d55c917c084a6ef63711d751dccda2563d713d50b128",
+      "exif_orientation": null,
+      "transposed_size": [
+        1536,
+        2048
+      ],
+      "split": "test"
+    },
+    "eng_AS_059": {
+      "source_file": "test/eng_AS_059.jpg",
+      "sha256": "9343e837eb8486bf8d188679a1fa63b408362cf94c09e0ae0302c55dc6c4faa8",
+      "exif_orientation": null,
+      "transposed_size": [
+        1536,
+        2048
+      ],
+      "split": "test"
+    },
+    "eng_AS_063": {
+      "source_file": "test/eng_AS_063.jpg",
+      "sha256": "745af302745ff5609e5f3fde96811bdbdde34e82cb4a9bfbcd37955d10fb23a7",
+      "exif_orientation": 1,
+      "transposed_size": [
+        957,
+        1411
+      ],
+      "split": "dev"
+    },
+    "eng_AS_075": {
+      "source_file": "test/eng_AS_075.jpg",
+      "sha256": "2c91ef512e1f60ced43797c1584d539b865e099366dd0013038c8279289a52cb",
+      "exif_orientation": null,
+      "transposed_size": [
+        1536,
+        2048
+      ],
+      "split": "test"
+    },
+    "eng_AS_077": {
+      "source_file": "test/eng_AS_077.jpg",
+      "sha256": "9343e837eb8486bf8d188679a1fa63b408362cf94c09e0ae0302c55dc6c4faa8",
+      "exif_orientation": null,
+      "transposed_size": [
+        1536,
+        2048
+      ],
+      "split": "test"
+    },
+    "eng_EU_009": {
+      "source_file": "test/eng_EU_009.jpg",
+      "sha256": "483f8e04e7f3cdb4b311df0eec465bf0afa59ca7a9865c2fda01739af24ae51c",
+      "exif_orientation": 0,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_013": {
+      "source_file": "test/eng_EU_013.jpg",
+      "sha256": "7e42b0dd7a1135983c6baeb54ede388f4d9e593ae83660300d6cd940f7b0bd0b",
+      "exif_orientation": 1,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_025": {
+      "source_file": "test/eng_EU_025.jpg",
+      "sha256": "952e1c2702a5194099f49186fffa6c70075db5ad2ca634a026f05bd78bab974a",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_026": {
+      "source_file": "test/eng_EU_026.jpg",
+      "sha256": "06e2111b099be54063fbc85b30ba3f64a6cf8f43db524e21e25715feacf15690",
+      "exif_orientation": 1,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_036": {
+      "source_file": "test/eng_EU_036.jpg",
+      "sha256": "53dc83a9d38668022424e7aef478dab958961388507596e2af6222894329d562",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_038": {
+      "source_file": "test/eng_EU_038.jpg",
+      "sha256": "e2a113fed8fd77bdee3fb11b54c275863ca41b64dfd566e2421d8a66baa6aaac",
+      "exif_orientation": 0,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_040": {
+      "source_file": "test/eng_EU_040.jpg",
+      "sha256": "27f9a33c41ab122b3f4cf82ea426e298c53e2800a6bdf51011b033624d92d4a7",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_044": {
+      "source_file": "test/eng_EU_044.jpg",
+      "sha256": "ee9472beff680955891455facec90cadd1fdcbf539cd0187b46f97c1253be297",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_048": {
+      "source_file": "test/eng_EU_048.jpg",
+      "sha256": "49eb8984851c3cba716a102d91dac505ca9343ae7897f8338eaab438feb34ea1",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_063": {
+      "source_file": "test/eng_EU_063.jpg",
+      "sha256": "13c1dfded9c493f5bbd762c01366c9179964cea80df6e1969e9a22fcc4760e30",
+      "exif_orientation": 0,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_067": {
+      "source_file": "test/eng_EU_067.jpg",
+      "sha256": "ebb097238214bd2bc295572150f57c2993fade8d281ff7c3f8e5e3d6f706ad6e",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_069": {
+      "source_file": "test/eng_EU_069.jpg",
+      "sha256": "7b5ac2279ca9b40adffd49d94167540425fddc477ed0a75948c8cf77f902624d",
+      "exif_orientation": 0,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_071": {
+      "source_file": "test/eng_EU_071.jpg",
+      "sha256": "a891cfd270449325951dcf1c7ccd642e0fceb8d19655de453d8ad44aee777148",
+      "exif_orientation": 0,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_094": {
+      "source_file": "test/eng_EU_094.jpg",
+      "sha256": "d5fda217170c18086ea1dc434e52cc384061c00f47385d5f225ab2347048148a",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_098": {
+      "source_file": "test/eng_EU_098.jpg",
+      "sha256": "38bb6376e38e1f9652f50be3ca8ba7e5d7e3bee2fb79b988fcd3b40b9d883cf6",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_099": {
+      "source_file": "test/eng_EU_099.jpg",
+      "sha256": "aa551a83941fd359c4b304840ba1b188b2cafa50a7fa78818a80a894a1301829",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_109": {
+      "source_file": "test/eng_EU_109.jpg",
+      "sha256": "6ce56be5aec8c132e40b8eb3043ba16922e545a2e6c591172c507401e2aefec8",
+      "exif_orientation": 1,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_112": {
+      "source_file": "test/eng_EU_112.jpg",
+      "sha256": "0d68ae7ed7d353a1f5849f4d30f6db76540f545c6040e15069b446c4b658c0c7",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_115": {
+      "source_file": "test/eng_EU_115.jpg",
+      "sha256": "99cf301c2a6998cfd3a6ed3c91600e3b231c294a75f772c8504dceb649400a10",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_117": {
+      "source_file": "test/eng_EU_117.jpg",
+      "sha256": "89ae0c93a654879b4db4adbf0765434d5a7acdb44fbd3766bce802ba7d26a25c",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_118": {
+      "source_file": "test/eng_EU_118.jpg",
+      "sha256": "e42dc73ce282a3e8305b8715ad2c52d404188ad1f8dbdfd567cd5c5923447a7f",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_119": {
+      "source_file": "test/eng_EU_119.jpg",
+      "sha256": "f13777d6a7d1813ad5bbd410a2dbce33a6868d8f60212eee6a94af51579ca840",
+      "exif_orientation": 0,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_128": {
+      "source_file": "test/eng_EU_128.jpg",
+      "sha256": "4008d95f8ef57c69c7aba72faf160c31307fc1d92359016bf57fc10d684f7416",
+      "exif_orientation": 0,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_138": {
+      "source_file": "test/eng_EU_138.jpg",
+      "sha256": "e5d6da04dc3f0bdbb774f14a8435c2ec3d8515b35f28aed5e3a49ea033b00cf0",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_139": {
+      "source_file": "test/eng_EU_139.jpg",
+      "sha256": "d8b2835b898b823642e7787b932dfe7d1276bc5a17c517ab3ffd7e936050df6e",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_140": {
+      "source_file": "test/eng_EU_140.jpg",
+      "sha256": "b08748d508c0c25621c9a1576d08eb91eeb6fb6f54de6819c53bf339f3515961",
+      "exif_orientation": 1,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_144": {
+      "source_file": "test/eng_EU_144.jpg",
+      "sha256": "5646b45f899fbac4bd5a5830fdc37d6bda5b12f75ad1bf22f83642a1c27a933a",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_160": {
+      "source_file": "test/eng_EU_160.jpg",
+      "sha256": "a830695d38c7a91fe8d7b18030fefbc4ae0f820d7166401292a96b29a9d1145f",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_164": {
+      "source_file": "test/eng_EU_164.jpg",
+      "sha256": "aeacc2a7da174c60abb3f5932b7e56fd3ad9505b78ab06b219f0af666e36d97b",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_167": {
+      "source_file": "test/eng_EU_167.jpg",
+      "sha256": "b557c255fe830fa8ec953e2ddbb8e24ede1f93d22aeeb259c5e7001ff08b412b",
+      "exif_orientation": 1,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_174": {
+      "source_file": "test/eng_EU_174.jpg",
+      "sha256": "8a52b7497b621df94281453e40eff2aeb40130362e8b15ccdb690b20db1a2713",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_178": {
+      "source_file": "test/eng_EU_178.jpg",
+      "sha256": "1544ee7b48f40e0d6e9bd4e3866f0c3000ac35bf5081cb88e0c5b684d1b6cc4c",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_186": {
+      "source_file": "test/eng_EU_186.jpg",
+      "sha256": "a867b476e5c9e14ecb3a998a592c0f06d1b4d1fcdae7084a48e1a5461f2455ed",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_197": {
+      "source_file": "test/eng_EU_197.jpg",
+      "sha256": "d5b06cc8a8441a71098d5b36eafb30ceddd7fa0b6157351fe3a6c49e621171ac",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_198": {
+      "source_file": "test/eng_EU_198.jpg",
+      "sha256": "136c261cd5c27b0e813cfd4b80319f04cc69397908f8f79dbb7a4cf58cff41c2",
+      "exif_orientation": 0,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_210": {
+      "source_file": "test/eng_EU_210.jpg",
+      "sha256": "c05423a04afabfe84a48ee97fd4e601abfbc451841888acab4135a8552082fdc",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_216": {
+      "source_file": "test/eng_EU_216.jpg",
+      "sha256": "0dbac7ee471800f70854f9b56a03e84797997ab5c8860f0bc9b9c3358833da1d",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_227": {
+      "source_file": "test/eng_EU_227.jpg",
+      "sha256": "b5acd18052e4535c5395b8302ac1957e2cd0425748f53df8ff03149c1e6adb33",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "test"
+    },
+    "eng_EU_229": {
+      "source_file": "test/eng_EU_229.jpg",
+      "sha256": "754e7e65659f196dfbda935db2e76669882b40339cf50a0e6c141ca4b5bda921",
+      "exif_orientation": 0,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_238": {
+      "source_file": "test/eng_EU_238.jpg",
+      "sha256": "eba7c23c9aecdeb69a7bb14d15b0c50a718932dbc5c0a8e22dc9d14b3793629f",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4000,
+        3000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_241": {
+      "source_file": "test/eng_EU_241.jpg",
+      "sha256": "282cad43a962f339684815c7b8de9b81de105ee5299c42b68c4bce1d1e1a2dba",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "dev"
+    },
+    "eng_EU_243": {
+      "source_file": "test/eng_EU_243.jpg",
+      "sha256": "b0ec0457c46b3515714a8f74b9dd4e99820a2ac21d04a5fc6d5ae7ddd265cf18",
+      "exif_orientation": 1,
+      "transposed_size": [
+        3000,
+        4000
+      ],
+      "split": "test"
+    },
+    "eng_EU_266": {
+      "source_file": "test/eng_EU_266.jpg",
+      "sha256": "010d3f49486a95e7e82a7e76c031298f391480552ebaa1ee75caebc26bb2c7ae",
+      "exif_orientation": null,
+      "transposed_size": [
+        800,
+        690
+      ],
+      "split": "dev"
+    },
+    "eng_EU_272": {
+      "source_file": "test/eng_EU_272.jpg",
+      "sha256": "9d7ad3341e5f9d5e427b0dd31a02c12f2d9dbaac4195fd2e1ab66985d2fbaa63",
+      "exif_orientation": null,
+      "transposed_size": [
+        4135,
+        5847
+      ],
+      "split": "test"
+    },
+    "eng_EU_281": {
+      "source_file": "test/eng_EU_281.jpg",
+      "sha256": "69097d6fe706faaf9a50a21932661f9870f533b79df91312d07eca7c15e639e2",
+      "exif_orientation": null,
+      "transposed_size": [
+        1080,
+        1525
+      ],
+      "split": "test"
+    },
+    "eng_EU_283": {
+      "source_file": "test/eng_EU_283.jpg",
+      "sha256": "d0c9b832a1d6cc34902ecc3a5567447abf257f46d1a1e5d50e619a05afae876d",
+      "exif_orientation": null,
+      "transposed_size": [
+        1080,
+        1118
+      ],
+      "split": "test"
+    },
+    "eng_EU_285": {
+      "source_file": "test/eng_EU_285.jpg",
+      "sha256": "489e71a1ea88f239d1c24860c29b378ebec5ad38c2df634f4a3ec85ea0bc4cc2",
+      "exif_orientation": null,
+      "transposed_size": [
+        556,
+        800
+      ],
+      "split": "test"
+    },
+    "eng_EU_293": {
+      "source_file": "test/eng_EU_293.jpg",
+      "sha256": "9ea1e6d1b8cfea8b0019572560ec43d1c490b50282e32605724c3428a90355ee",
+      "exif_orientation": null,
+      "transposed_size": [
+        1956,
+        1080
+      ],
+      "split": "test"
+    },
+    "eng_EU_298": {
+      "source_file": "test/eng_EU_298.jpg",
+      "sha256": "85da9b3b9b636f50ad7c251990be009a5a7b156f06f81b74ca54bc3cb6f041e3",
+      "exif_orientation": null,
+      "transposed_size": [
+        1323,
+        1080
+      ],
+      "split": "dev"
+    },
+    "eng_EU_307": {
+      "source_file": "test/eng_EU_307.jpg",
+      "sha256": "65f840d902660797f9cf1f6d099d941e71e5f6b671dd09ee415c12152f34538f",
+      "exif_orientation": null,
+      "transposed_size": [
+        1231,
+        1080
+      ],
+      "split": "test"
+    },
+    "eng_EU_310": {
+      "source_file": "test/eng_EU_310.jpg",
+      "sha256": "01e1fb9c9dc93a014796fe52a02c636cdcfe930bdc371d9b1afd54468c0ffcc5",
+      "exif_orientation": null,
+      "transposed_size": [
+        800,
+        465
+      ],
+      "split": "dev"
+    },
+    "eng_EU_313": {
+      "source_file": "test/eng_EU_313.jpg",
+      "sha256": "66a6a9b9b9f3a299c0f850d43a130ce99702836119ff9c0f12f4a39db84a3985",
+      "exif_orientation": null,
+      "transposed_size": [
+        1080,
+        1246
+      ],
+      "split": "dev"
+    },
+    "eng_EU_315": {
+      "source_file": "test/eng_EU_315.jpg",
+      "sha256": "bbdb919e67c3e8e9e3f464aaf28d2574743d7dba4e4d99c5234191e6b3e85aae",
+      "exif_orientation": 1,
+      "transposed_size": [
+        2719,
+        3023
+      ],
+      "split": "dev"
+    },
+    "eng_EU_319": {
+      "source_file": "test/eng_EU_319.jpg",
+      "sha256": "b94a9ba7f839c5409ceac7fd2ab83888815b3f9a617492b767674cb376d64305",
+      "exif_orientation": null,
+      "transposed_size": [
+        800,
+        340
+      ],
+      "split": "dev"
+    },
+    "eng_EU_322": {
+      "source_file": "test/eng_EU_322.jpg",
+      "sha256": "56d0c263cfb06825b7c16b7afca681e104895e6c035c628ea65f45d2badf101b",
+      "exif_orientation": 1,
+      "transposed_size": [
+        2816,
+        3486
+      ],
+      "split": "test"
+    },
+    "eng_EU_326": {
+      "source_file": "test/eng_EU_326.jpg",
+      "sha256": "720d86854a3ee0db32e469d1cbbe130dbae80371000e1d70e0a24f7e2fbe18f6",
+      "exif_orientation": 1,
+      "transposed_size": [
+        3003,
+        3918
+      ],
+      "split": "test"
+    },
+    "eng_NA_013": {
+      "source_file": "test/eng_NA_013.jpg",
+      "sha256": "cda3207ac26d34436ed023fe5837cb16d4bf87e467fd5c118fc3e530b088e218",
+      "exif_orientation": 6,
+      "transposed_size": [
+        1080,
+        1440
+      ],
+      "split": "test"
+    },
+    "eng_NA_023": {
+      "source_file": "test/eng_NA_023.jpg",
+      "sha256": "a5d9f8ccabb64faf4145b2a7552ac89cccb83275a7a9134e8cdca3a4c6156cba",
+      "exif_orientation": null,
+      "transposed_size": [
+        1440,
+        1080
+      ],
+      "split": "test"
+    },
+    "eng_NA_030": {
+      "source_file": "test/eng_NA_030.jpg",
+      "sha256": "c369ed2bd8704468db61c3d4deb440ab6c68236751719e0b93c4bef1f39c5c27",
+      "exif_orientation": null,
+      "transposed_size": [
+        2448,
+        3264
+      ],
+      "split": "test"
+    },
+    "eng_NA_032": {
+      "source_file": "test/eng_NA_032.jpg",
+      "sha256": "5b0a54e4bc2684adb2d38eff1f275f16753a5f3024dd9870e68d6d3b47b651ae",
+      "exif_orientation": 8,
+      "transposed_size": [
+        4032,
+        2834
+      ],
+      "split": "test"
+    },
+    "eng_NA_038": {
+      "source_file": "test/eng_NA_038.jpg",
+      "sha256": "453bda9cf4515359207ea560ecbe95d982a648df35a74a5b091a9643917b3508",
+      "exif_orientation": 3,
+      "transposed_size": [
+        1440,
+        1080
+      ],
+      "split": "test"
+    },
+    "eng_NA_041": {
+      "source_file": "test/eng_NA_041.jpg",
+      "sha256": "12fd1e45677863dc5674391758871f699fcdda31a64275d607927f3f27f0bd92",
+      "exif_orientation": null,
+      "transposed_size": [
+        960,
+        1280
+      ],
+      "split": "test"
+    },
+    "eng_NA_047": {
+      "source_file": "test/eng_NA_047.jpg",
+      "sha256": "3d249b1fe2a31621e5aa279478640c1833fc0d759235afae520ced1950f0f2c6",
+      "exif_orientation": null,
+      "transposed_size": [
+        3024,
+        4032
+      ],
+      "split": "dev"
+    },
+    "eng_NA_052": {
+      "source_file": "test/eng_NA_052.jpg",
+      "sha256": "ef3a9b6cfdba15d36e1759dfdeebfd96d549f91065b564610cdbe551ba9cca8a",
+      "exif_orientation": 1,
+      "transposed_size": [
+        3909,
+        3012
+      ],
+      "split": "dev"
+    },
+    "eng_NA_065": {
+      "source_file": "test/eng_NA_065.jpg",
+      "sha256": "4f8e9f18ecb27df4055d5a0c88fd59f1dad2084eb192efc62d58354f562c0245",
+      "exif_orientation": 1,
+      "transposed_size": [
+        1411,
+        1075
+      ],
+      "split": "test"
+    },
+    "eng_NA_076": {
+      "source_file": "test/eng_NA_076.jpg",
+      "sha256": "65f50e64b0b9a77cd41d51a12b1d8ad6a1cf8e40bd7ec08c11f000aa851c113e",
+      "exif_orientation": null,
+      "transposed_size": [
+        1440,
+        1080
+      ],
+      "split": "test"
+    },
+    "eng_NA_081": {
+      "source_file": "test/eng_NA_081.jpg",
+      "sha256": "e7da1c62239b2885d5b9dd5f54b58e6804bd3aaf0ef7e1bd679be7d5df4afcef",
+      "exif_orientation": 0,
+      "transposed_size": [
+        2976,
+        3968
+      ],
+      "split": "test"
+    },
+    "eng_NA_085": {
+      "source_file": "test/eng_NA_085.jpg",
+      "sha256": "f96fce3dfa023b7d87b29819ce50d357cd6b998f89a2ffb1ded3325643900ee1",
+      "exif_orientation": 8,
+      "transposed_size": [
+        1440,
+        1080
+      ],
+      "split": "test"
+    },
+    "eng_NA_088": {
+      "source_file": "test/eng_NA_088.jpg",
+      "sha256": "2330c1fe2c50bf234d5f9519fd1c84ce3cf33e669b0aa451e0a7599330b38662",
+      "exif_orientation": 1,
+      "transposed_size": [
+        1080,
+        1440
+      ],
+      "split": "test"
+    },
+    "eng_NA_094": {
+      "source_file": "test/eng_NA_094.jpg",
+      "sha256": "c79e37ebd25c08873cf51ef44476250ff489bed7694a432d1f493d5c21f92a49",
+      "exif_orientation": null,
+      "transposed_size": [
+        1080,
+        1440
+      ],
+      "split": "dev"
+    },
+    "eng_NA_095": {
+      "source_file": "test/eng_NA_095.jpg",
+      "sha256": "6dad3226e4aaf9e9d080f69c764c14d273d5d2dfca248cec51374ff6b71b7984",
+      "exif_orientation": 1,
+      "transposed_size": [
+        4032,
+        3024
+      ],
+      "split": "test"
+    },
+    "eng_NA_101": {
+      "source_file": "test/eng_NA_101.jpg",
+      "sha256": "509dfc8a22e9f8b1ea27e14bf37e11774c58ad405665020f8fc00150fd227ec9",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3024,
+        4032
+      ],
+      "split": "test"
+    },
+    "eng_NA_107": {
+      "source_file": "test/eng_NA_107.jpg",
+      "sha256": "c24833b0822703d184791fd33db570e9b193b6d24007b55ced70f4312f1b3b76",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3024,
+        4032
+      ],
+      "split": "test"
+    },
+    "eng_NA_111": {
+      "source_file": "test/eng_NA_111.jpg",
+      "sha256": "95f358c9abefc303d1410a159ac1ae47b7d0782317baa14dc90d50b832d7318b",
+      "exif_orientation": 8,
+      "transposed_size": [
+        1280,
+        960
+      ],
+      "split": "test"
+    },
+    "eng_NA_113": {
+      "source_file": "test/eng_NA_113.jpg",
+      "sha256": "19d579972369a2b81e0d34e4cb187559ed308680aac40c22fad6fccdb1967baf",
+      "exif_orientation": null,
+      "transposed_size": [
+        1080,
+        1440
+      ],
+      "split": "test"
+    },
+    "eng_NA_114": {
+      "source_file": "test/eng_NA_114.jpg",
+      "sha256": "8c2fd88dc49dea16656e740d2de635ead6a2867ceb0a0cc119d8324149bd469e",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3024,
+        4032
+      ],
+      "split": "test"
+    },
+    "eng_NA_121": {
+      "source_file": "test/eng_NA_121.jpg",
+      "sha256": "301c4a039fc73b1a6468c60cfced92aa11917621aae9db5612fbf9835d1dafff",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3024,
+        4032
+      ],
+      "split": "dev"
+    },
+    "eng_NA_124": {
+      "source_file": "test/eng_NA_124.jpg",
+      "sha256": "386669f424405ea20a7a94326cdcbdf4eff889802e927b63adb5aa77029280fd",
+      "exif_orientation": null,
+      "transposed_size": [
+        960,
+        1920
+      ],
+      "split": "test"
+    },
+    "eng_NA_128": {
+      "source_file": "test/eng_NA_128.jpg",
+      "sha256": "9df85b99980ba79d8f03b418f9f3d903dda97d68962de4643ee17df2cf8ca7f4",
+      "exif_orientation": 8,
+      "transposed_size": [
+        1920,
+        1080
+      ],
+      "split": "dev"
+    },
+    "eng_NA_132": {
+      "source_file": "test/eng_NA_132.jpg",
+      "sha256": "2078072dfd8c1dd74baefa9b78da875d679a9f186cf6dabba4169efbe493f0e5",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3024,
+        4032
+      ],
+      "split": "dev"
+    },
+    "eng_NA_136": {
+      "source_file": "test/eng_NA_136.jpg",
+      "sha256": "f7b35c916c0e67602f47a4aaa9c3a8cd23e704bdbbaeade59449f6ebdc4bc86a",
+      "exif_orientation": 0,
+      "transposed_size": [
+        3456,
+        4608
+      ],
+      "split": "dev"
+    },
+    "eng_NA_137": {
+      "source_file": "test/eng_NA_137.jpg",
+      "sha256": "0e385df8b9067c35d366d6d0c2c66621d020a5126e8fa11761c949fde4e4ca5e",
+      "exif_orientation": 0,
+      "transposed_size": [
+        3456,
+        4608
+      ],
+      "split": "test"
+    },
+    "eng_NA_142": {
+      "source_file": "test/eng_NA_142.jpg",
+      "sha256": "4c679364f92d18e852febbb406805d70ac2863b381685408c8c383f02c39b17f",
+      "exif_orientation": 6,
+      "transposed_size": [
+        3120,
+        4160
+      ],
+      "split": "dev"
+    }
+  },
+  "samples": [
+    {
+      "id": "GNHK_eng_AF_007_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_007_w011.png",
+      "sha256": "7c7d4f5f5c1964e7a6579b4f8aa681e4527cc82fb7ca140c75110fd3005d063e",
+      "ground_truth": "acquiring",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_007",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        647,
+        393,
+        789,
+        460
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_007_w030",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_007_w030.png",
+      "sha256": "1ac53dd0acac6bb6109b472989f260a1a0b5eb4b68e27a788abfa83f1523c4a1",
+      "ground_truth": "identify",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_007",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        238,
+        686,
+        353,
+        741
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_010_w001",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_010_w001.png",
+      "sha256": "66cc872b54c51615479a59cd6404c97d21d6d8d7c53377a234e1a60bed7124ce",
+      "ground_truth": "i",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_010",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        426,
+        137,
+        443,
+        211
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_010_w003",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_010_w003.png",
+      "sha256": "aa62e4a453bde7a9b7d4eb76330c40e8899ab5969603924f7e9105f2882ae2aa",
+      "ground_truth": "you",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_010",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        717,
+        156,
+        870,
+        244
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_010_w018",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_010_w018.png",
+      "sha256": "3e3957752ef1437340185e7c54b5736993ec7c137782f48cf5cc03bb280796f3",
+      "ground_truth": "most",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_010",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        773,
+        409,
+        995,
+        492
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_011_w001",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_011_w001.png",
+      "sha256": "a746465a6dc5fe89348f36500e267dd0bd301da9cbc560b36ee7b067ba5a4163",
+      "ground_truth": "without",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_011",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        531,
+        215,
+        809,
+        283
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_016_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_016_w011.png",
+      "sha256": "6051ef367b55f823d85480e91624cac2983137f3c360de180431dd66e4f6c4af",
+      "ground_truth": "Nigeria",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_016",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        1265,
+        332,
+        1541,
+        412
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_016_w015",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_016_w015.png",
+      "sha256": "3c79e25537933273e334df90384e018661fb83ce41643c63a8ba4030c1821e69",
+      "ground_truth": "of",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_016",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        1234,
+        482,
+        1322,
+        562
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_022_w043",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_022_w043.png",
+      "sha256": "f3556ac40f0210231eab4f1f776830fcfb2df2613422045049dd3bf655512bcb",
+      "ground_truth": "37",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AF_022",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        1044,
+        640,
+        1092,
+        665
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_027_w010",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_027_w010.png",
+      "sha256": "0d7bb2bcfae3f09eeaed713d6870a69e45724fdfc79ee850456c9c46c7da94e1",
+      "ground_truth": "running",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_027",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        884,
+        213,
+        1051,
+        310
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_027_w033",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_027_w033.png",
+      "sha256": "9566f3fc188258f6bd7d9b78d8de6c650ded7496cd5e28e864f7be3fe3e51610",
+      "ground_truth": "CSS.",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_027",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        481,
+        522,
+        600,
+        577
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_027_w113",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_027_w113.png",
+      "sha256": "a4782c526b1d021092ac4e6f023462a71134d3163188cdfd7c8b53f55217cbb3",
+      "ground_truth": "currently",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_027",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 18,
+      "crop_box_xyxy": [
+        764,
+        1282,
+        977,
+        1437
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_031_w033",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_031_w033.png",
+      "sha256": "0ee43d5575237d45479ea30fa447e1d66f5b38b03178dc3261b663b0d91975ea",
+      "ground_truth": "to",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_031",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        372,
+        1275,
+        615,
+        1412
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_036_w041",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_036_w041.png",
+      "sha256": "b45f05fed998dc9d75726d8ca0d9f720216cead29a255c05550663b3c2b30fb4",
+      "ground_truth": "97/134",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AF_036",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 16,
+      "crop_box_xyxy": [
+        1200,
+        2823,
+        1892,
+        2996
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_041_w041",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_041_w041.png",
+      "sha256": "d92f98f511df91a701ab90497eb47a49dfec417638501cc606a9f970837df788",
+      "ground_truth": "5",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AF_041",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        66,
+        802,
+        119,
+        854
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_041_w071",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_041_w071.png",
+      "sha256": "2bf08ad5803a0dddace9c8f926017659068d8738e19d2be74654f10485234a10",
+      "ground_truth": "struggling",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_041",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 9,
+      "crop_box_xyxy": [
+        525,
+        1259,
+        884,
+        1394
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_041_w110",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_041_w110.png",
+      "sha256": "091bf43e1c06106180f39ad47deb3a3b18283c7aa0d589af24fcb39ef764f7f0",
+      "ground_truth": "does",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_041",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 14,
+      "crop_box_xyxy": [
+        257,
+        1940,
+        453,
+        2032
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_046_w056",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_046_w056.png",
+      "sha256": "2085f5f434ef2d7d4700d9f278ac64830772c2fa0c733a3cf2f13a8617abb3a5",
+      "ground_truth": "employ",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_046",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 11,
+      "crop_box_xyxy": [
+        161,
+        642,
+        357,
+        715
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_046_w065",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_046_w065.png",
+      "sha256": "cfcee85e619092fcb7109c00282e01a3b9cd631d9dcaa63705077061b6144a62",
+      "ground_truth": "likely",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_046",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 13,
+      "crop_box_xyxy": [
+        139,
+        807,
+        316,
+        911
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_046_w066",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_046_w066.png",
+      "sha256": "b84a6f9cf80d60fc4d909ca24e2a43772fc7b3aead92ad1353b1c4e7c3a6b41c",
+      "ground_truth": "business",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_046",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 13,
+      "crop_box_xyxy": [
+        366,
+        802,
+        599,
+        855
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_047_w030",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_047_w030.png",
+      "sha256": "d8051b29b9c6d779cf07dc400dc5dda2ab15778301816c184e01d6d1bfde26d2",
+      "ground_truth": "11",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AF_047",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 12,
+      "crop_box_xyxy": [
+        231,
+        3521,
+        373,
+        3682
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_061_w003",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_061_w003.png",
+      "sha256": "1dab5abe67971e56946dfa2200aab360d62ea03e6787ff25c9baef756c39582c",
+      "ground_truth": "onions.",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_061",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        448,
+        1011,
+        1507,
+        1271
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_065_w047",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_065_w047.png",
+      "sha256": "9e3804098fb3fd53b75614c8265c397d2783cc2e8ce0b77f30fb5e425bc430fd",
+      "ground_truth": "000",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AF_065",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 20,
+      "crop_box_xyxy": [
+        3264,
+        2225,
+        3539,
+        2322
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_069_w054",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_069_w054.png",
+      "sha256": "f402a700f1531de457eb12219544196a01a1750a1a212220c5252acfd17e1a07",
+      "ground_truth": "to;",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_069",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 13,
+      "crop_box_xyxy": [
+        256,
+        1017,
+        336,
+        1070
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_077_w004",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_077_w004.png",
+      "sha256": "a4c2aa74f526912e0daf96b82ac5212786b76d1f15997fe636b7b8b9d4c03161",
+      "ground_truth": "1",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AF_077",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        321,
+        394,
+        361,
+        456
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_077_w033",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_077_w033.png",
+      "sha256": "fa62b01d01c8c3432a8fbd5986a91b95b19f7fdc43d600686d75999a042073a0",
+      "ground_truth": "Parallel",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_077",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        839,
+        1306,
+        1195,
+        1420
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_077_w042",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_077_w042.png",
+      "sha256": "012400dfa518cd0fadcc2effacd060abac4850e23541be5a9eb516c0c9c3cf86",
+      "ground_truth": "4",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AF_077",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        83,
+        1791,
+        135,
+        1881
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_085_w014",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_085_w014.png",
+      "sha256": "eaf121db2eef75fab6083df39d378b491675af111f8d518af6b3a00fcc77ce3f",
+      "ground_truth": "CHOSING",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_085",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        1859,
+        1158,
+        2315,
+        1260
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_095_w004",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_095_w004.png",
+      "sha256": "c001acac9add1a107c0edbb6938b87b72f2313b2234c8fc3e4dc7b00d5ee4864",
+      "ground_truth": "Basic",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_095",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        667,
+        396,
+        772,
+        426
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_095_w026",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_095_w026.png",
+      "sha256": "83151dfce453bb401002f1799b8919640eba3c0795d8c9e4f870c32662d16cde",
+      "ground_truth": "Software",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_095",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        843,
+        641,
+        1044,
+        688
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_112_w021",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_112_w021.png",
+      "sha256": "48de4e5a3fc117a7637193c8646b26e61f45fff7c92606e6fc630fab1ff0b4cd",
+      "ground_truth": "1-",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_AF_112",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        78,
+        801,
+        270,
+        882
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_112_w024",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_112_w024.png",
+      "sha256": "a5f10619e159d1b8bd9bd7b40c329559b1a7223613276a04957130f4f9aabf77",
+      "ground_truth": "the",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_112",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        1165,
+        821,
+        1367,
+        870
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_112_w029",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_112_w029.png",
+      "sha256": "75cc3a03445b8c032d9cad59a9d4f4895d611dbbdeda34c2c90b3b3638a07aac",
+      "ground_truth": "2",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_AF_112",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        45,
+        1096,
+        110,
+        1150
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_113_w006",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_113_w006.png",
+      "sha256": "444f2bb9d7d8c570395c44433e81a37ac72c8387883c5fdd90b63a02e2d16944",
+      "ground_truth": "quickly",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_113",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        1042,
+        678,
+        1618,
+        887
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_113_w007",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_113_w007.png",
+      "sha256": "dade1c0f4295d6305487cac78eb31c04b31c5ec65dea3d4c10c57cc902011c84",
+      "ground_truth": "Welcome",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AF_113",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        463,
+        923,
+        1116,
+        1065
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_115_w002",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_115_w002.png",
+      "sha256": "6fa048e3cd3fdeab71342fecfd3faf35aba239b6f0c3994fbf2a7280d4bc86d8",
+      "ground_truth": "men",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_115",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        467,
+        39,
+        675,
+        98
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_115_w031",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_115_w031.png",
+      "sha256": "517b6b82ce381e3c09183a5f21d4148b5d939fc23cb493392331e6672130fd5e",
+      "ground_truth": "it",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_115",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        379,
+        572,
+        486,
+        632
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_115_w072",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_115_w072.png",
+      "sha256": "be7803aeeef6fa95350e5455207e4a16e59159499bad4b1dfc6da3935827df81",
+      "ground_truth": "self",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_115",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 14,
+      "crop_box_xyxy": [
+        26,
+        1423,
+        242,
+        1486
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_126_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_126_w011.png",
+      "sha256": "e5708bde9383b28dbce47a657854066473fdfd2a5f4b1766b56ab0ce4915a3b3",
+      "ground_truth": "you",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_126",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        1265,
+        803,
+        1493,
+        982
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_126_w034",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_126_w034.png",
+      "sha256": "e173ac5d2416ccd93613eaddf4221c8baf6e2d7199d297253301dee672866cec",
+      "ground_truth": "Junwa.",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_126",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        2134,
+        1793,
+        2609,
+        1963
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_127_w024",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_127_w024.png",
+      "sha256": "65bf9b16ae1307f3d671434a9aa34678c62c6768cd392d651aa886c1fcc4d6ba",
+      "ground_truth": "If",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_127",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        529,
+        1101,
+        631,
+        1271
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_127_w029",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_127_w029.png",
+      "sha256": "17d9e2533b609789e2897fbee22df51ae41a3712b0b1647732871a850467bdd0",
+      "ground_truth": "why?",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_127",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        1048,
+        1213,
+        1349,
+        1436
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AF_127_w055",
+      "file": "data/public/gnhk/subset/GNHK_eng_AF_127_w055.png",
+      "sha256": "7d05700beb16063848d913ba497f3e95f1511ed263160b0a7fff842825024651",
+      "ground_truth": "buy",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AF_127",
+      "writer_id": null,
+      "region": "AF",
+      "line_idx": 10,
+      "crop_box_xyxy": [
+        2858,
+        1806,
+        2996,
+        1998
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_007_w049",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_007_w049.png",
+      "sha256": "1d10604aafdc6b04b779663a2ee06f04446e0ebead1b509a212f599acd160b38",
+      "ground_truth": "a",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AS_007",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 13,
+      "crop_box_xyxy": [
+        784,
+        612,
+        807,
+        633
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_007_w062",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_007_w062.png",
+      "sha256": "8c5a3b8e740e70cef131ecd88efb344754640af176fb1969462732d198087150",
+      "ground_truth": "4.",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_AS_007",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 19,
+      "crop_box_xyxy": [
+        135,
+        862,
+        162,
+        898
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_007_w098",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_007_w098.png",
+      "sha256": "871c4b2af9fd74dea76628cc08acc22878f06a16ab84f16f33816cdb61c46f94",
+      "ground_truth": "happened",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AS_007",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 24,
+      "crop_box_xyxy": [
+        693,
+        1001,
+        817,
+        1052
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_016_w076",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_016_w076.png",
+      "sha256": "57e0163ed47bf326da98433a43376232a6795d03e4f394e216f50f9f79cae2cc",
+      "ground_truth": "the",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AS_016",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 16,
+      "crop_box_xyxy": [
+        371,
+        1201,
+        428,
+        1241
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_022_w013",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_022_w013.png",
+      "sha256": "f0ae0c1dc16541c8863dc3c708453e4b150c3455316c3fd0b232d4e44b0dc79b",
+      "ground_truth": "internet",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_022",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        397,
+        361,
+        771,
+        473
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_022_w058",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_022_w058.png",
+      "sha256": "828137f7c19bbb241938f2a869bd632909ae4511b595f42df7d1530500d4a9af",
+      "ground_truth": "of",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_022",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 11,
+      "crop_box_xyxy": [
+        468,
+        1771,
+        596,
+        1909
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_022_w061",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_022_w061.png",
+      "sha256": "a948f0a04d62d3ef1fc736a41b4d6a8994d9763af303de564cb4af64acda5b6b",
+      "ground_truth": "books.",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_022",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 11,
+      "crop_box_xyxy": [
+        1078,
+        1773,
+        1363,
+        1902
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_030_w023",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_030_w023.png",
+      "sha256": "62d3d94e8ecc39ae297fc8561dfddcf2e8a70f93d0903a97660b3a2ac8013f0d",
+      "ground_truth": "12:25)",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AS_030",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        427,
+        295,
+        507,
+        329
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_030_w171",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_030_w171.png",
+      "sha256": "3d05eb307c29ce58b9b082262a25260d4faf08cba8085e27c589058d20efbf3b",
+      "ground_truth": "18.",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AS_030",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        23,
+        219,
+        56,
+        241
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_030_w178",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_030_w178.png",
+      "sha256": "4a1e21ead1553ba2639c7bbb8ec757b722c6e4fd76840514772ab80b56c5407b",
+      "ground_truth": "14:",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AS_030",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 21,
+      "crop_box_xyxy": [
+        369,
+        864,
+        394,
+        885
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_034_w000",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_034_w000.png",
+      "sha256": "37f253d6d5203ae7a7cfcd792a99552e44113cd287ed2be697f4a62af6b038e9",
+      "ground_truth": "-generally",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_034",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 19,
+      "crop_box_xyxy": [
+        78,
+        1294,
+        341,
+        1402
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_034_w024",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_034_w024.png",
+      "sha256": "c3635d3133147ae5509635a8929deb50b63d8d6e0e66921bad043685e23d4f03",
+      "ground_truth": "provide",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_034",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        108,
+        393,
+        278,
+        526
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_034_w044",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_034_w044.png",
+      "sha256": "226436550792bef80566a1f6265dcb31fb1279c4957ef346b090786aad564293",
+      "ground_truth": "solutions",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_034",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        136,
+        177,
+        333,
+        236
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_036_w030",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_036_w030.png",
+      "sha256": "2f7729862e76ec1ffdb6e0b5a4e48866ebe3b52ccf7b8ffce47fdf88981e721a",
+      "ground_truth": "most",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_036",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        1809,
+        813,
+        1898,
+        878
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_037_w013",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_037_w013.png",
+      "sha256": "6e37830e0205154f073abd893b7f4fc88439c9b6d1c3326603a004c527de1a85",
+      "ground_truth": "1",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_AS_037",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        44,
+        289,
+        49,
+        303
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_037_w067",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_037_w067.png",
+      "sha256": "b8a33f1659b6328c9c220aaac557e701ba117f5ae6bd4433ad5baa8610e3453e",
+      "ground_truth": "again",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AS_037",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 14,
+      "crop_box_xyxy": [
+        357,
+        747,
+        444,
+        803
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_038_w007",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_038_w007.png",
+      "sha256": "2772d55eeb9812a94836deda12496a88e0a2f204bd65369f4fe563d9d35dca21",
+      "ground_truth": "Neomycin",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AS_038",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        802,
+        585,
+        1102,
+        680
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_041_w030",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_041_w030.png",
+      "sha256": "961d8650f6ea33d3f938f004acb6141cad060652e117dff6908565ae6a6565f8",
+      "ground_truth": "which",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_041",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        694,
+        406,
+        783,
+        446
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_041_w077",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_041_w077.png",
+      "sha256": "c645cae53fba89b691551f3a9a9cb586d562dd9cf1764bf41614f4491a3108e8",
+      "ground_truth": "is",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_041",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 10,
+      "crop_box_xyxy": [
+        867,
+        865,
+        895,
+        903
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_042_w030",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_042_w030.png",
+      "sha256": "794d6d0381d7323700409f2aea1f4d8fccdc3ac4ba62f695b88f74c9ceec1d44",
+      "ground_truth": "SODIUM",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_042",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 11,
+      "crop_box_xyxy": [
+        291,
+        493,
+        350,
+        505
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_045_w059",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_045_w059.png",
+      "sha256": "5782decb776757a3e3190ee81016eecb3f8408adc0ee47cc393192c7477a3d00",
+      "ground_truth": "Ground",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_045",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 23,
+      "crop_box_xyxy": [
+        223,
+        1027,
+        375,
+        1072
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_045_w130",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_045_w130.png",
+      "sha256": "9708a0de30dc8f15202ba133479476b096a191fe95e7187b59fa96a49d5d37c0",
+      "ground_truth": "2001:",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AS_045",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 48,
+      "crop_box_xyxy": [
+        868,
+        140,
+        989,
+        172
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_045_w204",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_045_w204.png",
+      "sha256": "689bfc9827c38578f6d8da6be0e9df970020bfc28ba336f949fde80d77751ae7",
+      "ground_truth": "night",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_045",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 77,
+      "crop_box_xyxy": [
+        930,
+        1368,
+        1026,
+        1427
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_051_w060",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_051_w060.png",
+      "sha256": "0d1b1954835ac183233e1e000af453a078598eb13313032a2394a488e0fb368f",
+      "ground_truth": "class",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_051",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 13,
+      "crop_box_xyxy": [
+        246,
+        1123,
+        313,
+        1148
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_054_w001",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_054_w001.png",
+      "sha256": "1b79e584aefea0dc9375a037b5e02e17a3f9c12806b9f89bae3b4ceda1695dbf",
+      "ground_truth": "to",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_054",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        433,
+        465,
+        497,
+        513
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_054_w048",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_054_w048.png",
+      "sha256": "71db89ceccec370407df5e6176620809394d1895ba27cb18565ea4b6038384c7",
+      "ground_truth": "is",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_054",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 11,
+      "crop_box_xyxy": [
+        1021,
+        1314,
+        1082,
+        1379
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_059_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_059_w011.png",
+      "sha256": "99de20bc93c95f67abb0b6a22f1ad8e1f42801a55736ec5bebe5080c9912c9b8",
+      "ground_truth": "society",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_059",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        1052,
+        400,
+        1242,
+        485
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_059_w044",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_059_w044.png",
+      "sha256": "b65512031dc095ab2833b683a8cacff279a6107094f0a0afe6cb7f777be2ad01",
+      "ground_truth": "good",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_059",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 11,
+      "crop_box_xyxy": [
+        288,
+        1219,
+        423,
+        1310
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_059_w051",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_059_w051.png",
+      "sha256": "877223ef002c13be21276af4ea6de210ea3ef5f7511e15457373b45c05ccac4d",
+      "ground_truth": "human",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_059",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 12,
+      "crop_box_xyxy": [
+        723,
+        1306,
+        901,
+        1377
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_063_w012",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_063_w012.png",
+      "sha256": "9c96d314a98d9b25eb7fe592790e03ef54201193eb2e84256432e7fe2b9773ba",
+      "ground_truth": "&",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AS_063",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        36,
+        223,
+        56,
+        260
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_063_w013",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_063_w013.png",
+      "sha256": "9e27853ca043dc7ecdf0692e1fd663f036aac32b79a31a47d81f3c347d5902d5",
+      "ground_truth": "systematic",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AS_063",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        63,
+        222,
+        223,
+        273
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_063_w033",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_063_w033.png",
+      "sha256": "ea61df73842aba97baeaf7730aa067fffb1c646c8e267badee67a7850ace5aac",
+      "ground_truth": "conditions",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_AS_063",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 9,
+      "crop_box_xyxy": [
+        322,
+        502,
+        472,
+        539
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_075_w005",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_075_w005.png",
+      "sha256": "fb6d703dd4f017248b1ba2c080fb1957050a03a4b77a52fea05e00eed0bb08d6",
+      "ground_truth": "Rectangle",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_075",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        190,
+        483,
+        358,
+        547
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_075_w018",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_075_w018.png",
+      "sha256": "dcc770500ca7eeab65ee02fbf93846cfa91f78acaed081741e7521e878264702",
+      "ground_truth": "34",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_AS_075",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        135,
+        783,
+        182,
+        837
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_075_w038",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_075_w038.png",
+      "sha256": "0e5e3ce3831674c073a3d27cea180028115a706147b114fcae11b87af9cfec06",
+      "ground_truth": "spoon",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_075",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 12,
+      "crop_box_xyxy": [
+        328,
+        1297,
+        441,
+        1343
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_AS_077_w010",
+      "file": "data/public/gnhk/subset/GNHK_eng_AS_077_w010.png",
+      "sha256": "0a665254ac20066666198f4de57432f285c633f712fb1daf50e3ec3d44defca4",
+      "ground_truth": "with",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_AS_077",
+      "writer_id": null,
+      "region": "AS",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        882,
+        402,
+        997,
+        455
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_009_w046",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_009_w046.png",
+      "sha256": "cc239adda01b52899dc671556ffe1357cda5ce08eff2d6597f823b330b9cc638",
+      "ground_truth": "the",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_009",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 13,
+      "crop_box_xyxy": [
+        726,
+        3117,
+        1028,
+        3274
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_013_w009",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_013_w009.png",
+      "sha256": "fe79f0c8587184d53efd590bb6d706368a33097a320b63e5142495144585a165",
+      "ground_truth": "aloud",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_013",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        1112,
+        1318,
+        1756,
+        1454
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_013_w024",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_013_w024.png",
+      "sha256": "0740a3f7a50b8f8c508e0e2fde138fbf352aef8b767d72f85205e42e9b52bba2",
+      "ground_truth": "comprehension",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_013",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        263,
+        2570,
+        1459,
+        2788
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_013_w045",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_013_w045.png",
+      "sha256": "2b99978ab974bd044051737f80bbe08e00f35b5f23b5f6f84c082b21227192e8",
+      "ground_truth": "e",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_013",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 13,
+      "crop_box_xyxy": [
+        953,
+        3551,
+        1081,
+        3667
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_025_w030",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_025_w030.png",
+      "sha256": "76328c904e5b746f39980ad689f3b11f0381e1f796fc5b995bbbbafbcb8dfa9a",
+      "ground_truth": "Good",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_025",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        675,
+        2031,
+        1195,
+        2256
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_026_w016",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_026_w016.png",
+      "sha256": "9a7e5ef5996544b02667c9d3419de37eb7ec7f92f37b8fb3081c6eb0568f594d",
+      "ground_truth": "47",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_026",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        637,
+        693,
+        819,
+        830
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_026_w061",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_026_w061.png",
+      "sha256": "143445ece3ce3481f2b06f3385c5829476670bf4425a95a0f144e952754fdf46",
+      "ground_truth": "Sprinters",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_026",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        249,
+        1408,
+        754,
+        1631
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_036_w004",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_036_w004.png",
+      "sha256": "64a50a10b55ec71f958fe8f131addfda1a1a83714b33b1467f8076df020fb607",
+      "ground_truth": "fluid",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_036",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        1295,
+        125,
+        1670,
+        220
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_038_w009",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_038_w009.png",
+      "sha256": "dcfb3dfac5115572c2abf339d903250b04ba1e6fdb32bd0ce8a6f3a71edc84e3",
+      "ground_truth": "(1st",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_038",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        2114,
+        272,
+        2324,
+        402
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_038_w047",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_038_w047.png",
+      "sha256": "f27b0733a530bb666883f6483ad4edc03d3c4c500be5dc765251ecb10ff05d09",
+      "ground_truth": "tap",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_038",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 9,
+      "crop_box_xyxy": [
+        269,
+        1387,
+        443,
+        1582
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_038_w061",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_038_w061.png",
+      "sha256": "e317b79794391504e7e51faa2841d8ac4366ba1728038ce9e5ec517891002727",
+      "ground_truth": "labour",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_038",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 11,
+      "crop_box_xyxy": [
+        229,
+        1678,
+        614,
+        1818
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_040_w006",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_040_w006.png",
+      "sha256": "5e9675885b531de89517723c0252a3276531ae5d31a4ff77395f514d6510249d",
+      "ground_truth": "Health",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_040",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        670,
+        1139,
+        1077,
+        1303
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_044_w025",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_044_w025.png",
+      "sha256": "657f0d4cccf0d1187b8d9506a2d919b881596d942ad95ba2144a4e64363fe55d",
+      "ground_truth": "cake",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_044",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        2165,
+        962,
+        2524,
+        1174
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_044_w044",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_044_w044.png",
+      "sha256": "11f75ce7b5c592b0e3675414b4ab215331b7f62e43b6425884e85c9a9b5f2635",
+      "ground_truth": "of",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_044",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        2662,
+        1766,
+        2887,
+        1984
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_044_w047",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_044_w047.png",
+      "sha256": "f6a3c187ffcd16c64e900c28debd867939aac2dbbdc174ba5ca5f23d09744110",
+      "ground_truth": "3",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_044",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        3590,
+        2467,
+        3759,
+        2694
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_048_w005",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_048_w005.png",
+      "sha256": "fabb53c7ac7a8aa0fe8ded6f2079286192ee4183a3c2968c15ca33269a458f5f",
+      "ground_truth": "the",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_048",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        950,
+        812,
+        1347,
+        1018
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_063_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_063_w011.png",
+      "sha256": "8ea74c264d5ca55f15bb32f568c7e7f7a3e18f6cef1f12a605e6b37d9c3b4f95",
+      "ground_truth": "7n",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_063",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        475,
+        1196,
+        720,
+        1317
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_063_w018",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_063_w018.png",
+      "sha256": "434d2729211ca4e1eaca406626c6be82a2952c37026a6848678b03c991f93a30",
+      "ground_truth": "7",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_063",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        575,
+        1800,
+        798,
+        1936
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_063_w022",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_063_w022.png",
+      "sha256": "9e711c9a86ec8036f81983288b90160330df6cee6a7a6d535c155613ecb48ff1",
+      "ground_truth": "meant",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_063",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        2097,
+        1959,
+        2559,
+        2068
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_067_w015",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_067_w015.png",
+      "sha256": "c0b2b18049b5251759c1595da3aa4e0359620f81a368c848d0e84de76e3f7b5f",
+      "ground_truth": "the",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_067",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        387,
+        2066,
+        666,
+        2234
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_069_w025",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_069_w025.png",
+      "sha256": "be27f9413458565636f5c8c390f69ee11b7afe162df475d5144a8278e39009f6",
+      "ground_truth": "fractions.",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_069",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        344,
+        1631,
+        1074,
+        1867
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_071_w002",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_071_w002.png",
+      "sha256": "02beb45ca28abf7d06cd826db7860447223ddcacfbc9a51fd54883c8e43a3b72",
+      "ground_truth": "26/06/12",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_071",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        2397,
+        291,
+        3160,
+        486
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_071_w014",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_071_w014.png",
+      "sha256": "061d1427e93d77461affeb0a9844982bca054e3429ebbb7e8d97d1b374e70757",
+      "ground_truth": "Sonic",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_071",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        2716,
+        907,
+        3219,
+        1142
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_071_w019",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_071_w019.png",
+      "sha256": "bd1bc91534e8705f7dba1a50788b5bba9173f55713f5c0bbe12c7dd63021dcdc",
+      "ground_truth": "can",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_071",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        2190,
+        1209,
+        2582,
+        1293
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_094_w028",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_094_w028.png",
+      "sha256": "ebd827030b6505f42a99bd20482424ddd9195fa1d02e4c986a615a5fd12c795c",
+      "ground_truth": "would",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_094",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        746,
+        870,
+        1017,
+        948
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_094_w057",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_094_w057.png",
+      "sha256": "367392addf8106f1329b110d086633315942d1643d49f3b14bed41fc019f7b0d",
+      "ground_truth": "in",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_094",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 10,
+      "crop_box_xyxy": [
+        2402,
+        1522,
+        2533,
+        1601
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_094_w108",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_094_w108.png",
+      "sha256": "d6631c70c94ca30cdf3a318ccf6e722523c2be4f3d6db0fcc33187eb515b097d",
+      "ground_truth": "of",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_094",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 17,
+      "crop_box_xyxy": [
+        2426,
+        2795,
+        2520,
+        2933
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_098_w039",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_098_w039.png",
+      "sha256": "2ab57508617431d2755dfbf197d3fd2cb3f7e5423be93172f3fc1b80293dcdc3",
+      "ground_truth": "SP",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_098",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        2236,
+        908,
+        2329,
+        993
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_099_w004",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_099_w004.png",
+      "sha256": "969b3a297c5a0fbc31955a57d2b0215dcb0f5f27c28dd187fe2fb33706b718eb",
+      "ground_truth": "in",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_099",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        621,
+        592,
+        812,
+        827
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_109_w006",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_109_w006.png",
+      "sha256": "4fef5671dbe14ae9b4973a625a145cac9319c90e283ec8e4e402da20f012d372",
+      "ground_truth": "on",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_109",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        1378,
+        1031,
+        1537,
+        1119
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_112_w030",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_112_w030.png",
+      "sha256": "6ab8e247e6d050c26f53e4d6a82109f6fcc0bd1d6d3d601b2119bf91ac90b439",
+      "ground_truth": "tease",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_112",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        1885,
+        2535,
+        2165,
+        2658
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_112_w038",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_112_w038.png",
+      "sha256": "6191315a04c3b85e91ed79d1529b02b7c4f79e97944cf7c8b5828cf7fd902446",
+      "ground_truth": "his",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_112",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 9,
+      "crop_box_xyxy": [
+        1962,
+        2705,
+        2095,
+        2803
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_115_w006",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_115_w006.png",
+      "sha256": "f32a3b84e9f4deba04d4a9e8cfb6138802a420918f6b3cc0c63e54c2710c492e",
+      "ground_truth": "be",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_115",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        1648,
+        1851,
+        1934,
+        2051
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_115_w013",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_115_w013.png",
+      "sha256": "02331bece9f7fb0128f4d7e0181fa48a35561b1def29647b79eee62c3a5f2f23",
+      "ground_truth": "wonderful",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_115",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        1961,
+        29,
+        3276,
+        1005
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_117_w019",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_117_w019.png",
+      "sha256": "ea7285946fab7339cc2065f5b73b57503d8c97f684de41d7ec21c0a2272820cb",
+      "ground_truth": "guns!\"",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_117",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        2939,
+        190,
+        3399,
+        372
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_117_w022",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_117_w022.png",
+      "sha256": "d8bcead26fe79fe749ede31fa1a7f967cceb580801897ac04d7d23c425ce9785",
+      "ground_truth": "the",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_117",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        888,
+        383,
+        1090,
+        480
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_117_w073",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_117_w073.png",
+      "sha256": "086e2f13e451e2d937f992f6c57172598ac663a0797b543b2bf79f00ae4f4f55",
+      "ground_truth": "battle",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_117",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        2511,
+        1001,
+        2913,
+        1138
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_118_w045",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_118_w045.png",
+      "sha256": "f534c56dcb9eb3cc68438928b7ca77b8bfba86a661e0e807c9bd9ffcec0f5b96",
+      "ground_truth": "for",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_118",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        3123,
+        2012,
+        3419,
+        2308
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_119_w002",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_119_w002.png",
+      "sha256": "841e5315d634d4c6a25ec3de9adb5143e4b74d956283928c1d53fb4cb1b30d5a",
+      "ground_truth": "400",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_119",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        1161,
+        152,
+        1421,
+        339
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_128_w021",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_128_w021.png",
+      "sha256": "a8daf930c00c390be8c5c1903e52bc7d41c1e72e572adf1b6c187b4a91bf401f",
+      "ground_truth": "future",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_128",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        3367,
+        2246,
+        3787,
+        2390
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_138_w016",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_138_w016.png",
+      "sha256": "a6b40e15528176e843bb4f5379dc34f01885d5587abb98417db63a4fb4d0ba7a",
+      "ground_truth": "alert",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_138",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        2387,
+        261,
+        2762,
+        414
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_138_w018",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_138_w018.png",
+      "sha256": "ee7699e356e8732483cc2ca471e842118c73d2ad1963ff313b99a7a7563d091d",
+      "ground_truth": "contented",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_138",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        965,
+        413,
+        1636,
+        566
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_138_w090",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_138_w090.png",
+      "sha256": "94166c3d9fa7223eb0d7884d916169e54510ec295607b43aae96365eb18fd8af",
+      "ground_truth": "natal",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_138",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 18,
+      "crop_box_xyxy": [
+        2534,
+        2159,
+        2805,
+        2316
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_139_w000",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_139_w000.png",
+      "sha256": "7dfe35ceab52d40c2ed29a74f6d80a8c1f457ab7148208979af7f270eec81e71",
+      "ground_truth": "Liam",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_139",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        552,
+        513,
+        1173,
+        740
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_139_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_139_w011.png",
+      "sha256": "9a5b81f9da60cc3d03fef90d25f2836d224f0c027134b03a4ab898793e80b789",
+      "ground_truth": "is",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_139",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        2934,
+        1223,
+        3080,
+        1431
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_139_w019",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_139_w019.png",
+      "sha256": "446f92c45614678db7437a129bb4270df2e3f7d59eee5fea9d67f29fbe5bbaf2",
+      "ground_truth": "21.1.13",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_139",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        873,
+        2599,
+        1592,
+        2746
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_140_w012",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_140_w012.png",
+      "sha256": "66d0f074ebd53e0e69b1b44652d7dff8b653daf51e1715e92418c976646ad39a",
+      "ground_truth": "2m",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_140",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        257,
+        990,
+        661,
+        1176
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_144_w022",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_144_w022.png",
+      "sha256": "ec8fcd81b7690dcc33efaf8f9aae8a5982b670c06a05c12752dd7dae05e67c2a",
+      "ground_truth": "1.20",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_EU_144",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        315,
+        2091,
+        642,
+        2205
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_160_w021",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_160_w021.png",
+      "sha256": "c0217f9a8384490782eb190c35fe00cd6cab52d173976cc56aa2fd3b2448b211",
+      "ground_truth": "how",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_160",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        1087,
+        537,
+        1409,
+        660
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_164_w051",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_164_w051.png",
+      "sha256": "a38f23795e6f7b7725e5394d3cbf6a953448fe57a9c66872b4d16d843febcbc1",
+      "ground_truth": "it",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_164",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        3717,
+        329,
+        3861,
+        502
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_167_w039",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_167_w039.png",
+      "sha256": "3181e2989058446465d32cfccd0e434a5850c46a0a63f3a10083e640d28ec893",
+      "ground_truth": "really",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_167",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        948,
+        1966,
+        1282,
+        2108
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_167_w046",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_167_w046.png",
+      "sha256": "75aabac33de52a45e2df5c7add0efefaf41be368e2b333404bdcbe4504685a57",
+      "ground_truth": "for",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_167",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        1372,
+        2186,
+        1581,
+        2352
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_167_w069",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_167_w069.png",
+      "sha256": "32233179ed3dca3e3e9ba641de3232e982f5db4c2bdfb0481a65ff0cf5d81479",
+      "ground_truth": "x",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_167",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 9,
+      "crop_box_xyxy": [
+        913,
+        2791,
+        1034,
+        2941
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_174_w010",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_174_w010.png",
+      "sha256": "aee53f28bdcb488a17b6f9a3c6a899351f6ad79aedbc231fc3cc2899c890d9af",
+      "ground_truth": "-",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_174",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        363,
+        446,
+        450,
+        478
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_174_w018",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_174_w018.png",
+      "sha256": "684c750306093aee9b41cc9775468d6c5a86c9a46d2955b03526933e694140be",
+      "ground_truth": "improve",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_174",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        1528,
+        533,
+        2174,
+        637
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_174_w034",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_174_w034.png",
+      "sha256": "f95337bf2c3c40ba6e6f3c33db7d8fc80d2ca4645ee73d362862f85a11510fc8",
+      "ground_truth": "(m+E)",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_174",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        3103,
+        1585,
+        3703,
+        1803
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_178_w037",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_178_w037.png",
+      "sha256": "1f75cfcf570435c04004300b760bd6599bb22e2f0cb855b8e449ef49859ec5d9",
+      "ground_truth": "a",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_178",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        1450,
+        681,
+        1618,
+        779
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_186_w020",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_186_w020.png",
+      "sha256": "9f7a9d5ad0cebf0b38235e8806b7842b65119e4dc7e8f148793b717801050864",
+      "ground_truth": "be",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_186",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 9,
+      "crop_box_xyxy": [
+        2478,
+        1406,
+        2661,
+        1517
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_197_w003",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_197_w003.png",
+      "sha256": "a78e3c02ac5cdaffce9b7b70e1805cb1d287094082b6c9e664679a87d0d6ece1",
+      "ground_truth": "12/1/10.",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_197",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        757,
+        427,
+        1590,
+        661
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_197_w019",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_197_w019.png",
+      "sha256": "8e7f2a72753649b1111fd1612bc7971dcc4e21857d82e6a3cfa1e7cadd775fad",
+      "ground_truth": "for",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_197",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        1986,
+        1415,
+        2304,
+        1718
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_197_w027",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_197_w027.png",
+      "sha256": "246a6994cce3d12f6fee684f3efd676dd5ef012997657abd6a597f2a93faa447",
+      "ground_truth": "More",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_197",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 9,
+      "crop_box_xyxy": [
+        1070,
+        2182,
+        1466,
+        2359
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_198_w038",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_198_w038.png",
+      "sha256": "3610bf6f1331d6cc94c06ad9c0ecbb56719194e6c835b0a893e5bef913863df0",
+      "ground_truth": "0",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_198",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 9,
+      "crop_box_xyxy": [
+        287,
+        2666,
+        397,
+        2802
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_210_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_210_w011.png",
+      "sha256": "ca8da202906018aae6f3fa440526359e375b5df43d7e105dd3ac842648f91be7",
+      "ground_truth": "press",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_210",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        2655,
+        1224,
+        2866,
+        1380
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_210_w016",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_210_w016.png",
+      "sha256": "ef19fd1dc44b9d82fe75161121220877dcb6a8f08b929d3d764a7d51c86d13d9",
+      "ground_truth": "120",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_EU_210",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        1647,
+        1851,
+        1977,
+        1988
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_216_w026",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_216_w026.png",
+      "sha256": "d1e041c4ddc226e88554d3b878c61b7e567d616558e112c302bed09b44921839",
+      "ground_truth": "from",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_216",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        388,
+        515,
+        669,
+        599
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_216_w027",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_216_w027.png",
+      "sha256": "23ea06bd86f0f4b4993329f9c427e142d356037432e555bf058c92db8b7539f1",
+      "ground_truth": "below",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_216",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        775,
+        526,
+        1127,
+        610
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_216_w066",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_216_w066.png",
+      "sha256": "b8f1fdb74df34ee7ff14dd23f82c85033f3ddb970be33ccf474691d737c34fb7",
+      "ground_truth": "measure",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_216",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 11,
+      "crop_box_xyxy": [
+        895,
+        1562,
+        1370,
+        1638
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_227_w022",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_227_w022.png",
+      "sha256": "74296bf862ff9532e71eee4acd962d93bc969c6eb6e7593bff97d602267015dc",
+      "ground_truth": "to",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_227",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        2472,
+        788,
+        2650,
+        990
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_227_w038",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_227_w038.png",
+      "sha256": "d4f21a5a79cac9061f6cb1fa43715b4bc239b0630891da6ce4aaaf7719d6e401",
+      "ground_truth": "through",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_227",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        1070,
+        1348,
+        1521,
+        1628
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_229_w006",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_229_w006.png",
+      "sha256": "5fb462127fd31e090eec6656bed3eda742a22a74c44e4b91d8757b36ccf4781c",
+      "ground_truth": "he",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_229",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        1008,
+        578,
+        1178,
+        721
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_238_w017",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_238_w017.png",
+      "sha256": "8af48977d0cb6585af261042c7e2540206c78bee400a135db8247d76d2f61be5",
+      "ground_truth": "to",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_238",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        1518,
+        1391,
+        1847,
+        1540
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_241_w004",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_241_w004.png",
+      "sha256": "9668c4ad268b48ed532c4939553a3e5f4c9a283341d0d3e08dfa714c4dbb167c",
+      "ground_truth": "in",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_241",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        1777,
+        1418,
+        1986,
+        1548
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_243_w004",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_243_w004.png",
+      "sha256": "3d1654cff57cd33ad0423a44a767612e2cef71a7f2e1082da172775e6731f005",
+      "ground_truth": "met",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_243",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        1760,
+        730,
+        2047,
+        842
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_243_w017",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_243_w017.png",
+      "sha256": "c3a795329871e3322ac3142f611c28308feef9267205eb23a61c0461948c2ae7",
+      "ground_truth": "first",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_243",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        1497,
+        1372,
+        1779,
+        1493
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_243_w060",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_243_w060.png",
+      "sha256": "88fb52ff887228b91cd62ff2140548ac764232ff719e9d767d6d8863b615c2f6",
+      "ground_truth": "4",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_243",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 14,
+      "crop_box_xyxy": [
+        1916,
+        3414,
+        2052,
+        3534
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_266_w002",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_266_w002.png",
+      "sha256": "304329fa9c4197fe35b9d7e93e9a77ab0721b20a21f7ceb75e3d1004deec2319",
+      "ground_truth": "Gramercy",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_266",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        356,
+        154,
+        627,
+        220
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_272_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_272_w011.png",
+      "sha256": "3f690184468a0c037c562c80bdfba2800345c105b0d3b25b4b5fc567d0725842",
+      "ground_truth": "was",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_272",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        2123,
+        874,
+        2414,
+        997
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_281_w014",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_281_w014.png",
+      "sha256": "af30bae7b5b5104dac91e840b6383c9fa8547bc4c7663efc5ace47372dec7620",
+      "ground_truth": "19-22.",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_281",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        606,
+        890,
+        903,
+        946
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_283_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_283_w011.png",
+      "sha256": "f41c2c7bce0ba31e4aaca3e969f2ecd800d31162f674222cee30c6f231e5ed98",
+      "ground_truth": "in",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_283",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        793,
+        540,
+        885,
+        609
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_285_w022",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_285_w022.png",
+      "sha256": "e57cf990ded821f78202d6e6f90a214e42e793faa89582ad92d674b22aa62d4a",
+      "ground_truth": "Call",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_285",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        146,
+        212,
+        190,
+        236
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_285_w034",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_285_w034.png",
+      "sha256": "0d342f705647e1bdc182b3113b9b7972519651a5b1ac84025dad5fc84fe8a07b",
+      "ground_truth": "7",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_285",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 18,
+      "crop_box_xyxy": [
+        487,
+        334,
+        515,
+        369
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_285_w072",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_285_w072.png",
+      "sha256": "5b96956de440fcd2931198720e6db5e57ce50d835abb7a66bd81727e05991fea",
+      "ground_truth": "5B2",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_285",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 39,
+      "crop_box_xyxy": [
+        386,
+        545,
+        430,
+        562
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_293_w005",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_293_w005.png",
+      "sha256": "79874ee0985c6957e7f3189d3ff967d5e47e026b37c631d280567f38855a0779",
+      "ground_truth": "1830",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_293",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        339,
+        681,
+        568,
+        783
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_293_w010",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_293_w010.png",
+      "sha256": "fb90b5d8d5d20a67cb6444dfe4a0904ced71c866c6356ce91c8dca565f31f977",
+      "ground_truth": "M3N",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_EU_293",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        977,
+        882,
+        1256,
+        1012
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_298_w022",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_298_w022.png",
+      "sha256": "a40915c017b8bc73cbdae1973a02f8f0a46892266f09830f3244beb0b1276bdd",
+      "ground_truth": "the",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_298",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        0,
+        530,
+        129,
+        632
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_298_w064",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_298_w064.png",
+      "sha256": "89708d0d5011fec2c26f5ba1669f31ecc71e191d464977f9a5c0cf71b34d8d67",
+      "ground_truth": "in",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_298",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        188,
+        85,
+        256,
+        165
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_307_w020",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_307_w020.png",
+      "sha256": "8a27a8981935899cabd61f8e7a62c02b306ebc44a2ad091702ccaf492d099673",
+      "ground_truth": "side",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_307",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        127,
+        592,
+        258,
+        662
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_310_w034",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_310_w034.png",
+      "sha256": "7159fc87bc2c35fb93448e4217ef6aeab2d38f4fd68cbdd4c0f29047d72f29d5",
+      "ground_truth": "18",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_EU_310",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 10,
+      "crop_box_xyxy": [
+        619,
+        373,
+        664,
+        403
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_313_w000",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_313_w000.png",
+      "sha256": "101b90914fe848f49a75af3ffd83812eb68fe8d90e9558ac9653220d4d0e4758",
+      "ground_truth": "Dear",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_313",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        0,
+        45,
+        204,
+        153
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_313_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_313_w011.png",
+      "sha256": "d4cbff693f6d839e63c8b3ab20c1fc9a0dd3de7950434411f819e94378c40fc1",
+      "ground_truth": "generosity",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_313",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        84,
+        378,
+        418,
+        524
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_315_w047",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_315_w047.png",
+      "sha256": "c2ea39188ba30895013675112f4d193e4b8f9d322c0b31bf0f629d49faf51fff",
+      "ground_truth": "have",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_315",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 9,
+      "crop_box_xyxy": [
+        2109,
+        2481,
+        2523,
+        2658
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_319_w020",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_319_w020.png",
+      "sha256": "daea4ace2598856b13a748ab1742fc8f07026441f30447387ecdeddde6f4c932",
+      "ground_truth": "and",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_EU_319",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        49,
+        268,
+        140,
+        307
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_322_w056",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_322_w056.png",
+      "sha256": "25a54d1f5524d35da67137e37dcb8a5247b30824c3f46cca7cb29980e1a66aa0",
+      "ground_truth": "market",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_322",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        1479,
+        878,
+        1741,
+        1033
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_322_w095",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_322_w095.png",
+      "sha256": "12314eceb8f79edcea0376d83d91c1a1f81d08c40e131c847d8d73add3efa68f",
+      "ground_truth": "of",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_322",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 10,
+      "crop_box_xyxy": [
+        1070,
+        1803,
+        1221,
+        1927
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_322_w147",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_322_w147.png",
+      "sha256": "497e2a5e475ec333f213daec0309c55e94de38357d1249d766f6dc9973a264c6",
+      "ground_truth": "to",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_322",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 15,
+      "crop_box_xyxy": [
+        2117,
+        2503,
+        2198,
+        2599
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_326_w005",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_326_w005.png",
+      "sha256": "048c4c93bd26a9c3079248aad500c86a9b4a392226b5c7aa5b8a36842cf98ff5",
+      "ground_truth": "away",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_326",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        1995,
+        350,
+        2221,
+        523
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_326_w120",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_326_w120.png",
+      "sha256": "800348495dfbbe3d9693d43c05035cf492af9d75492186e56721ff1760a555a5",
+      "ground_truth": "Equality",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_326",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 17,
+      "crop_box_xyxy": [
+        708,
+        1902,
+        1018,
+        2059
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_EU_326_w125",
+      "file": "data/public/gnhk/subset/GNHK_eng_EU_326_w125.png",
+      "sha256": "f4bdf6a765bde285d8f24ebb94411b40319be944f5b1e6256747965b594a8474",
+      "ground_truth": "in",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_EU_326",
+      "writer_id": null,
+      "region": "EU",
+      "line_idx": 17,
+      "crop_box_xyxy": [
+        2307,
+        1861,
+        2379,
+        1979
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_013_w013",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_013_w013.png",
+      "sha256": "a112a8f30fb3d53cc1b4f98f94a9f87571c2dd984bff158febb03341cf181b73",
+      "ground_truth": "11/",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_013",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        488,
+        128,
+        511,
+        156
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_013_w016",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_013_w016.png",
+      "sha256": "fd5d8ce9b0ed1141ae3ef8a8d54df2b0fe3aa24bb8f78e37ef25f34f188dd6b3",
+      "ground_truth": "18",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_013",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        162,
+        163,
+        179,
+        186
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_013_w022",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_013_w022.png",
+      "sha256": "3d9f1aa8b0d97079455cc4361f0f3d05fc973fa724826dbc72e27461a2659bb3",
+      "ground_truth": "1797.5",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_013",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        578,
+        155,
+        650,
+        180
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_023_w049",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_023_w049.png",
+      "sha256": "7dce302cfcba23eae1cd29a4c0cc8fe1eb3cf963288038f483d659cdf4192fc9",
+      "ground_truth": "150,000",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_023",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 21,
+      "crop_box_xyxy": [
+        611,
+        295,
+        697,
+        323
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_030_w022",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_030_w022.png",
+      "sha256": "417f568841c68788d28e14472bde27f0caa0d3cc04ce194c812f5aae748331d6",
+      "ground_truth": "Gnarled",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_030",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        131,
+        1537,
+        403,
+        1724
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_030_w023",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_030_w023.png",
+      "sha256": "7a34021e0e5db68efee39dc75a9656940af77b54afde44cce913697c571b3e09",
+      "ground_truth": "old",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_030",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        424,
+        1579,
+        544,
+        1682
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_030_w047",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_030_w047.png",
+      "sha256": "e5de4630f4ab236507a1238e311b06e6fdccba6a16f122d14237ec94775b13ef",
+      "ground_truth": "more!!!",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_030",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 12,
+      "crop_box_xyxy": [
+        1206,
+        2363,
+        1476,
+        2499
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_032_w002",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_032_w002.png",
+      "sha256": "6e83dedbad601bf3a70f30238b9d4c11cef50a5597a75e508cddeecd153e35d7",
+      "ground_truth": "1.",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_032",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        290,
+        352,
+        442,
+        498
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_032_w016",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_032_w016.png",
+      "sha256": "0eb57af524968e75022e4d3d7e51fe61569cf3ed45feb9e7c3aa1ae910e1f6ef",
+      "ground_truth": "We",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_032",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        470,
+        1043,
+        701,
+        1224
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_038_w000",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_038_w000.png",
+      "sha256": "d939a1d192c2a9cf60e516b669d1f89b878f9d5b658a718cc230d3872596afff",
+      "ground_truth": "PD",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_038",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        400,
+        77,
+        513,
+        180
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_041_w029",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_041_w029.png",
+      "sha256": "34872dfeb423511413ba9ce2d15223edc039b701f2466a5f98704f43fbaf72ad",
+      "ground_truth": "a",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_041",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        332,
+        506,
+        382,
+        549
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_041_w030",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_041_w030.png",
+      "sha256": "07d084f861972a1dd3413ec9a1a77df274e757815d565dcc5f556f8cb45f109f",
+      "ground_truth": "true",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_041",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        420,
+        497,
+        616,
+        558
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_041_w059",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_041_w059.png",
+      "sha256": "1d3ff8b5dd9d9f62c47afa533a47cc034fb87dbae32be756822e2571a386c01b",
+      "ground_truth": "bnb.",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_041",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 13,
+      "crop_box_xyxy": [
+        298,
+        1067,
+        430,
+        1129
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_047_w077",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_047_w077.png",
+      "sha256": "daf4aed712feeeb3c8d8cd710ffbf140a507367ce81565d77cf39aba6337cffe",
+      "ground_truth": "Tier2:",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_047",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 16,
+      "crop_box_xyxy": [
+        777,
+        2166,
+        1163,
+        2256
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_047_w088",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_047_w088.png",
+      "sha256": "c776414b814377a34988409287bba44c41369b44fe4bd811d4c99db24bafbecf",
+      "ground_truth": "25,000,000",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_047",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 18,
+      "crop_box_xyxy": [
+        1875,
+        2397,
+        2545,
+        2522
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_047_w098",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_047_w098.png",
+      "sha256": "299dc9d51cc09c406897d4766f2de2ba49f18f5a3f6ebc3d075db85a951ad995",
+      "ground_truth": "3:",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_047",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 21,
+      "crop_box_xyxy": [
+        901,
+        2775,
+        1050,
+        2863
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_052_w000",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_052_w000.png",
+      "sha256": "98df806a4481d2dac6e40f84ce836e645b6ab93253641c4f10eceddae048e8c8",
+      "ground_truth": "To",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_NA_052",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        438,
+        252,
+        632,
+        352
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_052_w005",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_052_w005.png",
+      "sha256": "787dd0f495f3c7603ae199d0257e649c655b741e7231f4edacab981f519c4cc7",
+      "ground_truth": "I",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_NA_052",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        497,
+        542,
+        585,
+        674
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_052_w048",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_052_w048.png",
+      "sha256": "60737f70f2ab09f884115466e6b32d4c8bf6d13cd303b110cedac28e7d68e827",
+      "ground_truth": "after.",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_NA_052",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        1605,
+        1616,
+        1988,
+        1803
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_065_w017",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_065_w017.png",
+      "sha256": "5fd4a177829367a7ef7741ae644e793ecf8551d71814b56b34deb93c0bf1a375",
+      "ground_truth": "in",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_065",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        1026,
+        53,
+        1062,
+        90
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_065_w028",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_065_w028.png",
+      "sha256": "68d568b8fdc01243cba4ed70a6e2557028f144c47386b12605378433e1d36b30",
+      "ground_truth": "challenge",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_065",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 4,
+      "crop_box_xyxy": [
+        160,
+        271,
+        294,
+        339
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_065_w066",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_065_w066.png",
+      "sha256": "45e9a82523c99ecbcac6ed440402d15d002cddefab0f6a0a3b61422dd2464309",
+      "ground_truth": "heard",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_065",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        333,
+        474,
+        426,
+        525
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_076_w039",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_076_w039.png",
+      "sha256": "6df65e51c95bce3f44493e59ca9036c30d86dc3f34453c63be3851f5b0ed7cad",
+      "ground_truth": "9:30",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_076",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 12,
+      "crop_box_xyxy": [
+        234,
+        494,
+        316,
+        542
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_081_w015",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_081_w015.png",
+      "sha256": "4b117f6e04d7a60851ee566d7f4d7a9c906795a11b741b1deaa992203303b9b6",
+      "ground_truth": "all",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_081",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        533,
+        654,
+        623,
+        748
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_081_w045",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_081_w045.png",
+      "sha256": "6c2dd8195033b44073738c334d1442844e16741acb53bbe5205e8a9cf464482e",
+      "ground_truth": "value",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_081",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        678,
+        1260,
+        911,
+        1388
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_081_w062",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_081_w062.png",
+      "sha256": "c8f0213598e14a1baee95ab7b2c7d597d6932f4a510d753cd137f2d346ca29fb",
+      "ground_truth": "interval",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_081",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 11,
+      "crop_box_xyxy": [
+        2035,
+        2419,
+        2325,
+        2547
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_085_w017",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_085_w017.png",
+      "sha256": "0b69c7bb21ca07b23f9e8bb984f46b7e1e8e09268bd1e2907f378f9e42195cfe",
+      "ground_truth": "scattered",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_085",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 1,
+      "crop_box_xyxy": [
+        451,
+        329,
+        585,
+        370
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_088_w023",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_088_w023.png",
+      "sha256": "54ae7fd5218eb622fa92a1f983e70ea018c131ff493dfda2b6d1009da809a236",
+      "ground_truth": "8,000",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_088",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        226,
+        399,
+        308,
+        416
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_094_w009",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_094_w009.png",
+      "sha256": "c9f8dc3c0acc4fda81b033c824da995424177ed71c6f30aaeb6dd26c3d05c400",
+      "ground_truth": "Declare",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_NA_094",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        67,
+        196,
+        197,
+        254
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_094_w045",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_094_w045.png",
+      "sha256": "7ea4724d2b239052cb7ac8c7751e9801b0d3a24c7e43e85958a7422bdec1fa5b",
+      "ground_truth": "ACCOUNT",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_NA_094",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        640,
+        522,
+        807,
+        561
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_094_w082",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_094_w082.png",
+      "sha256": "ddd371a9c4497208b15b159ff4ce483e7fa98fa5572fffea9b957498d0785ea3",
+      "ground_truth": "to",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_NA_094",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 15,
+      "crop_box_xyxy": [
+        270,
+        1037,
+        352,
+        1074
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_095_w014",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_095_w014.png",
+      "sha256": "3beef3bf64b7a85570b00151a075e219e5a1ef7ab58a61b490e61fe5499d7215",
+      "ground_truth": "English",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_095",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        1802,
+        1298,
+        2358,
+        1555
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_101_w006",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_101_w006.png",
+      "sha256": "4feb2078e66ad7bf8c6fb0507440e009c4dd3dcb3c1ba42e4c7cf12237a6fb82",
+      "ground_truth": "implementaion",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_101",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        397,
+        631,
+        1016,
+        705
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_101_w097",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_101_w097.png",
+      "sha256": "709f1f76ef1abbea0a978ab3c2f63929429720178c06080da1ce26f29d033201",
+      "ground_truth": "nodes,",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_101",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 22,
+      "crop_box_xyxy": [
+        1042,
+        1952,
+        1349,
+        2027
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_101_w135",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_101_w135.png",
+      "sha256": "d1b3f425bad9f1e4ad36e0a82834455b61a64d54143e94ca49f491e64979570e",
+      "ground_truth": "by",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_101",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 29,
+      "crop_box_xyxy": [
+        2427,
+        2261,
+        2511,
+        2372
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_107_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_107_w011.png",
+      "sha256": "8a1772f5e917718743aae5f63e9c7c4f8d417ec6c0ed9a15dcd993685cd03361",
+      "ground_truth": "organisms",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_107",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        1315,
+        1634,
+        1636,
+        1751
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_107_w141",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_107_w141.png",
+      "sha256": "07f924d9e071d444a8f924d2a6bd45424950308977eb27c59cdc8aa241c45b68",
+      "ground_truth": "10",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_107",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 21,
+      "crop_box_xyxy": [
+        2214,
+        2780,
+        2273,
+        2833
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_107_w156",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_107_w156.png",
+      "sha256": "53d3828521888cfae0f9046f333de1c6dd9dbb6515411e12d411d343956108c6",
+      "ground_truth": "1",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_107",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 27,
+      "crop_box_xyxy": [
+        2272,
+        3245,
+        2292,
+        3315
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_111_w028",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_111_w028.png",
+      "sha256": "c211a126f3f2c6c2d628e70e4b3e4c6063f80fe14e9fe57e303c9a0034e80376",
+      "ground_truth": "classro",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_111",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 7,
+      "crop_box_xyxy": [
+        1093,
+        419,
+        1280,
+        535
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_113_w037",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_113_w037.png",
+      "sha256": "e34d41a37e1b4eb991e59272743ac72b1cec6a81f45e59138c2cb51ca458a416",
+      "ground_truth": "care",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_113",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        981,
+        429,
+        1072,
+        459
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_113_w047",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_113_w047.png",
+      "sha256": "5e3a4da743c0a0e624cfac00f425fd707b6b0846674f90e5956f3ad85a05e902",
+      "ground_truth": "by",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_113",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 10,
+      "crop_box_xyxy": [
+        340,
+        785,
+        390,
+        852
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_113_w056",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_113_w056.png",
+      "sha256": "36df8b97fdfea23cb8b3f8bdcfa57c6e3226888dacaccfea9db58c36fe569a73",
+      "ground_truth": "/",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_113",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 10,
+      "crop_box_xyxy": [
+        74,
+        796,
+        114,
+        841
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_114_w001",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_114_w001.png",
+      "sha256": "7620c6a6ae283e689731e76e859124405c92d1741c4d5f5369c9fcca5e442338",
+      "ground_truth": "2988680",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_114",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        1150,
+        215,
+        2062,
+        474
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_114_w004",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_114_w004.png",
+      "sha256": "0f84bbeda112f9d6980fddb1bdb88b5b320c08393ae654a04612c169c29a04cf",
+      "ground_truth": "20",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "test",
+      "group_id": "eng_NA_114",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 2,
+      "crop_box_xyxy": [
+        402,
+        1084,
+        704,
+        1217
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_114_w010",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_114_w010.png",
+      "sha256": "d670745aff1e5ed23b7795840f62ab6d40162c24c1a19c15569db74a7d6eaa9e",
+      "ground_truth": "kennedy",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_114",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        1863,
+        1537,
+        2210,
+        2123
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_121_w014",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_121_w014.png",
+      "sha256": "41c0af865ca2da7e3ccffc8a63affcce9dd9a1e62e25b5b844f2ec0862318c69",
+      "ground_truth": "KN-10-04",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_121",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        858,
+        1246,
+        1844,
+        1376
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_121_w030",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_121_w030.png",
+      "sha256": "864eb81a272ae774e28f03f154aab6d2958f3a440881de6585f1c5eb75ab64b9",
+      "ground_truth": "LV-12-07",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_121",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 10,
+      "crop_box_xyxy": [
+        262,
+        2194,
+        1000,
+        2327
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_121_w046",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_121_w046.png",
+      "sha256": "1b715046e5e81ade09ee0f84b0564d0ef3daa5116f8298fb9020f4709608e663",
+      "ground_truth": "LV-15-08",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_121",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 17,
+      "crop_box_xyxy": [
+        399,
+        3425,
+        1107,
+        3530
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_124_w020",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_124_w020.png",
+      "sha256": "982d36097154cbe8e19da16cf64d3ad900c353b02efdd07182b21e055a247de7",
+      "ground_truth": "Calculate",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_124",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 5,
+      "crop_box_xyxy": [
+        240,
+        548,
+        336,
+        573
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_124_w050",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_124_w050.png",
+      "sha256": "2d4f637351f6136364b2340994913a8bfddbd4b0dd7b1b2db3e9418a4ffc9783",
+      "ground_truth": "state",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_124",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 11,
+      "crop_box_xyxy": [
+        559,
+        750,
+        611,
+        775
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_124_w106",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_124_w106.png",
+      "sha256": "d45a3f8f161bb3442a77d40cd358ca2863aa99c97dadbd40488839036da30333",
+      "ground_truth": "for",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_124",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 20,
+      "crop_box_xyxy": [
+        430,
+        1222,
+        468,
+        1253
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_128_w041",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_128_w041.png",
+      "sha256": "67a35490b90e749eeaa106ad5f5b3c90bbbb4a0125557c80ff257260f90a5319",
+      "ground_truth": "will",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_NA_128",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 6,
+      "crop_box_xyxy": [
+        453,
+        861,
+        563,
+        907
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_128_w051",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_128_w051.png",
+      "sha256": "62114775076b4d92376049f99e5f4af670d16550d0b012588c4f83226e6a23eb",
+      "ground_truth": "\"some",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_NA_128",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        1146,
+        963,
+        1350,
+        1028
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_132_w001",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_132_w001.png",
+      "sha256": "b9b0b7d1b29dc7082da94e72dfa93453c9533cd3db286bd61c79642cfe4d2e7e",
+      "ground_truth": "1",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_132",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        1248,
+        249,
+        1308,
+        402
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_132_w011",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_132_w011.png",
+      "sha256": "e3f5f396926aff23e8447f83fa9b1ad6a8ba26dbea2a09f4fb0e1bfe9f4f6794",
+      "ground_truth": "9k",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_132",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 14,
+      "crop_box_xyxy": [
+        2250,
+        1186,
+        2560,
+        1435
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_132_w017",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_132_w017.png",
+      "sha256": "4d989b64c35e7026db802e853988ff60592d0cdd8c64ca97972d524fb888024f",
+      "ground_truth": "100",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_132",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 9,
+      "crop_box_xyxy": [
+        1054,
+        2488,
+        1281,
+        2618
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_136_w005",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_136_w005.png",
+      "sha256": "fbed017ea381a4b34a63fe720c7441f2b1f050593d930562071336f1bba594e2",
+      "ground_truth": "(1.4B)",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_136",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 10,
+      "crop_box_xyxy": [
+        2241,
+        189,
+        2461,
+        345
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_136_w021",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_136_w021.png",
+      "sha256": "7a5533410a759a46459c4666294940a24b061182cfc723ccbb90bc8a4d1e8762",
+      "ground_truth": "+",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_NA_136",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 3,
+      "crop_box_xyxy": [
+        876,
+        337,
+        1005,
+        516
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_136_w025",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_136_w025.png",
+      "sha256": "9a5dd144d258984738034d1f97c8f433acda5dbf3ec3932e393931e81b0a3ddb",
+      "ground_truth": "year",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "dev",
+      "group_id": "eng_NA_136",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 15,
+      "crop_box_xyxy": [
+        1847,
+        645,
+        2016,
+        768
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_137_w022",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_137_w022.png",
+      "sha256": "dff5b7b8e566cad48da6b8b0b358711261d393b22d24a93f0491c6e714d76f80",
+      "ground_truth": "Control",
+      "category": "gnhk_other",
+      "stratum": "other",
+      "split": "test",
+      "group_id": "eng_NA_137",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 8,
+      "crop_box_xyxy": [
+        696,
+        2280,
+        971,
+        2378
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_142_w001",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_142_w001.png",
+      "sha256": "8cc47679e8dcdf5f9ed6efa1ade7b106435a736132d6ea664e73318ac399b04c",
+      "ground_truth": "1",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_142",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 0,
+      "crop_box_xyxy": [
+        416,
+        59,
+        443,
+        129
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_142_w051",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_142_w051.png",
+      "sha256": "cfbfb29037c75f073259677e63dfea028f4e6c5274a68c2ba683509876caaef5",
+      "ground_truth": "(225,000)",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_142",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 12,
+      "crop_box_xyxy": [
+        1801,
+        1373,
+        2258,
+        1496
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    },
+    {
+      "id": "GNHK_eng_NA_142_w079",
+      "file": "data/public/gnhk/subset/GNHK_eng_NA_142_w079.png",
+      "sha256": "ffd0e1c40e1a5349f2bddb4e103c2b9a8c13d44129265ff7d96072cc7f2ef23b",
+      "ground_truth": "377,480-368,480",
+      "category": "gnhk_digit",
+      "stratum": "digit",
+      "split": "dev",
+      "group_id": "eng_NA_142",
+      "writer_id": null,
+      "region": "NA",
+      "line_idx": 21,
+      "crop_box_xyxy": [
+        1687,
+        2122,
+        2526,
+        2255
+      ],
+      "crop_type": "annotation_polygon_bbox"
+    }
+  ]
+}

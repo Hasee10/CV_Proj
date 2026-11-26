@@ -1,0 +1,63 @@
+{
+  "milestone": "M4 dataset preparation and evaluation design",
+  "date": "2026-11-26",
+  "status": "PARTIAL",
+  "status_reason": "Standard public data acquired, validated and split; protocols frozen. Required custom banking-domain data is designed but NOT collected (0 writers, 0 photos), so the acceptance criteria 'custom data acquired', 'ground-truth validation complete' and 'leakage checks pass' are met for D1 only.",
+  "acceptance": {
+    "standard_data_acquired": "VERIFIED (GNHK test subset, 240 words)",
+    "sources_and_licenses_documented": "VERIFIED",
+    "custom_data_acquired": "NOT STARTED (collection kit ready)",
+    "manifests_complete_and_reproducible": "VERIFIED for D1; D2 pending",
+    "ground_truth_validation": "D1: published labels used as-is (structural validation + spot check); D2: NOT STARTED",
+    "split_reproducible": "VERIFIED for D1 (seed 20261126); D2 procedure fixed",
+    "leakage_checks": "PASSED for D1; D2 pending",
+    "metrics_defined": "VERIFIED (EVALUATION_PROTOCOL.md + eval_metrics.py self-test)",
+    "stress_protocol_fixed": "VERIFIED (STRESS_TEST_PROTOCOL.md + stress_corrupt.py self-test)",
+    "baseline_defined": "VERIFIED (BASELINE_DEFINITION.md)",
+    "limitations_documented": "VERIFIED (BLOCKERS.md)",
+    "h05_writer_confirmation_recorded": "VERIFIED (artifacts/M3_B_final/)"
+  },
+  "m3b_final": {
+    "folder": "artifacts/M3_B_final/",
+    "H05": "75,450.50 (writer-confirmed)",
+    "H04": "1250-00 / 1250.00 (ambiguous; separator excluded from strict punctuation)",
+    "recomputed": {"crop_exact": "4/9", "crop_cer": "18/68 = 0.2647", "full_photo_exact": "1/9", "full_photo_cer": "22/68 = 0.3235",
+                   "crop_numeric_exact": "2/5", "segmented_exact": "3/3", "strict_punctuation": "0/2", "median_crop_latency_s": 1.1138},
+    "expected_value_check": "all 9 match (EXPECTED_VALUE_CHECK.json)",
+    "history_preserved": ["artifacts/M3_A/", "artifacts/M3_B/", "artifacts/M3_B_corrected/ (rev. 2; rev. 1 was overwritten earlier, logged)"]
+  },
+  "public_dataset": {
+    "selected": "GNHK (CC-BY-4.0), official test split",
+    "rejected": {"IAM": "site unreachable + registration-gated; mirrors not used", "SSL-HWD": "likely checkpoint training data"},
+    "source": "HF mirror staghado/GNHK-Dataset @ eaa67d396fd29b8b04e38d630da79f67db11b212 (official page no longer serves data)",
+    "downloaded_bytes": 286039365,
+    "test_data_zip_sha256": "6f3d65d91535d1665050afd83a9f3831394d80accfae88c5b91bbb990781eacb",
+    "acquired_words": 240,
+    "split": {"dev": 80, "test": 160, "unit": "page (writer ids unavailable)", "dev_pages_used": 42, "test_pages_used": 80},
+    "strata": {"dev": {"digit": 20, "other": 60}, "test": {"digit": 40, "other": 120}},
+    "manifest_sha256": "13450762dd5508154fe05878554d4867d7df94e9a30a614f2b80385371c0af56",
+    "validation": "passed; 0 cross-split exact duplicates, 0 near-duplicate candidates (dHash Hamming <= 4)"
+  },
+  "custom_dataset": {
+    "status": "designed, not collected",
+    "per_writer": "3 A4 sheets, 21 amount pairs (15 match, 6 deliberate mismatch)",
+    "writers_required": "minimum 4 (W01 = student, dev), recommended 5-6",
+    "planned_crops": "168-252",
+    "kit": ["data/custom/template/collection_sheets.pdf", "data/custom/template/amount_list.csv",
+            "data/custom/template/layout.json", "data/custom/template/annotation_template.csv",
+            "artifacts/M4/COLLECTION_INSTRUCTIONS.md"],
+    "extraction": "ArUco-registered template crops (scripts/custom_sheets.py; self-test rectification error 5.38 grey levels)"
+  },
+  "evaluation_safeguards_added": {
+    "A_input_hash_validation": "smoke_inference.py",
+    "B_C_failure_aware_metrics": "eval_metrics.text_metrics (failed = empty prediction; coverage reported)",
+    "D_alignment_punctuation": "eval_metrics.punct_counts",
+    "E_crop_type_labelled": "crop_type field: annotation_polygon_bbox / template_registered; M3-B manual",
+    "F_no_space_correction": "words parser does not segment unspaced text",
+    "I_output_protection": "required new --out paths; refusal to overwrite in m3b_correct, stress_corrupt"
+  },
+  "inference_run": false,
+  "training": false,
+  "next_milestone_authorized": false,
+  "student_action_required": "collect and verify custom data per COLLECTION_INSTRUCTIONS.md"
+}

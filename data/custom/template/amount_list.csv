@@ -1,0 +1,22 @@
+item_id,sheet,numeric_prompt,words_prompt,numeric_value,words_value,pair_label,features
+A01,A,500,Five hundred only,500,500,match,small
+A02,A,"2,500",Two thousand five hundred only,2500,2500,match,comma
+A03,A,"12,500",Twelve thousand five hundred only,12500,12500,match,comma
+A04,A,"50,000",Five thousand only,50000,5000,mismatch,comma;repeated_zeros;magnitude
+A05,A,100000,One hundred thousand only,100000,100000,match,no_separator;repeated_zeros
+A06,A,"1,250.00",One thousand two hundred fifty only,1250.00,1250,match,comma;decimal
+A07,A,"7,200",Seven thousand only,7200,7000,mismatch,comma;omitted_hundreds
+B01,B,"Rs. 3,000/-",Rupees three thousand only,3000,3000,match,currency;comma;suffix
+B02,B,"75,450.50",Seventy five thousand four hundred fifty and fifty paisa only,75450.50,75450.50,match,comma;decimal;long_words
+B03,B,"9,999",Nine thousand nine hundred ninety nine only,9999,9999,match,comma;repeated_digits
+B04,B,"6,500",Five thousand six hundred only,6500,5600,mismatch,comma;transposed
+B05,B,"PKR 18,750",Eighteen thousand seven hundred fifty only,18750,18750,match,currency;comma
+B06,B,"1,005",One thousand five only,1005,1005,match,comma;inner_zeros
+B07,B,"15,000",One lakh fifty thousand only,15000,150000,mismatch,comma;lakh;magnitude
+C01,C,"40,000",Forty thousand only,40000,40000,match,comma;repeated_zeros
+C02,C,"260,000",Two hundred sixty thousand only,260000,260000,match,comma;repeated_zeros
+C03,C,"8,040.75",Eight thousand forty and seventy five paisa only,8040.75,8040.75,match,comma;decimal;inner_zero
+C04,C,"Rs. 2,100/-",Rupees one thousand two hundred only,2100,1200,mismatch,currency;suffix;transposed
+C05,C,"30,000",Thirty thousand only,30000,30000,match,comma;repeated_zeros
+C06,C,"45,600",Forty five thousand only,45600,45000,mismatch,comma;omitted_hundreds
+C07,C,250.50,Two hundred fifty and fifty paisa only,250.50,250.50,match,decimal

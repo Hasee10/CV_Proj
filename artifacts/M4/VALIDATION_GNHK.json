@@ -1,0 +1,17 @@
+{
+  "manifests": [
+    "data/public/gnhk/subset/manifest.json"
+  ],
+  "samples": 240,
+  "per_split": {
+    "dev": 80,
+    "test": 160,
+    "exploratory": 0
+  },
+  "groups": 122,
+  "near_duplicate_threshold_hamming": 4,
+  "cross_split_exact_duplicates": [],
+  "cross_split_near_duplicate_candidates": [],
+  "errors": [],
+  "passed": true
+}

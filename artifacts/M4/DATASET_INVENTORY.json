@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-26",
+  "datasets": [
+    {
+      "id": "D1",
+      "name": "GNHK test-split word subset",
+      "status": "acquired",
+      "license": "CC-BY-4.0",
+      "official_reference": "https://github.com/GoodNotes/GNHK-dataset",
+      "source": "https://huggingface.co/datasets/staghado/GNHK-Dataset",
+      "source_revision": "eaa67d396fd29b8b04e38d630da79f67db11b212",
+      "downloaded_bytes": 286039365,
+      "archive": {"file": "data/public/gnhk/cache/test_data.zip", "bytes": 285995725, "crc32": 1897843626,
+                  "sha256": "6f3d65d91535d1665050afd83a9f3831394d80accfae88c5b91bbb990781eacb"},
+      "official_test_pages": 172,
+      "official_test_words": 10066,
+      "eligible_words": 8829,
+      "excluded": {"printed": 867, "special_tokens": 369, "out_of_vocabulary": 1},
+      "selected_words": 240,
+      "per_split": {"dev": {"words": 80, "pages": 42, "digit": 20, "other": 60, "gt_chars": 377},
+                    "test": {"words": 160, "pages": 80, "digit": 40, "other": 120, "gt_chars": 706}},
+      "page_split": {"dev_pages": 52, "test_pages": 120, "seed": 20261126},
+      "writer_ids": null,
+      "manifest": "data/public/gnhk/subset/manifest.json",
+      "manifest_sha256": "13450762dd5508154fe05878554d4867d7df94e9a30a614f2b80385371c0af56",
+      "crop_bytes_on_disk": 9033348,
+      "validation": "artifacts/M4/VALIDATION_GNHK.json (passed: hashes, readability, group-split, 0 exact / 0 near duplicates across splits)"
+    },
+    {
+      "id": "D2",
+      "name": "ChequeVerify custom handwritten amounts",
+      "status": "designed, NOT collected",
+      "collected_writers": 0,
+      "collected_photos": 0,
+      "collected_crops": 0,
+      "design": {"items_per_writer": 21, "sheets": ["A", "B", "C"], "matching_pairs": 15, "mismatching_pairs": 6,
+                 "planned_writers": "4-6 (minimum 4)", "planned_crops": "168-252"},
+      "template": {"amount_list": "data/custom/template/amount_list.csv", "sheets_pdf": "data/custom/template/collection_sheets.pdf",
+                   "layout": "data/custom/template/layout.json", "annotation_template": "data/custom/template/annotation_template.csv"},
+      "split_rule": "writer-disjoint; W01 (M3-B writer) forced dev; n_dev = max(1, round(0.3*n_writers)); seed 20261126"
+    },
+    {
+      "id": "D3",
+      "name": "Synthetic stress variants",
+      "status": "protocol frozen, NOT generated",
+      "variants_per_clean_sample": 15,
+      "generator": "scripts/stress_corrupt.py"
+    },
+    {
+      "id": "D0",
+      "name": "M3-B exploratory handwriting",
+      "status": "acquired (M3-B), development-only",
+      "handwriting_samples": 9,
+      "condition_entries": 21,
+      "writers": 1,
+      "final_labels": "artifacts/M3_B_final/DATA_MANIFEST.json"
+    }
+  ]
+}

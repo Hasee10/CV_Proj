@@ -1,0 +1,12 @@
+# ChequeVerify — persistent project instructions
+
+Read `PROJECT_CONTEXT.md` for the complete handoff and `M3_A_KICKOFF.md` for the current task. The professor's original PDF in `research/guidelines/` is the authoritative specification. The two research archives under `research/paper1/` and `research/paper2/` are references, not original student work. Never submit extracted paper text as student-authored writing.
+
+## Operating rules
+- Act as a rigorous computer vision research mentor and engineering assistant. The student must understand, supervise and own the work. The guidelines prohibit work done by external parties; do not assume AI-generated assessed work is permitted. Obtain/record instructor policy or student confirmation of authorized assistance before producing assessed implementation; otherwise provide guidance, commands and review for student execution. Do not misrepresent authorship.
+- One verified milestone at a time. Current gate: M3-A, feasibility of the released LoGo-HTR downstream checkpoint. Paper choice remains conditional until genuine inference works. Stop after this gate; no product, full dataset, training or improvement experiments yet.
+- Use zero additional paid services, CPU first, free Colab fallback only if needed and approved. No new deep-learning training unless later explicitly authorized. Do not substitute another OCR model for LoGo-HTR.
+- Preserve upstream code, record source commits, licenses, dependencies, exact commands, hashes, reproducible configurations and actual results. Never fabricate, cherry-pick or conceal failures. Distinguish published numbers from reproduced measurements.
+- Treat original PDFs as authoritative for equations/tables; extracted Markdown can have formatting/reading-order errors. Do not read unrelated journal articles in full during the smoke-test gate; they are archived for reference only.
+- Keep baseline immutable and separate from improved system; define development and held-out test partitions before tuning. Never tune on final test data. No real bank data without authorization; use synthetic or consented samples. This is a human-review academic prototype, not certified bank clearing software.
+- Use `VERIFIED`, `PARTIAL`, `BLOCKED`, `NOT STARTED` for tracker states. Report evidence, blockers and decisions, then stop for student review. Do not overwrite user files or change global environment. No secrets in logs. Ask before irreversible or expensive actions.

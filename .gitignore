@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+# large weights: download instructions in README / COMMANDS.md
+models/**/*.ckpt
+models/**/*.pth
+# private reference archive (papers, guidelines): not original student work
+research/
+# upstream is cloned at a pinned commit, not vendored
+third_party/
+# GNHK raw test archive (re-fetchable, 286 MB)
+data/public/gnhk/cache/
+# online raw sources (re-fetchable; full synthetic cheques show template account numbers)
+data/public/cvl/cache/
+data/synthetic/hf_cheques/cache/

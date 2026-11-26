@@ -1,0 +1,34 @@
+# M3-A CPU inference environment (exact pip freeze, Python 3.11.9, Windows 11).
+# Install: .venv\Scripts\python.exe -m pip install -r requirements-inference.txt
+# Upstream pins torch-1.8-era packages with no Python 3.11 wheels; deviations listed in THIRD_PARTY_NOTICES.md / MODEL_INSPECTION.md.
+--extra-index-url https://download.pytorch.org/whl/cpu
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.5
+aiosignal==1.4.0
+attrs==26.1.0
+colorama==0.4.6
+einops==0.3.0
+filelock==4.2.4
+frozenlist==1.8.0
+fsspec==2026.9.0
+idna==3.20
+Jinja2==3.1.6
+lightning-utilities==0.15.3
+MarkupSafe==3.0.3
+mpmath==1.3.0
+multidict==7.2.1
+networkx==3.6.1
+numpy==2.4.6
+opencv-python-headless==5.1.0.95
+packaging==26.4
+pillow==13.0.0
+propcache==0.5.4
+pytorch-lightning==2.6.6
+PyYAML==6.0.4
+sympy==1.14.0
+torch==2.15.0+cpu
+torchmetrics==1.9.0
+torchvision==0.29.2+cpu
+tqdm==4.70.1
+typing_extensions==4.16.0
+yarl==1.25.1

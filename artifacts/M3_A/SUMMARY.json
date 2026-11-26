@@ -1,0 +1,96 @@
+{
+  "milestone": "M3-A checkpoint acquisition and CPU inference verification",
+  "date": "2026-11-26",
+  "status": "VERIFIED",
+  "status_scope": "Feasibility gate only: the official full downstream checkpoint loads strictly and decodes real handwritten words on CPU without training. This is NOT a reproduction of the paper's results, NOT an accuracy estimate, and NOT evidence of cheque-domain performance.",
+  "gates": {
+    "environment_isolated_venv": "VERIFIED",
+    "upstream_repo_acquired": "VERIFIED",
+    "checkpoint_downloaded_and_hash_verified": "VERIFIED",
+    "safe_loading_weights_only": "VERIFIED",
+    "architecture_config_established": "VERIFIED",
+    "vocabulary_established": "VERIFIED (empirically; not confirmed by authors)",
+    "preprocessing_established": "VERIFIED against upstream code; authors' dataset conversion step unpublished",
+    "strict_weight_loading": "VERIFIED",
+    "genuine_inference_5plus_preselected_samples": "VERIFIED (8 samples, in-domain SSL-HWD)",
+    "repeatable_cpu_inference": "VERIFIED (2 runs, identical token ids)",
+    "out_of_domain_or_student_written_samples": "NOT STARTED",
+    "artifacts_recorded": "VERIFIED"
+  },
+  "environment": {
+    "os": "Windows 11 Pro 10.0.26200",
+    "cpu": "Intel Core i7-1265U (10C/12T)",
+    "ram_gb": 15.44,
+    "gpu": "Intel Iris Xe (integrated), no CUDA",
+    "python": "3.11.9",
+    "interpreter": ".venv\\Scripts\\python.exe -X utf8 -I",
+    "torch": "2.15.0+cpu",
+    "pytorch_lightning": "2.6.6",
+    "device": "cpu",
+    "torch_threads": 10
+  },
+  "upstream": {
+    "url": "https://github.com/shreemitra/LoGoHTR",
+    "commit": "9eaea5fe52e908ebf3b625ca4c05da3d1905a6af",
+    "license": "MIT",
+    "modified": false
+  },
+  "checkpoint": {
+    "source": "https://huggingface.co/Shree10/LoGo-HTR",
+    "revision": "64439ca9edfbf58e3007c2bb6af17559bcf2d29e",
+    "file": "Downstream_Full_Model_Best.ckpt",
+    "bytes": 52019943,
+    "sha256": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432",
+    "license": "apache-2.0 (model card)",
+    "pl_version": "1.4.9",
+    "epoch": 100,
+    "global_step": 370400,
+    "fine_tuning_dataset": "unknown (undocumented)"
+  },
+  "model_loading": {
+    "method": "torch.load weights_only=True + safe_globals([ModelCheckpoint]); LitCoMER(**hyper_parameters); load_state_dict strict=True",
+    "state_dict_keys": 673,
+    "model_keys": 673,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "parameter_count": 6385537,
+    "paper_parameter_count": "6.4M",
+    "dtype": "float32",
+    "vocab_size": 97,
+    "dictionary": "comer/datamodule/SSL_HWD_Dict.txt",
+    "decoding": "bi-directional beam search, beam 10, max_len 200, alpha 1.0"
+  },
+  "inference_results": [
+    {"id": "S01", "file": "writer1_1.png", "category": "numeric", "ground_truth": "1850", "prediction": "1850", "exact_match": true, "latency_s": 0.1242, "wrong_dict_prediction": "1850"},
+    {"id": "S02", "file": "writer1_13.png", "category": "numeric", "ground_truth": "28", "prediction": "28", "exact_match": true, "latency_s": 0.0878, "wrong_dict_prediction": "28"},
+    {"id": "S03", "file": "writer1_128.png", "category": "numeric", "ground_truth": "4", "prediction": "4", "exact_match": true, "latency_s": 0.0595, "wrong_dict_prediction": "4"},
+    {"id": "S04", "file": "writer1_102.png", "category": "lowercase_word_len5plus", "ground_truth": "living", "prediction": "living", "exact_match": true, "latency_s": 0.1474, "wrong_dict_prediction": "khuhmf"},
+    {"id": "S05", "file": "writer1_103.png", "category": "lowercase_word_len5plus", "ground_truth": "keeping", "prediction": "keeping", "exact_match": true, "latency_s": 0.1807, "wrong_dict_prediction": "jddohmf"},
+    {"id": "S06", "file": "writer1_104.png", "category": "lowercase_word_len5plus", "ground_truth": "house", "prediction": "house", "exact_match": true, "latency_s": 0.1354, "wrong_dict_prediction": "gntrd"},
+    {"id": "S07", "file": "writer1_101.png", "category": "capitalised_word_len5plus", "ground_truth": "Island", "prediction": "Island", "exact_match": true, "latency_s": 0.1725, "wrong_dict_prediction": "Irk_mc"},
+    {"id": "S08", "file": "writer1_124.png", "category": "capitalised_word_len5plus", "ground_truth": "April", "prediction": "April", "exact_match": true, "latency_s": 0.2461, "wrong_dict_prediction": "Aoqhk"}
+  ],
+  "exact_match": "8/8 (in-domain, possibly seen in training; feasibility evidence only)",
+  "latency": {
+    "includes": "preprocess + encoder + bi-directional beam search + rescoring, batch 1; excludes model load and warm-up",
+    "run1_median_s": 0.1414,
+    "run1_min_max_s": [0.0595, 0.2461],
+    "run2_median_s": 0.1412,
+    "warmup_s_run1": 0.1789,
+    "model_load_s_run1": 1.843
+  },
+  "samples": {
+    "source": "SSL-HWD-Words labelled zip, revision 91b51355f71e1166eb5b1ef3e6c0540463f32008, first 4 MiB only (HTTP range)",
+    "license": "apache-2.0",
+    "selection": "pre-registered regex rules in scripts/fetch_ssl_hwd_samples.py, CSV order, no replacement",
+    "rule_shortfall": "alphanumeric_mixed: 0 of 2 found in fetched bytes",
+    "manifest": "data/smoke_samples/ssl_hwd/manifest.json"
+  },
+  "adapters": [
+    "vocab: run upstream vocab.py unchanged, build CROHMEVocab from SSL_HWD_Dict.txt (upstream default IIIT_Dict.txt missing)",
+    "encoder: skip hard-coded Linux backbone preload during construction; strict full load replaces all weights"
+  ],
+  "open_risks": ["R1 possible train/test overlap of samples", "R2 no cheque/out-of-domain samples", "R3 punctuation/symbols untested", "R4 vocabulary not author-confirmed", "R5 fine-tuning dataset undocumented", "R6 dataset conversion unpublished", "R7 OneDrive-synced project folder", "R8 small rule-based sample set"],
+  "recommendation": "Keep LoGo-HTR as the conditionally selected paper. Before final M2 commitment, run 5-10 student-written photographed words and amounts (including punctuation such as 1,250.00) through the same script to check out-of-domain behaviour.",
+  "next_milestone_authorized": false
+}

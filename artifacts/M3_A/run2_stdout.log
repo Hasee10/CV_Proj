@@ -1,0 +1,13 @@
+🔄 Loading pretrained weights from BarlowTwins backbone...
+✅ Weights loaded successfully.
+🧊 Freezing all model parameters...
+✅ All parameters are now Un-frozen (trainable).
+{"id": "S01", "ground_truth": "1850", "prediction_by_dict": {"SSL_HWD_Dict.txt": "1850", "dictionary.txt": "1850"}, "latency_seconds": 0.1205, "error": null}
+{"id": "S02", "ground_truth": "28", "prediction_by_dict": {"SSL_HWD_Dict.txt": "28", "dictionary.txt": "28"}, "latency_seconds": 0.0738, "error": null}
+{"id": "S03", "ground_truth": "4", "prediction_by_dict": {"SSL_HWD_Dict.txt": "4", "dictionary.txt": "4"}, "latency_seconds": 0.0501, "error": null}
+{"id": "S04", "ground_truth": "living", "prediction_by_dict": {"SSL_HWD_Dict.txt": "living", "dictionary.txt": "khuhmf"}, "latency_seconds": 0.1428, "error": null}
+{"id": "S05", "ground_truth": "keeping", "prediction_by_dict": {"SSL_HWD_Dict.txt": "keeping", "dictionary.txt": "jddohmf"}, "latency_seconds": 0.165, "error": null}
+{"id": "S06", "ground_truth": "house", "prediction_by_dict": {"SSL_HWD_Dict.txt": "house", "dictionary.txt": "gntrd"}, "latency_seconds": 0.1395, "error": null}
+{"id": "S07", "ground_truth": "Island", "prediction_by_dict": {"SSL_HWD_Dict.txt": "Island", "dictionary.txt": "Irk_mc"}, "latency_seconds": 0.147, "error": null}
+{"id": "S08", "ground_truth": "April", "prediction_by_dict": {"SSL_HWD_Dict.txt": "April", "dictionary.txt": "Aoqhk"}, "latency_seconds": 0.1888, "error": null}
+wrote artifacts/M3_A/INFERENCE_RESULTS_run2.json

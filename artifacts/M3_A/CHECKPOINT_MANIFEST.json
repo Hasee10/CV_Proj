@@ -1,0 +1,45 @@
+{
+  "model_repository": "https://huggingface.co/Shree10/LoGo-HTR",
+  "model_repository_revision": "64439ca9edfbf58e3007c2bb6af17559bcf2d29e",
+  "model_repository_last_modified": "2026-05-21T16:12:27Z",
+  "model_repository_files": {
+    ".gitattributes": 1519,
+    "README.md": 31,
+    "DenseNet_backbone_step290000.pth": 12194045,
+    "Downstream_Full_Model_Best.ckpt": 52019943
+  },
+  "model_card": "Contains only YAML front matter 'license: apache-2.0'. No disclosure of training data, vocabulary, preprocessing, metrics or intended use.",
+  "license_declared": "apache-2.0 (Hugging Face model card tag; code repository is MIT)",
+  "downloaded": {
+    "file": "Downstream_Full_Model_Best.ckpt",
+    "local_path": "models/logo_htr/Downstream_Full_Model_Best.ckpt",
+    "url": "https://huggingface.co/Shree10/LoGo-HTR/resolve/64439ca9edfbf58e3007c2bb6af17559bcf2d29e/Downstream_Full_Model_Best.ckpt",
+    "bytes": 52019943,
+    "sha256": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432",
+    "sha256_matches_hf_lfs_record": true,
+    "format": "PyTorch zip serialization (magic 'PK', archive/data.pkl, archive/version = 3); not HTML, not an LFS pointer",
+    "pickle_globals_static_scan": [
+      "collections.OrderedDict",
+      "torch._utils._rebuild_tensor_v2",
+      "torch.FloatStorage",
+      "torch.LongStorage",
+      "pytorch_lightning.callbacks.model_checkpoint.ModelCheckpoint (used only as a dict key in callback state)"
+    ],
+    "load_method": "torch.load(weights_only=True, map_location='cpu') inside torch.serialization.safe_globals([ModelCheckpoint]); no unsafe unpickling"
+  },
+  "not_downloaded": {
+    "file": "DenseNet_backbone_step290000.pth",
+    "reason": "Encoder-only SSL backbone; not needed because the full checkpoint holds all encoder weights (strict load, 0 missing keys).",
+    "sha256_hf_lfs_record": "21d17a8a16d65afdc8100cfdfb7fecf0fc65392abc0f885cf711ca0620dd6f37"
+  },
+  "provenance_from_checkpoint": {
+    "pytorch_lightning_version": "1.4.9",
+    "epoch": 100,
+    "global_step": 370400,
+    "monitor": "val_ExpRate",
+    "best_model_score": 0.9473420977592468,
+    "original_best_model_path": "/home2/shree.mitra23m/CoMER/lightning_logs/version_2457211/checkpoints/epoch=99-step=370399-val_ExpRate=0.9473.ckpt"
+  },
+  "training_dataset_of_checkpoint": "UNKNOWN - not documented. Vocabulary evidence (97 tokens, decodes correctly only with SSL_HWD_Dict.txt) is consistent with SSL-HWD fine-tuning but does not prove it. The val_ExpRate 0.9473 is the authors' internal validation value, not a result reproduced here.",
+  "redistribution": "Apache-2.0 permits redistribution with notice; still do not commit the .ckpt to the submission repo by default - provide download instructions (see README)."
+}

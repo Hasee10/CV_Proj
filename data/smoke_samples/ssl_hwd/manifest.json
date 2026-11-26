@@ -1,0 +1,87 @@
+{
+  "source": "https://huggingface.co/datasets/Shree10/SSL-HWD-Words/resolve/91b51355f71e1166eb5b1ef3e6c0540463f32008/SSL-HWD-Words(Labeled).zip",
+  "dataset_revision": "91b51355f71e1166eb5b1ef3e6c0540463f32008",
+  "license": "apache-2.0 (dataset card)",
+  "bytes_fetched": 4194304,
+  "writer": "writer1",
+  "selection_rules": [
+    [
+      "numeric",
+      "^[0-9]+$",
+      3
+    ],
+    [
+      "lowercase_word_len5plus",
+      "^[a-z]{5,}$",
+      3
+    ],
+    [
+      "capitalised_word_len5plus",
+      "^[A-Z][a-z]{4,}$",
+      2
+    ],
+    [
+      "alphanumeric_mixed",
+      "^(?=.*[0-9])(?=.*[A-Za-z]).+$",
+      2
+    ]
+  ],
+  "samples": [
+    {
+      "id": "S01",
+      "category": "numeric",
+      "file": "data/smoke_samples/ssl_hwd/writer1_1.png",
+      "ground_truth": "1850",
+      "sha256": "afc778d506fe54a839db3bf8173510f274979fedc53eccb74ecfb7a1dccdff1d"
+    },
+    {
+      "id": "S02",
+      "category": "numeric",
+      "file": "data/smoke_samples/ssl_hwd/writer1_13.png",
+      "ground_truth": "28",
+      "sha256": "f11aa477f3acbabfa148e6864544038adb0517d15d4f168bcaa10decdb6029eb"
+    },
+    {
+      "id": "S03",
+      "category": "numeric",
+      "file": "data/smoke_samples/ssl_hwd/writer1_128.png",
+      "ground_truth": "4",
+      "sha256": "662eba6cdc13281dfc8a8831b5e90678ddd56a07bcfc9c78da45c461aafbdc8f"
+    },
+    {
+      "id": "S04",
+      "category": "lowercase_word_len5plus",
+      "file": "data/smoke_samples/ssl_hwd/writer1_102.png",
+      "ground_truth": "living",
+      "sha256": "c662710b54f23185661f4c9c5bcdc63ab917a7ab4da4f744eac74a6affe4c699"
+    },
+    {
+      "id": "S05",
+      "category": "lowercase_word_len5plus",
+      "file": "data/smoke_samples/ssl_hwd/writer1_103.png",
+      "ground_truth": "keeping",
+      "sha256": "78c9c8f6bc06e7a073ab961ae7ecb3f14e5a839e0a5a2964e3caf6483332c37e"
+    },
+    {
+      "id": "S06",
+      "category": "lowercase_word_len5plus",
+      "file": "data/smoke_samples/ssl_hwd/writer1_104.png",
+      "ground_truth": "house",
+      "sha256": "7ac40f831d7e8e263241daa9449ad7d3bae3f199cb287f019fbfb0a3b1976505"
+    },
+    {
+      "id": "S07",
+      "category": "capitalised_word_len5plus",
+      "file": "data/smoke_samples/ssl_hwd/writer1_101.png",
+      "ground_truth": "Island",
+      "sha256": "1378584f0a6c4daaeff37c60664bac2fd3a740a705c02f691eeb01bd6c6b89e6"
+    },
+    {
+      "id": "S08",
+      "category": "capitalised_word_len5plus",
+      "file": "data/smoke_samples/ssl_hwd/writer1_124.png",
+      "ground_truth": "April",
+      "sha256": "8921c564a447fbef4664f28177e9910565ff64b8c0e67df0cb92b70c1496d458"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "recorded": "2026-11-26",
+  "project_root": "C:\\Users\\aliwa\\OneDrive\\Desktop\\FAST NUCES\\semester 7\\CV\\ChequeVerify",
+  "project_root_note": "D:\\Projects\\ChequeVerify does not exist (machine has only drive C:). Actual root is inside a OneDrive-synced folder; .venv (929 MB) and the 50 MB checkpoint are therefore synced unless the student pauses or moves the folder.",
+  "os": "Microsoft Windows 11 Pro 10.0.26200 (build 26200)",
+  "cpu": "12th Gen Intel(R) Core(TM) i7-1265U, 10 cores / 12 threads",
+  "ram_gb_total": 15.44,
+  "ram_gb_free_at_audit": 5.96,
+  "gpu": "Intel(R) Iris(R) Xe Graphics (integrated); no NVIDIA GPU, nvidia-smi not found",
+  "disk_c_free_gb_at_audit": 315.11,
+  "python_launcher": "py -3.11 -> C:\\Users\\aliwa\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr 2 2024) [MSC v.1938 64 bit (AMD64)]",
+  "venv": ".venv (created with: py -3.11 -m venv .venv)",
+  "venv_interpreter": ".venv\\Scripts\\python.exe",
+  "pip_in_venv": "26.3",
+  "git": {
+    "C:\\Program Files\\Git\\cmd\\git.exe": "2.56.1.windows.1 - HTTPS clone FAILED: Windows Application Control policy blocked libcurl-4.dll",
+    "MinGit (WinGet) git.exe": "2.55.0.windows.2 - used for the clone"
+  },
+  "key_packages": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "pytorch-lightning": "2.6.6",
+    "torchmetrics": "1.9.0",
+    "einops": "0.3.0",
+    "opencv-python-headless": "5.1.0.95",
+    "numpy": "2.4.6",
+    "pillow": "13.0.0"
+  },
+  "full_lock": "requirements-inference.txt",
+  "device_used": "cpu",
+  "cuda_available": false,
+  "torch_num_threads": 10,
+  "python_flags_required": "-X utf8 (dictionary files are UTF-8; Windows default code page would mis-decode non-ASCII symbols)",
+  "global_environment_changed": false
+}

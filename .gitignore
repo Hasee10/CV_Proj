@@ -19,3 +19,18 @@ data/diagnostics/
 # M7/M8 prediction caches (regenerable; large)
 data/m7/
 data/m8/
+# local run output and tooling caches
+.cache/
+.pytest_cache/
+*.part
+handover.zip
+# frontend dependencies and build output
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/out/
+frontend/coverage/
+frontend/test-results/
+frontend/playwright-report/
+.env

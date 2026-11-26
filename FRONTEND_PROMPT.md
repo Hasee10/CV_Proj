@@ -11,11 +11,11 @@ You are building the frontend for ChequeVerify, an academic prototype that reads
 3. Read CLAUDE.md and PROJECT_TRACKER.md.
 4. Never invent an endpoint, form field, response field or status code. If it is not in the code or the examples, it does not exist.
 
-## Step 2: start the backend and confirm it works
-Start the backend as the setup instructions say (HANDOVER.md gives: .venv\Scripts\python.exe -X utf8 -m uvicorn backend.app:app --host 127.0.0.1 --port 8000). Set the environment variable CV_CORS_ORIGINS if your dev server does not run on http://localhost:5173 or http://127.0.0.1:5173. Confirm that GET http://127.0.0.1:8000/health returns 200 with model_loaded true. If it does not, stop and report the cause (usually the git-ignored checkpoint or upstream code is missing). Do not continue with mocks only.
+## Step 2: set up the environment, start the backend and confirm it works
+Run the one-command setup from the repository root: `py -3.11 scripts/setup_env.py` on Windows (`python3.11 scripts/setup_env.py` elsewhere). It creates .venv, installs the pinned packages, fetches and verifies the upstream code and the checkpoint, enables the commit guard and runs the backend tests. It must end with SETUP COMPLETE; if it does not, report the error and stop. Then start the backend: `.venv\Scripts\python.exe -X utf8 -m uvicorn backend.app:app --host 127.0.0.1 --port 8000`. Set the environment variable CV_CORS_ORIGINS if your dev server does not run on http://localhost:5173 or http://127.0.0.1:5173. Confirm that GET http://127.0.0.1:8000/health returns 200 with model_loaded true. If it does not, stop and report the cause (usually the git-ignored checkpoint or upstream code is missing). Do not continue with mocks only.
 
 ## Step 3: the backend is frozen
-- Do not modify backend/, scripts/, artifacts/, data/, tests/ (research tests), model weights, configs, manifests, results, requirements files, openapi.json or API_CONTRACT.md.
+- Do not modify anything outside frontend/, except status updates in README.md, PROJECT_TRACKER.md, ROADMAP.md and PROJECT_CONTEXT.md. This is enforced: .claude/settings.json denies edits to frozen paths, the git pre-commit hook (scripts/guard.py --staged) refuses commits that touch them, and `python scripts/guard.py --verify` checks every frozen file against FROZEN_MANIFEST.json. Run the verify command before every commit. Never bypass these checks (no --no-verify, no changes to core.hooksPath, the hook, the manifest or the settings).
 - All frontend code goes in a new top-level directory frontend/. Frontend tests go inside frontend/.
 - The only backend-side change allowed is setting CV_CORS_ORIGINS through the environment when you start it.
 - If you believe the backend has a bug or the API needs a change, do not fix it. Write it in your report and stop that item.

@@ -11,6 +11,13 @@ This guide covers the application only. You do not need any research dataset to 
 | Cold install on a new machine | not tested |
 | Linux, macOS, GPU | not tested |
 
+## Fast path: one command
+After cloning (step 1), run from the repository root:
+```powershell
+py -3.11 scripts/setup_env.py
+```
+It carries out steps 2 to 4 and the test part of step 7, and enables the git commit guard (see `CLAUDE.md`). It is safe to rerun and ends with `SETUP COMPLETE`. The manual steps below show what it does.
+
 ## 1. Get the code
 ```powershell
 git clone https://github.com/Hasee10/CV_Proj.git ChequeVerify
@@ -69,14 +76,14 @@ curl.exe http://127.0.0.1:8000/health
 .\.venv\Scripts\python.exe -X utf8 -I scripts\m10_live_check.py
 ```
 - `/health` must return `{"status":"ok","model_loaded":true}`.
-- The live check sends 16 real requests and expects `16/16 passed`. One request is the deliberately slow proposed-mode written line, about 30–40 s. The check rewrites `openapi.json` and `artifacts/M10/LIVE_HTTP_CHECK.json`.
+- The live check sends 16 real requests and expects `16/16 passed`. One request is the deliberately slow proposed-mode written line, about 30–40 s. Results go to `.cache/live_check.json` (git-ignored). No tracked file changes.
 
 Test suites (no server needed):
 ```powershell
 .\.venv\Scripts\python.exe -X utf8 -m pytest tests\test_backend_unit.py tests\test_backend_integration.py -q
 ```
 - Expected: 27 passed.
-- The 20 unit tests use mocked inference. The 7 integration tests load the real checkpoint and rewrite the examples in `artifacts/M10/examples/`.
+- The 20 unit tests use mocked inference. The 7 integration tests load the real checkpoint. Neither suite changes tracked files.
 
 ## Troubleshooting
 | symptom | cause and fix |

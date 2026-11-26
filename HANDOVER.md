@@ -127,4 +127,12 @@ third_party/, models/  upstream code and checkpoint (git-ignored; see SETUP_GUID
 ```powershell
 .\.venv\Scripts\python.exe -X utf8 -m uvicorn backend.app:app --host 127.0.0.1 --port 8000
 ```
-Installation steps, checkpoint download with hash check, smoke tests and troubleshooting are in [SETUP_GUIDE.md](SETUP_GUIDE.md).
+First-time setup is one command, `py -3.11 scripts/setup_env.py`, which ends with `SETUP COMPLETE`. Manual steps, the checkpoint hash, smoke tests and troubleshooting are in [SETUP_GUIDE.md](SETUP_GUIDE.md).
+
+## Protection against accidental changes
+Only `frontend/` and four status documents (`README.md`, `PROJECT_TRACKER.md`, `ROADMAP.md`, `PROJECT_CONTEXT.md`) may change. Three layers enforce this:
+- `.claude/settings.json` denies Claude Code edits to frozen paths;
+- a git pre-commit hook (`scripts/guard.py --staged`, enabled by the setup script) refuses commits that touch frozen files, weights, archives, build output, `.env` files or token-like secrets;
+- `python scripts/guard.py --verify` checks every frozen file against the SHA-256 values in `FROZEN_MANIFEST.json`.
+
+The project owner can still commit a deliberate change with `git commit --no-verify`. `CLAUDE.md` explains the rules to every Claude Code session.

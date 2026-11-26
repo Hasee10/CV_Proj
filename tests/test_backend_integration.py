@@ -1,10 +1,12 @@
 """M9-A backend INTEGRATION tests: GENUINE inference with the real LoGo-HTR checkpoint (CPU, dev-split images only).
 Each response is compared with the cached prediction for the same pixels from the M5/M7 offline runs (determinism).
-Request/response examples are written to artifacts/M10/examples/ for the API documentation.
+Request/response examples are rewritten in artifacts/M10/examples/ only when CV_UPDATE_EXAMPLES=1 (maintainer use);
+by default the tests leave every tracked file unchanged.
 Run: .venv\\Scripts\\python.exe -X utf8 -m pytest tests\\test_backend_integration.py -q
 """
 import io
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -28,6 +30,8 @@ def raw(i):
 
 
 def save(name, request, response):
+    if os.environ.get("CV_UPDATE_EXAMPLES") != "1":
+        return
     EX.mkdir(parents=True, exist_ok=True)
     (EX / f"{name}.json").write_text(json.dumps({"request": request, "response": response}, indent=1, ensure_ascii=False),
                                      encoding="utf-8")

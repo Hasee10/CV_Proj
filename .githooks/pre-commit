@@ -1,0 +1,11 @@
+#!/bin/sh
+# ChequeVerify commit guard (installed by scripts/setup_env.py via `git config core.hooksPath .githooks`).
+# Blocks commits that touch frozen files; see CLAUDE.md "Protected files".
+for py in .venv/Scripts/python.exe .venv/bin/python; do
+  if [ -x "$py" ]; then exec "$py" scripts/guard.py --staged; fi
+done
+for py in python3 python py; do
+  if command -v "$py" >/dev/null 2>&1; then exec "$py" scripts/guard.py --staged; fi
+done
+echo "guard: no Python found, refusing to commit. Run: py -3.11 scripts/setup_env.py" >&2
+exit 1

@@ -1,5 +1,6 @@
 """M10-A live HTTP check against a running server (default http://127.0.0.1:8000). Dev-split images only.
-Writes <out> (default artifacts/M10/LIVE_HTTP_CHECK.json) and openapi.json. Usage:
+Writes the results to <out> (default .cache/live_check.json, git-ignored). --export-openapi also rewrites openapi.json
+(maintainer use). The committed evidence file is artifacts/M10/LIVE_HTTP_CHECK.json. Usage:
   .venv\\Scripts\\python.exe -X utf8 -I scripts\\m10_live_check.py [--base URL]
 """
 import argparse
@@ -24,7 +25,8 @@ def png(i):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--base", default="http://127.0.0.1:8000")
-    ap.add_argument("--out", default="artifacts/M10/LIVE_HTTP_CHECK.json")
+    ap.add_argument("--out", default=".cache/live_check.json")
+    ap.add_argument("--export-openapi", action="store_true")
     a = ap.parse_args()
     c = httpx.Client(base_url=a.base, timeout=300)
     checks = []
@@ -43,7 +45,8 @@ def main():
     call("model_info", "GET", "/api/model-info", 200)
     call("docs_page", "GET", "/docs", 200)
     spec = call("openapi", "GET", "/openapi.json", 200)
-    (ROOT / "openapi.json").write_text(json.dumps(spec, indent=1), encoding="utf-8")
+    if a.export_openapi:
+        (ROOT / "openapi.json").write_text(json.dumps(spec, indent=1), encoding="utf-8")
     call("recognize_numeric_proposed_synthetic", "POST", "/api/recognize", 200,
          files={"image": png("SYN_0001_num")}, data={"field_type": "numeric", "mode": "proposed"})
     call("recognize_numeric_baseline_synthetic", "POST", "/api/recognize", 200,

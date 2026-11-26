@@ -1,0 +1,102 @@
+{
+  "milestone": "M3-B independent handwriting feasibility verification",
+  "date": "2026-11-26",
+  "status": "VERIFIED",
+  "status_scope": "The experiment was conducted per protocol (inventory, frozen manifest, all samples evaluated, failures preserved). It does not mean the predictions were correct. Exploratory: 9 samples, 1 writer; not a benchmark or general accuracy.",
+  "acceptance": {
+    "all_photographs_inventoried": true,
+    "ground_truth_frozen_before_inference": "manifest SHA-256 d0cd3812773852128a549963777c9e3c26805d5c32cc34cc2a5c8147764296df at 2026-11-26T17:02:40+05:00",
+    "originals_unchanged": true,
+    "all_eligible_samples_evaluated": "21/21 entries (9 crop, 9 full_photo, 3 segmented_word); 0 errors, 0 exclusions",
+    "numeric_and_punctuation_evaluated": true,
+    "multiword_documented": true,
+    "m3a_evidence_intact": "all 10 M3-A artifact hashes re-verified",
+    "artifacts_complete": true
+  },
+  "setup_reused": {
+    "checkpoint_sha256": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432",
+    "upstream_commit": "9eaea5fe52e908ebf3b625ca4c05da3d1905a6af",
+    "dictionary": "SSL_HWD_Dict.txt",
+    "load": "673/673 keys, 0 missing, 0 unexpected, 6,385,537 params",
+    "preprocessing": "upstream ScaleToLimitRange(16-1024 w, 16-256 h) + ToTensor, RGB, no normalisation",
+    "decoding": "upstream bi-directional beam search, beam 10",
+    "device": "cpu (i7-1265U, torch 2.15.0+cpu, 10 threads)"
+  },
+  "data": {
+    "photos": 9,
+    "photo_format": "JPEG RGB, 950x398 to 1600x720, no EXIF orientation tag",
+    "originals": "handwritten_examples/ (unchanged); byte-identical copies in data/handwritten_examples/raw/",
+    "handwritten_samples": 9,
+    "ground_truth_vs_intended_list": [
+      "Photo 3 is '50000' (list said '50,000')",
+      "Photo 4 is '1250.00' (list said '1,250.00'); decimal drawn as a short dash, flagged ambiguous",
+      "Photo 9 is 'Five thousand only' (list said 'Five Thousand Only'); narrow gap between 'Five' and 'thousand' flagged"
+    ],
+    "categories": {"numeric": 3, "numeric_decimal": 1, "numeric_comma_decimal": 1, "word": 3, "multiword": 1},
+    "processing": "neutral rectangular crop (recorded boxes) + PNG save; no enhancement"
+  },
+  "results_crop_primary": [
+    {"id": "H01", "gt": "2500", "prediction": "2500", "raw_token_ids": [21, 24, 19, 19], "exact": true, "ed": 0, "cer": 0.0, "latency_s": 0.2839},
+    {"id": "H02", "gt": "12500", "prediction": "12500", "raw_token_ids": [20, 21, 24, 19, 19], "exact": true, "ed": 0, "cer": 0.0, "latency_s": 0.5487},
+    {"id": "H03", "gt": "50000", "prediction": "5000000", "raw_token_ids": [24, 19, 19, 19, 19, 19, 19], "exact": false, "ed": 2, "cer": 0.4, "latency_s": 1.1138},
+    {"id": "H04", "gt": "1250.00", "prediction": "125000", "raw_token_ids": [20, 21, 24, 19, 19, 19], "exact": false, "ed": 1, "cer": 0.1429, "latency_s": 1.2873},
+    {"id": "H05", "gt": "75,450.50", "prediction": "18050", "raw_token_ids": [20, 27, 19, 24, 19], "exact": false, "ed": 6, "cer": 0.6667, "latency_s": 1.779},
+    {"id": "H06", "gt": "Twenty", "prediction": "Twenty", "raw_token_ids": [55, 87, 69, 78, 84, 89], "exact": true, "ed": 0, "cer": 0.0, "latency_s": 1.0792},
+    {"id": "H07", "gt": "Thousand", "prediction": "Inowand", "raw_token_ids": [44, 78, 79, 87, 65, 78, 68], "exact": false, "ed": 4, "cer": 0.5, "latency_s": 2.0282},
+    {"id": "H08", "gt": "Rupees", "prediction": "Rupees", "raw_token_ids": [53, 85, 80, 69, 69, 83], "exact": true, "ed": 0, "cer": 0.0, "latency_s": 0.899},
+    {"id": "H09", "gt": "Five thousand only", "prediction": "Fivethousnandanty", "raw_token_ids": [41, 73, 86, 69, 84, 72, 79, 85, 83, 78, 65, 78, 68, 65, 78, 84, 89], "exact": false, "ed": 5, "cer": 0.2778, "latency_s": 6.0612}
+  ],
+  "results_full_photo_secondary": [
+    {"id": "H01-full", "prediction": "10500", "exact": false, "ed": 2},
+    {"id": "H02-full", "prediction": "125000", "exact": false, "ed": 1},
+    {"id": "H03-full", "prediction": "500000", "exact": false, "ed": 1},
+    {"id": "H04-full", "prediction": "1250000", "exact": false, "ed": 1},
+    {"id": "H05-full", "prediction": "75405050", "exact": false, "ed": 3},
+    {"id": "H06-full", "prediction": "Twenty", "exact": true, "ed": 0},
+    {"id": "H07-full", "prediction": "Inowand", "exact": false, "ed": 4},
+    {"id": "H08-full", "prediction": "ropees", "exact": false, "ed": 2},
+    {"id": "H09-full", "prediction": "Intiousantionly", "exact": false, "ed": 8}
+  ],
+  "results_segmented_words_separate": [
+    {"id": "H09a", "gt": "Five", "prediction": "Five", "exact": true},
+    {"id": "H09b", "gt": "thousand", "prediction": "thousand", "exact": true},
+    {"id": "H09c", "gt": "only", "prediction": "only", "exact": true}
+  ],
+  "aggregates": {
+    "definition": "aggregate CER = total char edit distance / total GT chars; raw predictions",
+    "crop": {"exact": "4/9", "cer": 0.2647, "ed": 18, "gt_chars": 68, "median_latency_s": 1.1138},
+    "crop_numeric": {"exact": "2/5", "cer": 0.3, "ed": 9, "gt_chars": 30},
+    "crop_words": {"exact": "2/3", "cer": 0.2, "ed": 4, "gt_chars": 20},
+    "crop_multiword_line": {"exact": "0/1", "cer": 0.2778, "ed": 5, "gt_chars": 18},
+    "full_photo": {"exact": "1/9", "cer": 0.3235, "ed": 22, "gt_chars": 68, "median_latency_s": 1.9166},
+    "segmented_words": {"exact": "3/3", "cer": 0.0, "median_latency_s": 0.5581},
+    "secondary_labelled": {
+      "crop_numeric_digits_only_exact": "3/5",
+      "crop_case_insensitive_nonnumeric_exact": "2/4",
+      "H09_vs_unspaced_gt_ed": 3
+    },
+    "latency_all_21_median_s": 1.59,
+    "latency_all_21_min_max_s": [0.2839, 6.4112],
+    "warmup_s": 0.3808,
+    "model_load_s": 1.693
+  },
+  "punctuation": {
+    "vocabulary_support": {",": 15, ".": 17, "-": 16, "/": 18, "$": 7, "£": 93, "₹": 96, "space": "id 3 decodes to empty string (line stripped)"},
+    "gt_marks_per_condition": 3,
+    "emitted_crop": 0,
+    "emitted_full_photo": 0,
+    "space_token_emitted_any_run": false,
+    "finding": "vocabulary supports punctuation; recognition not demonstrated (0/3 in each condition)"
+  },
+  "multiword": {
+    "full_line_exact": "0/1",
+    "spaces_emitted": 0,
+    "segmented_exact": "3/3",
+    "code_evidence": "upstream datamodule.py:93-95 builds targets with str.split(), so captions cannot contain a space token (applies to the published pipeline; checkpoint pipeline unconfirmed)"
+  },
+  "failure_types_observed": ["extra repeated characters (zeros)", "missing punctuation", "digit substitutions", "letter substitutions on joined strokes", "missing spaces", "character insertion in line", "worse on full photos than crops in exact match"],
+  "speculative_causes": ["word-level training without space targets", "punctuation/amount formats rare in training", "scale mismatch (crops 2-5x taller than training words)", "photo vs scan domain shift and ruled lines", "repetition on identical glyph runs"],
+  "recommendation": "B. FINALIZE WITH DOCUMENTED LIMITATIONS",
+  "recommendation_rationale": "Handwritten digits and words are recognised on unseen writing (H01, H02, H06, H08 exact; H04 digits all correct; segmented words 3/3), so there is no fundamental inability with numbers. Punctuation (0/3) and multiword lines (0/1) fail consistently. These are measurable baseline limitations suited to the failure-analysis and improvement requirements. Punctuation may not be fixable without training; this must be stated as a limitation unless a later inference-time method demonstrably helps. No performance threshold was set before or after observing the results.",
+  "next_milestone_authorized": false
+}

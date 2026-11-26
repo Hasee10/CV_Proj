@@ -1,0 +1,415 @@
+{
+  "description": "M3-B independent handwriting samples, written and photographed by the student (consented, no bank data).",
+  "ground_truth_rule": "Transcription of what is actually written (verified visually against each photo), not the intended list.",
+  "intended_list_from_student": [
+    "01: 2500",
+    "02: 12500",
+    "03: 1,250.00",
+    "04: 50,000",
+    "05: 75,450.50",
+    "07: Thousand",
+    "08: Rupees",
+    "09: Twenty",
+    "10: Five Thousand Only"
+  ],
+  "processing": "EXIF orientation checked (none present); rectangular crop with recorded box; saved as PNG. No enhancement.",
+  "conditions": {
+    "crop": "primary: neutral crop isolating the sample",
+    "full_photo": "secondary: unmodified original photo",
+    "segmented_word": "separate: individual words cropped from H09; not counted as full-line recognition"
+  },
+  "photos": {
+    "sample_example1.jpeg": {
+      "file": "data/handwritten_examples/raw/sample_example1.jpeg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "size": [
+        1600,
+        720
+      ],
+      "exif_orientation": null,
+      "sha256": "bc987578cd416204e54355f9d9aacd506694530affe025b889ebf2a1661d036d"
+    },
+    "sample_example2.jpeg": {
+      "file": "data/handwritten_examples/raw/sample_example2.jpeg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "size": [
+        1277,
+        930
+      ],
+      "exif_orientation": null,
+      "sha256": "8e05f22290ef9c90e6bc7fc8f614d0b145cb5adcfe0a0f3686468d4cfd330c89"
+    },
+    "sample_example3.jpeg": {
+      "file": "data/handwritten_examples/raw/sample_example3.jpeg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "size": [
+        1351,
+        643
+      ],
+      "exif_orientation": null,
+      "sha256": "1d589e72e24bd17bb2185b8419518170ae0deb9807ce19ccfb312304b5a48795"
+    },
+    "sample_example4.jpeg": {
+      "file": "data/handwritten_examples/raw/sample_example4.jpeg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "size": [
+        1449,
+        645
+      ],
+      "exif_orientation": null,
+      "sha256": "f79447c0d365df8fa09331ad455e71d2e301b2b9428a90f0f48f970e6b2debee"
+    },
+    "sample_example5.jpeg": {
+      "file": "data/handwritten_examples/raw/sample_example5.jpeg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "size": [
+        1542,
+        606
+      ],
+      "exif_orientation": null,
+      "sha256": "b6b00736f6595a3c02a92ba6856868c9cacee4698597098e2b46e4c983a8146b"
+    },
+    "sample_example6.jpeg": {
+      "file": "data/handwritten_examples/raw/sample_example6.jpeg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "size": [
+        1600,
+        432
+      ],
+      "exif_orientation": null,
+      "sha256": "e5df65c4fcaae82463ce78dc29cfb658be43824286dda2f9c9fee1eb4d0d4289"
+    },
+    "sample_example7.jpeg": {
+      "file": "data/handwritten_examples/raw/sample_example7.jpeg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "size": [
+        1581,
+        459
+      ],
+      "exif_orientation": null,
+      "sha256": "d3bc5eb11db5e2962fea4d541b1a4cf8defdad818b179150ca384a0673e902dc"
+    },
+    "sample_example8.jpeg": {
+      "file": "data/handwritten_examples/raw/sample_example8.jpeg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "size": [
+        950,
+        398
+      ],
+      "exif_orientation": null,
+      "sha256": "ef6b6302fb3ef0e56eb2537717cd319e68881985ed596c69fa1e3aa92b8dfb4b"
+    },
+    "sample_example9.jpeg": {
+      "file": "data/handwritten_examples/raw/sample_example9.jpeg",
+      "format": "JPEG",
+      "mode": "RGB",
+      "size": [
+        1600,
+        351
+      ],
+      "exif_orientation": null,
+      "sha256": "f4593f95672f2c5503fc7dcbb79bef87e64a88ba864bbcf2c3222e549d8e7a1f"
+    }
+  },
+  "samples": [
+    {
+      "id": "H01",
+      "condition": "crop",
+      "file": "data/handwritten_examples/crops/H01.png",
+      "crop_box_xyxy": [
+        540,
+        310,
+        940,
+        455
+      ],
+      "sha256": "21dcccb3f02e8f6898e81c5f2633855b18d4d2d8f7abef601aba84b78e458e15",
+      "ground_truth": "2500",
+      "category": "numeric",
+      "photo": "sample_example1.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H02",
+      "condition": "crop",
+      "file": "data/handwritten_examples/crops/H02.png",
+      "crop_box_xyxy": [
+        110,
+        270,
+        680,
+        435
+      ],
+      "sha256": "569ff5205638badb05cac341907f3098c3670901c0d58d8833aef227f055bb99",
+      "ground_truth": "12500",
+      "category": "numeric",
+      "photo": "sample_example2.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H03",
+      "condition": "crop",
+      "file": "data/handwritten_examples/crops/H03.png",
+      "crop_box_xyxy": [
+        360,
+        140,
+        930,
+        350
+      ],
+      "sha256": "07c02aa31a3f180495bed1714c36ff9b743ae25c82f6ff2c4010510a62e10ab0",
+      "ground_truth": "50000",
+      "category": "numeric",
+      "photo": "sample_example3.jpeg",
+      "notes": "Intended list had '50,000'; photo has no comma."
+    },
+    {
+      "id": "H04",
+      "condition": "crop",
+      "file": "data/handwritten_examples/crops/H04.png",
+      "crop_box_xyxy": [
+        260,
+        225,
+        1240,
+        410
+      ],
+      "sha256": "5b14c6d96577ed7767bcbf6a59b19733f3e30f5922f22e833979d7fb988dca48",
+      "ground_truth": "1250.00",
+      "category": "numeric_decimal",
+      "photo": "sample_example4.jpeg",
+      "notes": "Intended list had '1,250.00'; photo has no comma. AMBIGUOUS: decimal point is drawn as a short horizontal stroke and could be read as '-'; ground truth follows writer intent '.'."
+    },
+    {
+      "id": "H05",
+      "condition": "crop",
+      "file": "data/handwritten_examples/crops/H05.png",
+      "crop_box_xyxy": [
+        130,
+        140,
+        1305,
+        415
+      ],
+      "sha256": "e24491c1004bf6e6b5b4a09607f079f463faf0051430510114d072aec6bf4a27",
+      "ground_truth": "75,450.50",
+      "category": "numeric_comma_decimal",
+      "photo": "sample_example5.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H06",
+      "condition": "crop",
+      "file": "data/handwritten_examples/crops/H06.png",
+      "crop_box_xyxy": [
+        500,
+        40,
+        1095,
+        305
+      ],
+      "sha256": "1f7bee2de80fbc8a22dadbad2225a5b6d6c12b23e0eca95d64d2a58a0f12da17",
+      "ground_truth": "Twenty",
+      "category": "word",
+      "photo": "sample_example6.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H07",
+      "condition": "crop",
+      "file": "data/handwritten_examples/crops/H07.png",
+      "crop_box_xyxy": [
+        255,
+        115,
+        1265,
+        385
+      ],
+      "sha256": "035a1d43ea85408bc3af1f5bfa2f6f8f863c8158ac372d84cbfa46e48ab3f868",
+      "ground_truth": "Thousand",
+      "category": "word",
+      "photo": "sample_example7.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H08",
+      "condition": "crop",
+      "file": "data/handwritten_examples/crops/H08.png",
+      "crop_box_xyxy": [
+        190,
+        100,
+        660,
+        320
+      ],
+      "sha256": "689a0845c0168e5483b8c23ca52c4434670fbbc0e3d0a90669ff7d3f89875c62",
+      "ground_truth": "Rupees",
+      "category": "word",
+      "photo": "sample_example8.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H09",
+      "condition": "crop",
+      "file": "data/handwritten_examples/crops/H09.png",
+      "crop_box_xyxy": [
+        190,
+        60,
+        1455,
+        325
+      ],
+      "sha256": "a3948f08c7a7dc7bbb73d7c3d34c7c5947a3c518824d1786907b20ce72744b0a",
+      "ground_truth": "Five thousand only",
+      "category": "multiword",
+      "photo": "sample_example9.jpeg",
+      "notes": "Intended list had 'Five Thousand Only'; photo uses lowercase 't' and 'o'. AMBIGUOUS spacing: the gap between 'Five' and 'thousand' is very narrow."
+    },
+    {
+      "id": "H01-full",
+      "condition": "full_photo",
+      "file": "data/handwritten_examples/raw/sample_example1.jpeg",
+      "crop_box_xyxy": null,
+      "sha256": "bc987578cd416204e54355f9d9aacd506694530affe025b889ebf2a1661d036d",
+      "ground_truth": "2500",
+      "category": "numeric",
+      "photo": "sample_example1.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H02-full",
+      "condition": "full_photo",
+      "file": "data/handwritten_examples/raw/sample_example2.jpeg",
+      "crop_box_xyxy": null,
+      "sha256": "8e05f22290ef9c90e6bc7fc8f614d0b145cb5adcfe0a0f3686468d4cfd330c89",
+      "ground_truth": "12500",
+      "category": "numeric",
+      "photo": "sample_example2.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H03-full",
+      "condition": "full_photo",
+      "file": "data/handwritten_examples/raw/sample_example3.jpeg",
+      "crop_box_xyxy": null,
+      "sha256": "1d589e72e24bd17bb2185b8419518170ae0deb9807ce19ccfb312304b5a48795",
+      "ground_truth": "50000",
+      "category": "numeric",
+      "photo": "sample_example3.jpeg",
+      "notes": "Intended list had '50,000'; photo has no comma."
+    },
+    {
+      "id": "H04-full",
+      "condition": "full_photo",
+      "file": "data/handwritten_examples/raw/sample_example4.jpeg",
+      "crop_box_xyxy": null,
+      "sha256": "f79447c0d365df8fa09331ad455e71d2e301b2b9428a90f0f48f970e6b2debee",
+      "ground_truth": "1250.00",
+      "category": "numeric_decimal",
+      "photo": "sample_example4.jpeg",
+      "notes": "Intended list had '1,250.00'; photo has no comma. AMBIGUOUS: decimal point is drawn as a short horizontal stroke and could be read as '-'; ground truth follows writer intent '.'."
+    },
+    {
+      "id": "H05-full",
+      "condition": "full_photo",
+      "file": "data/handwritten_examples/raw/sample_example5.jpeg",
+      "crop_box_xyxy": null,
+      "sha256": "b6b00736f6595a3c02a92ba6856868c9cacee4698597098e2b46e4c983a8146b",
+      "ground_truth": "75,450.50",
+      "category": "numeric_comma_decimal",
+      "photo": "sample_example5.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H06-full",
+      "condition": "full_photo",
+      "file": "data/handwritten_examples/raw/sample_example6.jpeg",
+      "crop_box_xyxy": null,
+      "sha256": "e5df65c4fcaae82463ce78dc29cfb658be43824286dda2f9c9fee1eb4d0d4289",
+      "ground_truth": "Twenty",
+      "category": "word",
+      "photo": "sample_example6.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H07-full",
+      "condition": "full_photo",
+      "file": "data/handwritten_examples/raw/sample_example7.jpeg",
+      "crop_box_xyxy": null,
+      "sha256": "d3bc5eb11db5e2962fea4d541b1a4cf8defdad818b179150ca384a0673e902dc",
+      "ground_truth": "Thousand",
+      "category": "word",
+      "photo": "sample_example7.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H08-full",
+      "condition": "full_photo",
+      "file": "data/handwritten_examples/raw/sample_example8.jpeg",
+      "crop_box_xyxy": null,
+      "sha256": "ef6b6302fb3ef0e56eb2537717cd319e68881985ed596c69fa1e3aa92b8dfb4b",
+      "ground_truth": "Rupees",
+      "category": "word",
+      "photo": "sample_example8.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H09-full",
+      "condition": "full_photo",
+      "file": "data/handwritten_examples/raw/sample_example9.jpeg",
+      "crop_box_xyxy": null,
+      "sha256": "f4593f95672f2c5503fc7dcbb79bef87e64a88ba864bbcf2c3222e549d8e7a1f",
+      "ground_truth": "Five thousand only",
+      "category": "multiword",
+      "photo": "sample_example9.jpeg",
+      "notes": "Intended list had 'Five Thousand Only'; photo uses lowercase 't' and 'o'. AMBIGUOUS spacing: the gap between 'Five' and 'thousand' is very narrow."
+    },
+    {
+      "id": "H09a",
+      "condition": "segmented_word",
+      "file": "data/handwritten_examples/crops/H09a.png",
+      "crop_box_xyxy": [
+        190,
+        60,
+        443,
+        325
+      ],
+      "sha256": "a8c7ac10483d2525054088cf340f221ec8ec2c49d829f1eebadb613d55306628",
+      "ground_truth": "Five",
+      "category": "segmented_word",
+      "photo": "sample_example9.jpeg",
+      "notes": "Cut at x=443 between 'e' and 't'; the 't' crossbar may be partially clipped."
+    },
+    {
+      "id": "H09b",
+      "condition": "segmented_word",
+      "file": "data/handwritten_examples/crops/H09b.png",
+      "crop_box_xyxy": [
+        443,
+        60,
+        1060,
+        325
+      ],
+      "sha256": "f717f406af26afac7621a698b411b055e472e6e6b7f415fb892cbc3005c5f1d1",
+      "ground_truth": "thousand",
+      "category": "segmented_word",
+      "photo": "sample_example9.jpeg",
+      "notes": ""
+    },
+    {
+      "id": "H09c",
+      "condition": "segmented_word",
+      "file": "data/handwritten_examples/crops/H09c.png",
+      "crop_box_xyxy": [
+        1100,
+        60,
+        1455,
+        325
+      ],
+      "sha256": "0203af36a096a98f60a0e24074e25549f64727012c458afe0c75b832901d4edc",
+      "ground_truth": "only",
+      "category": "segmented_word",
+      "photo": "sample_example9.jpeg",
+      "notes": ""
+    }
+  ]
+}

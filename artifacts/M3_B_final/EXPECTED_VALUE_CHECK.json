@@ -1,0 +1,53 @@
+{
+  "crop_exact": {
+    "recomputed": "4/9",
+    "expected": "4/9",
+    "match": true
+  },
+  "crop_cer": {
+    "recomputed": "18/68",
+    "expected": "18/68",
+    "match": true
+  },
+  "full_exact": {
+    "recomputed": "1/9",
+    "expected": "1/9",
+    "match": true
+  },
+  "full_cer": {
+    "recomputed": "22/68",
+    "expected": "22/68",
+    "match": true
+  },
+  "crop_numeric_exact": {
+    "recomputed": "2/5",
+    "expected": "2/5",
+    "match": true
+  },
+  "segmented_exact": {
+    "recomputed": "3/3",
+    "expected": "3/3",
+    "match": true
+  },
+  "strict_punct": {
+    "recomputed": "0/2",
+    "expected": "0/2",
+    "match": true
+  },
+  "median_crop_latency": {
+    "recomputed": 1.1138,
+    "expected": 1.1138,
+    "match": true
+  },
+  "H05": {
+    "recomputed": [
+      "75,450.50",
+      "75,450.50"
+    ],
+    "expected": [
+      "75,450.50",
+      "75,450.50"
+    ],
+    "match": true
+  }
+}

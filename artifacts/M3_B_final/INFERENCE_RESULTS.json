@@ -1,0 +1,932 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "torch": "2.15.0+cpu",
+  "torch_threads": 10,
+  "beam_note": "upstream bi-directional beam search, hparams from checkpoint",
+  "checkpoint_sha256": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432",
+  "checkpoint_top_level_keys": [
+    "callbacks",
+    "epoch",
+    "global_step",
+    "hparams_name",
+    "hyper_parameters",
+    "lr_schedulers",
+    "optimizer_states",
+    "pytorch-lightning_version",
+    "state_dict"
+  ],
+  "checkpoint_pl_version": "1.4.9",
+  "checkpoint_epoch": 100,
+  "checkpoint_global_step": 370400,
+  "checkpoint_monitor": {
+    "ModelCheckpoint": {
+      "monitor": "val_ExpRate",
+      "best_model_score": 0.9473420977592468,
+      "best_model_path": "/home2/shree.mitra23m/CoMER/lightning_logs/version_2457211/checkpoints/epoch=99-step=370399-val_ExpRate=0.9473.ckpt",
+      "current_score": 0.9473420977592468,
+      "dirpath": "/home2/shree.mitra23m/CoMER/lightning_logs/version_2457211/checkpoints"
+    }
+  },
+  "hyper_parameters": {
+    "d_model": 256,
+    "growth_rate": 24,
+    "num_layers": 16,
+    "nhead": 8,
+    "num_decoder_layers": 3,
+    "dim_feedforward": 1024,
+    "dropout": 0.3,
+    "dc": 32,
+    "cross_coverage": true,
+    "self_coverage": true,
+    "beam_size": 10,
+    "max_len": 200,
+    "alpha": 1.0,
+    "early_stopping": false,
+    "temperature": 1.0,
+    "learning_rate": 0.0008,
+    "patience": 10
+  },
+  "state_dict_keys": 673,
+  "model_state_keys": 673,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "not_loaded_training_state": [
+    "epoch",
+    "global_step",
+    "pytorch-lightning_version",
+    "callbacks",
+    "optimizer_states",
+    "lr_schedulers",
+    "hparams_name"
+  ],
+  "parameter_count": 6385537,
+  "parameter_count_encoder": 3161328,
+  "parameter_count_decoder": 3224209,
+  "buffer_count": 142133,
+  "dtypes": [
+    "torch.float32"
+  ],
+  "device": "cpu",
+  "vocab_size": 97,
+  "model_load_seconds": 1.693,
+  "unreadable_inputs": {},
+  "warmup_seconds": 0.3808,
+  "warmup_image": "data/handwritten_examples/crops/H01.png",
+  "latency_includes": "preprocess + encoder + bi-directional beam search (beam 10) + rescoring; batch size 1; excludes model load and warm-up",
+  "latency_median_seconds": 1.59,
+  "latency_min_max_seconds": [
+    0.2839,
+    6.4112
+  ],
+  "results": [
+    {
+      "id": "H01",
+      "file": "data/handwritten_examples/crops/H01.png",
+      "ground_truth": "2500",
+      "condition": "crop",
+      "category": "numeric",
+      "error": null,
+      "latency_seconds": 0.2839,
+      "input_tensor_shape": [
+        1,
+        3,
+        145,
+        400
+      ],
+      "raw_token_ids": [
+        21,
+        24,
+        19,
+        19
+      ],
+      "score": -0.06336453557014465,
+      "upstream_label_ssl_hwd_dict": "2 5 0 0",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "2500",
+        "dictionary.txt": "2500"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": true,
+        "dictionary.txt": true
+      },
+      "view_space_token_as_space": "2500",
+      "space_token_emitted": false,
+      "char_edit_distance": 0,
+      "cer": 0.0,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H02",
+      "file": "data/handwritten_examples/crops/H02.png",
+      "ground_truth": "12500",
+      "condition": "crop",
+      "category": "numeric",
+      "error": null,
+      "latency_seconds": 0.5487,
+      "input_tensor_shape": [
+        1,
+        3,
+        165,
+        570
+      ],
+      "raw_token_ids": [
+        20,
+        21,
+        24,
+        19,
+        19
+      ],
+      "score": -0.07513999193906784,
+      "upstream_label_ssl_hwd_dict": "1 2 5 0 0",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "12500",
+        "dictionary.txt": "12500"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": true,
+        "dictionary.txt": true
+      },
+      "view_space_token_as_space": "12500",
+      "space_token_emitted": false,
+      "char_edit_distance": 0,
+      "cer": 0.0,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H03",
+      "file": "data/handwritten_examples/crops/H03.png",
+      "ground_truth": "50000",
+      "condition": "crop",
+      "category": "numeric",
+      "error": null,
+      "latency_seconds": 1.1138,
+      "input_tensor_shape": [
+        1,
+        3,
+        210,
+        570
+      ],
+      "raw_token_ids": [
+        24,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "score": -0.23182344436645508,
+      "upstream_label_ssl_hwd_dict": "5 0 0 0 0 0 0",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "5000000",
+        "dictionary.txt": "5000000"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "5000000",
+      "space_token_emitted": false,
+      "char_edit_distance": 2,
+      "cer": 0.4,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H04",
+      "file": "data/handwritten_examples/crops/H04.png",
+      "ground_truth": "1250-00",
+      "condition": "crop",
+      "category": "numeric_decimal",
+      "error": null,
+      "latency_seconds": 1.2873,
+      "input_tensor_shape": [
+        1,
+        3,
+        185,
+        980
+      ],
+      "raw_token_ids": [
+        20,
+        21,
+        24,
+        19,
+        19,
+        19
+      ],
+      "score": -0.6030309200286865,
+      "upstream_label_ssl_hwd_dict": "1 2 5 0 0 0",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "125000",
+        "dictionary.txt": "125000"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "125000",
+      "space_token_emitted": false,
+      "char_edit_distance": 1,
+      "cer": 0.1429,
+      "label_status": "ambiguous_visual_reading",
+      "ground_truth_original_m3b": "1250.00",
+      "punctuation_strict_eligible": false,
+      "ambiguity_note": "Separator between '1250' and '00' is a short, slightly sloped stroke at mid-low height; it looks closer to '-' than to '.', but is ambiguous. Primary GT is the visual reading '1250-00'; the writer's intended '1250.00' is scored as an alternative. Excluded from strict punctuation evaluation.",
+      "alternative_readings": [
+        {
+          "ground_truth": "1250.00",
+          "exact": false,
+          "char_edit_distance": 1,
+          "cer": 0.1429
+        }
+      ]
+    },
+    {
+      "id": "H05",
+      "file": "data/handwritten_examples/crops/H05.png",
+      "ground_truth": "75,450.50",
+      "condition": "crop",
+      "category": "numeric_comma_decimal",
+      "error": null,
+      "latency_seconds": 1.779,
+      "input_tensor_shape": [
+        1,
+        3,
+        240,
+        1024
+      ],
+      "raw_token_ids": [
+        20,
+        27,
+        19,
+        24,
+        19
+      ],
+      "score": -1.0795814990997314,
+      "upstream_label_ssl_hwd_dict": "1 8 0 5 0",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "18050",
+        "dictionary.txt": "18050"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "18050",
+      "space_token_emitted": false,
+      "char_edit_distance": 6,
+      "cer": 0.6667,
+      "label_status": "writer_confirmed",
+      "ground_truth_original_m3b": "75,450.50",
+      "punctuation_strict_eligible": true,
+      "ambiguity_note": "Visual audit proposed '75,430.50'. Resolved as '75,450.50': the writer confirmed it on 2026-11-26, and side-by-side comparison shows the digit matches the writer's other two '5' glyphs. Comma and decimal point are clear and remain in strict punctuation evaluation.",
+      "alternative_readings": []
+    },
+    {
+      "id": "H06",
+      "file": "data/handwritten_examples/crops/H06.png",
+      "ground_truth": "Twenty",
+      "condition": "crop",
+      "category": "word",
+      "error": null,
+      "latency_seconds": 1.0792,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        575
+      ],
+      "raw_token_ids": [
+        55,
+        87,
+        69,
+        78,
+        84,
+        89
+      ],
+      "score": -0.2950635254383087,
+      "upstream_label_ssl_hwd_dict": "T w e n t y",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "Twenty",
+        "dictionary.txt": "Tvdmsx"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": true,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "Twenty",
+      "space_token_emitted": false,
+      "char_edit_distance": 0,
+      "cer": 0.0,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H07",
+      "file": "data/handwritten_examples/crops/H07.png",
+      "ground_truth": "Thousand",
+      "condition": "crop",
+      "category": "word",
+      "error": null,
+      "latency_seconds": 2.0282,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        958
+      ],
+      "raw_token_ids": [
+        44,
+        78,
+        79,
+        87,
+        65,
+        78,
+        68
+      ],
+      "score": -1.1909847259521484,
+      "upstream_label_ssl_hwd_dict": "I n o w a n d",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "Inowand",
+        "dictionary.txt": "Imnv_mc"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "Inowand",
+      "space_token_emitted": false,
+      "char_edit_distance": 4,
+      "cer": 0.5,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H08",
+      "file": "data/handwritten_examples/crops/H08.png",
+      "ground_truth": "Rupees",
+      "condition": "crop",
+      "category": "word",
+      "error": null,
+      "latency_seconds": 0.899,
+      "input_tensor_shape": [
+        1,
+        3,
+        220,
+        470
+      ],
+      "raw_token_ids": [
+        53,
+        85,
+        80,
+        69,
+        69,
+        83
+      ],
+      "score": -0.4801037013530731,
+      "upstream_label_ssl_hwd_dict": "R u p e e s",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "Rupees",
+        "dictionary.txt": "Rtoddr"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": true,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "Rupees",
+      "space_token_emitted": false,
+      "char_edit_distance": 0,
+      "cer": 0.0,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H09",
+      "file": "data/handwritten_examples/crops/H09.png",
+      "ground_truth": "Five thousand only",
+      "condition": "crop",
+      "category": "multiword",
+      "error": null,
+      "latency_seconds": 6.0612,
+      "input_tensor_shape": [
+        1,
+        3,
+        215,
+        1024
+      ],
+      "raw_token_ids": [
+        41,
+        73,
+        86,
+        69,
+        84,
+        72,
+        79,
+        85,
+        83,
+        78,
+        65,
+        78,
+        68,
+        65,
+        78,
+        84,
+        89
+      ],
+      "score": -2.3196301460266113,
+      "upstream_label_ssl_hwd_dict": "F i v e t h o u s n a n d a n t y",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "Fivethousnandanty",
+        "dictionary.txt": "Fhudsgntrm_mc_msx"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "Fivethousnandanty",
+      "space_token_emitted": false,
+      "char_edit_distance": 5,
+      "cer": 0.2778,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H01-full",
+      "file": "data/handwritten_examples/raw/sample_example1.jpeg",
+      "ground_truth": "2500",
+      "condition": "full_photo",
+      "category": "numeric",
+      "error": null,
+      "latency_seconds": 1.5718,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        569
+      ],
+      "raw_token_ids": [
+        20,
+        19,
+        24,
+        19,
+        19
+      ],
+      "score": -1.8353289365768433,
+      "upstream_label_ssl_hwd_dict": "1 0 5 0 0",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "10500",
+        "dictionary.txt": "10500"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "10500",
+      "space_token_emitted": false,
+      "char_edit_distance": 2,
+      "cer": 0.5,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H02-full",
+      "file": "data/handwritten_examples/raw/sample_example2.jpeg",
+      "ground_truth": "12500",
+      "condition": "full_photo",
+      "category": "numeric",
+      "error": null,
+      "latency_seconds": 1.2983,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        352
+      ],
+      "raw_token_ids": [
+        20,
+        21,
+        24,
+        19,
+        19,
+        19
+      ],
+      "score": -0.8423548340797424,
+      "upstream_label_ssl_hwd_dict": "1 2 5 0 0 0",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "125000",
+        "dictionary.txt": "125000"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "125000",
+      "space_token_emitted": false,
+      "char_edit_distance": 1,
+      "cer": 0.2,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H03-full",
+      "file": "data/handwritten_examples/raw/sample_example3.jpeg",
+      "ground_truth": "50000",
+      "condition": "full_photo",
+      "category": "numeric",
+      "error": null,
+      "latency_seconds": 1.6566,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        538
+      ],
+      "raw_token_ids": [
+        24,
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "score": -1.0747928619384766,
+      "upstream_label_ssl_hwd_dict": "5 0 0 0 0 0",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "500000",
+        "dictionary.txt": "500000"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "500000",
+      "space_token_emitted": false,
+      "char_edit_distance": 1,
+      "cer": 0.2,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H04-full",
+      "file": "data/handwritten_examples/raw/sample_example4.jpeg",
+      "ground_truth": "1250-00",
+      "condition": "full_photo",
+      "category": "numeric_decimal",
+      "error": null,
+      "latency_seconds": 1.9166,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        575
+      ],
+      "raw_token_ids": [
+        20,
+        21,
+        24,
+        19,
+        19,
+        19,
+        19
+      ],
+      "score": -0.7376205921173096,
+      "upstream_label_ssl_hwd_dict": "1 2 5 0 0 0 0",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "1250000",
+        "dictionary.txt": "1250000"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "1250000",
+      "space_token_emitted": false,
+      "char_edit_distance": 1,
+      "cer": 0.1429,
+      "label_status": "ambiguous_visual_reading",
+      "ground_truth_original_m3b": "1250.00",
+      "punctuation_strict_eligible": false,
+      "ambiguity_note": "Separator between '1250' and '00' is a short, slightly sloped stroke at mid-low height; it looks closer to '-' than to '.', but is ambiguous. Primary GT is the visual reading '1250-00'; the writer's intended '1250.00' is scored as an alternative. Excluded from strict punctuation evaluation.",
+      "alternative_readings": [
+        {
+          "ground_truth": "1250.00",
+          "exact": false,
+          "char_edit_distance": 1,
+          "cer": 0.1429
+        }
+      ]
+    },
+    {
+      "id": "H05-full",
+      "file": "data/handwritten_examples/raw/sample_example5.jpeg",
+      "ground_truth": "75,450.50",
+      "condition": "full_photo",
+      "category": "numeric_comma_decimal",
+      "error": null,
+      "latency_seconds": 1.9354,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        651
+      ],
+      "raw_token_ids": [
+        26,
+        24,
+        23,
+        19,
+        24,
+        19,
+        24,
+        19
+      ],
+      "score": -1.6536157131195068,
+      "upstream_label_ssl_hwd_dict": "7 5 4 0 5 0 5 0",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "75405050",
+        "dictionary.txt": "75405050"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "75405050",
+      "space_token_emitted": false,
+      "char_edit_distance": 3,
+      "cer": 0.3333,
+      "label_status": "writer_confirmed",
+      "ground_truth_original_m3b": "75,450.50",
+      "punctuation_strict_eligible": true,
+      "ambiguity_note": "Visual audit proposed '75,430.50'. Resolved as '75,450.50': the writer confirmed it on 2026-11-26, and side-by-side comparison shows the digit matches the writer's other two '5' glyphs. Comma and decimal point are clear and remain in strict punctuation evaluation.",
+      "alternative_readings": []
+    },
+    {
+      "id": "H06-full",
+      "file": "data/handwritten_examples/raw/sample_example6.jpeg",
+      "ground_truth": "Twenty",
+      "condition": "full_photo",
+      "category": "word",
+      "error": null,
+      "latency_seconds": 3.2672,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        948
+      ],
+      "raw_token_ids": [
+        55,
+        87,
+        69,
+        78,
+        84,
+        89
+      ],
+      "score": -0.7634245157241821,
+      "upstream_label_ssl_hwd_dict": "T w e n t y",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "Twenty",
+        "dictionary.txt": "Tvdmsx"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": true,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "Twenty",
+      "space_token_emitted": false,
+      "char_edit_distance": 0,
+      "cer": 0.0,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H07-full",
+      "file": "data/handwritten_examples/raw/sample_example7.jpeg",
+      "ground_truth": "Thousand",
+      "condition": "full_photo",
+      "category": "word",
+      "error": null,
+      "latency_seconds": 2.0886,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        882
+      ],
+      "raw_token_ids": [
+        44,
+        78,
+        79,
+        87,
+        65,
+        78,
+        68
+      ],
+      "score": -0.9494627714157104,
+      "upstream_label_ssl_hwd_dict": "I n o w a n d",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "Inowand",
+        "dictionary.txt": "Imnv_mc"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "Inowand",
+      "space_token_emitted": false,
+      "char_edit_distance": 4,
+      "cer": 0.5,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H08-full",
+      "file": "data/handwritten_examples/raw/sample_example8.jpeg",
+      "ground_truth": "Rupees",
+      "condition": "full_photo",
+      "category": "word",
+      "error": null,
+      "latency_seconds": 1.59,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        611
+      ],
+      "raw_token_ids": [
+        82,
+        79,
+        80,
+        69,
+        69,
+        83
+      ],
+      "score": -0.5820344686508179,
+      "upstream_label_ssl_hwd_dict": "r o p e e s",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "ropees",
+        "dictionary.txt": "qnoddr"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "ropees",
+      "space_token_emitted": false,
+      "char_edit_distance": 2,
+      "cer": 0.3333,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H09-full",
+      "file": "data/handwritten_examples/raw/sample_example9.jpeg",
+      "ground_truth": "Five thousand only",
+      "condition": "full_photo",
+      "category": "multiword",
+      "error": null,
+      "latency_seconds": 6.4112,
+      "input_tensor_shape": [
+        1,
+        3,
+        225,
+        1024
+      ],
+      "raw_token_ids": [
+        44,
+        78,
+        84,
+        73,
+        79,
+        85,
+        83,
+        65,
+        78,
+        84,
+        73,
+        79,
+        78,
+        76,
+        89
+      ],
+      "score": -2.5813510417938232,
+      "upstream_label_ssl_hwd_dict": "I n t i o u s a n t i o n l y",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "Intiousantionly",
+        "dictionary.txt": "Imshntr_mshnmkx"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": false,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "Intiousantionly",
+      "space_token_emitted": false,
+      "char_edit_distance": 8,
+      "cer": 0.4444,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H09a",
+      "file": "data/handwritten_examples/crops/H09a.png",
+      "ground_truth": "Five",
+      "condition": "segmented_word",
+      "category": "segmented_word",
+      "error": null,
+      "latency_seconds": 0.4446,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        244
+      ],
+      "raw_token_ids": [
+        41,
+        73,
+        86,
+        69
+      ],
+      "score": -0.21909357607364655,
+      "upstream_label_ssl_hwd_dict": "F i v e",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "Five",
+        "dictionary.txt": "Fhud"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": true,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "Five",
+      "space_token_emitted": false,
+      "char_edit_distance": 0,
+      "cer": 0.0,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H09b",
+      "file": "data/handwritten_examples/crops/H09b.png",
+      "ground_truth": "thousand",
+      "condition": "segmented_word",
+      "category": "segmented_word",
+      "error": null,
+      "latency_seconds": 1.9443,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        596
+      ],
+      "raw_token_ids": [
+        84,
+        72,
+        79,
+        85,
+        83,
+        65,
+        78,
+        68
+      ],
+      "score": -0.37953701615333557,
+      "upstream_label_ssl_hwd_dict": "t h o u s a n d",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "thousand",
+        "dictionary.txt": "sgntr_mc"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": true,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "thousand",
+      "space_token_emitted": false,
+      "char_edit_distance": 0,
+      "cer": 0.0,
+      "label_status": "visual_reading_confirmed_by_audit"
+    },
+    {
+      "id": "H09c",
+      "file": "data/handwritten_examples/crops/H09c.png",
+      "ground_truth": "only",
+      "condition": "segmented_word",
+      "category": "segmented_word",
+      "error": null,
+      "latency_seconds": 0.5581,
+      "input_tensor_shape": [
+        1,
+        3,
+        256,
+        343
+      ],
+      "raw_token_ids": [
+        79,
+        78,
+        76,
+        89
+      ],
+      "score": -0.01492485124617815,
+      "upstream_label_ssl_hwd_dict": "o n l y",
+      "prediction_by_dict": {
+        "SSL_HWD_Dict.txt": "only",
+        "dictionary.txt": "nmkx"
+      },
+      "exact_match_by_dict": {
+        "SSL_HWD_Dict.txt": true,
+        "dictionary.txt": false
+      },
+      "view_space_token_as_space": "only",
+      "space_token_emitted": false,
+      "char_edit_distance": 0,
+      "cer": 0.0,
+      "label_status": "visual_reading_confirmed_by_audit"
+    }
+  ],
+  "correction_pass": "Ground truth corrected after visual audit; predictions are the original M3-B outputs."
+}

@@ -1,0 +1,26 @@
+🔄 Loading pretrained weights from BarlowTwins backbone...
+✅ Weights loaded successfully.
+🧊 Freezing all model parameters...
+✅ All parameters are now Un-frozen (trainable).
+{"id": "H01", "ground_truth": "2500", "prediction_by_dict": {"SSL_HWD_Dict.txt": "2500", "dictionary.txt": "2500"}, "latency_seconds": 0.2839, "error": null}
+{"id": "H02", "ground_truth": "12500", "prediction_by_dict": {"SSL_HWD_Dict.txt": "12500", "dictionary.txt": "12500"}, "latency_seconds": 0.5487, "error": null}
+{"id": "H03", "ground_truth": "50000", "prediction_by_dict": {"SSL_HWD_Dict.txt": "5000000", "dictionary.txt": "5000000"}, "latency_seconds": 1.1138, "error": null}
+{"id": "H04", "ground_truth": "1250.00", "prediction_by_dict": {"SSL_HWD_Dict.txt": "125000", "dictionary.txt": "125000"}, "latency_seconds": 1.2873, "error": null}
+{"id": "H05", "ground_truth": "75,450.50", "prediction_by_dict": {"SSL_HWD_Dict.txt": "18050", "dictionary.txt": "18050"}, "latency_seconds": 1.779, "error": null}
+{"id": "H06", "ground_truth": "Twenty", "prediction_by_dict": {"SSL_HWD_Dict.txt": "Twenty", "dictionary.txt": "Tvdmsx"}, "latency_seconds": 1.0792, "error": null}
+{"id": "H07", "ground_truth": "Thousand", "prediction_by_dict": {"SSL_HWD_Dict.txt": "Inowand", "dictionary.txt": "Imnv_mc"}, "latency_seconds": 2.0282, "error": null}
+{"id": "H08", "ground_truth": "Rupees", "prediction_by_dict": {"SSL_HWD_Dict.txt": "Rupees", "dictionary.txt": "Rtoddr"}, "latency_seconds": 0.899, "error": null}
+{"id": "H09", "ground_truth": "Five thousand only", "prediction_by_dict": {"SSL_HWD_Dict.txt": "Fivethousnandanty", "dictionary.txt": "Fhudsgntrm_mc_msx"}, "latency_seconds": 6.0612, "error": null}
+{"id": "H01-full", "ground_truth": "2500", "prediction_by_dict": {"SSL_HWD_Dict.txt": "10500", "dictionary.txt": "10500"}, "latency_seconds": 1.5718, "error": null}
+{"id": "H02-full", "ground_truth": "12500", "prediction_by_dict": {"SSL_HWD_Dict.txt": "125000", "dictionary.txt": "125000"}, "latency_seconds": 1.2983, "error": null}
+{"id": "H03-full", "ground_truth": "50000", "prediction_by_dict": {"SSL_HWD_Dict.txt": "500000", "dictionary.txt": "500000"}, "latency_seconds": 1.6566, "error": null}
+{"id": "H04-full", "ground_truth": "1250.00", "prediction_by_dict": {"SSL_HWD_Dict.txt": "1250000", "dictionary.txt": "1250000"}, "latency_seconds": 1.9166, "error": null}
+{"id": "H05-full", "ground_truth": "75,450.50", "prediction_by_dict": {"SSL_HWD_Dict.txt": "75405050", "dictionary.txt": "75405050"}, "latency_seconds": 1.9354, "error": null}
+{"id": "H06-full", "ground_truth": "Twenty", "prediction_by_dict": {"SSL_HWD_Dict.txt": "Twenty", "dictionary.txt": "Tvdmsx"}, "latency_seconds": 3.2672, "error": null}
+{"id": "H07-full", "ground_truth": "Thousand", "prediction_by_dict": {"SSL_HWD_Dict.txt": "Inowand", "dictionary.txt": "Imnv_mc"}, "latency_seconds": 2.0886, "error": null}
+{"id": "H08-full", "ground_truth": "Rupees", "prediction_by_dict": {"SSL_HWD_Dict.txt": "ropees", "dictionary.txt": "qnoddr"}, "latency_seconds": 1.59, "error": null}
+{"id": "H09-full", "ground_truth": "Five thousand only", "prediction_by_dict": {"SSL_HWD_Dict.txt": "Intiousantionly", "dictionary.txt": "Imshntr_mshnmkx"}, "latency_seconds": 6.4112, "error": null}
+{"id": "H09a", "ground_truth": "Five", "prediction_by_dict": {"SSL_HWD_Dict.txt": "Five", "dictionary.txt": "Fhud"}, "latency_seconds": 0.4446, "error": null}
+{"id": "H09b", "ground_truth": "thousand", "prediction_by_dict": {"SSL_HWD_Dict.txt": "thousand", "dictionary.txt": "sgntr_mc"}, "latency_seconds": 1.9443, "error": null}
+{"id": "H09c", "ground_truth": "only", "prediction_by_dict": {"SSL_HWD_Dict.txt": "only", "dictionary.txt": "nmkx"}, "latency_seconds": 0.5581, "error": null}
+wrote artifacts/M3_B/INFERENCE_RESULTS.json

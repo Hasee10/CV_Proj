@@ -1,0 +1,68 @@
+{
+  "milestone": "M3-B independent handwriting feasibility verification - ground-truth correction pass",
+  "date": "2026-11-26",
+  "revision": 2,
+  "status": "VERIFIED",
+  "status_scope": "Correction pass completed per protocol: original predictions preserved exactly (asserted), ground truth reviewed after visual audit, derived metrics recomputed, original M3-B artifacts unchanged (SHA-256 re-verified). Exploratory: 9 samples, 1 writer; not a benchmark.",
+  "supersedes": "artifacts/M3_B/SUMMARY.json for ground truth and derived metrics only",
+  "ground_truth_review": [
+    {"id": "H04", "original_gt": "1250.00", "final_gt": "1250-00", "alternative": "1250.00", "handling": "separator ambiguous; excluded from strict punctuation evaluation; both readings scored (ED 1 either way)"},
+    {"id": "H05", "original_gt": "75,450.50", "final_gt": "75,450.50", "handling": "audit proposed 75,430.50 (adopted as disputed in revision 1); reverted in revision 2 after the writer confirmed 75,450.50, consistent with glyph comparison"}
+  ],
+  "unchanged_confirmed_gt": ["2500", "12500", "50000", "Twenty", "Thousand", "Rupees", "Five thousand only (narrow gap after 'Five')"],
+  "predictions_changed": false,
+  "inference_rerun": false,
+  "results_crop_primary": [
+    {"id": "H01", "gt": "2500", "prediction": "2500", "raw_token_ids": [21, 24, 19, 19], "exact": true, "ed": 0, "cer": 0.0, "latency_s": 0.2839},
+    {"id": "H02", "gt": "12500", "prediction": "12500", "raw_token_ids": [20, 21, 24, 19, 19], "exact": true, "ed": 0, "cer": 0.0, "latency_s": 0.5487},
+    {"id": "H03", "gt": "50000", "prediction": "5000000", "raw_token_ids": [24, 19, 19, 19, 19, 19, 19], "exact": false, "ed": 2, "cer": 0.4, "latency_s": 1.1138},
+    {"id": "H04", "gt": "1250-00", "gt_alternative": "1250.00", "prediction": "125000", "raw_token_ids": [20, 21, 24, 19, 19, 19], "exact": false, "ed": 1, "ed_alternative": 1, "cer": 0.1429, "latency_s": 1.2873},
+    {"id": "H05", "gt": "75,450.50", "prediction": "18050", "raw_token_ids": [20, 27, 19, 24, 19], "exact": false, "ed": 6, "cer": 0.6667, "latency_s": 1.779},
+    {"id": "H06", "gt": "Twenty", "prediction": "Twenty", "raw_token_ids": [55, 87, 69, 78, 84, 89], "exact": true, "ed": 0, "cer": 0.0, "latency_s": 1.0792},
+    {"id": "H07", "gt": "Thousand", "prediction": "Inowand", "raw_token_ids": [44, 78, 79, 87, 65, 78, 68], "exact": false, "ed": 4, "cer": 0.5, "latency_s": 2.0282},
+    {"id": "H08", "gt": "Rupees", "prediction": "Rupees", "raw_token_ids": [53, 85, 80, 69, 69, 83], "exact": true, "ed": 0, "cer": 0.0, "latency_s": 0.899},
+    {"id": "H09", "gt": "Five thousand only", "prediction": "Fivethousnandanty", "raw_token_ids": [41, 73, 86, 69, 84, 72, 79, 85, 83, 78, 65, 78, 68, 65, 78, 84, 89], "exact": false, "ed": 5, "cer": 0.2778, "latency_s": 6.0612}
+  ],
+  "results_full_photo_secondary": [
+    {"id": "H01-full", "prediction": "10500", "exact": false, "ed": 2},
+    {"id": "H02-full", "prediction": "125000", "exact": false, "ed": 1},
+    {"id": "H03-full", "prediction": "500000", "exact": false, "ed": 1},
+    {"id": "H04-full", "prediction": "1250000", "exact": false, "ed": 1, "ed_alternative": 1},
+    {"id": "H05-full", "prediction": "75405050", "exact": false, "ed": 3},
+    {"id": "H06-full", "prediction": "Twenty", "exact": true, "ed": 0},
+    {"id": "H07-full", "prediction": "Inowand", "exact": false, "ed": 4},
+    {"id": "H08-full", "prediction": "ropees", "exact": false, "ed": 2},
+    {"id": "H09-full", "prediction": "Intiousantionly", "exact": false, "ed": 8}
+  ],
+  "results_segmented_words_separate": {"exact": "3/3", "predictions": ["Five", "thousand", "only"]},
+  "aggregates_corrected": {
+    "definition": "aggregate CER = total char edit distance / total GT chars; raw predictions",
+    "crop": {"exact": "4/9", "cer": 0.2647, "ed": 18, "gt_chars": 68, "median_latency_s": 1.1138},
+    "crop_numeric": {"exact": "2/5", "cer": 0.3, "ed": 9, "gt_chars": 30},
+    "crop_words": {"exact": "2/3", "cer": 0.2},
+    "crop_multiword_line": {"exact": "0/1", "cer": 0.2778},
+    "full_photo": {"exact": "1/9", "cer": 0.3235, "ed": 22, "gt_chars": 68, "median_latency_s": 1.9166},
+    "full_photo_numeric": {"exact": "0/5", "cer": 0.2667, "ed": 8, "gt_chars": 30},
+    "segmented_words": {"exact": "3/3", "cer": 0.0},
+    "secondary_labelled": {"crop_numeric_digits_only_exact": "3/5", "crop_case_insensitive_nonnumeric_exact": "2/4"},
+    "latency_all_21_median_s": 1.59,
+    "changed_from_original_m3b": "none (all exact-match, CER and latency figures identical)"
+  },
+  "sensitivity_h04_reading": "crop 4/9, CER 0.2647 and full photo 1/9, CER 0.3235 under both '1250-00' and '1250.00'",
+  "punctuation_corrected": {
+    "strict_eligible_marks_per_condition": 2,
+    "strict_marks": "H05 ',' and '.'",
+    "emitted_crop": 0,
+    "emitted_full_photo": 0,
+    "excluded_ambiguous": ["H04", "H04-full"],
+    "excluded_ambiguous_emitted": 0,
+    "original_m3b": "0/3 (H04 counted as '.')",
+    "space_token_emitted_any_run": false,
+    "finding": "vocabulary supports , . - / $ £ ₹; recognition not demonstrated (0/2 strict marks per condition)"
+  },
+  "multiword": {"full_line_exact": "0/1", "spaces_emitted": 0, "segmented_exact": "3/3"},
+  "recommendation": "B. FINALIZE WITH DOCUMENTED LIMITATIONS",
+  "recommendation_changed": false,
+  "recommendation_rationale": "The review changes no exact-match, CER or latency figure and no conclusion: digits and words are recognised on unseen handwriting (H01, H02, H06, H08 exact; H04 digits correct), so there is no fundamental inability with numbers. Punctuation (0/2 strict) and multiword lines (0/1) fail consistently and remain documented baseline limitations. No performance threshold was set before or after observing results.",
+  "next_milestone_authorized": false
+}

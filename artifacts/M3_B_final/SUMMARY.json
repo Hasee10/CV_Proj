@@ -1,0 +1,34 @@
+{
+  "milestone": "M3-B final ground-truth version",
+  "date": "2026-11-26",
+  "status": "VERIFIED",
+  "authoritative": true,
+  "generated_by": ".venv\\Scripts\\python.exe -X utf8 -I scripts\\m3b_correct.py M3_B_final",
+  "inputs_unchanged": ["artifacts/M3_A/", "artifacts/M3_B/", "artifacts/M3_B_corrected/ (rev. 2)"],
+  "inference_rerun": false,
+  "predictions_changed": false,
+  "labels": {
+    "H05": {"gt": "75,450.50", "label_status": "writer_confirmed", "history": "audit proposal 75,430.50 rejected by the writer"},
+    "H04": {"gt": "1250-00", "alternative": "1250.00", "label_status": "ambiguous_visual_reading", "strict_punctuation": "excluded"},
+    "others": "visual_reading_confirmed_by_audit"
+  },
+  "metrics_recomputed_from_raw_predictions": {
+    "crop_exact": "4/9",
+    "crop_cer": "18/68 = 0.2647",
+    "full_photo_exact": "1/9",
+    "full_photo_cer": "22/68 = 0.3235",
+    "crop_numeric_exact": "2/5",
+    "segmented_word_exact": "3/3",
+    "strict_unambiguous_punctuation": "0/2",
+    "median_crop_latency_s": 1.1138
+  },
+  "expected_value_check": "EXPECTED_VALUE_CHECK.json: all 9 checks match",
+  "caveats": [
+    "9 handwriting samples from 1 writer; the 21 entries are conditions or derived crops of those 9 samples, not 21 independent samples",
+    "crops are manual oracle crops, not automatic segmentation",
+    "segmented-word results are not full-line recognition",
+    "exploratory, development-only data; not test evidence"
+  ],
+  "files": ["DATA_MANIFEST.json", "INFERENCE_RESULTS.json", "METRICS.json", "EXPECTED_VALUE_CHECK.json", "CORRECTION_LOG.md", "SUMMARY.json"],
+  "failure_analysis": "unchanged from artifacts/M3_B_corrected/FAILURE_ANALYSIS.md (rev. 2)"
+}

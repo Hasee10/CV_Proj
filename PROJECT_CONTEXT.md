@@ -103,3 +103,17 @@ This section supersedes conflicting status lines above. Earlier text is kept as 
 - **Failure analysis is complete on dev** (`artifacts/M6/`).
 - **Evidence-ranked M7 direction:** adaptive text-height normalisation is primary. Automatic word segmentation is conditional, because the automatic attempt failed on 0/8 lines. Line removal is rejected.
 - **M7 needs authorisation.**
+
+## Decisions update (2026-11-27, M7, M8, M9-A, M10-A)
+- **M7 (commit f836129).** Training-free adaptive text-height normalisation (ATHN), configuration P1-A, was selected on the dev split under a protocol frozen before any M7 inference. It estimates text height from connected components (pixels only, no labels) and resizes crops whose estimate lies outside 24-72 px toward 48 px (scale clamped 0.5-4.0), ahead of the unchanged LoGo-HTR checkpoint. Dev: synthetic numeric value-exact 0/35 to 18/35; GNHK words exact 34 to 36; CVL digits exact 38 to 36 (at the guardrail limit).
+- **Rejected on dev.** Uniform 2x upscaling (B1) failed the genuine-data guardrails (GNHK 27, CVL 19 exact). Word segmentation (P2) cut written-line CER from 0.779 to 0.371 but produced 1 correct value of 37, so the frozen rule rejected it.
+- **M8 (commit 5520d75).** The locked test split was run once: 621 entries (603 eligible, 18 blank), 216 pairs (52 GNHK, 164 synthetic). Baseline to ATHN:
+  - synthetic numeric value-exact 0/77 to 17/77, CER 1.014 to 0.599 (95% CI of change [-0.534, -0.296]);
+  - GNHK words CER 0.296 to 0.252, exact 73 to 78 of 160;
+  - CVL digits CER 0.141 to 0.143, exact 97 to 97 of 210;
+  - all genuine handwriting (439 items) CER change -0.015 [-0.036, 0.002], with 19 exact improvements against 10 regressions (McNemar p = 0.136): no measurable harm, possibly a small gain;
+  - GNHK pairs: automatic decisions 24 to 27, incorrect acceptance 0 for both methods;
+  - synthetic pairs: all 164 are still routed to review by both methods, because written synthetic amounts never parse.
+- **Latency limitation.** Median latency rose from 0.251 to 0.294 s per crop, but 5 of 89 enlarged synthetic written lines took over 120 s (maximum 419 s). The optional stress subset was not run.
+- **Backend (M9-A, commit 56b9df1; M10-A handover).** FastAPI service in `backend/`. Its default mode is proposed (ATHN), as declared in `artifacts/M7/FROZEN_CONFIG.json` before M8. 17 unit tests and 7 integration tests pass, and 13/13 live HTTP checks passed (`artifacts/M10/LIVE_HTTP_CHECK.json`). Handover files: `HANDOVER.md`, `API_CONTRACT.md`, `FRONTEND_REQUIREMENTS.md`, `openapi.json`, `.env.example`, `requirements-backend.txt`. Nothing is pushed to GitHub; the collaborator pushes.
+- **Next step.** The collaborator builds the frontend against the API contract. A numeric-only ATHN variant is a possible future method; it would need its own dev selection under a new frozen protocol before any test use.

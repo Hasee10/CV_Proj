@@ -1,0 +1,157 @@
+{
+ "project": "ChequeVerify",
+ "date": "2026-11-27",
+ "branch": "main",
+ "pushed": false,
+ "milestones": {
+  "M7": {
+   "status": "VERIFIED",
+   "commit": "f836129",
+   "selected": "P1-A",
+   "dev_primary": {
+    "B0": 0,
+    "P1-A": 18,
+    "n": 35
+   },
+   "dev_genuine": {
+    "D1_exact": [
+     34,
+     36
+    ],
+    "D1_cer": [
+     0.305,
+     0.2918
+    ],
+    "D4_exact": [
+     38,
+     36
+    ],
+    "D4_cer": [
+     0.1846,
+     0.1971
+    ]
+   },
+   "p2_adopted": false,
+   "tests": "9/9"
+  },
+  "M8": {
+   "status": "VERIFIED",
+   "commit": "5520d75",
+   "counts": {
+    "entries": 621,
+    "eligible": 603,
+    "blank": 18,
+    "pairs": 216,
+    "pairs_gnhk": 52,
+    "pairs_synthetic": 164,
+    "pairs_unresolved": 18
+   },
+   "headline": {
+    "D6_numeric_value_exact": [
+     0,
+     17,
+     77
+    ],
+    "D6_numeric_cer": [
+     1.0135,
+     0.5993
+    ],
+    "D1_cer": [
+     0.296,
+     0.2521
+    ],
+    "D4_cer": [
+     0.1406,
+     0.1429
+    ],
+    "all_genuine_cer_delta_ci95": [
+     -0.0153,
+     [
+      -0.0359,
+      0.0023
+     ]
+    ],
+    "genuine_exact_improved_regressed": [
+     19,
+     10
+    ],
+    "gnhk_pairs_decisions": {
+     "baseline": {
+      "review": 28,
+      "accept": 11,
+      "flag": 13
+     },
+     "proposed": {
+      "review": 25,
+      "flag": 15,
+      "accept": 12
+     }
+    },
+    "synthetic_pairs": "all 164 routed to review by both methods",
+    "incorrect_acceptance_rate": {
+     "gnhk": 0.0,
+     "synthetic": 0.0
+    },
+    "latency_median_s": [
+     0.2509,
+     0.2936
+    ],
+    "latency_p95_s": [
+     1.0404,
+     19.0139
+    ],
+    "proposed_inputs_over_120s": 5,
+    "proposed_max_latency_s": 419.36
+   },
+   "tests": "7/7",
+   "supplementary_stress": "not run (optional; skipped to keep compute on the locked comparison)"
+  },
+  "M9-A": {
+   "status": "VERIFIED",
+   "commit": "56b9df1",
+   "endpoints": [
+    "GET /health",
+    "GET /api/model-info",
+    "POST /api/recognize",
+    "POST /api/verify",
+    "GET /api/benchmark",
+    "GET /docs",
+    "GET /openapi.json"
+   ],
+   "tests": {
+    "unit": "17/17",
+    "integration": "7/7"
+   }
+  },
+  "M10-A": {
+   "status": "VERIFIED",
+   "commit": "see git log (final handover commit)",
+   "startup_command": ".venv\\Scripts\\python.exe -X utf8 -m uvicorn backend.app:app --host 127.0.0.1 --port 8000",
+   "live_http_checks": "13/13",
+   "live_full_cheque_roi_verify_seconds_proposed": 37.654,
+   "handover_files": [
+    "HANDOVER.md",
+    "API_CONTRACT.md",
+    "FRONTEND_REQUIREMENTS.md",
+    "openapi.json",
+    ".env.example",
+    "requirements-backend.txt",
+    "artifacts/M10/examples/",
+    "artifacts/M10/LIVE_HTTP_CHECK.json"
+   ]
+  }
+ },
+ "not_done": [
+  "frontend (collaborator)",
+  "optional M8 stress subset",
+  "numeric-only ATHN (new method; needs its own dev selection)",
+  "field detection on full cheques",
+  "real handwritten cheques"
+ ],
+ "key_limitations": [
+  "proposed mode: 5/89 synthetic written test lines >120 s (max 419 s); backend timeout 120 s -> 504",
+  "synthetic written amounts never parse -> all synthetic pairs review",
+  "genuine-handwriting gains not statistically significant",
+  "synthetic data from one font-rendered set"
+ ]
+}

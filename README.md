@@ -15,7 +15,11 @@ This is an academic prototype for the Computer Vision course (FAST-NUCES, Fall 2
 | M4: datasets and evaluation design | verified, with documented limits | 872 validated samples across four sets; 38/38 regression tests pass |
 | M5-DEV: frozen baseline on the dev split | verified | 251 dev entries, 0 errors; exact matches: GNHK words 34/80, CVL digit strings 38/90, synthetic cheque fields 0/72; every synthetic amount pair goes to review |
 | M6: failure analysis and stress tests (dev) | verified | 3,675 paired corruption variants plus diagnostics. Upscaling recovers small synthetic numbers (0/8 to 5/8 exact) but harms genuine handwriting; severe contrast loss costs CVL 16.7 points |
-| M5 test, M7 onward: locked test, improvement, web demo | not started | |
+| M7: training-free improvement (dev) | verified | Adaptive text-height normalisation (ATHN), config P1-A, chosen on the dev split under a protocol frozen before inference. Synthetic numeric value-exact 0/35 to 18/35; GNHK words exact 34 to 36; CVL digits exact 38 to 36 (at the guardrail limit). Uniform 2x upscaling failed the genuine-data guardrails; word segmentation was rejected by the frozen rule |
+| M8: locked test, baseline vs ATHN | verified | Run once on 621 entries (216 pairs). Synthetic numeric value-exact 0/77 to 17/77, CER 1.014 to 0.599; genuine handwriting (439 items) CER change -0.015 [-0.036, 0.002], so no measurable harm and a possible small gain. Latency has a long tail on enlarged written lines |
+| M9-A: backend | verified | FastAPI service in `backend/` with recognise, verify and saved-benchmark endpoints; 17 unit tests and 7 integration tests (real checkpoint) pass |
+| M10-A: handover | verified | Real server, 13/13 live HTTP checks passed (`artifacts/M10/LIVE_HTTP_CHECK.json`); `HANDOVER.md`, `API_CONTRACT.md`, `FRONTEND_REQUIREMENTS.md`, `openapi.json` |
+| Frontend demo | not started | requirements in `FRONTEND_REQUIREMENTS.md` |
 
 Each milestone has its evidence in `artifacts/<milestone>/` (summary JSON, commands, logs, hashes). `PROJECT_TRACKER.md` holds the running log, and `ROADMAP.md` describes every phase, its deliverables and the rules for contributors.
 
@@ -85,6 +89,15 @@ Run the tests:
 .\.venv\Scripts\python.exe -X utf8 -I tests\test_m4_online.py
 ```
 
+Run the backend (the checkpoint must already be in place, see Setup):
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-inference.txt -r requirements-backend.txt
+.\.venv\Scripts\python.exe -X utf8 -m uvicorn backend.app:app --host 127.0.0.1 --port 8000
+```
+
+Interactive API documentation (Swagger) is at http://127.0.0.1:8000/docs. The endpoints, error format and limits are in `API_CONTRACT.md`; `HANDOVER.md` explains how to hand the service to the frontend.
+
 The exact commands behind every recorded result are in each milestone's `COMMANDS.md`.
 
 ## Design choices worth knowing
@@ -100,6 +113,8 @@ The exact commands behind every recorded result are in each milestone's `COMMAND
 - Genuine handwritten written amounts in the evaluation data are limited to 27 single number words.
 - Every crop comes from a known position (annotation boxes or fixed template boxes). Automatic cheque-field detection is not implemented.
 - Signature verification and tampering detection are out of scope.
+- The proposed mode has a latency tail on written lines. On the locked test, 5 of 89 enlarged synthetic written lines took over 120 s on CPU (maximum 419 s), although the median rose only from 0.251 to 0.294 s per crop.
+- Synthetic written amounts never parse to a value, so every synthetic pair is sent to review by both the baseline and the proposed mode. Automatic accept decisions are measured only on the 52 GNHK pairs.
 
 ## Credits and licences
 

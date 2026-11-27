@@ -63,3 +63,17 @@ Screenshots outside Git: C:/Users/Administrator/.codex/visualizations/2026/11/27
 This supersedes the preceding 140ms inactivity interaction. Tiles no longer rotate; bevelled blocks remain on aligned grid axes, with a 2048px shadow map. Pointer hover produces raised relief, violet local colour and a subtle surface tint, which remain during stationary hover; pointer leave returns to neutral and flat. Rendering stops once settled. Removed the extra hero footer rule and aligned the Field Notes headings/rule.
 
 Browser observed at the default desktop viewport: stationary hover depth/colour, neutral state after leave, straight resting seams and aligned Field Notes header. No console errors/warnings observed. Actual result pages and mobile layout were also verified; see RESULTS_HANDOVER.md for request IDs, screenshots and remaining limits. Production build and 29 tests pass. No GPU benchmark or automated visual/accessibility suite.
+
+## Branded opening and PNG field report
+
+The screenshot-requested opening captions, wordmark, Skip label, status/credit line and hero footer/movement captions have been removed. The new local entry uses an original generated hand photograph and a live Three.js C/check point-cloud mark. The hand is a still plate; the symbol has depth layers, rotation and pointer response. The Enter arrow has an accessible label and keyboard focus. No external scene iframe remains.
+
+The shared brand now uses the transparent rendered logo. Manrope is self-hosted with its SIL OFL notice, shared by the landing and workspace. New workflow and research sections display actual saved API values. The booklet uses six distinct 1200 x 1600 PNGs generated from the same recorded inputs/results, plus a matching generated text transcript. All six PNGs were opened and inspected. Low-resolution input evidence is honestly magnified rather than redrawn.
+
+Browser checks: default desktop and 390 x 844 mobile opening, hero, report and shared dashboard; 3D cover, pages 2-3 and 4-5, final-page state, next navigation, page PNG link, plain/3D switch and accessible transcript. Native page-turn controls and the workspace handoff were exercised. Mobile research-number overflow was corrected; final landing and dashboard document widths were 375px inside the 390px viewport (scrollbar consumes the remainder). No console errors/warnings observed. Temporary viewport override reset.
+
+Production build and strict type-check pass; 29 existing tests pass, including unchanged capture hash/benchmark checks. All 1174 frozen files match. No new inference or research evaluation, GPU benchmark, reduced-motion emulation or automated accessibility audit.
+
+Current screenshots outside Git: C:/Users/Administrator/.codex/visualizations/2026/11/27/chequeverify-brand-report/ (entry-desktop.jpg, entry-mobile.jpg, hero-desktop.jpg, hero-mobile.jpg, workflow-desktop.jpg, report-cover-desktop.jpg, report-spread-desktop.jpg, report-athn-decisions.jpg, report-mobile.jpg, evidence-mobile.jpg, dashboard-mobile.jpg).
+
+Asset sources, full creative prompts, dimensions and regeneration command: ASSETS_AND_REPORT.md. Historical iframe/SVG descriptions above are superseded by this section.

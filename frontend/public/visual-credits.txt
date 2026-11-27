@@ -1,9 +1,9 @@
 ChequeVerify visual credits
 
-Entry: Volumetric Light and Bones animation by Cullen Webber.
+Opening art-direction reference: Volumetric Light and Bones animation by Cullen Webber.
 https://cullenwebber.github.io/three-volumetric-light/
 https://github.com/cullenwebber/three-volumetric-light
-The original hosted demonstration is embedded cross-origin. Its source code and models are not copied or claimed as student work. It needs an internet connection. Skip/Enter always remain available.
+The former external embed is replaced by a local original generated photographic hand plate and a project-authored Three.js holographic C/check mark. The hand is a still image; the logo is live 3D. No original reference code or model is copied. Prompts and provenance: frontend/ASSETS_AND_REPORT.md in the project repository.
 
 Hero: independent local Three.js implementation inspired by Wavy Cubes, Franky Hung / Arkon Digital.
 https://projects.arkon.digital/threejs/wavy-cubes/
@@ -12,6 +12,8 @@ Full-surface instanced cube tiles, depth waves and lavender pointer highlighting
 Field Notes: LeafThrough by dmtrbrl, MIT licence, package version 0.1.8.
 https://github.com/dmtrbrl/leafthrough
 https://dmtrbrl.github.io/leafthrough/
-Original booklet artwork and project text created for ChequeVerify. Page source generator is in frontend/scripts/create-fieldnotes.py. LeafThrough's licence is distributed with the installed dependency; see VISUAL_CREDITS.md for full notice.
+Six 1200 x 1600 PNG report pages use actual saved DEV inputs/results and frozen research data. Page layout generator: frontend/scripts/create-report.py. The cover uses the original generated brand render. LeafThrough's licence is distributed with the installed dependency; see VISUAL_CREDITS.md for full notice.
 
 Implementation assisted by Codex. No claim of authorship of referenced works.
+
+Typography: Manrope, SIL Open Font License. Self-hosted font from Google Fonts; full notice at /fonts/Manrope-OFL.txt.

@@ -1,0 +1,17 @@
+{
+  "source_run": "20261127T081154Z-cbb492",
+  "dimensions": [
+    1200,
+    1600
+  ],
+  "pages": 6,
+  "source_responses": [
+    "sheet_accept",
+    "sheet_flag",
+    "sheet_review",
+    "numeric-baseline",
+    "numeric-proposed",
+    "benchmark"
+  ],
+  "notice": "Publication layout from recorded DEV examples and saved frozen metrics. No inference or metric recomputation."
+}

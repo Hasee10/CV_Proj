@@ -4,6 +4,7 @@ import tailwind from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwind()],
+  optimizeDeps: { include: ["leafthrough/react"] },
   server: { host: "127.0.0.1", port: 5173, strictPort: true },
   test: { environment: "node", include: ["tests/**/*.test.ts"] },
 });

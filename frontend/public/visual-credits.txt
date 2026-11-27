@@ -1,9 +1,9 @@
 ChequeVerify visual credits
 
-Opening art-direction reference: Volumetric Light and Bones animation by Cullen Webber.
+Opening scene adapted from Volumetric Light and Bones animation by Cullen Webber.
 https://cullenwebber.github.io/three-volumetric-light/
 https://github.com/cullenwebber/three-volumetric-light
-The former external embed is replaced by a local original generated photographic hand plate and a project-authored Three.js holographic C/check mark. The hand is a still image; the logo is live 3D. No original reference code or model is copied. Prompts and provenance: frontend/ASSETS_AND_REPORT.md in the project repository.
+The current local opening adapts the original rigged hand, finger/wrist animation, volumetric beam and ASCII material. Only the floating symbol geometry is replaced with the ChequeVerify C/check. Upstream commit: 28b2103f1ce0403eacbe53c4ea53790b8905705a. Source fingerprints and changes: frontend/src/light-study/UPSTREAM.json. Third-party scene/model authorship remains with Cullen Webber; it is not claimed as student-created. The former generated still hand plate is no longer used.
 
 Hero: independent local Three.js implementation inspired by Wavy Cubes, Franky Hung / Arkon Digital.
 https://projects.arkon.digital/threejs/wavy-cubes/

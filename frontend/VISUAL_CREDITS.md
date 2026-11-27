@@ -5,7 +5,7 @@
 https://cullenwebber.github.io/three-volumetric-light/
 https://github.com/cullenwebber/three-volumetric-light
 
-Art-direction reference for the hand, volumetric light and point-based floating symbol. The former iframe has been replaced by a local original generated hand plate and a project-authored Three.js holographic brand mark. No source code or hand model was copied. The hand plate is a still image; the logo is live 3D. See ASSETS_AND_REPORT.md for asset provenance and generation prompts.
+Current opening: adapted locally from Cullen Webber's rigged-hand, volumetric-beam and ASCII-shading implementation. Pinned upstream commit: 28b2103f1ce0403eacbe53c4ea53790b8905705a. The original hand, bone animation and lighting are retained; the floating glyph geometry is replaced with the project C/check. Source fingerprints and adaptations: src/light-study/UPSTREAM.json. This third-party scene/model is not claimed as student-authored. The rejected generated still background and separate point overlay have been removed.
 
 ## Franky Hung / Arkon Digital - Wavy Cubes
 
@@ -24,4 +24,4 @@ Implementation assisted by Codex. References and authorship remain distinguished
 
 ## Project branding and typography
 
-The new rendered logo and hand plate were generated with the built-in image generation tool from project-directed prompts. The canonical C/check silhouette and live point-cloud implementation are local project assets/code. Asset paths, prompt set and limitations: ASSETS_AND_REPORT.md. Manrope is self-hosted from the Google Fonts repository under the SIL Open Font License, retained in public/fonts/Manrope-OFL.txt.
+The rendered logo was generated with the built-in image generation tool from a project-created C/check silhouette. Its extruded floating geometry is a local adaptation inside the attributed reference scene. Asset paths, prompt set and limitations: ASSETS_AND_REPORT.md. Manrope is self-hosted from the Google Fonts repository under the SIL Open Font License, retained in public/fonts/Manrope-OFL.txt.

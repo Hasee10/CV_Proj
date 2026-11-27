@@ -77,3 +77,13 @@ Production build and strict type-check pass; 29 existing tests pass, including u
 Current screenshots outside Git: C:/Users/Administrator/.codex/visualizations/2026/11/27/chequeverify-brand-report/ (entry-desktop.jpg, entry-mobile.jpg, hero-desktop.jpg, hero-mobile.jpg, workflow-desktop.jpg, report-cover-desktop.jpg, report-spread-desktop.jpg, report-athn-decisions.jpg, report-mobile.jpg, evidence-mobile.jpg, dashboard-mobile.jpg).
 
 Asset sources, full creative prompts, dimensions and regeneration command: ASSETS_AND_REPORT.md. Historical iframe/SVG descriptions above are superseded by this section.
+
+## Animated-hand restoration and hero text backing
+
+The preceding still-hand design is superseded. The opening now uses Cullen Webber's original rigged hand and volumetric-light implementation adapted locally, with the C/check replacing the floating glyph geometry inside the original ASCII material. Finger/wrist bones animate over time; no photographed hand or separate point overlay is used. Source hashes and pinned commit: src/light-study/UPSTREAM.json. Models and Draco decoders are local. The child scene is removed on Enter; replay creates a fresh isolated scene. Animation is capped at 30fps, skips hidden-page rendering and keeps the hand still under reduced-motion preference.
+
+The reference requires Three.js 0.182.0 shadow comparison textures. The renderer and its types were aligned to that release; Vite's old optimized 0.181 cache was explicitly rebuilt. The original light beam, dust and hand shading were then observed alongside the new floating symbol, with no console errors/warnings. Two saved frames and pointer/camera response were inspected, and Enter/replay were exercised. Two regression tests use the real GLB skeleton metadata to verify that the actual hand/wrist rotations change over time. This checks pose updates; it is not a GPU-rendering test.
+
+A 67% translucent, 16px backdrop-blurred layer now backs the hero copy. Tile seams are softened beneath the letters while tiles remain visible and interactive outside the panel. Desktop browser appearance and computed backdrop filter verified. Screenshots outside Git: C:/Users/Administrator/.codex/visualizations/2026/11/27/chequeverify-motion-fix/ (hand-frame-a.jpg, hand-frame-b.jpg, hero-glass-desktop.jpg). Responsive CSS remains, but the viewport override did not apply reliably in this check, so this entry does not claim a new mobile visual pass. No reduced-motion emulation or GPU benchmark.
+
+31 tests pass, including the two new bone-motion regressions and existing capture-integrity checks. Frozen backend/research/data/model files remain unchanged.

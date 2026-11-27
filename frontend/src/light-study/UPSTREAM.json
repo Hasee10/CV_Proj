@@ -1,0 +1,39 @@
+{
+  "repository": "https://github.com/cullenwebber/three-volumetric-light",
+  "commit": "28b2103f1ce0403eacbe53c4ea53790b8905705a",
+  "source_sha256": {
+    "src/core/Three.js": "972a856f1f8542f0d51b81a93747f73e429a35173d7533ddf8a238433a6a8dfb",
+    "src/core/WebGLContext.js": "9247f60636a979e5080cbd3f9a9804d5705afb69c5c886a6b89a842c78de3ea7",
+    "src/materials/AsciiMaterial.js": "fec828f491e5a3ad23e00ec854488408f32683818c9738edf079811e33250f2c",
+    "src/objects/Arm.js": "02af6a7c271831acd083e51869baf944e35b9a7e3e02fd097e1b8ad156178803",
+    "src/objects/BackgroundPlane.js": "25ee93260ecb30e6b77fcb59191c055bcf6280d749014fa3e5859e0403244000",
+    "src/objects/BeamParticles.js": "3f046bdd9d55aa83477c12d94d40136e2f62d86e2f8afaf310c5a018d6e6db47",
+    "src/objects/FloatingObjects.js": "a82c7d6cb2bba40905eea77f13a55421d04564ab196d38bf74854b14947682ff",
+    "src/objects/LightGradient.js": "1f7e906e9ca5d68c3d8e4a3600c556fd43183e2e9cc230a5954325e6df05d007",
+    "src/objects/VolumetricBeam.js": "aee57a300a70c8ea2480b414e3a6b09640566ccabb333ec55b0dde45d6f910d1",
+    "src/postfx/BeamCompositor.js": "be92cf70bf3c5a761ff2f0a6d566b3d90aa6e5f9f7d63b25596b45744aa5d060",
+    "src/scenes/Scene.js": "8dcc344e5863c8a33dcbecf7dfeea542e4b681d63a12d4d7badcc6dd2bcb2b71",
+    "src/shaders/ascii.frag.glsl": "323a07c0361ee9b04faa0bf56e1ae3afda119ab15132bccc9fd0e0732cbeaec1",
+    "src/shaders/ascii.vert.glsl": "97eb3759ba2694b4f028cf4b1bdde5422001a2755502ff1367370f99bd261e1c",
+    "src/shaders/background.frag.glsl": "e81c56f0d5dc896e0a44a3487f8222adc9ab436f8a4613be30868fbdd0636e0d",
+    "src/shaders/background.vert.glsl": "633310880aaf5e862bac1f2c170366a52da9e2dd818fdd90125a938df098a4ca",
+    "src/shaders/beam.frag.glsl": "faec65a40468e494163390494867f41928f9403c7e1de618039f2457936312a0",
+    "src/shaders/beam.vert.glsl": "ca3cab736b5eef21c5a12b9d55b95e11715666a5d7a41f14d1d48590e7a416b6",
+    "src/shaders/bloomDownsample.frag.glsl": "a10add36115c0f08cce54c7871ac39bd9408d299ce8d7764076f8101d1f66bfb",
+    "src/shaders/bloomUpsample.frag.glsl": "de0254cdaf6cc42d348aa70ef3eec9f3de080d3445f7a42db414ff3fa8d06009",
+    "src/shaders/fullscreen.vert.glsl": "8e1a865e91cf3cca7a3a715603503d33d1ba2698b50ff6f76cddd707c5ef41c4",
+    "src/shaders/particles.frag.glsl": "3a6d185477c927f633e18397f92f137e9db02c6e074fb6e28b41735bfa3e072c",
+    "src/shaders/particles.vert.glsl": "61d8a10dbb864982877164e89bd71f4e43c3c28e8d5797e9fad1da22dcc77016",
+    "src/shaders/screen.frag.glsl": "959bca03383394ecf0dc5f1b27138b5e5980ce768970bf18d84c7bb0fdae039e",
+    "src/utils/CameraRig.js": "3b8fd6c281bef461bdcc99d35956d040d08af7dd44efaa30ca5e8d79905800d6",
+    "src/utils/ImportGltf.js": "5965655f3d8c5cd27bfa6f3bb2460612b3ea1aa3f1d44230abf99f9fb3e232cb"
+  },
+  "arm_sha256": "3f1c702f4129603cda00910ebff76c71461e3297cd2a5c1b833804f697458855",
+  "changes": [
+    "Logo geometry replacement",
+    "Vite raw shader imports",
+    "Scoped canvas and iframe lifecycle",
+    "Asset paths",
+    "Removed unused experimental bent-normal shading"
+  ]
+}

@@ -39,40 +39,12 @@ input {
   min-height: 520px;
   background: #001215;
 }
-.entry-hand {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-.entry-vignette {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 54% 49%, transparent 25%, #0003 80%);
-  pointer-events: none;
-}
-.entry-hologram {
-  position: absolute;
-  width: min(34vw, 420px);
-  height: min(38vw, 420px);
-  left: 53%;
-  top: 39%;
-  transform: translate(-50%, -50%);
-  filter: drop-shadow(0 0 12px #d6ffffbb) drop-shadow(0 0 40px #b1f9ff88);
-}
-.hologram-logo,
-.hologram-logo canvas {
-  width: 100%;
-  height: 100%;
+.branded-entry .entry-scene {
+  z-index: 0;
   display: block;
 }
-.hologram-logo img,
-.entry-logo-fallback {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.branded-entry .entry-continue {
+  z-index: 2;
 }
 .entry-continue {
   position: absolute;
@@ -117,6 +89,20 @@ input {
 .wave-hero .hero-copy {
   margin-left: 0;
   max-width: 800px;
+  isolation: isolate;
+}
+.wave-hero .hero-copy::before {
+  content: "";
+  position: absolute;
+  inset: -34px -38px;
+  z-index: -1;
+  border: 1px solid rgb(255 255 255 / 60%);
+  border-radius: 12px;
+  background: rgb(247 250 244 / 67%);
+  backdrop-filter: blur(16px) saturate(75%);
+  -webkit-backdrop-filter: blur(16px) saturate(75%);
+  box-shadow: 0 20px 60px rgb(23 61 49 / 5%);
+  pointer-events: none;
 }
 .wave-hero .hero-copy h1 {
   white-space: normal;
@@ -489,18 +475,14 @@ input {
   }
 }
 @media (max-width: 600px) {
+  .wave-hero .hero-copy::before {
+    inset: -25px -12px;
+    background: rgb(247 250 244 / 74%);
+  }
   .branded-entry {
     min-height: 480px;
   }
-  .entry-hand {
-    object-position: 54% center;
-  }
-  .entry-hologram {
-    width: 75vw;
-    height: 75vw;
-    left: 51%;
-    top: 40%;
-  }
+
   .entry-continue {
     width: 58px;
     height: 58px;

@@ -1,6 +1,5 @@
-import { lazy, Suspense, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
-const HologramLogo = lazy(() => import("./HologramLogo"));
 
 export function EntryExperience({ onEnter }: { onEnter: () => void }) {
   const button = useRef<HTMLButtonElement>(null);
@@ -12,21 +11,11 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
       className="entry-experience branded-entry"
       aria-label="ChequeVerify light introduction"
     >
-      <img className="entry-hand" src="/brand/hand-light.png" alt="" />
-      <div className="entry-vignette" />
-      <div className="entry-hologram" aria-hidden="true">
-        <Suspense
-          fallback={
-            <img
-              className="entry-logo-fallback"
-              src="/brand/mark-3d.png"
-              alt=""
-            />
-          }
-        >
-          <HologramLogo />
-        </Suspense>
-      </div>
+      <iframe
+        className="entry-scene"
+        src="/light-study/index.html"
+        title="Animated hand and volumetric light with the ChequeVerify logo"
+      />
       <button
         ref={button}
         className="entry-continue"

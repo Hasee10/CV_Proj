@@ -49,7 +49,7 @@ export function AppLayout() {
         <Link to="/" aria-label="ChequeVerify introduction">
           <Brand />
         </Link>
-        <div className="sidebar-section">RESEARCH WORKSPACE</div>
+        <div className="sidebar-section">YOUR WORKSPACE</div>
         <nav aria-label="Main navigation">
           {navigation.map(({ to, label, icon: Icon }) => (
             <NavLink key={to} to={to}>
@@ -68,10 +68,20 @@ export function AppLayout() {
       <div className="workspace">
         <header className="workspace-bar">
           <span>
-            ChequeVerify <span className="slash">/</span>{" "}
-            <strong>{title}</strong>
+            Workspace <span className="slash">/</span> <strong>{title}</strong>
           </span>
-          <span className="academic-label">Academic prototype</span>
+          <span className="header-system" data-state={status.readiness}>
+            <span aria-hidden="true" />
+            {status.readiness === "ready"
+              ? "Model connected"
+              : status.readiness === "loading"
+                ? "Checking connection"
+                : status.readiness === "unavailable"
+                  ? "Model unavailable"
+                  : status.readiness === "offline"
+                    ? "Backend offline"
+                    : "Connection error"}
+          </span>
           <button
             ref={toggle}
             className="mobile-toggle"

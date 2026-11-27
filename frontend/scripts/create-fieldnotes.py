@@ -28,7 +28,7 @@ for index,(kicker,title,body,footer) in enumerate(pages):
         parts.append(f'<g stroke="{accent}" fill="none" stroke-width="2" opacity=".7"><rect x="66" y="454" width="768" height="190"/><path d="M96 510H620M96 556H550M96 600H740"/><rect x="640" y="550" width="160" height="60"/></g>')
         y=735
     for line_no,line in enumerate(body):
-        parts.append(f'<text x="66" y="{y+line_no*44}" font-size="25" fill="{muted}">{escape(line)}</text>')
-    parts.append(f'<path d="M66 1130H834" stroke="{muted}"/><text x="66" y="1178" font-size="17" fill="{muted}">{escape(footer)}</text></g></svg>')
+        parts.append(f'<text x="66" y="{y+line_no*49}" font-size="29" fill="{muted}">{escape(line)}</text>')
+    parts.append(f'<path d="M66 1130H834" stroke="{muted}"/><text x="66" y="1178" font-size="19" fill="{muted}">{escape(footer)}</text></g></svg>')
     (OUT / f'{index+1}.svg').write_text(''.join(parts),encoding='utf-8')
 print('Created six original field-note pages.')

@@ -28,7 +28,7 @@ export default function WaveGridScene() {
     el.appendChild(renderer.domElement);
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-10, 10, 5, -5, 0.1, 100);
-    camera.position.set(0, -3.5, 18);
+    camera.position.set(0, 0, 18);
     camera.lookAt(0, 0, 0);
     const geometry = new RoundedBoxGeometry(0.965, 0.965, 0.88, 2, 0.03);
     const material = new THREE.MeshStandardMaterial({
@@ -67,6 +67,8 @@ export default function WaveGridScene() {
       disposed = false,
       frame = 0,
       last = -100;
+    let lastMovement = -1000,
+      strength = 0;
     const reduced = matchMedia("(prefers-reduced-motion: reduce)");
     const pointer = new THREE.Vector2(1000, 1000),
       smoothPointer = pointer.clone();
@@ -88,17 +90,23 @@ export default function WaveGridScene() {
       if (raycaster.ray.intersectPlane(surface, intersection))
         pointer.set(intersection.x, intersection.y);
       if (smoothPointer.x > 100) smoothPointer.copy(pointer);
-      if (reduced.matches) restart();
+      lastMovement = performance.now();
+      restart();
     }
     function leave() {
-      pointer.set(1000, 1000);
-      if (reduced.matches) restart();
+      lastMovement = -1000;
+      restart();
     }
     function render(t: number) {
       if (disposed) return;
+      let rendered = false;
       if (mesh && visible && !document.hidden && t - last >= 33) {
         last = t;
-        const time = reduced.matches ? 0 : t * 0.00035;
+        const moving = t - lastMovement < 140;
+        strength = reduced.matches
+          ? 0
+          : THREE.MathUtils.lerp(strength, moving ? 1 : 0, 0.18);
+        if (!moving && strength < 0.002) strength = 0;
         if (pointer.x > 100) smoothPointer.copy(pointer);
         else smoothPointer.lerp(pointer, 0.12);
         let index = 0;
@@ -106,24 +114,21 @@ export default function WaveGridScene() {
           for (let col = 0; col < columns; col++) {
             const x = col - (columns - 1) / 2,
               y = row - (rows - 1) / 2;
-            const wave =
-              Math.sin(x * 0.49 + time) * Math.cos(y * 0.43 - time * 0.8);
             const distance = Math.hypot(
               x - smoothPointer.x,
               y - smoothPointer.y,
             );
-            const hover = Math.exp((-distance * distance) / 3.7);
+            const hover = Math.exp((-distance * distance) / 3.1) * strength;
             const quietLeft = THREE.MathUtils.smoothstep(
               x / worldWidth + 0.5,
               0.12,
               0.6,
             );
-            const amplitude = 0.18 + 0.5 * quietLeft;
-            object.position.set(x, y, wave * amplitude + hover * 0.8);
+            object.position.set(x, y, hover * (0.65 + 0.4 * quietLeft));
+            object.scale.setScalar(1.025 - hover * 0.025);
             object.rotation.set(
-              Math.sin(y * 0.43 - time * 0.8) * 0.085 * quietLeft +
-                hover * 0.09,
-              Math.cos(x * 0.49 + time) * 0.1 * quietLeft - hover * 0.065,
+              hover * Math.tanh(y - smoothPointer.y) * 0.13,
+              -hover * Math.tanh(x - smoothPointer.x) * 0.13,
               0,
             );
             object.updateMatrix();
@@ -135,8 +140,14 @@ export default function WaveGridScene() {
         mesh.instanceMatrix.needsUpdate = true;
         if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
         renderer.render(scene, camera);
+        rendered = true;
       }
-      if (visible && !document.hidden && !reduced.matches)
+      if (
+        visible &&
+        !document.hidden &&
+        (!rendered ||
+          (!reduced.matches && (strength > 0 || t - lastMovement < 140)))
+      )
         frame = requestAnimationFrame(render);
     }
     function restart() {
@@ -214,7 +225,7 @@ export default function WaveGridScene() {
       ref={host}
       className="wave-grid-stage"
       role="img"
-      aria-label="Raised pale tiles with bevelled edges, visible sidewalls, soft cast shadows and a lavender pointer ripple. Decorative illustration, not model output."
+      aria-label="Pale tiles that rise locally while the pointer moves, then settle flat when movement stops. Decorative illustration, not model output."
     />
   );
 }

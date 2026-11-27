@@ -3,10 +3,14 @@ import {
   RefreshCw,
   Cpu,
   Fingerprint,
-  Layers,
   CircleCheck,
   CircleAlert,
   CircleHelp,
+  ScanLine,
+  TextSearch,
+  ChartNoAxesCombined,
+  BookOpen,
+  Layers,
 } from "lucide-react";
 import { API_BASE_URL } from "../api/client";
 import type { useModelStatus } from "../hooks/useModelStatus";
@@ -18,6 +22,32 @@ const labels = {
   offline: "Backend unreachable",
   error: "Unexpected API error",
 };
+const workspaces = [
+  {
+    to: "/verify",
+    title: "Cheque verification",
+    description:
+      "Select the amount in figures and words, then compare the recognised values.",
+    milestone: "F2",
+    icon: ScanLine,
+  },
+  {
+    to: "/recognize",
+    title: "Amount recognition",
+    description:
+      "Inspect the handwriting in one field and the text produced by the model.",
+    milestone: "F3",
+    icon: TextSearch,
+  },
+  {
+    to: "/benchmarks",
+    title: "Research benchmarks",
+    description:
+      "Compare baseline and ATHN results across genuine and synthetic data.",
+    milestone: "F4",
+    icon: ChartNoAxesCombined,
+  },
+];
 export function Dashboard() {
   const s = useOutletContext<ReturnType<typeof useModelStatus>>();
   const info = s.info;
@@ -28,51 +58,57 @@ export function Dashboard() {
         ? CircleHelp
         : CircleAlert;
   return (
-    <>
-      <div className="page-heading">
+    <div className="dashboard-redesign">
+      <div className="dashboard-heading">
         <div>
-          <p className="eyebrow">SYSTEM OVERVIEW</p>
-          <h1>A clear view of the model.</h1>
+          <p className="eyebrow">CHEQUEVERIFY / RESEARCH WORKSPACE</p>
+          <h1>Your work, in focus.</h1>
           <p>
-            Read handwritten amounts. Compare their values. Keep a person in the
-            loop.
+            Inspect handwriting, compare amounts, and understand the evidence
+            behind each result.
           </p>
         </div>
-        <button
-          className="button secondary"
-          disabled={s.loading}
-          onClick={() => void s.refresh()}
-        >
-          <RefreshCw
-            size={16}
-            className={s.loading ? "spin" : ""}
-            aria-hidden="true"
-          />
-          Check again
-        </button>
+        <Link className="field-notes-shortcut" to="/">
+          <BookOpen size={20} aria-hidden="true" />
+          Project introduction
+        </Link>
       </div>
       <section
         className={`system-status ${s.readiness}`}
         aria-label="System status"
       >
         <div role="status" aria-live="polite">
-          <Icon size={22} aria-hidden="true" />
+          <Icon size={26} aria-hidden="true" />
           <div>
             <h2>{labels[s.readiness]}</h2>
             <p>
               {s.readiness === "ready"
-                ? "The backend is reachable and the recognition model is loaded."
+                ? "The backend is connected. LoGo-HTR is loaded for CPU inference."
                 : s.readiness === "loading"
-                  ? "Contacting the backend and reading model information."
+                  ? "Reading the backend health and model information."
                   : s.readiness === "unavailable"
                     ? "The backend is reachable. Recognition is unavailable until the model is loaded."
                     : s.readiness === "offline"
-                      ? "Check the backend server and connection, then try again."
-                      : "The API returned an unexpected response. Check the details below."}
+                      ? "Start the backend server, then check the connection again."
+                      : "The API returned an unexpected response. See the details below."}
             </p>
           </div>
         </div>
-        <code>{API_BASE_URL}</code>
+        <div className="status-actions">
+          <code>{API_BASE_URL}</code>
+          <button
+            className="button secondary"
+            disabled={s.loading}
+            onClick={() => void s.refresh()}
+          >
+            <RefreshCw
+              size={18}
+              className={s.loading ? "spin" : ""}
+              aria-hidden="true"
+            />
+            Check again
+          </button>
+        </div>
       </section>
       {s.errors.length > 0 && (
         <div className="error-list" role="alert">
@@ -88,17 +124,44 @@ export function Dashboard() {
           ))}
         </div>
       )}
-      <div className="overview-grid">
-        <section className="model-panel">
-          <div className="panel-heading">
-            <span className="eyebrow">RECOGNITION ENGINE</span>
-            <Cpu size={20} aria-hidden="true" />
+      <section className="workspace-tools" aria-labelledby="tools-title">
+        <div className="workspace-section-heading">
+          <h2 id="tools-title">Choose a workspace</h2>
+          <p>Available in the next implementation stages</p>
+        </div>
+        <div className="tool-grid">
+          {workspaces.map(
+            ({ to, title, description, milestone, icon: ToolIcon }) => (
+              <Link className="workspace-tool" to={to} key={to}>
+                <div className="tool-top">
+                  <span className="tool-icon">
+                    <ToolIcon size={26} strokeWidth={1.5} aria-hidden="true" />
+                  </span>
+                  <span className="pending-tag">Pending {milestone}</span>
+                </div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <span className="tool-footer">View workspace details</span>
+              </Link>
+            ),
+          )}
+        </div>
+      </section>
+      <section
+        className="engine-section"
+        aria-label="Model and recognition methods"
+      >
+        <article className="engine-card">
+          <div className="engine-card-top">
+            <p className="eyebrow">THE RECOGNITION ENGINE</p>
+            <Cpu size={24} strokeWidth={1.5} aria-hidden="true" />
           </div>
           <h2>{info ? "LoGo-HTR" : "Model information"}</h2>
-          <p>
-            {info?.model ?? "Model details will appear when the API responds."}
+          <p className="engine-description">
+            {info?.model ??
+              "Model information will appear when the API responds."}
           </p>
-          <dl className="engine-facts">
+          <dl className="engine-metrics">
             <div>
               <dt>Parameters</dt>
               <dd>
@@ -108,7 +171,7 @@ export function Dashboard() {
               </dd>
             </div>
             <div>
-              <dt>Inference device</dt>
+              <dt>Device</dt>
               <dd>{info?.device ?? "Not available"}</dd>
             </div>
             <div>
@@ -116,33 +179,32 @@ export function Dashboard() {
               <dd>{info?.default_mode ?? "Not available"}</dd>
             </div>
           </dl>
-          <div className="model-rule" />
-          <div className="model-note">
-            <Fingerprint size={18} aria-hidden="true" />
-            <span>Frozen checkpoint. Inference only.</span>
+          <div className="engine-footnote">
+            <Fingerprint size={20} aria-hidden="true" />
+            <span>Frozen checkpoint · inference only</span>
           </div>
-        </section>
-        <section className="modes-panel">
-          <div className="section-title">
-            <h2>Two paths. One recogniser.</h2>
-            <Layers size={19} aria-hidden="true" />
+        </article>
+        <article className="method-card">
+          <div className="workspace-section-heading">
+            <h2>One model. Two methods.</h2>
+            <Layers size={22} strokeWidth={1.5} aria-hidden="true" />
           </div>
-          <p className="section-intro">
-            The proposed method adds preprocessing to the unchanged model.
+          <p className="method-intro">
+            The same recogniser, with a different preparation step.
           </p>
-          <article className="mode-row">
-            <div>
-              <span className="mode-tag">BASELINE</span>
+          <div className="method-option">
+            <div className="method-label">
+              <span>BASELINE</span>
               {info?.default_mode === "baseline" && (
                 <span className="default-tag">Default</span>
               )}
             </div>
-            <h3>Original model pipeline</h3>
+            <h3>Original pipeline</h3>
             <p>{info?.modes.baseline ?? "Awaiting model information."}</p>
-          </article>
-          <article className="mode-row">
-            <div>
-              <span className="mode-tag">PROPOSED / ATHN</span>
+          </div>
+          <div className="method-option proposed-option">
+            <div className="method-label">
+              <span>PROPOSED / ATHN</span>
               {info?.default_mode === "proposed" && (
                 <span className="default-tag">Default</span>
               )}
@@ -152,41 +214,31 @@ export function Dashboard() {
               {info?.modes.proposed.method ?? "Awaiting model information."}
             </p>
             {info && (
-              <p className="config-line">
-                Config: {info.modes.proposed.config?.id ?? "Not available"} ·
-                Status: {info.modes.proposed.status ?? "Not available"}
-              </p>
+              <div className="method-config">
+                <span>
+                  Config{" "}
+                  <strong>
+                    {info.modes.proposed.config?.id ?? "Not available"}
+                  </strong>
+                </span>
+                <span>
+                  Status{" "}
+                  <strong>
+                    {info.modes.proposed.status ?? "Not available"}
+                  </strong>
+                </span>
+              </div>
             )}
-          </article>
-        </section>
-      </div>
-      <section className="next-section">
-        <div>
-          <p className="eyebrow">APPLICATION WORKFLOW</p>
-          <h2>From handwriting to a comparison.</h2>
-        </div>
-        <div className="workflow-links">
-          <Link to="/verify">
-            <span className="workflow-number">01</span>
-            <strong>Mark the amount fields</strong>
-            <span>Cheque verification · Pending F2</span>
-          </Link>
-          <Link to="/recognize">
-            <span className="workflow-number">02</span>
-            <strong>Inspect recognised text</strong>
-            <span>Amount recognition · Pending F3</span>
-          </Link>
-          <Link to="/benchmarks">
-            <span className="workflow-number">03</span>
-            <strong>Explore the evidence</strong>
-            <span>Research benchmarks · Pending F4</span>
-          </Link>
-        </div>
+          </div>
+        </article>
       </section>
-      <section className="limitations">
-        <div>
-          <span className="eyebrow">READ BEFORE USING</span>
-          <h2>What this system can tell you.</h2>
+      <section className="research-boundaries">
+        <div className="workspace-section-heading">
+          <div>
+            <p className="eyebrow">READ BEFORE USING</p>
+            <h2>Keep the result in context.</h2>
+          </div>
+          <span className="review-label">Human review required</span>
         </div>
         {info ? (
           <ul>
@@ -196,14 +248,19 @@ export function Dashboard() {
           </ul>
         ) : (
           <p>
-            Model limitations could not yet be retrieved. Check the connection
+            Model limitations have not been retrieved. Check the connection
             before using recognition.
           </p>
         )}
       </section>
       {info && (
         <details className="technical">
-          <summary>Checkpoint & pipeline details</summary>
+          <summary>
+            <span>Model provenance & pipeline</span>
+            <span className="technical-hint">
+              Checkpoint, dictionary and decoding
+            </span>
+          </summary>
           <dl>
             <dt>Checkpoint SHA-256</dt>
             <dd>
@@ -222,6 +279,6 @@ export function Dashboard() {
           </dl>
         </details>
       )}
-    </>
+    </div>
   );
 }

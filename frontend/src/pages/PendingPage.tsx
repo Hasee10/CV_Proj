@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ScanLine } from "lucide-react";
+import { ScanLine, CircleDashed } from "lucide-react";
 export function PendingPage({
   title,
   milestone,
@@ -10,22 +10,34 @@ export function PendingPage({
   description: string;
 }) {
   return (
-    <>
-      <p className="eyebrow">APPLICATION WORKSPACE</p>
+    <div className="pending-workspace">
+      <p className="eyebrow">CHEQUEVERIFY / WORKSPACE</p>
       <h1>{title}</h1>
+      <p className="pending-lead">{description}</p>
       <section className="pending-panel">
-        <ScanLine size={38} strokeWidth={1} aria-hidden="true" />
-        <span className="mode-tag">PENDING {milestone}</span>
-        <h2>This workspace is next.</h2>
-        <p>{description}</p>
-        <p>
-          This route is part of the foundation. Its controls and API integration
-          are not implemented yet.
-        </p>
-        <Link className="button primary" to="/dashboard">
-          Return to dashboard
-        </Link>
+        <div className="pending-illustration" aria-hidden="true">
+          <div className="document-outline">
+            <ScanLine size={52} strokeWidth={1} />
+            <span />
+            <span />
+            <span />
+          </div>
+        </div>
+        <div className="pending-content">
+          <span className="pending-tag">
+            <CircleDashed size={16} aria-hidden="true" />
+            Pending {milestone}
+          </span>
+          <h2>This workspace is being prepared.</h2>
+          <p>
+            The foundation is ready. The input controls and recognition flow for
+            this workspace are part of the next implementation stage.
+          </p>
+          <Link className="button primary" to="/dashboard">
+            Back to overview
+          </Link>
+        </div>
       </section>
-    </>
+    </div>
   );
 }

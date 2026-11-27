@@ -43,3 +43,8 @@ States: VERIFIED, PARTIAL, BLOCKED, NOT STARTED. VERIFIED requires recorded evid
 - 2026-11-27: Final backend handover. Timeout audit: a 504 is returned at the deadline but a running model call cannot be interrupted and keeps its slot; concurrency stays bounded and the queue wait is capped (fix 1448d7a, slow-inference tests). Line endings pinned so recorded hashes reproduce in clones (9ca5789). Fresh-clone reproduction passed with cached dependencies. All local commits pushed to origin/main with the student's authorisation.
 
 Deadlines: 2 Dec 2026 implementation/models/dataset; 3 Dec report; 4 Dec presentation and live demo.
+
+## Frontend foundation update - 27 Nov 2026
+
+- M9-B frontend: PARTIAL. F1 foundation VERIFIED: React/TypeScript/Vite/Tailwind shell, responsive navigation, typed API client, real health/model-info dashboard and original procedural light/document opening. The owner's selected Leafthrough and wave/cluster references are scoped in frontend/DESIGN_DIRECTION.md; later routes explicitly pending. Type-check and production build pass; 16/16 focused unit tests pass; production dependency audit reports 0 vulnerabilities. Browser inspection at 1440x900, 768x1024 and 390x844, mobile/keyboard navigation, live ready/offline/unavailable states checked. Manual accessibility review only. Evidence and external screenshot locations: frontend/ACCEPTANCE.md. All 1174 frozen hashes match. No new research or recognition tests run.
+- M10-B full application integration: NOT STARTED. F1 checks only GET /health and GET /api/model-info; full recognition/ROI/benchmark integration remains for later milestones. Backend restored to the normal loaded-model server after failure-state checks.

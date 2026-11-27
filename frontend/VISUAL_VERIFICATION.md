@@ -35,3 +35,9 @@ Outside Git at C:/Users/Administrator/.codex/visualizations/2026/11/27/chequever
 The entry is a credited external embed and needs internet; it is not self-hosted or student-authored. The cluster and booklet are local. Reduced-motion paths are implemented but were not browser-emulated. No GPU performance benchmark, automated accessibility audit, or full recognition end-to-end suite was run. No backend, frozen research, data or model changes.
 
 Full source/asset attribution: VISUAL_CREDITS.md and public/leafthrough-license.txt. Booklet images are generated original SVGs with committed source.
+
+## Subsequent owner-requested wave replacement
+
+The spherical cluster described above has now been replaced by a full-hero tiled wave surface referencing https://projects.arkon.digital/threejs/wavy-cubes/. Independent local instanced Three.js cubes, thin seams, gentle height/tilt waves, and a lavender pointer highlight. Pale surface and dark typography extend across the entire hero; no separate right-hand object remains.
+
+Type-check/build PASS (10.23s); existing unit tests 16/16 PASS; all 1174 frozen hashes match. Browser inspected at 1440x900 and 390x844; pointer response exercised, no console errors/warnings. Mobile document width does not exceed its viewport. Latest screenshots: C:/Users/Administrator/.codex/visualizations/2026/11/27/chequeverify-wave-hero/desktop.jpg and mobile.jpg. No new automated visual tests or GPU benchmark. Credits and current design direction updated. Entry light experience and LeafThrough reader retain their existing implementations.

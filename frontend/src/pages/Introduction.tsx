@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Brand } from "../components/ui/Brand";
 import { EntryExperience } from "../components/visuals/EntryExperience";
-const ClusterScene = lazy(() => import("../components/visuals/ClusterScene"));
+const WaveGridScene = lazy(() => import("../components/visuals/WaveGridScene"));
 const ResearchBook = lazy(() => import("../components/visuals/ResearchBook"));
 export function Introduction() {
   const navigate = useNavigate();
@@ -55,8 +55,13 @@ export function Introduction() {
           </Link>
         </nav>
       </header>
-      <section className="cluster-hero" aria-labelledby="hero-title">
-        <div className="cluster-copy">
+      <section className="wave-hero" aria-labelledby="hero-title">
+        <div className="wave-visual" aria-hidden="true">
+          <Suspense fallback={null}>
+            <WaveGridScene />
+          </Suspense>
+        </div>
+        <div className="hero-copy">
           <p className="vision-kicker">A STUDY IN MACHINE PERCEPTION</p>
           <h1 id="hero-title" ref={hero} tabIndex={-1}>
             Read the ink.
@@ -80,18 +85,9 @@ export function Introduction() {
             Research prototype · LoGo-HTR + ATHN
           </p>
         </div>
-        <div className="cluster-visual">
-          <Suspense
-            fallback={
-              <div className="scene-loading">Preparing interactive cluster</div>
-            }
-          >
-            <ClusterScene />
-          </Suspense>
-          <p className="cluster-instruction">
-            MOVE TO REVEAL <span>/</span> DRAG TO ROTATE
-          </p>
-        </div>
+        <p className="wave-instruction">
+          MOVE ACROSS THE SURFACE / A STUDY IN PERCEPTION
+        </p>
         <div className="hero-bottom">
           <span>RECOGNISE / PARSE / COMPARE</span>
           <a href="#field-notes">

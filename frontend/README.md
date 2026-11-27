@@ -31,4 +31,4 @@ See DESIGN_DIRECTION.md for implemented visual placements and resource limits, a
 
 ## Visual correction (27 Nov 2026)
 
-The original F1 light/document illustration has been replaced. The entry displays Cullen Webber's credited original hosted light scene in an isolated iframe; this requires an internet connection. Enter removes that iframe and opens the local interactive cluster hero. Below it, Field Notes uses the actual MIT-licensed LeafThrough reader with six original local SVG pages and a full text alternative. See DESIGN_DIRECTION.md and VISUAL_CREDITS.md. Other application routes retain their F1 status.
+The original F1 light/document illustration has been replaced. The entry displays Cullen Webber's credited original hosted light scene in an isolated iframe; this requires an internet connection. Enter removes that iframe and opens the local interactive tiled wave hero. Below it, Field Notes uses the actual MIT-licensed LeafThrough reader with six original local SVG pages and a full text alternative. See DESIGN_DIRECTION.md and VISUAL_CREDITS.md. Other application routes retain their F1 status.

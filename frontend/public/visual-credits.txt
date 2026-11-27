@@ -5,10 +5,9 @@ https://cullenwebber.github.io/three-volumetric-light/
 https://github.com/cullenwebber/three-volumetric-light
 The original hosted demonstration is embedded cross-origin. Its source code and models are not copied or claimed as student work. It needs an internet connection. Skip/Enter always remain available.
 
-Hero: independent WebGL implementation inspired by Interactive 3D Cluster by Francesco Michelini (Codrops).
-https://tympanus.net/Tutorials/3DCluster/
-https://github.com/kekkorider/codrops-tutorial-dark-cluster
-Extruded icosahedron facets, pointer response and slow rotation follow the selected visual concept. Application code, geometry generation and lighting were written independently; no upstream code or textures were copied. The cluster is decorative, not a representation of model activations.
+Hero: independent local Three.js implementation inspired by Wavy Cubes, Franky Hung / Arkon Digital.
+https://projects.arkon.digital/threejs/wavy-cubes/
+Full-surface instanced cube tiles, depth waves and lavender pointer highlighting. No upstream source or assets copied. Decorative illustration, not model output. Replaces the earlier spherical Codrops cluster.
 
 Field Notes: LeafThrough by dmtrbrl, MIT licence, package version 0.1.8.
 https://github.com/dmtrbrl/leafthrough

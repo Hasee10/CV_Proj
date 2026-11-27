@@ -4,6 +4,7 @@ import { api, isModelInfo } from "../api/client";
 import type { BenchmarkResult, PairMetrics } from "../api/results";
 import { formatJson, useCaptureContext } from "../hooks/useSavedCapture";
 import { CaptureProvenance } from "../components/results/ResultDetails";
+import { BenchmarkVisuals } from "../components/research/BenchmarkVisuals";
 const names: Record<string, string> = {
   D1_gnhk_words_genuine: "GNHK words",
   D4_cvl_numeric_genuine: "CVL digit strings",
@@ -114,132 +115,50 @@ export function Benchmark() {
       )}
       <p className="result-help">
         Source: <code>{data.source}</code>. This endpoint reads the saved file;
-        no evaluation is rerun. Rates are shown as returned (0–1); lower CER and
-        WER are better.
+        no evaluation is rerun. Percentages below are presentation formatting;
+        raw values remain in the detailed tables. CER can exceed 1 due to
+        insertion errors.
       </p>
-      {[false, true].map((synthetic) => (
-        <section className="benchmark-group" key={String(synthetic)}>
-          <div className="benchmark-group-heading">
-            <span className="capture-chip">
-              {synthetic ? "SYNTHETIC" : "GENUINE HANDWRITING"}
-            </span>
-            <h2>
-              {synthetic
-                ? "Font-rendered cheque fields"
-                : "Handwritten words and digits"}
-            </h2>
-          </div>
-          <div
-            className="results-table-wrap"
-            role="region"
-            aria-label={`${synthetic ? "Synthetic" : "Genuine"} recognition metrics`}
-            tabIndex={0}
-          >
-            <table className="results-table">
-              <caption>
-                Recognition results — values as returned by the API
-              </caption>
-              <thead>
-                <tr>
-                  {[
-                    "Dataset",
-                    "Mode",
-                    "Items",
-                    "CER",
-                    "WER",
-                    "Exact",
-                    "Exact rate",
-                    "Value exact",
-                    "Value items",
-                    "Parseable",
-                  ].map((h) => (
-                    <th scope="col" key={h}>
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {Object.entries(data.datasets)
-                  .filter(([key]) => key.includes("SYNTHETIC") === synthetic)
-                  .flatMap(([key, d]) =>
-                    (["baseline", "proposed"] as const).map((mode) => (
-                      <tr key={key + mode}>
-                        <th scope="row">{names[key] ?? key}</th>
-                        <td>{mode === "proposed" ? "ATHN" : mode}</td>
-                        <td>{d.n_eligible}</td>
-                        <td>{show(d.cer[mode])}</td>
-                        <td>{show(d.wer[mode])}</td>
-                        <td>{show(d.exact[mode])}</td>
-                        <td>{show(d.exact_rate[mode])}</td>
-                        <td>{show(d.value_exact?.[mode])}</td>
-                        <td>{show(d.value_exact?.n)}</td>
-                        <td>{show(d.value_exact?.parseable?.[mode])}</td>
-                      </tr>
-                    )),
-                  )}
-              </tbody>
-            </table>
-          </div>
-          <details className="response-detail">
-            <summary>Reported changes and complete dataset metrics</summary>
-            <pre>
-              {formatJson(
-                Object.fromEntries(
-                  Object.entries(data.datasets).filter(
-                    ([key]) => key.includes("SYNTHETIC") === synthetic,
-                  ),
-                ),
-              )}
-            </pre>
-          </details>
-        </section>
-      ))}
-      <section className="benchmark-group">
-        <h2>Pair decisions</h2>
-        <p className="result-help">
-          Genuine pair results use constructed pairs of genuine crops, not real
-          cheques. No real handwritten cheques were available. Match/mismatch
-          definitions follow the{" "}
-          <a
-            href={`https://github.com/Hasee10/CV_Proj/blob/${capture.manifest.source_git_commit}/artifacts/M8/FINAL_EVALUATION_REPORT.md`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            evaluation report
-          </a>
-          .
-        </p>
+      <BenchmarkVisuals data={data} />
+      <details className="benchmark-tables polish-card">
+        <summary>
+          Detailed metrics, confusion matrices &amp; original source values
+        </summary>
         {[false, true].map((synthetic) => (
-          <div className="pair-group" key={String(synthetic)}>
-            <h3>
-              {synthetic
-                ? "Synthetic pairs"
-                : "Genuine handwriting · constructed pairs"}
-            </h3>
+          <section className="benchmark-group" key={String(synthetic)}>
+            <div className="benchmark-group-heading">
+              <span className="capture-chip">
+                {synthetic ? "SYNTHETIC" : "GENUINE HANDWRITING"}
+              </span>
+              <h2>
+                {synthetic
+                  ? "Font-rendered cheque fields"
+                  : "Handwritten words and digits"}
+              </h2>
+            </div>
             <div
               className="results-table-wrap"
               role="region"
-              aria-label={`${synthetic ? "Synthetic" : "Genuine"} pair decisions`}
+              aria-label={`${synthetic ? "Synthetic" : "Genuine"} recognition metrics`}
               tabIndex={0}
             >
               <table className="results-table">
+                <caption>
+                  Recognition results — values as returned by the API
+                </caption>
                 <thead>
                   <tr>
                     {[
-                      "Group",
+                      "Dataset",
                       "Mode",
-                      "Eligible pairs",
-                      "Unresolved",
-                      "Accept",
-                      "Flag",
-                      "Review",
-                      "Review rate",
-                      "Decision coverage",
-                      "Incorrect acceptance",
-                      "Incorrect rejection",
-                      "Mismatch detection",
-                      "Auto-accepted matches",
+                      "Items",
+                      "CER",
+                      "WER",
+                      "Exact",
+                      "Exact rate",
+                      "Value exact",
+                      "Value items",
+                      "Parseable",
                     ].map((h) => (
                       <th scope="col" key={h}>
                         {h}
@@ -248,50 +167,146 @@ export function Benchmark() {
                   </tr>
                 </thead>
                 <tbody>
-                  {Object.entries(data.pairs)
+                  {Object.entries(data.datasets)
                     .filter(([key]) => key.includes("SYNTHETIC") === synthetic)
-                    .flatMap(([key, p]) =>
+                    .flatMap(([key, d]) =>
                       (["baseline", "proposed"] as const).map((mode) => (
                         <tr key={key + mode}>
                           <th scope="row">{names[key] ?? key}</th>
                           <td>{mode === "proposed" ? "ATHN" : mode}</td>
-                          <td>{p[mode].n_eligible}</td>
-                          <td>{p[mode].unresolved}</td>
-                          {(["accept", "flag", "review"] as const).map((d) => (
-                            <td key={d}>{p[mode].decisions[d] ?? 0}</td>
-                          ))}
-                          <td>{show(p[mode].review_rate)}</td>
-                          <td>{show(p[mode].decision_coverage)}</td>
-                          <td>{show(p[mode].incorrect_acceptance_rate)}</td>
-                          <td>{show(p[mode].incorrect_rejection_rate)}</td>
-                          <td>{show(p[mode].explicit_mismatch_detection)}</td>
-                          <td>{show(p[mode].auto_accepted_matches)}</td>
+                          <td>{d.n_eligible}</td>
+                          <td>{show(d.cer[mode])}</td>
+                          <td>{show(d.wer[mode])}</td>
+                          <td>{show(d.exact[mode])}</td>
+                          <td>{show(d.exact_rate[mode])}</td>
+                          <td>{show(d.value_exact?.[mode])}</td>
+                          <td>{show(d.value_exact?.n)}</td>
+                          <td>{show(d.value_exact?.parseable?.[mode])}</td>
                         </tr>
                       )),
                     )}
                 </tbody>
               </table>
             </div>
-            {Object.entries(data.pairs)
-              .filter(([key]) => key.includes("SYNTHETIC") === synthetic)
-              .map(([key, p]) => (
-                <details className="response-detail" key={key}>
-                  <summary>{names[key] ?? key} — confusion & details</summary>
-                  <div className="confusion-grid">
-                    {(["baseline", "proposed"] as const).map((mode) => (
-                      <div key={mode}>
-                        <h4>{mode}</h4>
-                        <Confusion data={p[mode]} />
-                      </div>
-                    ))}
-                  </div>
-                  <pre>{formatJson(p)}</pre>
-                </details>
-              ))}
-          </div>
+            <details className="response-detail">
+              <summary>Reported changes and complete dataset metrics</summary>
+              <pre>
+                {formatJson(
+                  Object.fromEntries(
+                    Object.entries(data.datasets).filter(
+                      ([key]) => key.includes("SYNTHETIC") === synthetic,
+                    ),
+                  ),
+                )}
+              </pre>
+            </details>
+          </section>
         ))}
-      </section>
-      <section className="research-boundaries">
+        <section className="benchmark-group">
+          <h2>Pair decisions</h2>
+          <p className="result-help">
+            Genuine pair results use constructed pairs of genuine crops, not
+            real cheques. No real handwritten cheques were available.
+            Match/mismatch definitions follow the{" "}
+            <a
+              href={`https://github.com/Hasee10/CV_Proj/blob/${capture.manifest.source_git_commit}/artifacts/M8/FINAL_EVALUATION_REPORT.md`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              evaluation report
+            </a>
+            .
+          </p>
+          {[false, true].map((synthetic) => (
+            <div className="pair-group" key={String(synthetic)}>
+              <h3>
+                {synthetic
+                  ? "Synthetic pairs"
+                  : "Genuine handwriting · constructed pairs"}
+              </h3>
+              <div
+                className="results-table-wrap"
+                role="region"
+                aria-label={`${synthetic ? "Synthetic" : "Genuine"} pair decisions`}
+                tabIndex={0}
+              >
+                <table className="results-table">
+                  <thead>
+                    <tr>
+                      {[
+                        "Group",
+                        "Mode",
+                        "Eligible pairs",
+                        "Unresolved",
+                        "Accept",
+                        "Flag",
+                        "Review",
+                        "Review rate",
+                        "Decision coverage",
+                        "Incorrect acceptance",
+                        "Incorrect rejection",
+                        "Mismatch detection",
+                        "Auto-accepted matches",
+                      ].map((h) => (
+                        <th scope="col" key={h}>
+                          {h}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {Object.entries(data.pairs)
+                      .filter(
+                        ([key]) => key.includes("SYNTHETIC") === synthetic,
+                      )
+                      .flatMap(([key, p]) =>
+                        (["baseline", "proposed"] as const).map((mode) => (
+                          <tr key={key + mode}>
+                            <th scope="row">{names[key] ?? key}</th>
+                            <td>{mode === "proposed" ? "ATHN" : mode}</td>
+                            <td>{p[mode].n_eligible}</td>
+                            <td>{p[mode].unresolved}</td>
+                            {(["accept", "flag", "review"] as const).map(
+                              (d) => (
+                                <td key={d}>{p[mode].decisions[d] ?? 0}</td>
+                              ),
+                            )}
+                            <td>{show(p[mode].review_rate)}</td>
+                            <td>{show(p[mode].decision_coverage)}</td>
+                            <td>{show(p[mode].incorrect_acceptance_rate)}</td>
+                            <td>{show(p[mode].incorrect_rejection_rate)}</td>
+                            <td>{show(p[mode].explicit_mismatch_detection)}</td>
+                            <td>{show(p[mode].auto_accepted_matches)}</td>
+                          </tr>
+                        )),
+                      )}
+                  </tbody>
+                </table>
+              </div>
+              {Object.entries(data.pairs)
+                .filter(([key]) => key.includes("SYNTHETIC") === synthetic)
+                .map(([key, p]) => (
+                  <details className="response-detail" key={key}>
+                    <summary>{names[key] ?? key} — confusion & details</summary>
+                    <div className="confusion-grid">
+                      {(["baseline", "proposed"] as const).map((mode) => (
+                        <div key={mode}>
+                          <h4>{mode}</h4>
+                          <Confusion data={p[mode]} />
+                        </div>
+                      ))}
+                    </div>
+                    <pre>{formatJson(p)}</pre>
+                  </details>
+                ))}
+            </div>
+          ))}
+        </section>
+      </details>
+      <details className="research-boundaries additional-limits">
+        <summary>
+          Research context, historical latency &amp; source report
+        </summary>
         <h2>Read the limits alongside the numbers.</h2>
         <p>
           Decision counts include unresolved pairs; eligible-pair metrics and
@@ -319,7 +334,7 @@ export function Benchmark() {
             ))}
           </ul>
         )}
-      </section>
+      </details>
       <details className="response-detail">
         <summary>Frozen proposed configuration</summary>
         <pre>{formatJson(data.proposed_config)}</pre>

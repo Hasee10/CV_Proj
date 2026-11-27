@@ -5,6 +5,7 @@ import "./styles.css";
 import "./workspace.css";
 import "./results.css";
 import "./editorial.css";
+import "./workspace-polish.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />

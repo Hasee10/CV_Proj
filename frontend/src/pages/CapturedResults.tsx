@@ -9,6 +9,11 @@ import {
   CaptureProvenance,
   FieldResultCard,
 } from "../components/results/ResultDetails";
+import { EvidencePanel } from "../components/results/EvidencePanel";
+import {
+  RecognitionComparison,
+  RecognitionPipeline,
+} from "../components/results/RecognitionComparison";
 const decisionLabels = {
   accept: "Amounts agree",
   flag: "Amounts differ",
@@ -41,11 +46,6 @@ export function CapturedResults({
   const [busy, setBusy] = useState(false),
     [elapsed, setElapsed] = useState(0),
     [error, setError] = useState<ApiError | null>(null);
-  const [imageSize, setImageSize] = useState<{
-    id: string;
-    width: number;
-    height: number;
-  } | null>(null);
   const active = useRef<AbortController | null>(null),
     running = useRef(false),
     resultHeading = useRef<HTMLHeadingElement>(null),
@@ -153,8 +153,8 @@ export function CapturedResults({
         </h1>
         <p>
           {kind === "verification"
-            ? "Three constructed DEV examples, processed by the real model. Inspect the recognised text and the comparison."
-            : "Short DEV crops processed by the real model. Baseline and ATHN use the same synthetic numeric input."}
+            ? "Input evidence and recognised values, together. Three constructed DEV examples."
+            : "One input, two recognition methods. Inspect the actual model output."}
         </p>
       </header>
       <div className="capture-source-banner">
@@ -242,104 +242,88 @@ export function CapturedResults({
           <p>The saved result below is from the earlier capture.</p>
         </div>
       )}
-      <section className="captured-input">
-        <div className="input-caption">
-          <h2>Input evidence</h2>
-          <span>{record.description}</span>
-        </div>
-        <div className={`input-image ${kind}`}>
-          <img
-            src={record.image}
-            onLoad={(e) =>
-              setImageSize({
-                id: record.id,
-                width: e.currentTarget.naturalWidth,
-                height: e.currentTarget.naturalHeight,
-              })
-            }
-            alt={
-              kind === "verification"
-                ? "Constructed demo sheet with amount fields marked"
-                : "Original DEV field crop submitted to the recogniser"
-            }
+      <div className="inspection-workspace">
+        <div className="inspection-evidence">
+          <EvidencePanel
+            key={record.id}
+            record={record}
+            rois={verification?.rois}
           />
-          {verification?.rois &&
-            imageSize?.id === record.id &&
-            (["numeric", "written"] as const).map((field) => {
-              const box = verification.rois![`${field}_px`];
-              return (
-                <div
-                  key={field}
-                  className={`roi-overlay ${field}`}
-                  style={{
-                    left: `${(box[0] / imageSize.width) * 100}%`,
-                    top: `${(box[1] / imageSize.height) * 100}%`,
-                    width: `${((box[2] - box[0]) / imageSize.width) * 100}%`,
-                    height: `${((box[3] - box[1]) / imageSize.height) * 100}%`,
-                  }}
-                >
-                  <span>{field === "numeric" ? "Figures" : "Words"}</span>
+          {kind === "recognition" && <RecognitionPipeline />}
+        </div>
+        <section className="inspection-result polish-card" aria-live="polite">
+          {verification ? (
+            <>
+              <div className="panel-heading">
+                <h2>Comparison result</h2>
+                <span className="capture-chip">
+                  {isFresh ? "Fresh live" : "Saved capture"}
+                </span>
+              </div>
+              <div className={`decision-panel ${verification.decision}`}>
+                <div>
+                  {icon}
+                  <h2 ref={resultHeading} tabIndex={-1}>
+                    {decisionLabels[verification.decision]}
+                  </h2>
                 </div>
-              );
-            })}
-        </div>
-      </section>
-      {verification ? (
-        <>
-          <section
-            className={`decision-panel ${verification.decision}`}
-            aria-live="polite"
-          >
-            <div>
-              {icon}
-              <h2 ref={resultHeading} tabIndex={-1}>
-                {decisionLabels[verification.decision]}
+                <ul>
+                  {verification.reasons.map((reason) => (
+                    <li key={reason}>{reason}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="field-results-grid">
+                <FieldResultCard
+                  compact
+                  title="Amount in figures"
+                  result={verification.numeric}
+                />
+                <FieldResultCard
+                  compact
+                  title="Amount in words"
+                  result={verification.written}
+                />
+              </div>
+              <div className="inspection-facts">
+                <span>
+                  Total inference time{" "}
+                  <strong>
+                    {String(verification.total_latency_seconds)} s
+                  </strong>
+                </span>
+                <span>
+                  Mode <strong>{verification.mode}</strong>
+                </span>
+              </div>
+              <p className="authenticity-notice">{verification.notice}</p>
+            </>
+          ) : (
+            <>
+              <h2 className="sr-only" ref={resultHeading} tabIndex={-1}>
+                Recognition result
               </h2>
-            </div>
-            <p>{verification.notice}</p>
-            <ul>
-              {verification.reasons.map((reason) => (
-                <li key={reason}>{reason}</li>
-              ))}
-            </ul>
-            <p className="request-line">
-              Request {verification.request_id} · {verification.mode} · Total{" "}
-              {String(verification.total_latency_seconds)} s
+              <RecognitionComparison
+                capture={capture}
+                record={record}
+                current={result as FieldResult}
+                fresh={isFresh}
+              />
+            </>
+          )}
+          <details className="request-details">
+            <summary>Request details &amp; original JSON</summary>
+            <p>
+              Request{" "}
+              {verification?.request_id ?? (result as FieldResult).request_id}
             </p>
-          </section>
-          <div className="field-results-grid">
-            <FieldResultCard
-              title="Amount in figures"
-              result={verification.numeric}
-            />
-            <FieldResultCard
-              title="Amount in words"
-              result={verification.written}
-            />
-          </div>
-        </>
-      ) : (
-        <section aria-live="polite">
-          <h2
-            className="recognition-result-heading"
-            ref={resultHeading}
-            tabIndex={-1}
-          >
-            Recognised field
-          </h2>
-          <FieldResultCard
-            title={
-              (result as FieldResult).field_type === "numeric"
-                ? "Numeric amount"
-                : "Written amount"
-            }
-            result={result as FieldResult}
-          />
-          <p className="request-line">
-            Request {(result as FieldResult).request_id}
-          </p>
+            {verification?.rois && (
+              <pre>{JSON.stringify(verification.rois, null, 2)}</pre>
+            )}
+            <p>The saved JSON download retains the original disk capture.</p>
+          </details>
         </section>
-      )}
+      </div>
       {isFresh && (
         <p className="result-help">
           This fresh response is held in memory only. The original saved capture
@@ -347,10 +331,14 @@ export function CapturedResults({
           run.
         </p>
       )}
-      <p className="result-help">
-        Leaving this page stops waiting in the browser; an already-running model
-        call can continue on the server. No requests are retried automatically.
-      </p>
+      <details className="session-details">
+        <summary>Request behaviour</summary>
+        <p>
+          Leaving this page stops waiting in the browser; an already-running
+          model call can continue on the server. No requests are retried
+          automatically.
+        </p>
+      </details>
       <CaptureProvenance record={record} manifest={capture.manifest} />
     </div>
   );

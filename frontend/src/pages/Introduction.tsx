@@ -9,6 +9,7 @@ import {
 import { useSavedCapture } from "../hooks/useSavedCapture";
 const WaveGridScene = lazy(() => import("../components/visuals/WaveGridScene"));
 const ResearchBook = lazy(() => import("../components/visuals/ResearchBook"));
+const ClusterScene = lazy(() => import("../components/visuals/ClusterScene"));
 export function Introduction() {
   const navigate = useNavigate();
   const capture = useSavedCapture();
@@ -89,9 +90,31 @@ export function Introduction() {
             </a>
           </div>
           <p className="vision-fineprint">
-            Research prototype · LoGo-HTR + ATHN
+            LoGo-HTR recogniser <span>+</span> Adaptive text-height
+            normalisation
           </p>
         </div>
+        <aside className="hero-insight" aria-labelledby="cluster-title">
+          <div className="cluster-topline">
+            <span>THE ART OF LOOKING CLOSER</span>
+            <span>01 / 03</span>
+          </div>
+          <Suspense fallback={<div className="cluster-canvas" />}>
+            <ClusterScene />
+          </Suspense>
+          <div className="cluster-caption">
+            <p className="vision-kicker">MANY PARTS. ONE CLEARER PICTURE.</p>
+            <h2 id="cluster-title">Evidence, from every angle.</h2>
+            <p>
+              One image becomes a reading. Two readings become a comparison.
+              Every decision stays open to inspection.
+            </p>
+          </div>
+          <div className="cluster-controls">
+            <span>DRAG TO EXPLORE ↔</span>
+            <span>Interactive study · not model output</span>
+          </div>
+        </aside>
       </section>
       <WorkflowSection capture={capture} />
       <section
@@ -104,7 +127,7 @@ export function Introduction() {
           <p className="vision-kicker">THE FIELD REPORT</p>
           <h2 id="notes-title">A closer look at what the model sees.</h2>
           <p>
-            Six pages. Original inputs, real model outputs, and the research
+            Nine pages. Original inputs, real model outputs, and the research
             behind the comparison.
           </p>
 
@@ -133,32 +156,81 @@ export function Introduction() {
       </section>
       <EvidenceSection capture={capture} />
       <section className="landing-closing">
-        <p className="vision-kicker">EXPLORE THE WORKSPACE</p>
-        <h2>The image. The reading. The reason behind it.</h2>
-        <Link to="/verify" className="vision-primary">
-          Inspect a real result <span aria-hidden="true">↗</span>
-        </Link>
-        <p>
-          Compare recorded examples and rerun them through the model. Agreement
-          checks values; it does not establish cheque authenticity.
-        </p>
+        <div className="closing-copy">
+          <p className="vision-kicker">EXPLORE THE WORKSPACE</p>
+          <h2>
+            The image.
+            <br />
+            The reading.
+            <br />
+            <span>The reason behind it.</span>
+          </h2>
+          <p>
+            Follow a recorded example from its original pixels to the final
+            comparison. Inspect each field, compare both methods, or make a
+            fresh request.
+          </p>
+          <Link to="/verify" className="vision-primary">
+            Inspect a real result <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
+        <div className="closing-path">
+          <Link to="/verify">
+            <span>01 / INSPECT</span>
+            <h3>Keep the source in sight.</h3>
+            <p>Original image, selected fields, and the comparison decision.</p>
+            <b aria-hidden="true">↗</b>
+          </Link>
+          <Link to="/recognize">
+            <span>02 / COMPARE</span>
+            <h3>Understand the reading.</h3>
+            <p>Baseline and ATHN results from the same input.</p>
+            <b aria-hidden="true">↗</b>
+          </Link>
+          <Link to="/benchmarks">
+            <span>03 / QUESTION</span>
+            <h3>Read beyond the numbers.</h3>
+            <p>Frozen research results, with their limits alongside them.</p>
+            <b aria-hidden="true">↗</b>
+          </Link>
+          <p>
+            Agreement checks values. It does not establish cheque authenticity.
+          </p>
+        </div>
       </section>
       <footer className="vision-footer">
-        <Brand />
-        <span>Computer Vision · Fall 2026</span>
-        <button
-          onClick={() => {
-            navigate("/", { replace: true });
-            setEntered(false);
-            setBookVisible(false);
-            window.scrollTo(0, 0);
-          }}
-        >
-          Replay light introduction
-        </button>
-        <a href="/visual-credits.txt" target="_blank" rel="noreferrer">
-          Visual credits
-        </a>
+        <div className="footer-identity">
+          <Brand />
+          <p>A closer look at handwritten amounts.</p>
+          <span>Computer Vision · Fall 2026</span>
+        </div>
+        <div className="footer-navigation">
+          <p>THE APPLICATION</p>
+          <Link to="/verify">Verify a comparison ↗</Link>
+          <Link to="/recognize">Explore recognition ↗</Link>
+          <Link to="/benchmarks">Research evidence ↗</Link>
+        </div>
+        <div className="footer-navigation">
+          <p>THE EXPERIENCE</p>
+          <button
+            onClick={() => {
+              navigate("/", { replace: true });
+              setEntered(false);
+              setBookVisible(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Replay light introduction
+          </button>
+          <a href="/visual-credits.txt" target="_blank" rel="noreferrer">
+            Visual credits
+          </a>
+          <a href="#field-notes">Read the field report ↑</a>
+        </div>
+        <div className="footer-bottom">
+          <span>ChequeVerify / A computer vision research prototype</span>
+          <span>Evidence first. Human judgement always.</span>
+        </div>
       </footer>
     </main>
   );

@@ -8,7 +8,9 @@ The opening restores Cullen Webber's rigged hand and volumetric-light renderer, 
 - `public/brand/mark.svg` and `mark-flat.png`: canonical silhouette and reference. The new extruded floating geometry uses the same C/check silhouette with the reference ASCII material.
 - `public/light-study/arm_bones.glb`: the reference rigged hand, with its original animated finger/wrist skeleton.
 - `public/light-study/draco/`: local Three.js Draco decoders; source notices retained.
-- `public/field-report/1.png` through `6.png`: six 1200×1600 pages, 3:4 width/height ratio. A new cover, actual field crops, raw baseline output, same-input ATHN comparison, three recorded decisions and genuine/synthetic research figures.
+- `public/field-report/1.png` through `9.png`: nine 1200×1600 pages, 3:4 width/height ratio. Cover, actual field crops, raw baseline output, same-input ATHN comparison, three recorded decisions, genuine/synthetic research figures, a review failure, domain comparison and illustrated system context.
+- `public/field-report/review-path.svg`, `domain-map.svg`, `system-flow.svg`: original editable explanatory diagrams, linked directly from the associated pages.
+- `public/field-report/scan-concept.png`: generated 1536×1024 conceptual document-stack illustration used on page nine, explicitly labelled as artwork rather than model output.
 - `public/field-report/provenance.json`: capture run and response sources. All scientific content comes from `public/results/20261127T081154Z-cbb492/`.
 - `public/fonts/Manrope.ttf`: self-hosted variable Manrope font, distributed with its SIL Open Font License. Source: https://github.com/google/fonts/tree/main/ofl/manrope. No runtime font service.
 
@@ -22,9 +24,11 @@ From the repository root:
 .\.venv\Scripts\python.exe -X utf8 frontend/scripts/create-report.py
 ```
 
-Requires Pillow in the existing environment. It lays out actual stored input crops and values, creates the six PNGs, and generates `src/generated/report.ts` so the accessible transcript contains the same evidence. It makes no API requests and runs no inference. The LeafThrough page aspect is `1600 / 1200`; renderer DPR is capped at 2, with reduced grain, no show-through, and direct PNG links for close reading.
+Requires Pillow in the existing environment. It lays out actual stored input crops and values, creates nine PNGs and three SVG companions, and generates `src/generated/report.ts` so the accessible transcript contains the same evidence. It makes no API requests and runs no inference. The LeafThrough page aspect is `1600 / 1200`; renderer DPR is capped at 2, with reduced grain, no show-through, and direct PNG links for close reading.
 
 ## Generation prompts
+
+**New document-stack concept:** created with the built-in image generation tool, then copied to `public/field-report/scan-concept.png`. Prompt brief: an original premium editorial 3D illustration for ChequeVerify; three floating ivory paper sheets with abstract handwritten strokes, translucent teal and muted-violet scan windows, forest-green background and a restrained diagonal light beam; isometric depth, realistic paper, no UI or fabricated results. Landscape source, laid out proportionally on portrait report page nine. This is conceptual artwork; actual handwriting and response data on the other pages come from stored sources.
 
 The rendered logo and the now-retired still hand plate were produced using the built-in image generation tool. The current animated hand and beam are adapted from the attributed reference, not image generation. The mark's reference was the project-created `mark-flat.png`. The prompts were:
 
@@ -33,6 +37,8 @@ The rendered logo and the now-retired still hand plate were produced using the b
 **3D mark:** Create a beautifully finished 3D logo asset using the supplied flat mint emblem as the exact silhouette reference. Preserve both parts exactly: an angular open C bracket at left combined with a rising checkmark at right, including the open negative space, lengths and proportions. Do not add letters, circles, framing, text or extra symbols. Make this same mark a solid finely bevelled extruded object, deep polished forest-green metal with pale silver-green front faces and a restrained lavender reflected edge. Three-quarter front view with slight yaw so the right sidewalls and substantial depth are visible, the glyph still reads clearly. Premium industrial design product rendering, controlled softbox lighting, crisp clean edges, delicate specular highlights, believable ambient occlusion, no exaggerated reflections, no plastic, no decorative pedestal. Entire object centered and fully visible with generous empty margin. Genuinely transparent background, no background colour or scenery, no shadow plane. Square composition at high resolution, useful as a website brand asset and a publication cover illustration.
 
 ## Interaction and scope
+
+Latest refinement supersedes the bordered hero panel: a feathered translucent backdrop now softens tile seams without a visible card perimeter. A local interactive cubic sculpture occupies the right-hand study panel, with text and drag/keyboard controls. The nine-page report and workspace verification are documented in `F_POLISH_01.md`.
 
 The opening contains the real animated hand/beam scene and one arrow button, with an accessible Enter label. A translucent blurred surface now backs the hero copy so tile seams do not cross the lettering. The removed text includes the header wordmark, Skip caption, introductory headings, taglines, on-screen credit/status line, hero movement instruction and hero footer labels. Credits remain available in the landing footer. The book's long instruction sentence was removed; arrow controls, text version and page PNG access remain.
 

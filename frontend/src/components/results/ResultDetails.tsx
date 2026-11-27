@@ -7,10 +7,51 @@ import { formatJson } from "../../hooks/useSavedCapture";
 export function FieldResultCard({
   result,
   title,
+  compact = false,
 }: {
   result: FieldResult;
   title: string;
+  compact?: boolean;
 }) {
+  if (compact)
+    return (
+      <article className="field-result-card compact-result">
+        <div className="result-card-title">
+          <h3>{title}</h3>
+          <span className="parse-indicator">{result.parse_status}</span>
+        </div>
+        <p className="result-label">Parsed value</p>
+        <div className="compact-value">
+          {result.parsed_value ?? "Not parsed"}
+        </div>
+        <p className="result-label">Raw model text</p>
+        <pre className="compact-raw">{result.raw_text || "(empty output)"}</pre>
+        <p className="compact-timing">
+          Inference{" "}
+          <strong>{String(result.latency_seconds.inference)} s</strong> · Total{" "}
+          {String(result.latency_seconds.total)} s
+          <br />
+          Preprocessing {String(result.latency_seconds.preprocess)} s
+        </p>
+        <details className="response-detail">
+          <summary>Model details</summary>
+          <p>Mode: {result.mode}</p>
+          <p>
+            Model score (uncalibrated, not confidence):{" "}
+            {String(result.beam_log_probability)}
+          </p>
+          <p>Input shape: {JSON.stringify(result.model_input_shape)}</p>
+          <pre>
+            {formatJson({
+              preprocessing: result.preprocessing,
+              latency_seconds: result.latency_seconds,
+              image: result.image ?? null,
+              request_id: result.request_id ?? null,
+            })}
+          </pre>
+        </details>
+      </article>
+    );
   return (
     <article className="field-result-card">
       <div className="result-card-title">

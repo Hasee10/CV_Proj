@@ -7,12 +7,16 @@ The current local opening adapts the original rigged hand, finger/wrist animatio
 
 Hero: independent local Three.js implementation inspired by Wavy Cubes, Franky Hung / Arkon Digital.
 https://projects.arkon.digital/threejs/wavy-cubes/
-Full-surface instanced cube tiles, depth waves and lavender pointer highlighting. No upstream source or assets copied. Decorative illustration, not model output. Replaces the earlier spherical Codrops cluster.
+Full-surface instanced cube tiles, cursor-driven depth and lavender pointer highlighting. No upstream source or assets copied. Decorative illustration, not model output.
+
+Right-hand hero study: original local cubic sculpture inspired by Interactive 3D Cluster by Francesco Michelini / Codrops.
+https://tympanus.net/Tutorials/3DCluster/
+No reference source or assets copied. Pointer separation, drag rotation and keyboard controls. A visual metaphor, not model features or inference output.
 
 Field Notes: LeafThrough by dmtrbrl, MIT licence, package version 0.1.8.
 https://github.com/dmtrbrl/leafthrough
 https://dmtrbrl.github.io/leafthrough/
-Six 1200 x 1600 PNG report pages use actual saved DEV inputs/results and frozen research data. Page layout generator: frontend/scripts/create-report.py. The cover uses the original generated brand render. LeafThrough's licence is distributed with the installed dependency; see VISUAL_CREDITS.md for full notice.
+Nine 1200 x 1600 PNG report pages use actual saved DEV inputs/results and frozen research data. Three original SVG diagrams accompany the added pages. Page nine includes an original generated document-stack concept, explicitly labelled as artwork rather than model output. Page layout generator: frontend/scripts/create-report.py. The cover uses the original generated brand render. LeafThrough's licence is distributed with the installed dependency; see VISUAL_CREDITS.md for full notice.
 
 Implementation assisted by Codex. No claim of authorship of referenced works.
 

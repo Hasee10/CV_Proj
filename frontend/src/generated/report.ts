@@ -2,26 +2,47 @@
 export const reportNotes = [
   {
     "title": "Read beyond the handwriting.",
-    "text": "ChequeVerify reads handwritten amounts in figures and words, compares their parsed values, and keeps the original evidence visible. This report contains recorded development examples and saved research results."
+    "text": "ChequeVerify reads handwritten amounts in figures and words, compares their parsed values, and keeps the original evidence visible. This report contains recorded development examples and saved research results.",
+    "diagram": null
   },
   {
     "title": "One amount. Two ways to write it.",
-    "text": "The agreement example contains two genuine handwriting crops in a constructed DEV sheet. The raw numeric reading is 1 and the written reading is one. Both parse to 1.00. Input crops are magnified for publication; this is not a real cheque."
+    "text": "The agreement example contains two genuine handwriting crops in a constructed DEV sheet. The raw numeric reading is 1 and the written reading is one. Both parse to 1.00. Input crops are magnified for publication; this is not a real cheque.",
+    "diagram": null
   },
   {
     "title": "The image in. The raw answer out.",
-    "text": "LoGo-HTR uses its released frozen checkpoint on CPU. On this synthetic numeric DEV input, baseline returns the unedited raw text 3003, parsed as 3003.00. Request 9cdb5f378752."
+    "text": "LoGo-HTR uses its released frozen checkpoint on CPU. On this synthetic numeric DEV input, baseline returns the unedited raw text 3003, parsed as 3003.00. Request 9cdb5f378752.",
+    "diagram": null
   },
   {
     "title": "Same recogniser. A different scale.",
-    "text": "The same synthetic DEV input produces 3003 under baseline and 3083 under ATHN. Input height is 40 pixels; prepared height is 122 pixels. ATHN is a training-free preprocessing step selected on DEV and frozen before test evaluation. This example is not an overall accuracy claim."
+    "text": "The same synthetic DEV input produces 3003 under baseline and 3083 under ATHN. Input height is 40 pixels; prepared height is 122 pixels. ATHN is a training-free preprocessing step selected on DEV and frozen before test evaluation. This example is not an overall accuracy claim.",
+    "diagram": null
   },
   {
     "title": "Agreement, difference, or a closer review.",
-    "text": "Three recorded DEV examples: 1.00 and 1.00 agree; 25000.00 and 1.00 differ; 3003.00 and an unparseable written reading need human review. Agreement compares recognised values; it does not establish authenticity."
+    "text": "Three recorded DEV examples: 1.00 and 1.00 agree; 25000.00 and 1.00 differ; 3003.00 and an unparseable written reading need human review. Agreement compares recognised values; it does not establish authenticity.",
+    "diagram": null
   },
   {
     "title": "Read the results. Keep their context.",
-    "text": "Saved locked-test results: on 160 GNHK word crops, CER is 0.296 baseline and 0.2521 ATHN. The overall genuine-handwriting change was not statistically significant. Synthetic numeric exact parsed values are 0/77 baseline and 17/77 ATHN. Every synthetic pair went to review under both methods. No new evaluation was run."
+    "text": "Saved locked-test results: on 160 GNHK word crops, CER is 0.296 baseline and 0.2521 ATHN. The overall genuine-handwriting change was not statistically significant. Synthetic numeric exact parsed values are 0/77 baseline and 17/77 ATHN. Every synthetic pair went to review under both methods. No new evaluation was run.",
+    "diagram": null
+  },
+  {
+    "title": "A visible failure. An honest outcome.",
+    "text": "The recorded synthetic written field returns raw text mummisessing, a null parsed value, and human review. No numeric value is fabricated for an unparseable reading.",
+    "diagram": "/field-report/review-path.svg"
+  },
+  {
+    "title": "Handwritten evidence. Synthetic examples.",
+    "text": "Genuine and synthetic inputs are shown separately. The saved test includes 160 GNHK word crops, 210 CVL digit strings, 77 eligible synthetic numeric fields and 87 eligible synthetic written fields. The original source images above are recorded DEV examples, not test inference.",
+    "diagram": "/field-report/domain-map.svg"
+  },
+  {
+    "title": "From pixels to a decision.",
+    "text": "A conceptual illustration accompanies the explanatory browser, API, frozen recogniser and human-review workflow. The artwork is not inference output. Original inputs, model text and captured metadata remain inspectable.",
+    "diagram": "/field-report/system-flow.svg"
   }
 ];

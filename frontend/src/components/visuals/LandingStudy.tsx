@@ -62,23 +62,26 @@ export function WorkflowSection({ capture }: { capture: CaptureState }) {
         </ol>
         <figure className="landing-specimen">
           <figcaption>
-            <span>AN ACTUAL MODEL RESPONSE</span>
+            <span>01 / ORIGINAL → RECOGNISED</span>
             <span>ATHN / DEV</span>
           </figcaption>
           {record && result ? (
             <>
               <div className="specimen-image">
+                <span className="specimen-tag">
+                  SOURCE / SYNTHETIC NUMERIC CROP
+                </span>
                 <img
                   src={record.image}
                   alt="Original synthetic numeric development crop"
                 />
               </div>
               <div className="specimen-output">
-                <span>Raw recognised text</span>
+                <span>02 / Raw recognised text</span>
                 <strong>{result.raw_text}</strong>
               </div>
               <div className="specimen-parsed">
-                <span>Parsed value</span>
+                <span>03 / Parsed value</span>
                 <strong>{result.parsed_value ?? "Not parsed"}</strong>
               </div>
               <p>Synthetic input · recorded response · not an accuracy claim</p>
@@ -137,6 +140,24 @@ export function EvidenceSection({ capture }: { capture: CaptureState }) {
                 <strong>{genuine.cer.proposed}</strong>
               </div>
             </div>
+            <div
+              className="evidence-bars"
+              aria-label="Character error rate comparison, lower is better"
+            >
+              <div>
+                <span>Baseline</span>
+                <i style={{ width: `${genuine.cer.baseline * 100}%` }} />
+                <b>{(genuine.cer.baseline * 100).toFixed(2)}%</b>
+              </div>
+              <div>
+                <span>ATHN</span>
+                <i style={{ width: `${genuine.cer.proposed * 100}%` }} />
+                <b>{(genuine.cer.proposed * 100).toFixed(2)}%</b>
+              </div>
+              <small>
+                Character errors / reference characters · lower is better
+              </small>
+            </div>
             <p>
               One genuine subset. The overall genuine-handwriting change was not
               statistically significant.
@@ -163,6 +184,20 @@ export function EvidenceSection({ capture }: { capture: CaptureState }) {
                   <small> / {synthetic.value_exact?.n}</small>
                 </strong>
               </div>
+            </div>
+            <div
+              className="evidence-dots"
+              role="img"
+              aria-label={`${synthetic.value_exact?.proposed} of ${synthetic.value_exact?.n} synthetic numeric values parsed exactly with ATHN`}
+            >
+              {Array.from({ length: synthetic.value_exact?.n ?? 0 }, (_, i) => (
+                <i
+                  key={i}
+                  className={
+                    i < (synthetic.value_exact?.proposed ?? 0) ? "exact" : ""
+                  }
+                />
+              ))}
             </div>
             <p>
               Font-rendered fields. These results do not establish performance

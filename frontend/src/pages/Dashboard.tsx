@@ -1,311 +1,220 @@
 import { useOutletContext, Link } from "react-router-dom";
 import {
   RefreshCw,
-  Cpu,
-  Fingerprint,
-  CircleCheck,
-  CircleAlert,
-  CircleHelp,
   ScanLine,
   TextSearch,
   ChartNoAxesCombined,
-  BookOpen,
-  Layers,
+  Cpu,
+  ArrowUpRight,
 } from "lucide-react";
 import { API_BASE_URL } from "../api/client";
 import type { useModelStatus } from "../hooks/useModelStatus";
-import { useCaptureContext } from "../hooks/useSavedCapture";
+import type { BenchmarkResult } from "../api/results";
+import { formatJson, useCaptureContext } from "../hooks/useSavedCapture";
+import { ResearchHighlights } from "../components/research/BenchmarkVisuals";
 
 const labels = {
-  loading: "Checking system",
+  loading: "Checking model",
   ready: "Model ready",
   unavailable: "Model not loaded",
-  offline: "Backend unreachable",
-  error: "Unexpected API error",
+  offline: "Backend offline",
+  error: "Connection error",
 };
 const workspaces = [
   {
     to: "/verify",
     title: "Cheque verification",
-    description:
-      "Inspect three captured comparisons and rerun the original examples.",
-    milestone: "F2",
+    text: "Inspect two amount fields and their comparison.",
     icon: ScanLine,
+    action: "Open verification",
   },
   {
     to: "/recognize",
     title: "Amount recognition",
-    description:
-      "Inspect the handwriting in one field and the text produced by the model.",
-    milestone: "F3",
+    text: "Compare baseline and ATHN on the same input.",
     icon: TextSearch,
+    action: "Inspect recognition",
   },
   {
     to: "/benchmarks",
     title: "Research benchmarks",
-    description:
-      "Compare baseline and ATHN results across genuine and synthetic data.",
-    milestone: "F4",
+    text: "Explore the frozen results and their limits.",
     icon: ChartNoAxesCombined,
+    action: "Explore benchmarks",
   },
 ];
 export function Dashboard() {
-  const s = useOutletContext<ReturnType<typeof useModelStatus>>();
+  const system = useOutletContext<ReturnType<typeof useModelStatus>>();
   const capture = useCaptureContext();
-  const info = s.info;
-  const Icon =
-    s.readiness === "ready"
-      ? CircleCheck
-      : s.readiness === "loading"
-        ? CircleHelp
-        : CircleAlert;
+  const info = system.info;
+  const benchmark = capture.responses.benchmark as BenchmarkResult | undefined;
   return (
-    <div className="dashboard-redesign">
-      <div className="dashboard-heading">
+    <div className="dashboard-polish">
+      <header className="polish-page-heading">
         <div>
           <p className="eyebrow">CHEQUEVERIFY / RESEARCH WORKSPACE</p>
-          <h1>Your work, in focus.</h1>
-          <p>
-            Inspect handwriting, compare amounts, and understand the evidence
-            behind each result.
-          </p>
+          <h1>Cheque verification workspace</h1>
+          <p>Inspect handwriting, compare values, and explore the evidence.</p>
         </div>
-        <Link className="field-notes-shortcut" to="/">
-          <BookOpen size={20} aria-hidden="true" />
-          Project introduction
-        </Link>
-      </div>
-      {capture.manifest && (
-        <section className="saved-run-banner">
+        <span className={`readiness-pill ${system.readiness}`}>
+          {labels[system.readiness]}
+        </span>
+      </header>
+      <div className="dashboard-overview">
+        <section className="workspace-welcome polish-card">
           <div>
-            <span className="capture-chip">ACTUAL API RESULTS SAVED</span>
-            <h2>A real backend run, ready to inspect.</h2>
+            <p className="eyebrow">START AN INSPECTION</p>
+            <h2>
+              From handwriting
+              <br />
+              to an amount decision.
+            </h2>
             <p>
-              {capture.manifest.records.length} responses captured ·{" "}
-              {capture.manifest.captured_at} (UTC)
+              Open a recorded example, inspect both fields, and rerun it through
+              the real model.
             </p>
-            <p>
-              Constructed DEV demos and short field crops, plus the existing
-              saved research benchmark. No new accuracy evaluation.
-            </p>
+            <Link className="button primary" to="/verify">
+              Open verification <ArrowUpRight size={17} aria-hidden="true" />
+            </Link>
           </div>
-          <Link className="button primary" to="/verify">
-            Inspect captured results
-          </Link>
+          <figure className="concept-cheque">
+            <figcaption>Illustrative workflow</figcaption>
+            <svg
+              viewBox="0 0 240 175"
+              role="img"
+              aria-label="Explanatory cheque-field illustration: words and figures represent one amount"
+            >
+              <rect
+                x="1"
+                y="1"
+                width="238"
+                height="173"
+                rx="7"
+                fill="#fbfcf7"
+                stroke="#bacbb7"
+              />
+              <text x="16" y="25" className="concept-caption">
+                Amount in words
+              </text>
+              <rect
+                x="15"
+                y="34"
+                width="210"
+                height="48"
+                rx="4"
+                fill="white"
+                stroke="#72579c"
+                strokeDasharray="3 3"
+              />
+              <text x="28" y="65" className="concept-ink">
+                one
+              </text>
+              <text x="16" y="104" className="concept-caption">
+                Amount in figures
+              </text>
+              <rect
+                x="15"
+                y="112"
+                width="210"
+                height="48"
+                rx="4"
+                fill="white"
+                stroke="#28685c"
+                strokeDasharray="3 3"
+              />
+              <text x="28" y="145" className="concept-ink">
+                1.00
+              </text>
+            </svg>
+          </figure>
         </section>
-      )}
-      <section
-        className={`system-status ${s.readiness}`}
-        aria-label="System status"
-      >
-        <div role="status" aria-live="polite">
-          <Icon size={26} aria-hidden="true" />
-          <div>
-            <h2>{labels[s.readiness]}</h2>
-            <p>
-              {s.readiness === "ready"
-                ? "The backend is connected. LoGo-HTR is loaded for CPU inference."
-                : s.readiness === "loading"
-                  ? "Reading the backend health and model information."
-                  : s.readiness === "unavailable"
-                    ? "The backend is reachable. Recognition is unavailable until the model is loaded."
-                    : s.readiness === "offline"
-                      ? "Start the backend server, then check the connection again."
-                      : "The API returned an unexpected response. See the details below."}
-            </p>
+        <section className="polish-card engine-overview">
+          <div className="panel-heading">
+            <h2>Recognition engine</h2>
+            <Cpu size={20} aria-hidden="true" />
           </div>
-        </div>
-        <div className="status-actions">
-          <code>{API_BASE_URL}</code>
-          <button
-            className="button secondary"
-            disabled={s.loading}
-            onClick={() => void s.refresh()}
-          >
-            <RefreshCw
-              size={18}
-              className={s.loading ? "spin" : ""}
-              aria-hidden="true"
-            />
-            Check again
-          </button>
-        </div>
-      </section>
-      {s.errors.length > 0 && (
-        <div className="error-list" role="alert">
-          {s.errors.map((e, i) => (
-            <div key={i}>
-              <p>{e.message}</p>
-              <small>
-                {e.status && `HTTP ${e.status}`}
-                {e.code && ` · ${e.code}`}
-                {e.requestId && ` · Request ${e.requestId}`}
-              </small>
-            </div>
-          ))}
-        </div>
-      )}
-      <section className="workspace-tools" aria-labelledby="tools-title">
-        <div className="workspace-section-heading">
-          <h2 id="tools-title">Choose a workspace</h2>
-          <p>Actual saved responses and manual backend reruns</p>
-        </div>
-        <div className="tool-grid">
-          {workspaces.map(
-            ({ to, title, description, milestone, icon: ToolIcon }) => (
-              <Link className="workspace-tool" to={to} key={to}>
-                <div className="tool-top">
-                  <span className="tool-icon">
-                    <ToolIcon size={26} strokeWidth={1.5} aria-hidden="true" />
-                  </span>
-                  <span className="pending-tag">
-                    {capture.loading
-                      ? `Loading ${milestone}`
-                      : capture.manifest
-                        ? "Results available"
-                        : "Capture unavailable"}
-                  </span>
-                </div>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <span className="tool-footer">Open results workspace</span>
-              </Link>
-            ),
-          )}
-        </div>
-      </section>
-      <section
-        className="engine-section"
-        aria-label="Model and recognition methods"
-      >
-        <article className="engine-card">
-          <div className="engine-card-top">
-            <p className="eyebrow">THE RECOGNITION ENGINE</p>
-            <Cpu size={24} strokeWidth={1.5} aria-hidden="true" />
-          </div>
-          <h2>{info ? "LoGo-HTR" : "Model information"}</h2>
-          <p className="engine-description">
-            {info?.model ??
-              "Model information will appear when the API responds."}
-          </p>
-          <dl className="engine-metrics">
+          <strong className="engine-name">LoGo-HTR</strong>
+          <p>Official frozen checkpoint · CPU inference</p>
+          <dl className="engine-summary">
             <div>
               <dt>Parameters</dt>
               <dd>
                 {info?.parameter_count != null
                   ? info.parameter_count.toLocaleString("en-US")
-                  : "Not available"}
+                  : "Unavailable"}
               </dd>
             </div>
             <div>
-              <dt>Device</dt>
-              <dd>{info?.device ?? "Not available"}</dd>
-            </div>
-            <div>
-              <dt>Default mode</dt>
-              <dd>{info?.default_mode ?? "Not available"}</dd>
+              <dt>Methods</dt>
+              <dd>Baseline + ATHN</dd>
             </div>
           </dl>
-          <div className="engine-footnote">
-            <Fingerprint size={20} aria-hidden="true" />
-            <span>Frozen checkpoint · inference only</span>
+          <div className="engine-status">
+            <span className={`readiness-pill ${system.readiness}`}>
+              {labels[system.readiness]}
+            </span>
+            <button
+              className="button secondary"
+              disabled={system.loading}
+              onClick={() => void system.refresh()}
+            >
+              <RefreshCw size={15} aria-hidden="true" />
+              Check again
+            </button>
           </div>
-        </article>
-        <article className="method-card">
-          <div className="workspace-section-heading">
-            <h2>One model. Two methods.</h2>
-            <Layers size={22} strokeWidth={1.5} aria-hidden="true" />
-          </div>
-          <p className="method-intro">
-            The same recogniser, with a different preparation step.
-          </p>
-          <div className="method-option">
-            <div className="method-label">
-              <span>BASELINE</span>
-              {info?.default_mode === "baseline" && (
-                <span className="default-tag">Default</span>
-              )}
-            </div>
-            <h3>Original pipeline</h3>
-            <p>{info?.modes.baseline ?? "Awaiting model information."}</p>
-          </div>
-          <div className="method-option proposed-option">
-            <div className="method-label">
-              <span>PROPOSED / ATHN</span>
-              {info?.default_mode === "proposed" && (
-                <span className="default-tag">Default</span>
-              )}
-            </div>
-            <h3>Adaptive text-height normalisation</h3>
-            <p>
-              {info?.modes.proposed.method ?? "Awaiting model information."}
+          <details className="technical">
+            <summary>Model provenance &amp; limitations</summary>
+            <p>{API_BASE_URL}</p>
+            <pre>
+              {info
+                ? formatJson(info)
+                : "Live model information is unavailable. Saved results remain accessible."}
+            </pre>
+          </details>
+        </section>
+      </div>
+      {system.errors.length > 0 && (
+        <div className="error-list" role="alert">
+          {system.errors.map((e, i) => (
+            <p key={i}>
+              {e.message}
+              {e.code && ` · ${e.code}`}
+              {e.requestId && ` · ${e.requestId}`}
             </p>
-            {info && (
-              <div className="method-config">
-                <span>
-                  Config{" "}
-                  <strong>
-                    {info.modes.proposed.config?.id ?? "Not available"}
-                  </strong>
-                </span>
-                <span>
-                  Status{" "}
-                  <strong>
-                    {info.modes.proposed.status ?? "Not available"}
-                  </strong>
-                </span>
-              </div>
-            )}
-          </div>
-        </article>
-      </section>
-      <section className="research-boundaries">
-        <div className="workspace-section-heading">
-          <div>
-            <p className="eyebrow">READ BEFORE USING</p>
-            <h2>Keep the result in context.</h2>
-          </div>
-          <span className="review-label">Human review required</span>
+          ))}
         </div>
-        {info ? (
-          <ul>
-            {info.limitations.map((l) => (
-              <li key={l}>{l}</li>
-            ))}
-          </ul>
+      )}
+      <nav className="workspace-entry-grid" aria-label="Choose a workspace">
+        {workspaces.map(({ to, title, text, icon: Icon, action }) => (
+          <Link className="polish-card workspace-entry" key={to} to={to}>
+            <span className="entry-icon">
+              <Icon size={23} aria-hidden="true" />
+            </span>
+            <h2>{title}</h2>
+            <p>{text}</p>
+            <span className="entry-action">
+              {action}
+              <ArrowUpRight size={17} aria-hidden="true" />
+            </span>
+          </Link>
+        ))}
+      </nav>
+      <section className="dashboard-research">
+        <div className="panel-heading">
+          <h2>Evidence at a glance</h2>
+          <span>Frozen historical research</span>
+        </div>
+        {benchmark ? (
+          <ResearchHighlights data={benchmark} />
         ) : (
-          <p>
-            Model limitations have not been retrieved. Check the connection
-            before using recognition.
-          </p>
+          <p role="status">{capture.error ?? "Loading recorded research…"}</p>
         )}
       </section>
-      {info && (
-        <details className="technical">
-          <summary>
-            <span>Model provenance & pipeline</span>
-            <span className="technical-hint">
-              Checkpoint, dictionary and decoding
-            </span>
-          </summary>
-          <dl>
-            <dt>Checkpoint SHA-256</dt>
-            <dd>
-              <code>{info.checkpoint_sha256}</code>
-            </dd>
-            <dt>Upstream commit</dt>
-            <dd>
-              <code>{info.upstream_commit}</code>
-            </dd>
-            <dt>Dictionary</dt>
-            <dd>{info.dictionary}</dd>
-            <dt>Preprocessing</dt>
-            <dd>{info.preprocessing}</dd>
-            <dt>Decoding</dt>
-            <dd>{info.decoding}</dd>
-          </dl>
-        </details>
-      )}
+      <p className="dashboard-context">
+        Recognition compares values; it does not establish cheque authenticity.
+        No real handwritten cheques were evaluated. Saved examples remain
+        available when the backend is offline.
+      </p>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function ResearchBook() {
   return (
     <>
       <div className="book-topline">
-        <span>CHEQUEVERIFY / SIX PAGES OF EVIDENCE</span>
+        <span>CHEQUEVERIFY / NINE PAGES OF EVIDENCE</span>
         <button onClick={() => setPlain(!plain)}>
           {plain ? "Return to 3D" : "Read without 3D"}
         </button>
@@ -70,6 +70,19 @@ export default function ResearchBook() {
         <a href={pages[page].src} target="_blank" rel="noreferrer">
           View page PNG ↗
         </a>
+        {notes.slice(page, last + 1).map(
+          (note, i) =>
+            note.diagram && (
+              <a
+                key={note.diagram}
+                href={note.diagram}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Page {page + i + 1} SVG ↗
+              </a>
+            ),
+        )}
       </div>
       {error && (
         <p role="status">
@@ -87,6 +100,11 @@ export default function ResearchBook() {
           <article key={note.title}>
             <h3>{note.title}</h3>
             <p>{note.text}</p>
+            {note.diagram && (
+              <a href={note.diagram} target="_blank" rel="noreferrer">
+                Open the explanatory SVG ↗
+              </a>
+            )}
           </article>
         ))}
       </details>

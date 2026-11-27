@@ -41,3 +41,9 @@ Full source/asset attribution: VISUAL_CREDITS.md and public/leafthrough-license.
 The spherical cluster described above has now been replaced by a full-hero tiled wave surface referencing https://projects.arkon.digital/threejs/wavy-cubes/. Independent local instanced Three.js cubes, thin seams, gentle height/tilt waves, and a lavender pointer highlight. Pale surface and dark typography extend across the entire hero; no separate right-hand object remains.
 
 Type-check/build PASS (10.23s); existing unit tests 16/16 PASS; all 1174 frozen hashes match. Browser inspected at 1440x900 and 390x844; pointer response exercised, no console errors/warnings. Mobile document width does not exceed its viewport. Latest screenshots: C:/Users/Administrator/.codex/visualizations/2026/11/27/chequeverify-wave-hero/desktop.jpg and mobile.jpg. No new automated visual tests or GPU benchmark. Credits and current design direction updated. Entry light experience and LeafThrough reader retain their existing implementations.
+
+### Raised tile refinement
+
+Owner requested more visible 3D depth. Flat boxes replaced with bevelled RoundedBoxGeometry, thicker sidewalls, a slightly elevated viewing angle, stronger height variation and real 1024px soft directional shadow maps. Instanced tiles cast/receive shadows over a recessed backing plane. Brighter fill and a quiet wash behind copy preserve readability; pointer coordinates now raycast to the tilted view. Existing 30fps/DPR caps, hidden/offscreen pause and reduced-motion handling remain.
+
+Strict type-check/build passed. Manually reviewed at 1440x900 and 390x844; no console errors/warnings and no mobile horizontal overflow. Screenshots: C:/Users/Administrator/.codex/visualizations/2026/11/27/chequeverify-raised-tiles/desktop.jpg and mobile.jpg. No new unit tests for this visual-only refinement and no measured GPU benchmark. All 1174 frozen files match.

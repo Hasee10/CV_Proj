@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
 
 // Original instanced geometry and interaction, visually referencing Franky
 // Hung / Arkon Digital's Wavy Cubes. No reference source or assets copied.
@@ -19,24 +20,44 @@ export default function WaveGridScene() {
       return;
     }
     renderer.setPixelRatio(Math.min(devicePixelRatio, 1.25));
-    renderer.setClearColor("#c7cdca");
+    renderer.setClearColor("#ccd1ce");
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.3;
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     el.appendChild(renderer.domElement);
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-10, 10, 5, -5, 0.1, 100);
-    camera.position.set(0, 0, 18);
-    const geometry = new THREE.BoxGeometry(0.994, 0.994, 0.65);
+    camera.position.set(0, -3.5, 18);
+    camera.lookAt(0, 0, 0);
+    const geometry = new RoundedBoxGeometry(0.965, 0.965, 0.88, 2, 0.03);
     const material = new THREE.MeshStandardMaterial({
       color: "#ffffff",
-      metalness: 0.12,
-      roughness: 0.34,
+      metalness: 0.06,
+      roughness: 0.4,
     });
-    scene.add(new THREE.HemisphereLight("#ffffff", "#bcc0c4", 2.1));
-    const key = new THREE.DirectionalLight("#ffffff", 2.5);
-    key.position.set(-4, 7, 12);
+    scene.add(new THREE.HemisphereLight("#ffffff", "#b7c1bb", 1.8));
+    const key = new THREE.DirectionalLight("#fff9ef", 3);
+    key.position.set(-6, 8, 9);
+    key.castShadow = true;
+    key.shadow.mapSize.set(1024, 1024);
+    key.shadow.bias = -0.00015;
+    key.shadow.normalBias = 0.025;
+    key.shadow.camera.near = 0.5;
+    key.shadow.camera.far = 60;
     scene.add(key);
-    const rim = new THREE.DirectionalLight("#d8deeb", 1.1);
+    const rim = new THREE.DirectionalLight("#d8deeb", 0.45);
     rim.position.set(5, -3, 7);
     scene.add(rim);
+    const backingGeometry = new THREE.PlaneGeometry(1, 1);
+    const backingMaterial = new THREE.MeshStandardMaterial({
+      color: "#adb8b1",
+      roughness: 1,
+    });
+    const backing = new THREE.Mesh(backingGeometry, backingMaterial);
+    backing.position.z = -1.3;
+    backing.receiveShadow = true;
+    scene.add(backing);
     let mesh: THREE.InstancedMesh | undefined;
     let columns = 0,
       rows = 0,
@@ -49,16 +70,23 @@ export default function WaveGridScene() {
     const reduced = matchMedia("(prefers-reduced-motion: reduce)");
     const pointer = new THREE.Vector2(1000, 1000),
       smoothPointer = pointer.clone();
+    const raycaster = new THREE.Raycaster();
+    const pointerNdc = new THREE.Vector2();
+    const surface = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
+    const intersection = new THREE.Vector3();
     const object = new THREE.Object3D(),
       color = new THREE.Color();
     const neutral = new THREE.Color("#e4e7e4"),
       lavender = new THREE.Color("#b7b8dd");
     function move(e: PointerEvent) {
       const rect = el.getBoundingClientRect();
-      pointer.set(
-        ((e.clientX - rect.left) / rect.width - 0.5) * worldWidth,
-        (0.5 - (e.clientY - rect.top) / rect.height) * worldHeight,
+      pointerNdc.set(
+        ((e.clientX - rect.left) / rect.width) * 2 - 1,
+        1 - ((e.clientY - rect.top) / rect.height) * 2,
       );
+      raycaster.setFromCamera(pointerNdc, camera);
+      if (raycaster.ray.intersectPlane(surface, intersection))
+        pointer.set(intersection.x, intersection.y);
       if (smoothPointer.x > 100) smoothPointer.copy(pointer);
       if (reduced.matches) restart();
     }
@@ -90,12 +118,12 @@ export default function WaveGridScene() {
               0.12,
               0.6,
             );
-            const amplitude = 0.16 + 0.26 * quietLeft;
-            object.position.set(x, y, wave * amplitude + hover * 0.55);
+            const amplitude = 0.18 + 0.5 * quietLeft;
+            object.position.set(x, y, wave * amplitude + hover * 0.8);
             object.rotation.set(
-              Math.sin(y * 0.43 - time * 0.8) * 0.045 * quietLeft +
-                hover * 0.06,
-              Math.cos(x * 0.49 + time) * 0.065 * quietLeft - hover * 0.04,
+              Math.sin(y * 0.43 - time * 0.8) * 0.085 * quietLeft +
+                hover * 0.09,
+              Math.cos(x * 0.49 + time) * 0.1 * quietLeft - hover * 0.065,
               0,
             );
             object.updateMatrix();
@@ -130,6 +158,8 @@ export default function WaveGridScene() {
       }
       mesh = new THREE.InstancedMesh(geometry, material, columns * rows);
       mesh.frustumCulled = false;
+      mesh.castShadow = true;
+      mesh.receiveShadow = true;
       mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
       scene.add(mesh);
       camera.left = -worldWidth / 2;
@@ -137,6 +167,15 @@ export default function WaveGridScene() {
       camera.top = worldHeight / 2;
       camera.bottom = -worldHeight / 2;
       camera.updateProjectionMatrix();
+      backing.scale.set(worldWidth + 8, worldHeight + 8, 1);
+      const shadowExtent = Math.max(worldWidth, worldHeight) * 0.75 + 3;
+      Object.assign(key.shadow.camera, {
+        left: -shadowExtent,
+        right: shadowExtent,
+        top: shadowExtent,
+        bottom: -shadowExtent,
+      });
+      key.shadow.camera.updateProjectionMatrix();
       renderer.setSize(w, h);
       restart();
     }
@@ -164,6 +203,8 @@ export default function WaveGridScene() {
       mesh?.dispose();
       geometry.dispose();
       material.dispose();
+      backingGeometry.dispose();
+      backingMaterial.dispose();
       renderer.dispose();
       renderer.domElement.remove();
     };
@@ -173,7 +214,7 @@ export default function WaveGridScene() {
       ref={host}
       className="wave-grid-stage"
       role="img"
-      aria-label="A full-width pale tiled surface with gently undulating cubes and a lavender highlight that follows the pointer. Decorative illustration, not model output."
+      aria-label="Raised pale tiles with bevelled edges, visible sidewalls, soft cast shadows and a lavender pointer ripple. Decorative illustration, not model output."
     />
   );
 }

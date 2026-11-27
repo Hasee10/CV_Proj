@@ -11,3 +11,5 @@ Palette: pale tiled hero, deep green text and lavender interaction; paper #e6e8d
 Runtime: first Entry only; then Wave Grid; LeafThrough loads as the field-notes section approaches the viewport. No new backend endpoints or changes to research or data. Verification/recognition/benchmark routes remain pending their existing milestones.
 
 Credits: public/visual-credits.txt and public/leafthrough-license.txt. Booklet artwork source: scripts/create-fieldnotes.py.
+
+Tile depth refinement: bevelled raised blocks, visible sidewalls, soft directional cast shadows, recessed backing and stronger relief. A gentle wash behind the copy keeps the 3D surface from competing with text. Geometry remains instanced and rendering remains capped.

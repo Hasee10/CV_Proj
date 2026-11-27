@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { API_BASE_URL } from "../api/client";
 import type { useModelStatus } from "../hooks/useModelStatus";
+import { useCaptureContext } from "../hooks/useSavedCapture";
 
 const labels = {
   loading: "Checking system",
@@ -27,7 +28,7 @@ const workspaces = [
     to: "/verify",
     title: "Cheque verification",
     description:
-      "Select the amount in figures and words, then compare the recognised values.",
+      "Inspect three captured comparisons and rerun the original examples.",
     milestone: "F2",
     icon: ScanLine,
   },
@@ -50,6 +51,7 @@ const workspaces = [
 ];
 export function Dashboard() {
   const s = useOutletContext<ReturnType<typeof useModelStatus>>();
+  const capture = useCaptureContext();
   const info = s.info;
   const Icon =
     s.readiness === "ready"
@@ -73,6 +75,25 @@ export function Dashboard() {
           Project introduction
         </Link>
       </div>
+      {capture.manifest && (
+        <section className="saved-run-banner">
+          <div>
+            <span className="capture-chip">ACTUAL API RESULTS SAVED</span>
+            <h2>A real backend run, ready to inspect.</h2>
+            <p>
+              {capture.manifest.records.length} responses captured ·{" "}
+              {capture.manifest.captured_at} (UTC)
+            </p>
+            <p>
+              Constructed DEV demos and short field crops, plus the existing
+              saved research benchmark. No new accuracy evaluation.
+            </p>
+          </div>
+          <Link className="button primary" to="/verify">
+            Inspect captured results
+          </Link>
+        </section>
+      )}
       <section
         className={`system-status ${s.readiness}`}
         aria-label="System status"
@@ -127,7 +148,7 @@ export function Dashboard() {
       <section className="workspace-tools" aria-labelledby="tools-title">
         <div className="workspace-section-heading">
           <h2 id="tools-title">Choose a workspace</h2>
-          <p>Available in the next implementation stages</p>
+          <p>Actual saved responses and manual backend reruns</p>
         </div>
         <div className="tool-grid">
           {workspaces.map(
@@ -137,11 +158,17 @@ export function Dashboard() {
                   <span className="tool-icon">
                     <ToolIcon size={26} strokeWidth={1.5} aria-hidden="true" />
                   </span>
-                  <span className="pending-tag">Pending {milestone}</span>
+                  <span className="pending-tag">
+                    {capture.loading
+                      ? `Loading ${milestone}`
+                      : capture.manifest
+                        ? "Results available"
+                        : "Capture unavailable"}
+                  </span>
                 </div>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <span className="tool-footer">View workspace details</span>
+                <span className="tool-footer">Open results workspace</span>
               </Link>
             ),
           )}

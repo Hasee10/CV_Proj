@@ -28,7 +28,7 @@ export default function WaveGridScene() {
     el.appendChild(renderer.domElement);
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-10, 10, 5, -5, 0.1, 100);
-    camera.position.set(0, 0, 18);
+    camera.position.set(0, -2.2, 18);
     camera.lookAt(0, 0, 0);
     const geometry = new RoundedBoxGeometry(0.965, 0.965, 0.88, 2, 0.03);
     const material = new THREE.MeshStandardMaterial({
@@ -40,7 +40,7 @@ export default function WaveGridScene() {
     const key = new THREE.DirectionalLight("#fff9ef", 3);
     key.position.set(-6, 8, 9);
     key.castShadow = true;
-    key.shadow.mapSize.set(1024, 1024);
+    key.shadow.mapSize.set(2048, 2048);
     key.shadow.bias = -0.00015;
     key.shadow.normalBias = 0.025;
     key.shadow.camera.near = 0.5;
@@ -67,7 +67,7 @@ export default function WaveGridScene() {
       disposed = false,
       frame = 0,
       last = -100;
-    let lastMovement = -1000,
+    let hovering = false,
       strength = 0;
     const reduced = matchMedia("(prefers-reduced-motion: reduce)");
     const pointer = new THREE.Vector2(1000, 1000),
@@ -79,7 +79,7 @@ export default function WaveGridScene() {
     const object = new THREE.Object3D(),
       color = new THREE.Color();
     const neutral = new THREE.Color("#e4e7e4"),
-      lavender = new THREE.Color("#b7b8dd");
+      lavender = new THREE.Color("#927ccf");
     function move(e: PointerEvent) {
       const rect = el.getBoundingClientRect();
       pointerNdc.set(
@@ -90,25 +90,30 @@ export default function WaveGridScene() {
       if (raycaster.ray.intersectPlane(surface, intersection))
         pointer.set(intersection.x, intersection.y);
       if (smoothPointer.x > 100) smoothPointer.copy(pointer);
-      lastMovement = performance.now();
+      hovering = true;
       restart();
     }
     function leave() {
-      lastMovement = -1000;
+      hovering = false;
       restart();
     }
     function render(t: number) {
       if (disposed) return;
       let rendered = false;
+      let needsMore = false;
       if (mesh && visible && !document.hidden && t - last >= 33) {
         last = t;
-        const moving = t - lastMovement < 140;
+        const goal = hovering ? 1 : 0;
         strength = reduced.matches
-          ? 0
-          : THREE.MathUtils.lerp(strength, moving ? 1 : 0, 0.18);
-        if (!moving && strength < 0.002) strength = 0;
+          ? goal
+          : THREE.MathUtils.lerp(strength, goal, 0.2);
+        if (Math.abs(strength - goal) < 0.002) strength = goal;
         if (pointer.x > 100) smoothPointer.copy(pointer);
-        else smoothPointer.lerp(pointer, 0.12);
+        else if (reduced.matches) smoothPointer.copy(pointer);
+        else smoothPointer.lerp(pointer, 0.2);
+        needsMore =
+          Math.abs(strength - goal) > 0.002 ||
+          smoothPointer.distanceTo(pointer) > 0.002;
         let index = 0;
         for (let row = 0; row < rows; row++)
           for (let col = 0; col < columns; col++) {
@@ -118,22 +123,13 @@ export default function WaveGridScene() {
               x - smoothPointer.x,
               y - smoothPointer.y,
             );
-            const hover = Math.exp((-distance * distance) / 3.1) * strength;
-            const quietLeft = THREE.MathUtils.smoothstep(
-              x / worldWidth + 0.5,
-              0.12,
-              0.6,
-            );
-            object.position.set(x, y, hover * (0.65 + 0.4 * quietLeft));
-            object.scale.setScalar(1.025 - hover * 0.025);
-            object.rotation.set(
-              hover * Math.tanh(y - smoothPointer.y) * 0.13,
-              -hover * Math.tanh(x - smoothPointer.x) * 0.13,
-              0,
-            );
+            const hover = Math.exp((-distance * distance) / 2.8) * strength;
+            object.position.set(x, y, reduced.matches ? 0 : hover * 0.62);
+            object.scale.setScalar(1.02);
+            object.rotation.set(0, 0, 0);
             object.updateMatrix();
             mesh.setMatrixAt(index, object.matrix);
-            color.copy(neutral).lerp(lavender, hover * 0.7);
+            color.copy(neutral).lerp(lavender, strength * 0.1 + hover * 0.88);
             mesh.setColorAt(index, color);
             index++;
           }
@@ -145,8 +141,7 @@ export default function WaveGridScene() {
       if (
         visible &&
         !document.hidden &&
-        (!rendered ||
-          (!reduced.matches && (strength > 0 || t - lastMovement < 140)))
+        (!rendered || (!reduced.matches && needsMore))
       )
         frame = requestAnimationFrame(render);
     }
@@ -225,7 +220,7 @@ export default function WaveGridScene() {
       ref={host}
       className="wave-grid-stage"
       role="img"
-      aria-label="Pale tiles that rise locally while the pointer moves, then settle flat when movement stops. Decorative illustration, not model output."
+      aria-label="Aligned pale tiles that rise and turn violet under the pointer, with a subtle background colour response. They return flat when the pointer leaves. Decorative illustration, not model output."
     />
   );
 }

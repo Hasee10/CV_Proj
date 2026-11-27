@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout";
 import { Dashboard } from "./pages/Dashboard";
 import { Introduction } from "./pages/Introduction";
-import { PendingPage } from "./pages/PendingPage";
+import { CapturedResults } from "./pages/CapturedResults";
+import { Benchmark } from "./pages/Benchmark";
 export default function App() {
   return (
     <BrowserRouter>
@@ -12,34 +13,13 @@ export default function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route
             path="/verify"
-            element={
-              <PendingPage
-                title="Cheque verification"
-                milestone="F2"
-                description="Upload a cheque image and mark its numeric and written amount fields, or provide two separate crops."
-              />
-            }
+            element={<CapturedResults key="verification" kind="verification" />}
           />
           <Route
             path="/recognize"
-            element={
-              <PendingPage
-                title="Amount recognition"
-                milestone="F3"
-                description="Recognise one numeric or written amount field and inspect the unchanged model output."
-              />
-            }
+            element={<CapturedResults key="recognition" kind="recognition" />}
           />
-          <Route
-            path="/benchmarks"
-            element={
-              <PendingPage
-                title="Research benchmarks"
-                milestone="F4"
-                description="Explore the saved baseline and ATHN evaluation, with genuine handwriting and synthetic data presented separately."
-              />
-            }
-          />
+          <Route path="/benchmarks" element={<Benchmark />} />
           <Route
             path="*"
             element={

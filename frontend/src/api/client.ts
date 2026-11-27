@@ -1,4 +1,5 @@
 import type { BackendError, Health, ModelInfo } from "./types";
+import { isBenchmarkResult, isFieldResult, isVerifyResult } from "./results";
 
 export const API_BASE_URL = (
   import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000"
@@ -83,10 +84,12 @@ export function createApiClient(
     validate: (v: unknown) => v is T,
     signal?: AbortSignal,
     health = false,
+    init: RequestInit = {},
   ): Promise<T> {
     let response: Response;
     try {
       response = await fetcher(`${baseUrl.replace(/\/+$/, "")}${path}`, {
+        ...init,
         signal,
         headers: { Accept: "application/json" },
       });
@@ -144,6 +147,18 @@ export function createApiClient(
     health: (signal?: AbortSignal) => get("/health", isHealth, signal, true),
     modelInfo: (signal?: AbortSignal) =>
       get("/api/model-info", isModelInfo, signal),
+    benchmark: (signal?: AbortSignal) =>
+      get("/api/benchmark", isBenchmarkResult, signal),
+    verify: (body: FormData, signal?: AbortSignal) =>
+      get("/api/verify", isVerifyResult, signal, false, {
+        method: "POST",
+        body,
+      }),
+    recognize: (body: FormData, signal?: AbortSignal) =>
+      get("/api/recognize", isFieldResult, signal, false, {
+        method: "POST",
+        body,
+      }),
   };
 }
 export const api = createApiClient();

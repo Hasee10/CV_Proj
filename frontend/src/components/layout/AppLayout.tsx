@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Brand } from "../ui/Brand";
 import { useModelStatus } from "../../hooks/useModelStatus";
+import { useSavedCapture } from "../../hooks/useSavedCapture";
 export const navigation = [
   { to: "/dashboard", label: "Dashboard", icon: Activity },
   { to: "/verify", label: "Cheque verification", icon: Scan },
@@ -28,6 +29,7 @@ export function AppLayout() {
   const heading = useRef<HTMLDivElement>(null);
   const first = useRef(true);
   const status = useModelStatus();
+  const capture = useSavedCapture();
   useEffect(() => {
     setOpen(false);
     if (!first.current) heading.current?.focus({ preventScroll: true });
@@ -113,7 +115,7 @@ export function AppLayout() {
         </nav>
         <main id="main-content" className="workspace-content">
           <div tabIndex={-1} ref={heading} className="route-focus">
-            <Outlet context={status} />
+            <Outlet context={{ ...status, capture }} />
           </div>
         </main>
         <footer className="workspace-footer">

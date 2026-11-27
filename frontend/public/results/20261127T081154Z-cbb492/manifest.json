@@ -1,0 +1,196 @@
+{
+  "run_id": "20261127T081154Z-cbb492",
+  "captured_at": "2026-11-27T08:12:01.106589+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "source_git_commit": "849fed8db623d883bf067ecc16b574d6441b0880",
+  "checkpoint_sha256": "25db3a51f70a08cd5cbbf88409470bc4b37821aff95bc5ee6ab89e1e4298c432",
+  "upstream_commit": "9eaea5fe",
+  "notice": "Constructed DEV demonstration captures, not a new accuracy evaluation. Only the benchmark endpoint contains the previously saved locked-test results.",
+  "records": [
+    {
+      "id": "health",
+      "endpoint": "/health",
+      "method": "GET",
+      "captured_at": "2026-11-27T08:11:54.960202+00:00",
+      "http_status": 200,
+      "request_id": "ac15f56653d5",
+      "response": "/results/20261127T081154Z-cbb492/health.json",
+      "response_sha256": "9e3dd78523e05051aefd7c4e61d127f8df6cb2cf48c36b1c0ae924e222732dc8"
+    },
+    {
+      "id": "model-info",
+      "endpoint": "/api/model-info",
+      "method": "GET",
+      "captured_at": "2026-11-27T08:11:54.981203+00:00",
+      "http_status": 200,
+      "request_id": "edbca8bbe860",
+      "response": "/results/20261127T081154Z-cbb492/model-info.json",
+      "response_sha256": "f20f51240c19c9cade8dfbd987022a8b8df48ed2635060b0042370f976ab29bf"
+    },
+    {
+      "id": "benchmark",
+      "endpoint": "/api/benchmark",
+      "method": "GET",
+      "captured_at": "2026-11-27T08:11:54.985201+00:00",
+      "http_status": 200,
+      "request_id": "19a3b5fcaead",
+      "response": "/results/20261127T081154Z-cbb492/benchmark.json",
+      "response_sha256": "646e1ad78aa908825edfc2878316e9b5d019e7abd9ffdeb824fa785157a007fb",
+      "kind": "saved_research",
+      "note": "Existing locked-test metrics read through the API; no evaluation rerun."
+    },
+    {
+      "id": "sheet_accept",
+      "endpoint": "/api/verify",
+      "method": "POST",
+      "captured_at": "2026-11-27T08:11:54.995203+00:00",
+      "http_status": 200,
+      "request_id": "bc6d29ae3cb3",
+      "response": "/results/20261127T081154Z-cbb492/sheet_accept.json",
+      "response_sha256": "a48e7ab57273744eb638357f8a56fa43efc628ab8636472bdc3a383f165da3b2",
+      "image": "/results/20261127T081154Z-cbb492/sheet_accept.png",
+      "source_path": "data/demo/sheet_accept.png",
+      "image_sha256": "321f8e7f6a0f5222673e2ede07d78044706c994ae972fea7650335acf3eecd9e",
+      "fields": {
+        "mode": "baseline",
+        "numeric_roi": "[0.938889, 0.152672, 0.955556, 0.251908]",
+        "written_roi": "[0.044444, 0.40458, 0.301111, 0.694656]"
+      },
+      "kind": "verification",
+      "description": "genuine handwriting, constructed pair (two GNHK pages): 1 / one",
+      "split": "dev",
+      "constructed": true,
+      "synthetic": false,
+      "licences": [
+        "GNHK, CC-BY-4.0",
+        "GNHK, CC-BY-4.0"
+      ]
+    },
+    {
+      "id": "sheet_flag",
+      "endpoint": "/api/verify",
+      "method": "POST",
+      "captured_at": "2026-11-27T08:11:55.708128+00:00",
+      "http_status": 200,
+      "request_id": "fdf912452da1",
+      "response": "/results/20261127T081154Z-cbb492/sheet_flag.json",
+      "response_sha256": "971295fce7803bb6ef77489172c0a2c4dcbba97052d1bb846b7ae6dfc2320bbf",
+      "image": "/results/20261127T081154Z-cbb492/sheet_flag.png",
+      "source_path": "data/demo/sheet_flag.png",
+      "image_sha256": "2574c1f63da021a77f8c3263bb11a1c22fee6f70df7f13b3bef351da2a12584a",
+      "fields": {
+        "mode": "baseline",
+        "numeric_roi": "[0.727778, 0.137457, 0.955556, 0.32646]",
+        "written_roi": "[0.044444, 0.463918, 0.301111, 0.725086]"
+      },
+      "kind": "verification",
+      "description": "genuine handwriting, constructed MISMATCH: 25000 / one",
+      "split": "dev",
+      "constructed": true,
+      "synthetic": false,
+      "licences": [
+        "CVL digit strings, CC-BY-NC-4.0",
+        "GNHK, CC-BY-4.0"
+      ]
+    },
+    {
+      "id": "sheet_review",
+      "endpoint": "/api/verify",
+      "method": "POST",
+      "captured_at": "2026-11-27T08:11:56.862435+00:00",
+      "http_status": 200,
+      "request_id": "bc7e66d85428",
+      "response": "/results/20261127T081154Z-cbb492/sheet_review.json",
+      "response_sha256": "447dd9e3894afb0dfb9d1bcb12cea1aba0f4189dc062c617208861caad435827",
+      "image": "/results/20261127T081154Z-cbb492/sheet_review.png",
+      "source_path": "data/demo/sheet_review.png",
+      "image_sha256": "6f60562d12bd31cf326b46fecb80cce99477373318d399d7db61f044f683b880",
+      "fields": {
+        "mode": "baseline",
+        "numeric_roi": "[0.807778, 0.152672, 0.955556, 0.305344]",
+        "written_roi": "[0.044444, 0.458015, 0.355556, 0.694656]"
+      },
+      "kind": "verification",
+      "description": "SYNTHETIC cheque fields from one synthetic cheque: 3083 / Three Thousand and Eighty Three",
+      "split": "dev",
+      "constructed": true,
+      "synthetic": true,
+      "licences": [
+        "HF arunchincheti/cheques_data, Apache-2.0 (declared); SYNTHETIC font-rendered text",
+        "HF arunchincheti/cheques_data, Apache-2.0 (declared); SYNTHETIC font-rendered text"
+      ]
+    },
+    {
+      "id": "numeric-baseline",
+      "endpoint": "/api/recognize",
+      "method": "POST",
+      "captured_at": "2026-11-27T08:11:59.375479+00:00",
+      "http_status": 200,
+      "request_id": "9cdb5f378752",
+      "response": "/results/20261127T081154Z-cbb492/numeric-baseline.json",
+      "response_sha256": "7cc0a67fb9a4ff20b4e25de608dd798673c5dba114569c9d9191439b766e25e8",
+      "image": "/results/20261127T081154Z-cbb492/SYN_0001_num.png",
+      "source_path": "data/benchmarks/syn_cheques/SYN_0001_num.png",
+      "image_sha256": "84b8f654a34d2c9d1bb92771a890d8d6f4b747596d0bc5ec297b8a6311de2386",
+      "fields": {
+        "mode": "baseline",
+        "field_type": "numeric"
+      },
+      "kind": "recognition",
+      "description": "Synthetic numeric DEV crop; the same input in both modes.",
+      "split": "dev",
+      "synthetic": true,
+      "licences": [
+        "arunchincheti/cheques_data, Apache-2.0 (declared)"
+      ]
+    },
+    {
+      "id": "numeric-proposed",
+      "endpoint": "/api/recognize",
+      "method": "POST",
+      "captured_at": "2026-11-27T08:11:59.577478+00:00",
+      "http_status": 200,
+      "request_id": "d24f2172b9c3",
+      "response": "/results/20261127T081154Z-cbb492/numeric-proposed.json",
+      "response_sha256": "4bcc256b06f195c27373bb4c694ec8b654e86e260e36f4aa0d72c9965fda433c",
+      "image": "/results/20261127T081154Z-cbb492/SYN_0001_num.png",
+      "source_path": "data/benchmarks/syn_cheques/SYN_0001_num.png",
+      "image_sha256": "84b8f654a34d2c9d1bb92771a890d8d6f4b747596d0bc5ec297b8a6311de2386",
+      "fields": {
+        "mode": "proposed",
+        "field_type": "numeric"
+      },
+      "kind": "recognition",
+      "description": "Synthetic numeric DEV crop; the same input in both modes.",
+      "split": "dev",
+      "synthetic": true,
+      "licences": [
+        "arunchincheti/cheques_data, Apache-2.0 (declared)"
+      ]
+    },
+    {
+      "id": "written-baseline",
+      "endpoint": "/api/recognize",
+      "method": "POST",
+      "captured_at": "2026-11-27T08:12:00.619956+00:00",
+      "http_status": 200,
+      "request_id": "902aa05359ed",
+      "response": "/results/20261127T081154Z-cbb492/written-baseline.json",
+      "response_sha256": "9e75ff0f8ac098db039613c9f0c7889c38839148fdca002a1b89e1fbc87a2f23",
+      "image": "/results/20261127T081154Z-cbb492/GNHKP_eng_EU_117_w051.png",
+      "source_path": "data/benchmarks/gnhk_pairs/GNHKP_eng_EU_117_w051.png",
+      "image_sha256": "1747cb9b6975687fd1c9b1d69dba5fa5b1edf83d7a52dd68bcfe4263aa98d266",
+      "fields": {
+        "mode": "baseline",
+        "field_type": "written"
+      },
+      "kind": "recognition",
+      "description": "Genuine handwritten word from a DEV crop, not a real cheque.",
+      "split": "dev",
+      "synthetic": false,
+      "licences": [
+        "GNHK, CC-BY-4.0"
+      ]
+    }
+  ]
+}

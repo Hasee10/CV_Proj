@@ -19,8 +19,8 @@ This is an academic prototype for the Computer Vision course (FAST-NUCES, Fall 2
 | M8: locked test, baseline vs ATHN | verified | Run once on 621 entries (216 pairs). Synthetic numeric value-exact 0/77 to 17/77, CER 1.014 to 0.599; genuine handwriting (439 items) CER change -0.015 [-0.036, 0.002], so no measurable harm and a possible small gain. Latency has a long tail on enlarged written lines |
 | M9-A: backend | verified | FastAPI service in `backend/` with recognise, verify and saved-benchmark endpoints; 20 unit tests and 7 integration tests (real checkpoint) pass |
 | M10-A: backend integration and handover | verified | 16/16 live HTTP checks, also from a fresh clone (`artifacts/FINAL_BACKEND_HANDOVER/`); start with `HANDOVER.md` |
-| M9-B: frontend demo | not started | `FRONTEND_REQUIREMENTS.md`, `FRONTEND_PROMPT.md` |
-| M10-B: full application integration | not started | |
+| M9-B: frontend demo | PARTIAL | Three visual references integrated, live status, saved DEV results and fixed-case reruns; custom upload/ROI editing pending. `frontend/RESULTS_HANDOVER.md` |
+| M10-B: full application integration | PARTIAL | 29 frontend tests; real browser verification and numeric ATHN reruns, benchmark refresh, mobile result layouts checked; complete upload workflow pending |
 | Report and presentation | not started | |
 
 Each milestone has its evidence in `artifacts/<milestone>/` (summary JSON, commands, logs, hashes). `PROJECT_TRACKER.md` holds the running log, and `ROADMAP.md` describes every phase, its deliverables and the rules for contributors.

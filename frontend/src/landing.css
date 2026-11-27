@@ -824,3 +824,60 @@
     );
   }
 }
+/* Align section rules to the same content edges and strengthen the hover colour. */
+.wave-visual::after {
+  background: linear-gradient(
+    90deg,
+    rgba(244, 247, 242, 0.56),
+    rgba(244, 247, 242, 0.3) 36%,
+    transparent 72%
+  );
+}
+.hero-bottom {
+  border-top: 0 !important;
+  padding-top: 24px;
+}
+.field-notes {
+  border-top: 1px solid #b9c4b2;
+}
+.notes-intro {
+  padding-top: 0;
+}
+.book-topline {
+  padding-top: 0;
+  padding-bottom: 18px;
+  border-bottom-color: #b9c4b2;
+  min-height: 36px;
+}
+.notes-intro > .vision-kicker {
+  min-height: 36px;
+  margin-bottom: 18px;
+  padding-top: 4px;
+}
+@media (max-width: 600px) {
+  .wave-visual::after {
+    background: linear-gradient(
+      180deg,
+      rgba(244, 247, 242, 0.22),
+      rgba(244, 247, 242, 0.5) 25%,
+      rgba(244, 247, 242, 0.42) 65%,
+      transparent
+    );
+  }
+  .hero-bottom {
+    gap: 18px;
+  }
+  .field-notes {
+    padding-top: 45px;
+  }
+  .notes-intro > .vision-kicker {
+    min-height: 0;
+  }
+  .book-topline {
+    min-height: 44px;
+    padding-top: 10px;
+  }
+  .wave-hero .hero-bottom {
+    font-size: 10px !important;
+  }
+}

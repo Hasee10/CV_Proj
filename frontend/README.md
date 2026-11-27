@@ -23,7 +23,7 @@ npm test
 npm run build
 ```
 
-F1 includes the introduction, responsive shell, typed API client, manual readiness refresh and live dashboard. Recognition and benchmarks are pending routes. No automatic inference, image/result storage or application analytics. System fonts only. The credited external light scene is isolated in its entry iframe and receives no application data; it is removed before entering the landing or dashboard.
+The frontend includes the introduction, responsive shell, typed API client, manual readiness refresh and live dashboard. `/verify` and `/recognize` show actual saved DEV responses and can rerun the fixed examples through the backend. `/benchmarks` presents the frozen saved metrics and supports a manual API refresh. Original response bytes, input copies and hashes live in `public/results/`; no automatic inference or application analytics. Custom upload and ROI editing remain unfinished. See [RESULTS_HANDOVER.md](RESULTS_HANDOVER.md).
 
 API types use the backend code and saved responses. Health 503 is a valid health body; other errors are parsed defensively. JSON body request IDs are used because the frozen backend does not expose X-Request-ID through CORS. Header fallback remains best-effort. Contrary to a broad statement in FRONTEND_REQUIREMENTS, health/model-info/benchmark bodies do not themselves contain request_id; no such field is assumed.
 
@@ -31,4 +31,4 @@ See DESIGN_DIRECTION.md for implemented visual placements and resource limits, a
 
 ## Visual correction (27 Nov 2026)
 
-The original F1 light/document illustration has been replaced. The entry displays Cullen Webber's credited original hosted light scene in an isolated iframe; this requires an internet connection. Enter removes that iframe and opens the local interactive tiled wave hero. Below it, Field Notes uses the actual MIT-licensed LeafThrough reader with six original local SVG pages and a full text alternative. See DESIGN_DIRECTION.md and VISUAL_CREDITS.md. Other application routes retain their F1 status.
+The original F1 light/document illustration has been replaced. The entry displays Cullen Webber's credited original hosted light scene in an isolated iframe; this requires an internet connection. Enter removes that iframe and opens the local interactive tiled hero. Tiles remain aligned, rise and turn violet under the pointer, then settle flat on pointer leave. Below it, Field Notes uses the actual MIT-licensed LeafThrough reader with six original local SVG pages and a full text alternative. See DESIGN_DIRECTION.md and VISUAL_CREDITS.md.

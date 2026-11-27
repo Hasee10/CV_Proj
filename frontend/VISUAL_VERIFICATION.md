@@ -57,3 +57,9 @@ Raised the platform root reading scale to 18px, increased fixed-pixel landing/en
 Verification: strict type-check/build PASS (9.46s), existing API/status unit tests 16/16 PASS, frozen guard 1174/1174. Dashboard reviewed at 1440x900, 768x1024 and 390x844 with no tablet/mobile horizontal overflow; mobile navigation and pending-route handoff checked. Live Model ready and manual refresh checked. Hero flat resting state and settlement after pointer movement observed; healthy-sequence browser console had no errors/warnings. No new automated visual suite or GPU benchmark.
 
 Screenshots outside Git: C:/Users/Administrator/.codex/visualizations/2026/11/27/chequeverify-workspace-redesign/ (dashboard-desktop.jpg, dashboard-tablet.jpg, dashboard-mobile.jpg, tiles-at-rest.jpg, tiles-after-movement.jpg). A full-page screenshot attempt timed out; viewport screenshots were captured successfully.
+
+## Latest hover, alignment and actual-results correction
+
+This supersedes the preceding 140ms inactivity interaction. Tiles no longer rotate; bevelled blocks remain on aligned grid axes, with a 2048px shadow map. Pointer hover produces raised relief, violet local colour and a subtle surface tint, which remain during stationary hover; pointer leave returns to neutral and flat. Rendering stops once settled. Removed the extra hero footer rule and aligned the Field Notes headings/rule.
+
+Browser observed at the default desktop viewport: stationary hover depth/colour, neutral state after leave, straight resting seams and aligned Field Notes header. No console errors/warnings observed. Actual result pages and mobile layout were also verified; see RESULTS_HANDOVER.md for request IDs, screenshots and remaining limits. Production build and 29 tests pass. No GPU benchmark or automated visual/accessibility suite.

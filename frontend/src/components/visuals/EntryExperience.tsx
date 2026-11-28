@@ -7,48 +7,48 @@ export const openingFrames = [
     sample: 0,
     title: "Begin with the pixels.",
     label: "01 / THE INPUT",
-    accent: "#c5abc9",
-    color: [230, 220, 235],
+    accent: "#816790",
+    color: [243, 239, 246],
     side: 1,
   },
   {
     sample: 1,
     title: "Scale changes the reading.",
     label: "02 / PREPARATION",
-    accent: "#c7b592",
-    color: [238, 225, 204],
+    accent: "#957548",
+    color: [247, 241, 229],
     side: -1,
   },
   {
     sample: 2,
     title: "Read what the model read.",
     label: "03 / RECOGNITION",
-    accent: "#b5c9c5",
-    color: [218, 229, 225],
+    accent: "#527c75",
+    color: [235, 243, 239],
     side: 1,
   },
   {
     sample: 4,
     title: "Keep the error in view.",
     label: "04 / THE EVIDENCE",
-    accent: "#d3afa1",
-    color: [236, 221, 217],
+    accent: "#a76e5b",
+    color: [248, 240, 235],
     side: -1,
   },
   {
     sample: 5,
     title: "Small marks. Real consequences.",
     label: "05 / THE DETAIL",
-    accent: "#b9b6d7",
-    color: [225, 222, 238],
+    accent: "#736fa1",
+    color: [241, 239, 248],
     side: -1,
   },
   {
     sample: 3,
     title: "Leave room for judgement.",
     label: "06 / HUMAN REVIEW",
-    accent: "#d4c6a5",
-    color: [239, 231, 216],
+    accent: "#947940",
+    color: [247, 244, 236],
     side: 1,
   },
 ];
@@ -65,6 +65,25 @@ export function openingProgress(scroll: number, range: number) {
     ),
     dissolve: fade * fade * (3 - 2 * fade),
   };
+}
+
+const smooth = (value: number) => {
+  const t = Math.max(0, Math.min(1, value));
+  return t * t * (3 - 2 * t);
+};
+// Outgoing and incoming content have separate visibility windows. At most one
+// panel can be visible, including while scrolling backwards or jumping quickly.
+export function specimenVisibility(
+  index: number,
+  plate: number,
+  reduced = false,
+) {
+  if (reduced) return index === Math.round(plate) ? 1 : 0;
+  const delta = index - plate;
+  if (delta < -1 || delta > 1) return 0;
+  return delta <= 0
+    ? 1 - smooth((-delta - 0.18) / 0.32)
+    : smooth((1 - delta - 0.5) / 0.32);
 }
 
 export function EntryExperience({ onEnter }: { onEnter: () => void }) {
@@ -101,20 +120,13 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
         if (!image) return;
         const delta = index - plate;
         const direction = chapters[index].side;
-        const opacity = reduced.matches
-          ? index === Math.round(plate)
-            ? 1
-            : 0
-          : delta >= 0
-            ? delta > 3
-              ? 0
-              : 1 / (1 + delta * 3)
-            : Math.max(0, 1 + delta * 1.8);
-        image.style.opacity = String(opacity * (1 - dissolve));
+        const opacity = specimenVisibility(index, plate, reduced.matches);
+        image.style.opacity = String(opacity);
+        image.style.visibility = opacity > 0.001 ? "visible" : "hidden";
         image.style.transform = reduced.matches
           ? "translate(-50%, -50%)"
-          : `translate3d(calc(-50% + ${delta * 25 * direction}vw), calc(-50% + ${delta * 5}vh), ${-delta * 480 + dissolve * 300}px) rotateY(${-delta * 13 * direction}deg)`;
-
+          : `translate3d(calc(-50% + ${delta * 14 * direction}vw), calc(-50% + ${delta * 2 - dissolve * 1.5}vh), ${-delta * 240 + dissolve * 70}px) rotateY(${-delta * 7 * direction}deg)`;
+        image.dataset.visible = opacity > 0.001 ? "true" : "false";
         image.style.zIndex = String(10 - index);
       });
       if (phase >= 0.9995) {
@@ -142,13 +154,28 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
     };
   }, []);
   function forward() {
-    scrollBy({
-      top: innerHeight * 0.85,
+    const section = root.current!;
+    const range = section.offsetHeight - innerHeight;
+    const current = openingProgress(
+      -section.getBoundingClientRect().top,
+      range,
+    );
+    const next = Math.min(
+      chapters.length,
+      Math.floor(current.plate + 0.03) + 1,
+    );
+    const target =
+      next >= chapters.length
+        ? range
+        : range * (next / (chapters.length - 1)) * 0.72;
+    scrollTo({
+      top: section.getBoundingClientRect().top + scrollY + target,
       behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
         ? "instant"
         : "smooth",
     });
   }
+
   return (
     <section
       className="depth-opening"
@@ -208,6 +235,9 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
                       <img
                         src={sample.image}
                         alt=""
+                        style={{
+                          imageRendering: width < 40 ? "pixelated" : "auto",
+                        }}
                         loading="eager"
                         fetchPriority={index === 0 ? "high" : "auto"}
                       />
@@ -268,7 +298,7 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
                   </div>
                 </div>
                 <footer className="depth-plate-foot">
-                  <span>Same frozen recogniser. Original output retained.</span>
+                  <span>Same recogniser · Original pixels magnified</span>
                   <span>
                     {sample.synthetic ? "Synthetic" : "Handwritten"} · DEV
                     demonstration

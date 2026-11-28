@@ -256,7 +256,7 @@ html body .app-shell .sidebar-bottom {
   box-shadow: 0 5px 22px #38204035;
   justify-content: center;
 }
-.assistant-dock .guide-trigger > span {
+.assistant-dock .guide-trigger > span:not(.guide-character) {
   display: none;
 }
 .assistant-dock .guide-character {
@@ -1781,5 +1781,53 @@ html body .app-shell .dash-launch .button {
     left: auto;
     right: 16px;
     bottom: 90px;
+  }
+}
+
+/* A real ceramic 3D character, presented without a flat circular badge. */
+.assistant-dock > .guide-trigger {
+  width: 80px;
+  height: 88px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+.assistant-dock .guide-character {
+  display: block;
+  width: 80px;
+  height: 88px;
+  flex: none;
+  filter: drop-shadow(0 5px 6px #50356518);
+}
+.guide-model {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.guide-model canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.guide-model-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: #af94c4;
+  font-size: 38px;
+}
+.guide-model[data-ready="true"] .guide-model-fallback {
+  display: none;
+}
+.assistant-dock .guide-panel {
+  bottom: 124px;
+}
+@media (max-width: 900px) {
+  .assistant-dock .guide-panel {
+    bottom: 118px;
   }
 }

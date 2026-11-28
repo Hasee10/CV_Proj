@@ -38,3 +38,6 @@ Three predetermined DEV crops, captured sequentially through the unchanged local
 
 Observation desk and specimen opening (28 November 2026):
 The current opening uses six native HTML/CSS specimen frames, independent of the field-report pages. All crop images and readings are original DEV source/capture values from the local frozen backend. The additional capture manifest is /results/20261128T055842Z-workspace/manifest.json. CVL: CC-BY-NC-4.0. Synthetic source: arunchincheti/cheques_data, Apache-2.0 as declared. The chart geometry and Pip field-guide SVG are original frontend code. Pip currently provides local help; Groq integration is intentionally deferred. No chat service or key is loaded.
+
+Light specimen / 3D guide refinement (28 November 2026):
+Current Pip is an original procedural Three.js model (rounded geometry, physical materials, lights and a generated contact-shadow texture), implemented in src/components/ui/GuideCharacter3D.tsx. No downloaded character assets, external image generation or chat service is required. Specimen crops remain original DEV evidence; only display magnification and presentation changed.

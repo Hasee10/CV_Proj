@@ -4,11 +4,26 @@ import { renderToStaticMarkup } from "react-dom/server";
 import {
   EntryExperience,
   openingProgress,
+  specimenVisibility,
 } from "../src/components/visuals/EntryExperience";
 
 const asset = (path: string) => new URL("../public/" + path, import.meta.url);
 
 describe("Evidence-based depth opening", () => {
+  it("never paints overlapping specimen text at any scroll position", () => {
+    for (let step = 0; step <= 1000; step++) {
+      const plate = step / 200;
+      for (const reduced of [false, true]) {
+        const visible = Array.from({ length: 6 }, (_, i) =>
+          specimenVisibility(i, plate, reduced),
+        ).filter((v) => v > 0.001);
+        expect(visible.length).toBeLessThanOrEqual(1);
+      }
+    }
+    expect(specimenVisibility(0, 0.55)).toBe(0);
+    expect(specimenVisibility(1, 0.7)).toBeGreaterThan(0);
+    expect(specimenVisibility(5, 5)).toBe(1);
+  });
   it("holds the last image before dissolving completely into the site", () => {
     expect(openingProgress(0, 100)).toEqual({
       phase: 0,

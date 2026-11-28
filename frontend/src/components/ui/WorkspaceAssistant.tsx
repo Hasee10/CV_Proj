@@ -1,63 +1,16 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useId, useRef, useState } from "react";
 import { ArrowUpRight, Send, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useSessionRuns } from "../../lib/sessionRuns";
 
+const Character3D = lazy(() => import("./GuideCharacter3D"));
 export function GuideCharacter() {
   return (
-    <svg className="guide-character" viewBox="0 0 80 88" aria-hidden="true">
-      <ellipse cx="40" cy="80" rx="23" ry="4" fill="#17111d" opacity=".18" />
-      <g className="guide-float">
-        <path
-          d="M17 45L8 53M63 45l9-8"
-          stroke="#c9b5da"
-          strokeWidth="6"
-          strokeLinecap="round"
-        />
-        <path
-          d="M25 66l-3 9M55 66l3 9"
-          stroke="#c9b5da"
-          strokeWidth="6"
-          strokeLinecap="round"
-        />
-        <path d="M40 17V9" stroke="#c7d7b5" strokeWidth="3" />
-        <circle cx="40" cy="7" r="4" fill="#d7e3b8" />
-        <rect
-          x="15"
-          y="19"
-          width="50"
-          height="49"
-          rx="16"
-          fill="#eee6f3"
-          stroke="#bda4cf"
-          strokeWidth="2"
-        />
-        <path
-          d="M49 19h4q12 0 12 13v15"
-          stroke="#fffaf2"
-          strokeWidth="3"
-          fill="none"
-        />
-        <rect x="22" y="29" width="36" height="22" rx="9" fill="#413247" />
-        <g className="guide-eyes" fill="#e0eabd">
-          <ellipse cx="32" cy="40" rx="3" ry="4" />
-          <ellipse cx="48" cy="40" rx="3" ry="4" />
-        </g>
-        <path
-          d="M35 57q5 4 10 0"
-          stroke="#80648d"
-          strokeWidth="2"
-          fill="none"
-          strokeLinecap="round"
-        />
-        <path
-          d="M24 23h6M22 25v5M56 59h-5M58 57v-5"
-          stroke="#9677aa"
-          strokeWidth="1.5"
-          fill="none"
-        />
-      </g>
-    </svg>
+    <span className="guide-character" aria-hidden="true">
+      <Suspense fallback={<span className="guide-model-fallback">✦</span>}>
+        <Character3D />
+      </Suspense>
+    </span>
   );
 }
 export function guideAnswer(question: string) {

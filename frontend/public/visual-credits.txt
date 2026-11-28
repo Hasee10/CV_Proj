@@ -41,3 +41,11 @@ The current opening uses six native HTML/CSS specimen frames, independent of the
 
 Light specimen / 3D guide refinement (28 November 2026):
 Current Pip is an original procedural Three.js model (rounded geometry, physical materials, lights and a generated contact-shadow texture), implemented in src/components/ui/GuideCharacter3D.tsx. No downloaded character assets, external image generation or chat service is required. Specimen crops remain original DEV evidence; only display magnification and presentation changed.
+
+Ribbon-to-brand opening (28 November 2026):
+Art direction references selected by the owner:
+Animated 3D Ribbons with Three.js, Yuri Artiukh / Codrops, based on iad-lab by mutoco.ch:
+https://tympanus.net/codrops/2021/11/29/animated-3d-ribbons-with-three-js/
+Interactive Particles with Three.js, Bruno Imbrizi / Codrops:
+https://tympanus.net/codrops/2019/01/17/interactive-particles-with-three-js/
+Original implementation in OpeningBrandScene.tsx: closed procedural ribbon strips, satin physical materials, locally generated studio lighting, surface-sampled particles from the application's existing mark.svg silhouette, and a bevelled solid extrusion of that same silhouette. No reference code, shaders, textures, characters or models copied. Dots represent our brand mark, not model features, confidence or attention. The native-scroll timeline reveals the mark, forms the solid, docks it into the specimen header, presents the six unchanged DEV studies, and dissolves over the existing site. Reduced-motion compositions, WebGL fallback, background suspension, bounded rendering and resource disposal are included.

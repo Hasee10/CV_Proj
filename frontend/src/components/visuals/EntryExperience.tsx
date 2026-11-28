@@ -1,6 +1,10 @@
-import { useEffect, useRef } from "react";
+import { lazy, Suspense, useEffect, useRef } from "react";
 import { ArrowDown, ArrowUpRight, ScanLine } from "lucide-react";
 import { labSamples } from "../../lib/sampleLibrary";
+import { ease, nextOpeningStop, openingPose, openingProgress, specimenVisibility,
+  type OpeningSceneState } from "./openingMotion";
+export { openingProgress, specimenVisibility } from "./openingMotion";
+const OpeningBrandScene = lazy(() => import("./OpeningBrandScene"));
 
 export const openingFrames = [
   {
@@ -54,43 +58,17 @@ export const openingFrames = [
 ];
 const chapters = openingFrames;
 
-export function openingProgress(scroll: number, range: number) {
-  const phase = Math.max(0, Math.min(1, scroll / Math.max(1, range)));
-  const fade = Math.max(0, Math.min(1, (phase - 0.76) / 0.24));
-  return {
-    phase,
-    plate: Math.min(
-      chapters.length - 1,
-      (phase / 0.72) * (chapters.length - 1),
-    ),
-    dissolve: fade * fade * (3 - 2 * fade),
-  };
-}
-
-const smooth = (value: number) => {
-  const t = Math.max(0, Math.min(1, value));
-  return t * t * (3 - 2 * t);
-};
-// Outgoing and incoming content have separate visibility windows. At most one
-// panel can be visible, including while scrolling backwards or jumping quickly.
-export function specimenVisibility(
-  index: number,
-  plate: number,
-  reduced = false,
-) {
-  if (reduced) return index === Math.round(plate) ? 1 : 0;
-  const delta = index - plate;
-  if (delta < -1 || delta > 1) return 0;
-  return delta <= 0
-    ? 1 - smooth((-delta - 0.18) / 0.32)
-    : smooth((1 - delta - 0.5) / 0.32);
-}
-
 export function EntryExperience({ onEnter }: { onEnter: () => void }) {
   const root = useRef<HTMLElement>(null),
     stage = useRef<HTMLDivElement>(null);
   const plates = useRef<(HTMLElement | null)[]>([]),
     enter = useRef(onEnter);
+  const wake = useRef<() => void>(() => {});
+  const sceneState = useRef<OpeningSceneState>({
+    phase: 0, logoOpacity: 0, reduced: false,
+    anchor: { x: 0, y: 0, height: 39 }, siteAnchor: { x: 0, y: 0, height: 44 },
+  });
+  const fallback = useRef<HTMLImageElement>(null);
   useEffect(() => {
     enter.current = onEnter;
   }, [onEnter]);
@@ -109,26 +87,53 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
         -section.getBoundingClientRect().top,
         section.offsetHeight - innerHeight,
       );
+      const pose = openingPose(phase, reduced.matches);
       const first = Math.floor(plate),
         weight = plate - first;
       const a = chapters[first].color,
         b = chapters[Math.min(chapters.length - 1, first + 1)].color;
       stage.current!.style.backgroundColor = `rgb(${a.map((v, i) => Math.round(v + (b[i] - v) * weight)).join(",")})`;
       stage.current!.style.opacity = String(1 - dissolve);
+      stage.current!.dataset.openingPhase = phase < 0.375 ? "identity" : "evidence";
+      let logoOpacity = 0;
+      let anchor = sceneState.current.anchor;
 
       plates.current.forEach((image, index) => {
         if (!image) return;
         const delta = index - plate;
         const direction = chapters[index].side;
-        const opacity = specimenVisibility(index, plate, reduced.matches);
+        const opacity = specimenVisibility(index, plate, reduced.matches) * pose.gallery;
         image.style.opacity = String(opacity);
         image.style.visibility = opacity > 0.001 ? "visible" : "hidden";
         image.style.transform = reduced.matches
           ? "translate(-50%, -50%)"
-          : `translate3d(calc(-50% + ${delta * 14 * direction}vw), calc(-50% + ${delta * 2 - dissolve * 1.5}vh), ${-delta * 240 + dissolve * 70}px) rotateY(${-delta * 7 * direction}deg)`;
+          : `translate3d(calc(-50% + ${delta * 14 * direction}vw), calc(-50% + ${delta * 2 - dissolve * 1.5 + (1 - pose.gallery) * 4}vh), ${-delta * 240 + dissolve * 70}px) rotateY(${-delta * 7 * direction}deg)`;
         image.dataset.visible = opacity > 0.001 ? "true" : "false";
         image.style.zIndex = String(10 - index);
+        if ((index === 0 && phase < 0.39) || opacity > 0.001) {
+          const rect = image.querySelector(".depth-plate-brand img")!.getBoundingClientRect();
+          anchor = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2, height: rect.height };
+          logoOpacity = opacity;
+        }
       });
+      const siteRect = document.querySelector(".vision-header .brand-mark")?.getBoundingClientRect();
+      sceneState.current = {
+        phase, anchor, logoOpacity, reduced: reduced.matches,
+        siteAnchor: siteRect ? { x: siteRect.left + siteRect.width / 2,
+          y: siteRect.top + siteRect.height / 2, height: siteRect.height } : anchor,
+      };
+      // A real brand render remains available while WebGL loads or is unavailable.
+      const image = fallback.current!;
+      const logoSize = Math.min(innerWidth * 0.52, innerHeight * 0.4, 340);
+      const mix = (a: number, b: number) => a + (b - a) * pose.dock;
+      image.style.left = `${mix(innerWidth / 2, anchor.x)}px`;
+      image.style.top = `${mix(innerHeight / 2, anchor.y)}px`;
+      image.style.width = `${mix(logoSize, anchor.height)}px`;
+      image.style.height = image.style.width;
+      image.style.opacity = String(phase < 0.375
+        ? reduced.matches ? 1 : ease((phase - .06) / .09)
+        : logoOpacity);
+      wake.current();
       if (phase >= 0.9995) {
         completed = true;
         stage.current!.style.opacity = "0";
@@ -160,14 +165,7 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
       -section.getBoundingClientRect().top,
       range,
     );
-    const next = Math.min(
-      chapters.length,
-      Math.floor(current.plate + 0.03) + 1,
-    );
-    const target =
-      next >= chapters.length
-        ? range
-        : range * (next / (chapters.length - 1)) * 0.72;
+    const target = range * nextOpeningStop(current.phase);
     scrollTo({
       top: section.getBoundingClientRect().top + scrollY + target,
       behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -183,7 +181,10 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
       aria-label="ChequeVerify evidence gallery"
     >
       <div className="depth-stage" ref={stage}>
-        <div className="depth-space" aria-hidden="true">
+        <div className="opening-fallback-ribbons" aria-hidden="true"><i /><i /><i /></div>
+        <img className="opening-brand-fallback" ref={fallback} src="/brand/mark-3d.png" alt="" aria-hidden="true" />
+        <Suspense fallback={null}><OpeningBrandScene state={sceneState} wake={wake} /></Suspense>
+        <div className="depth-space">
           {chapters.map((item, index) => {
             const sample = labSamples[item.sample],
               base = sample.responses.baseline.result,
@@ -321,6 +322,8 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
           readings. These are not accuracy claims. Scrolling moves through the
           evidence, then dissolves into the site. The leaflet is a separate
           research publication.
+          The introduction opens with sliding ribbons and our particle logo,
+          which becomes solid and moves into the first specimen header.
         </div>
       </div>
     </section>

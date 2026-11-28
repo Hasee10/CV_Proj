@@ -30,9 +30,9 @@ describe("Evidence-based depth opening", () => {
       plate: 0,
       dissolve: 0,
     });
-    expect(openingProgress(72, 100).plate).toBe(5);
-    expect(openingProgress(76, 100).dissolve).toBe(0);
-    expect(openingProgress(88, 100).dissolve).toBeCloseTo(0.5);
+    expect(openingProgress(84, 100).plate).toBe(5);
+    expect(openingProgress(89, 100).dissolve).toBe(0);
+    expect(openingProgress(94.5, 100).dissolve).toBeCloseTo(0.5);
     expect(openingProgress(110, 100)).toEqual({
       phase: 1,
       plate: 5,

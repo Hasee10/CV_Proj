@@ -1,4 +1,36 @@
 /* A light optical desk. Only the active specimen is painted. */
+.depth-opening { height: 760svh; }
+.opening-brand-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 13;
+  pointer-events: none;
+}
+.opening-brand-scene canvas { display: block; width: 100%; height: 100%; }
+.opening-brand-fallback {
+  position: absolute;
+  z-index: 14;
+  width: min(52vw, 340px);
+  height: min(52vw, 340px);
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0;
+}
+.depth-stage[data-brand-scene="ready"] .opening-brand-fallback,
+.depth-stage[data-brand-scene="ready"] .depth-plate-brand img,
+.depth-stage[data-brand-scene="ready"] .opening-fallback-ribbons { visibility: hidden; }
+.depth-stage[data-opening-phase="identity"] .depth-plate-brand img,
+.depth-stage[data-opening-phase="evidence"]:not([data-brand-scene="ready"]) .opening-brand-fallback { visibility: hidden; }
+.opening-fallback-ribbons { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.opening-fallback-ribbons i { position: absolute; width: 140vw; height: 12vh; border-radius: 50%;
+  background: linear-gradient(175deg,#d9e0d2,#90a28f 45%,#c8d6c0 75%,#6f806d);
+  box-shadow: inset 0 2px #fff8, 0 20px 40px #63537118;
+  transform: rotate(-25deg); left: -20vw; top: 10%; }
+.opening-fallback-ribbons i:nth-child(2) { top: 73%; transform: rotate(17deg); background: linear-gradient(#dfd4e5,#ab94bd,#e3daeb); }
+.opening-fallback-ribbons i:nth-child(3) { top: 100%; transform: rotate(-35deg); height: 5vh; }
+.depth-stage[data-opening-phase="evidence"] .opening-fallback-ribbons { display: none; }
 .depth-stage {
   background: #f3eff6;
 }

@@ -1,17 +1,28 @@
+Current opening: independent native-scroll depth gallery, inspired by Atmospheric Depth Gallery by Houmahani Kane / Codrops.
+https://tympanus.net/Tutorials/DepthGallery/
+Three lightweight evidence plates are rendered from actual saved DEV input crops and unedited API readings. No AI-generated handwriting or abstract material imagery is used in the opening. The gallery uses local CSS perspective, native scroll and reduced-motion crossfades; no hand iframe, GLB or external scene is loaded. Generator and source provenance: /gallery/provenance.json and frontend/scripts/create-gallery-evidence.py.
+
+Current research illustration: independent Three.js glass-bar xylophone inspired by Sujen Phea / Codrops.
+https://tympanus.net/Tutorials/Xylophone/
+https://github.com/Sujenphea/xylophone
+Local instanced capsule geometry, physical glass and iridescence, generated studio environment and backdrop. No reference source, audio, images or shaders copied. Six selectable bands navigate saved datasets; bar geometry does not encode CER. Earlier local rolling-panel spiral is superseded, retained in source.
+
 ChequeVerify visual credits
 
-Opening scene adapted from Volumetric Light and Bones animation by Cullen Webber.
+Archived opening study adapted from Volumetric Light and Bones animation by Cullen Webber.
 https://cullenwebber.github.io/three-volumetric-light/
 https://github.com/cullenwebber/three-volumetric-light
-The current local opening adapts the original rigged hand, finger/wrist animation, volumetric beam and ASCII material. Only the floating symbol geometry is replaced with the ChequeVerify C/check. Upstream commit: 28b2103f1ce0403eacbe53c4ea53790b8905705a. Source fingerprints and changes: frontend/src/light-study/UPSTREAM.json. Third-party scene/model authorship remains with Cullen Webber; it is not claimed as student-created. The former generated still hand plate is no longer used.
+The archived local scene adapts the original rigged hand, finger/wrist animation, volumetric beam and ASCII material. Only the floating symbol geometry is replaced with the ChequeVerify C/check. Upstream commit: 28b2103f1ce0403eacbe53c4ea53790b8905705a. Source fingerprints and changes: frontend/src/light-study/UPSTREAM.json. Third-party scene/model authorship remains with Cullen Webber; it is not claimed as student-created. The former generated still hand plate is no longer used.
 
 Hero: independent local Three.js implementation inspired by Wavy Cubes, Franky Hung / Arkon Digital.
 https://projects.arkon.digital/threejs/wavy-cubes/
 Full-surface instanced cube tiles, cursor-driven depth and lavender pointer highlighting. No upstream source or assets copied. Decorative illustration, not model output.
 
-Right-hand hero study: original local cubic sculpture inspired by Interactive 3D Cluster by Francesco Michelini / Codrops.
+Earlier right-hand hero study: original local cubic sculpture inspired by Interactive 3D Cluster by Francesco Michelini / Codrops. Retained in source; superseded by the evidence-led pixel study.
 https://tympanus.net/Tutorials/3DCluster/
 No reference source or assets copied. Pointer separation, drag rotation and keyboard controls. A visual metaphor, not model features or inference output.
+
+Current hero: original procedural image-intensity relief built from the actual stored synthetic numeric DEV input. Each raised cell encodes pixel darkness. This is an explanatory image visualization, not a learned feature map, attention map or confidence. Original crop and recorded ATHN dimensions are available as separate views. Model readings come from unchanged saved API captures. Research graphics: original native SVG diagrams of the six frozen datasets. Front-face bar heights encode CER; constant extrusion is decorative. SVG exports: /study/. Source and verification: frontend/VISION_STUDY.md.
 
 Field Notes: LeafThrough by dmtrbrl, MIT licence, package version 0.1.8.
 https://github.com/dmtrbrl/leafthrough
@@ -21,3 +32,6 @@ Nine 1200 x 1600 PNG report pages use actual saved DEV inputs/results and frozen
 Implementation assisted by Codex. No claim of authorship of referenced works.
 
 Typography: Manrope, SIL Open Font License. Self-hosted font from Google Fonts; full notice at /fonts/Manrope-OFL.txt.
+
+Supplemental opening and hero studies (28 November 2026):
+Three predetermined DEV crops, captured sequentially through the unchanged local backend in both modes. CVL digit strings: CC-BY-NC-4.0, https://zenodo.org/records/1492173. GNHK handwriting: CC-BY-4.0. Synthetic fields: arunchincheti/cheques_data, Apache-2.0 as declared by its source. Exact sources, image hashes, response hashes and request IDs: /gallery/samples.json. These individual demonstrations are not a new evaluation. All outcomes, including unchanged errors and null parses, are retained. Original research captures are untouched.

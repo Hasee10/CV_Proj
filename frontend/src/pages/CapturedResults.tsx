@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useSearchParams } from "react-router-dom";
 import { Play, Equal, CircleAlert, SquarePen } from "lucide-react";
 import { api, ApiError } from "../api/client";
 import type { FieldResult, VerifyResult } from "../api/results";
@@ -36,7 +36,10 @@ export function CapturedResults({
   const system = useOutletContext<ReturnType<typeof useModelStatus>>();
   const records =
     capture.manifest?.records.filter((r) => r.kind === kind) ?? [];
-  const [selected, setSelected] = useState("");
+  const [searchParams] = useSearchParams();
+  const [selected, setSelected] = useState(
+    () => searchParams.get("example") ?? "",
+  );
   const record = records.find((r) => r.id === selected) ?? records[0];
   const [fresh, setFresh] = useState<{
     id: string;

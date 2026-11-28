@@ -20,7 +20,7 @@ export default function WaveGridScene() {
       return;
     }
     renderer.setPixelRatio(Math.min(devicePixelRatio, 1.25));
-    renderer.setClearColor("#ccd1ce");
+    renderer.setClearColor("#eeeae4");
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.3;
     renderer.shadowMap.enabled = true;
@@ -28,13 +28,16 @@ export default function WaveGridScene() {
     el.appendChild(renderer.domElement);
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-10, 10, 5, -5, 0.1, 100);
-    camera.position.set(0, -2.2, 18);
+    camera.position.set(0, -0.6, 18);
     camera.lookAt(0, 0, 0);
-    const geometry = new RoundedBoxGeometry(0.965, 0.965, 0.88, 2, 0.03);
-    const material = new THREE.MeshStandardMaterial({
+    const geometry = new RoundedBoxGeometry(0.985, 0.985, 0.88, 2, 0.018);
+    const material = new THREE.MeshPhysicalMaterial({
       color: "#ffffff",
-      metalness: 0.06,
-      roughness: 0.4,
+      metalness: 0.04,
+      roughness: 0.3,
+      clearcoat: 0.6,
+      iridescence: 0.5,
+      iridescenceIOR: 1.3,
     });
     scene.add(new THREE.HemisphereLight("#ffffff", "#b7c1bb", 1.8));
     const key = new THREE.DirectionalLight("#fff9ef", 3);
@@ -78,8 +81,8 @@ export default function WaveGridScene() {
     const intersection = new THREE.Vector3();
     const object = new THREE.Object3D(),
       color = new THREE.Color();
-    const neutral = new THREE.Color("#e4e7e4"),
-      lavender = new THREE.Color("#927ccf");
+    const neutral = new THREE.Color("#eeece8"),
+      lavender = new THREE.Color("#b1a0ce");
     function move(e: PointerEvent) {
       const rect = el.getBoundingClientRect();
       pointerNdc.set(
@@ -124,12 +127,18 @@ export default function WaveGridScene() {
               y - smoothPointer.y,
             );
             const hover = Math.exp((-distance * distance) / 2.8) * strength;
-            object.position.set(x, y, reduced.matches ? 0 : hover * 0.62);
-            object.scale.setScalar(1.02);
-            object.rotation.set(0, 0, 0);
+            object.position.set(x, y, reduced.matches ? 0 : hover * 1.05);
+            object.scale.setScalar(1);
+            const dx = x - smoothPointer.x,
+              dy = y - smoothPointer.y;
+            object.rotation.set(
+              reduced.matches ? 0 : dy * hover * 0.055,
+              reduced.matches ? 0 : -dx * hover * 0.055,
+              0,
+            );
             object.updateMatrix();
             mesh.setMatrixAt(index, object.matrix);
-            color.copy(neutral).lerp(lavender, strength * 0.1 + hover * 0.88);
+            color.copy(neutral).lerp(lavender, strength * 0.075 + hover * 0.7);
             mesh.setColorAt(index, color);
             index++;
           }

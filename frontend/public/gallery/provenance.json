@@ -1,0 +1,48 @@
+{
+  "capture_run": "20261127T081154Z-cbb492",
+  "generator": "scripts/create-gallery-evidence.py",
+  "notice": "Editorial raster compositions of actual saved inputs and outputs; not AI-generated handwriting or new inference.",
+  "panels": [
+    {
+      "file": "fields.png",
+      "sources": [
+        "sheet_accept"
+      ]
+    },
+    {
+      "file": "scale.png",
+      "sources": [
+        "numeric-baseline",
+        "numeric-proposed"
+      ]
+    },
+    {
+      "file": "review.png",
+      "sources": [
+        "sheet_review"
+      ]
+    },
+    {
+      "file": "digits.png",
+      "sources": [
+        "CVL_135579_0002_10"
+      ],
+      "capture": "supplemental"
+    },
+    {
+      "file": "handwriting.png",
+      "sources": [
+        "GNHKP_eng_EU_310_w016"
+      ],
+      "capture": "supplemental"
+    },
+    {
+      "file": "synthetic.png",
+      "sources": [
+        "SYN_0013_num"
+      ],
+      "capture": "supplemental"
+    }
+  ],
+  "supplemental_run": "20261128T054632Z-gallery"
+}

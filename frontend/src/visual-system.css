@@ -1,0 +1,911 @@
+/* Shared visual calibration: ivory paper, graphite ink, amber and violet light. */
+:root {
+  font-size: 16px;
+  --paper: #f6f1e8;
+  --paper-raised: #fffcf7;
+  --ink: #332e38;
+  --muted: #756c76;
+  --line: #d9d0c7;
+  --accent: #79658b;
+  --caption: 0.75rem;
+  --small: 0.875rem;
+  --body: 1rem;
+  --lead: 1.125rem;
+}
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Full-viewport opening dissolves over the hero; no stacked section seam. */
+.depth-opening {
+  height: 580svh;
+  position: relative;
+  z-index: 30;
+  pointer-events: none;
+  color: var(--ink);
+}
+.depth-stage {
+  height: 100svh;
+  min-height: 0;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: #f3e1bc;
+  pointer-events: auto;
+  will-change: opacity;
+}
+.depth-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  z-index: 15;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.24' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.depth-space {
+  position: absolute;
+  inset: 0;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+.depth-space img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  height: min(76svh, 800px);
+  max-width: 76vw;
+  object-fit: contain;
+  box-shadow: 16px 24px 70px #6a4b6c24;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+.depth-scroll-cue {
+  position: absolute;
+  z-index: 20;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 14px;
+  background: transparent;
+  border: 0;
+  color: #74616f;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+html body .vision-landing.opening-underlay {
+  position: fixed;
+  inset: 0;
+  height: 100svh;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+html body .vision-landing {
+  background: var(--paper);
+  color: var(--ink);
+}
+html body .vision-landing .vision-header {
+  background: #faf6eef0;
+  color: var(--ink);
+  border-color: #ffffffd9;
+  box-shadow: 0 8px 34px #54445c12;
+}
+html body .vision-landing .vision-header .brand {
+  font-size: 24px;
+}
+html body .vision-landing .header-sections a {
+  font-size: 14px;
+  color: #6f6373;
+}
+html body .vision-landing .header-workspace {
+  background: #4e4057;
+  color: #fff8ec;
+  font-size: 14px;
+}
+html body .vision-landing .header-cta-arrow {
+  background: #e5d9ed;
+  color: #594563;
+}
+html body .vision-landing .purposeful-hero .hero-copy h1 {
+  font-size: clamp(44px, 4.3vw, 76px);
+  line-height: 1.1;
+  letter-spacing: -0.055em;
+  color: #37303b;
+}
+html body .vision-landing .purposeful-hero .hero-copy h1 span {
+  color: #7a6a82;
+}
+html body .vision-landing .purposeful-hero .vision-description {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #716571;
+  max-width: 470px;
+}
+html body .vision-landing .purposeful-hero .vision-kicker {
+  color: #7d6e7f;
+  font-size: 12px;
+}
+html body .vision-landing .hero-copy::before {
+  background: #fbf6ec96;
+}
+html body .vision-landing .vision-primary {
+  background: #55445e;
+  color: #fff9ed;
+  font-size: 16px;
+}
+html body .vision-landing .vision-text-link {
+  color: #695570;
+  font-size: 15px;
+  border-color: #b6a5b8;
+}
+.unified-specimen {
+  color: var(--ink);
+}
+.unified-specimen::before {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    #f6f1e8fa 52%,
+    #f6f1e8ed 70%,
+    #f6f1e800 100%
+  );
+}
+.study-topline {
+  border-color: #a294a53f;
+}
+.study-topline .study-label,
+.recorded-tag {
+  color: #867787;
+  font-size: 12px;
+}
+.study-title {
+  font-size: clamp(25px, 2.1vw, 34px);
+  color: #4b3d52;
+}
+.study-title > span {
+  color: #88728f;
+}
+.study-tabs button {
+  font-size: 13px;
+  color: #88758b;
+}
+.study-tabs button[aria-pressed="true"] {
+  color: #59445f;
+  border-color: #84658f;
+}
+.study-scene-caption {
+  color: #877a86;
+  font-size: 12px;
+}
+.study-fork {
+  color: #a68aab;
+}
+.study-fork > span {
+  background: var(--paper);
+  color: #87718e;
+  font-size: 12px;
+}
+.study-method {
+  color: #7c6984;
+  font-size: 13px;
+}
+.study-dimensions {
+  color: #8a7d8a;
+  font-size: 12px;
+}
+.study-result strong {
+  font-size: clamp(38px, 3vw, 50px);
+}
+.study-result small,
+.study-source p {
+  font-size: 12px;
+  color: #877989;
+}
+.study-source a {
+  color: #624a70;
+  font-size: 13px;
+}
+.study-scale-tag {
+  color: #765483;
+  background: #e9dfef;
+  font-size: 11px;
+}
+.changed-reading {
+  color: #846391;
+  border-color: #bc9dc6;
+}
+html
+  body
+  .vision-landing
+  :is(.landing-workflow, .field-notes, .landing-closing) {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--line);
+}
+html
+  body
+  .vision-landing
+  :is(
+    .trace-section-heading h2,
+    .notes-intro h2,
+    .closing-copy h2,
+    .spiral-heading h2
+  ) {
+  font-size: clamp(30px, 3.05vw, 48px);
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  color: #403446;
+}
+html
+  body
+  .vision-landing
+  :is(
+    .trace-section-heading h2 span,
+    .spiral-heading h2 span,
+    .closing-copy h2 span
+  ) {
+  color: #88728f;
+}
+html
+  body
+  .vision-landing
+  :is(
+    .trace-section-heading > p,
+    .notes-intro > p:not(.vision-kicker),
+    .closing-copy > p:not(.vision-kicker)
+  ) {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #7a6b7a;
+}
+html
+  body
+  .vision-landing
+  :is(
+    .section-label,
+    .vision-kicker,
+    .study-label,
+    .trace-step-label,
+    .footer-navigation h2
+  ) {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+html
+  body
+  .vision-landing
+  :is(
+    .trace-toolbar p,
+    .trace-toolbar button,
+    .trace-provenance,
+    .trace-authenticity,
+    .trace-crop figcaption,
+    .trace-crop figcaption small,
+    .trace-reading > span,
+    .trace-reading-values small,
+    .trace-decision > a,
+    .closing-path > a > span
+  ) {
+  font-size: 12px;
+}
+html body .vision-landing .trace-stage h3 {
+  font-size: 23px;
+}
+html body .vision-landing .trace-stage > p {
+  font-size: 14px;
+  color: #7c6f7e;
+}
+html body .vision-landing .trace-stage {
+  border-color: var(--line);
+  background: #fffdf8;
+  color: var(--ink);
+}
+html body .vision-landing .trace-stage.trace-decision {
+  background: #504558;
+  color: #faf3e6;
+}
+html body .vision-landing .trace-stage.trace-decision.flag {
+  background: #68523d;
+}
+html body .vision-landing .trace-stage.trace-decision.review {
+  background: #615269;
+}
+html body .vision-landing .trace-decision-copy p {
+  font-size: 14px;
+  color: #dbcede;
+}
+html body .vision-landing .trace-decision-copy h3 {
+  color: #fbf4e6;
+}
+html body .vision-landing .trace-reading-values strong {
+  font-size: 27px;
+}
+html body .vision-landing .trace-reading-values .long-reading {
+  font-size: 19px;
+}
+html body .vision-landing .trace-crop {
+  background: #f5f0e8;
+  border-color: #d9cbdc;
+}
+html body .vision-landing .trace-provenance,
+html body .vision-landing .trace-authenticity {
+  color: #87758c;
+}
+html body .vision-landing .book-controls span {
+  font-size: 14px;
+}
+html body .vision-landing .notes-intro h2 {
+  font-size: clamp(28px, 2.4vw, 40px);
+}
+html body .vision-landing .notes-intro > p:not(.vision-kicker) {
+  font-size: 14px;
+}
+
+/* The xylophone has its own pale studio, connected to the gallery palette. */
+html body .vision-landing .spiral-lab {
+  background: #eee7ef;
+  color: var(--ink);
+}
+.spiral-lab-grid {
+  gap: 5%;
+  grid-template-columns: 1.05fr 1fr;
+  border-color: #a18aa633;
+}
+.spiral-visual {
+  background: #e9e1f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.research-xylophone {
+  height: 470px;
+}
+.spiral-visual-top {
+  left: 18px;
+  right: 18px;
+  color: #746078;
+  font-size: 12px;
+}
+.spiral-visual-top i {
+  background: #8b789b;
+}
+.spiral-visual-top i:last-child {
+  background: #d1b985;
+}
+.spiral-visual-top button {
+  color: #78617e;
+  border-color: #a992af66;
+}
+.spiral-caption {
+  padding: 0 18px 14px;
+  color: #816a88;
+  font-size: 12px;
+}
+.spiral-heading .study-label,
+.spiral-source {
+  color: #8d7894;
+}
+.spiral-source {
+  font-size: 14px;
+}
+.spiral-datasets button {
+  background: #fbf6f147;
+  border-color: #b8a1c03d;
+  color: #88718e;
+  padding: 12px;
+}
+.spiral-datasets button small {
+  font-size: 11px;
+  color: #796480;
+}
+.spiral-datasets button > span {
+  font-size: 13px;
+}
+.spiral-datasets button[aria-pressed="true"] {
+  color: #5b3f6a;
+  background: #fdf8f3bf;
+  border-color: #af8fbc;
+}
+.spiral-measure-heading h3 {
+  font-size: 26px;
+  color: #4d3a57;
+}
+.spiral-measure-heading > span,
+.research-domain {
+  font-size: 12px;
+  color: #796480;
+}
+.research-domain.synthetic {
+  color: #796480;
+}
+.spiral-metric-label {
+  font-size: 14px;
+  color: #705579;
+}
+.spiral-metric-label > span {
+  font-size: 12px;
+  color: #796480;
+}
+.spiral-values small {
+  color: #796480;
+  font-size: 12px;
+}
+.spiral-values strong {
+  font-size: clamp(34px, 3vw, 48px);
+  color: #4b3b55;
+}
+.spiral-values > div:last-child strong {
+  color: #94719e;
+}
+.spiral-values > svg {
+  color: #b391b9;
+}
+.spiral-meter > div {
+  background: #bdacc630;
+}
+.spiral-meter i {
+  background: #a899b1;
+}
+.spiral-meter > div:last-child i {
+  background: #ac8cba;
+}
+.spiral-exact,
+.spiral-exact small {
+  font-size: 12px;
+  color: #796480;
+}
+.spiral-exact strong {
+  color: #72577d;
+  font-size: 24px;
+}
+.spiral-verdict {
+  font-size: 13px;
+  color: #796480;
+}
+.spiral-limits {
+  border-color: #b69bbe40;
+}
+.spiral-limits strong {
+  color: #71547a;
+  font-size: 30px;
+}
+.spiral-limits strong small,
+.spiral-limits span > small {
+  color: #796480;
+  font-size: 12px;
+}
+.spiral-limits span,
+.spiral-limits p {
+  font-size: 13px;
+  color: #796480;
+}
+.spiral-footer {
+  font-size: 12px;
+  color: #796480;
+}
+.spiral-footer a {
+  color: #775980;
+  font-size: 14px;
+}
+html body .vision-landing .closing-path a {
+  background: #fcf8f0;
+  border-color: var(--line);
+  color: #5d4968;
+}
+html body .vision-landing .closing-path p {
+  font-size: 14px;
+  color: #8a778d;
+}
+html body .vision-landing .vision-footer {
+  background: #302a34;
+  color: #f4ecdf;
+}
+html body .vision-landing .footer-masthead,
+html body .vision-landing .footer-bottom {
+  border-color: #ae91b22e;
+}
+html body .vision-landing .footer-purpose > p {
+  color: #e1d4e6;
+  font-size: 26px;
+}
+html
+  body
+  .vision-landing
+  :is(.footer-purpose > span, .footer-bottom, .footer-navigation h2) {
+  color: #bba8c0;
+  font-size: 12px;
+}
+html body .vision-landing :is(.footer-navigation a, .footer-navigation button) {
+  font-size: 15px;
+  color: #e9dfee;
+}
+
+/* Workspace keeps status semantics while sharing the paper, ink and type scale. */
+html body .app-shell {
+  --ws-forest: #3e3445;
+  --ws-ivory: #f7f2ea;
+  --ws-sage: #eae1ed;
+  --ws-teal: #786183;
+  --ws-ink: #3b3042;
+  --ws-line: #dfd3df;
+  --ws-muted: #8a798f;
+  font-size: 16px;
+}
+html body .app-shell .workspace-bar {
+  background: #faf6ef;
+  border-color: #dfd3df;
+  font-size: 14px;
+}
+html body .app-shell .sidebar {
+  background: #3e3445;
+}
+html body .app-shell .sidebar nav a {
+  font-size: 14px;
+}
+html body .app-shell .sidebar nav a.active {
+  background: #d2b8db24;
+  color: #f6e9ff;
+}
+html
+  body
+  .app-shell
+  :is(
+    .polish-card,
+    .workspace-entry,
+    .inspection-evidence,
+    .inspection-result,
+    .field-result-card,
+    .method-comparison,
+    .research-panel,
+    .polish-panel
+  ) {
+  background: #fffcf7;
+  border-color: #e1d6de;
+}
+html body .app-shell .button.primary {
+  background: #786183;
+  border-color: #786183;
+  font-size: 14px;
+}
+html body .app-shell :is(.results-heading h1, .polish-page-heading h1) {
+  font-size: clamp(28px, 3vw, 40px);
+  color: #4e3b58;
+}
+html
+  body
+  .app-shell
+  :is(
+    .results-heading > p:last-child,
+    .polish-page-heading > p,
+    .engine-summary,
+    .result-help
+  ) {
+  font-size: 15px;
+  line-height: 1.7;
+}
+html
+  body
+  .app-shell
+  :is(
+    .capture-source-banner,
+    .result-toolbar label,
+    .evidence-meta,
+    .crop-preview figcaption,
+    .inspection-facts,
+    .sidebar-section,
+    .sidebar-bottom,
+    .workspace-footer,
+    .technical,
+    .eyebrow,
+    .cer-dataset figcaption
+  ) {
+  font-size: 12px;
+}
+html
+  body
+  .app-shell
+  :is(
+    .compact-result .result-card-title h3,
+    .field-result-card label,
+    .field-result-card dt,
+    .compact-raw,
+    .result-card-title > span,
+    .capture-chip
+  ) {
+  font-size: 13px;
+}
+html
+  body
+  .app-shell
+  :is(.capture-source-banner, .crop-preview, .concept-cheque) {
+  background: #f0e8f1;
+  border-color: #dfcfe4;
+  color: #8b6f96;
+}
+html body .app-shell :is(.compact-value, .field-result-card .field-value) {
+  font-size: 30px;
+}
+html body .app-shell .decision-title {
+  font-size: 28px;
+}
+
+@media (max-width: 1000px) {
+  .depth-space img {
+    height: 72svh;
+    left: 50%;
+  }
+  .depth-space {
+    perspective-origin: 50% 50%;
+  }
+
+  .spiral-datasets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .depth-stage {
+    min-height: 0;
+  }
+
+  .depth-space {
+    perspective-origin: 50% 50%;
+  }
+  .depth-space img {
+    top: 50%;
+    left: 50%;
+    width: min(86vw, 430px);
+    max-width: none;
+    height: auto;
+  }
+
+  html body .vision-landing .vision-header .brand {
+    font-size: 20px;
+  }
+  html body .vision-landing .purposeful-hero .hero-copy h1 {
+    font-size: clamp(38px, 10vw, 48px);
+  }
+  html body .vision-landing .purposeful-hero .vision-description {
+    font-size: 16px;
+  }
+  html
+    body
+    .vision-landing
+    :is(.trace-section-heading h2, .closing-copy h2, .spiral-heading h2) {
+    font-size: 32px;
+  }
+  html body .vision-landing .notes-intro h2 {
+    font-size: 27px;
+  }
+  .study-title {
+    font-size: 24px;
+  }
+  .study-topline {
+    flex-direction: column;
+    align-items: start;
+    gap: 7px;
+  }
+  .study-tabs {
+    gap: 8px;
+  }
+  .study-tabs button {
+    font-size: 12px;
+  }
+  .study-scene-caption {
+    font-size: 11px;
+  }
+  .study-result strong {
+    font-size: 38px;
+  }
+  .study-dimensions,
+  .study-result small {
+    font-size: 11px;
+  }
+  html body .vision-landing .trace-stage h3 {
+    font-size: 21px;
+  }
+  html body .vision-landing .trace-reading-values strong {
+    font-size: 24px;
+  }
+  html body .vision-landing .trace-reading-values .long-reading {
+    font-size: 17px;
+  }
+  .research-xylophone {
+    height: 390px;
+  }
+  .spiral-lab-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .spiral-datasets button small {
+    font-size: 10px;
+  }
+  .spiral-datasets button > span {
+    font-size: 12px;
+  }
+  .spiral-values strong {
+    font-size: 34px;
+  }
+  .spiral-caption {
+    font-size: 10px;
+  }
+  .spiral-limits strong {
+    font-size: 27px;
+  }
+  html body .app-shell .field-results-grid,
+  html body .app-shell .method-comparison {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .depth-space img {
+    will-change: auto;
+  }
+}
+
+/* Explicit contrast and caption calibration for evidence and engine cards. */
+html body .app-shell .workspace-welcome {
+  background: #54445f;
+  color: #fff6e8;
+}
+html body .app-shell .workspace-welcome h2 {
+  color: #fff6e8;
+}
+html body .app-shell .workspace-welcome p {
+  color: #e3d6e7;
+}
+html body .app-shell .workspace-welcome .button {
+  background: #e6d8ed;
+  color: #554060;
+  border-color: #e6d8ed;
+}
+html body .app-shell :is(.panel-heading h2, .engine-name, .workspace-entry h3) {
+  color: #55405f;
+}
+html
+  body
+  .app-shell
+  :is(
+    small,
+    dt,
+    summary,
+    figcaption,
+    .readiness-pill,
+    .dashboard-context,
+    .technical pre,
+    .result-label,
+    .compact-timing,
+    .compact-timing strong,
+    .authenticity-notice,
+    .evidence-description,
+    .response-detail pre,
+    .request-details p,
+    .request-details pre,
+    .session-details p,
+    .capture-provenance p,
+    .inspection-result li,
+    .sidebar-bottom span,
+    .panel-heading > span,
+    .dashboard-research span
+  ) {
+  font-size: 12px;
+}
+html body .app-shell .crop-preview figcaption small {
+  font-size: 12px;
+}
+html body .vision-landing .trace-provenance code {
+  font-size: 12px;
+}
+html body .vision-landing .study-scale-tag {
+  font-size: 12px;
+}
+html body .vision-landing .spiral-datasets button small {
+  font-size: 12px;
+}
+html body .vision-landing .footer-field-pair span {
+  font-size: 12px;
+}
+
+html
+  body
+  .app-shell
+  .compact-result
+  :is(.result-label, .compact-timing, .compact-timing strong) {
+  font-size: 12px;
+}
+html
+  body
+  .app-shell
+  :is(
+    .response-origin,
+    .recognition-pipeline span,
+    .recognition-pipeline small,
+    .chart-caption,
+    .chart-legend span,
+    .chart-line-label,
+    .chart-line-label span,
+    .chart-denominator,
+    .decision-stack span,
+    .metric-bar-row span,
+    .metric-bar-row strong,
+    .value-exact-chart small,
+    .additional-limits p,
+    .additional-limits li,
+    .research-summary span,
+    .research-summary small
+  ) {
+  font-size: 12px;
+}
+html body .app-shell .cer-chart-section h3 {
+  font-size: 16px;
+}
+html body .app-shell .cer-dataset h4 {
+  font-size: 14px;
+}
+html body .app-shell .cer-dataset h4 span {
+  font-size: 12px;
+}
+html body .app-shell .results-table :is(td, th) {
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  html body .app-shell .metric-bar-row {
+    grid-template-columns: 60px minmax(0, 1fr) 65px;
+  }
+}
+
+/* Source controls belong to the evidence they change. */
+.research-domain-toggle,
+.specimen-samples {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.research-domain-toggle {
+  margin: 0 0 14px;
+  padding: 4px;
+  background: #ffffff50;
+  border: 1px solid #79658b30;
+  width: fit-content;
+  border-radius: 30px;
+}
+.research-domain-toggle button,
+.specimen-samples button {
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 9px 14px;
+  background: transparent;
+  color: var(--muted);
+  border: 0;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.research-domain-toggle button[aria-pressed="true"] {
+  background: #54445f;
+  color: #fffaf2;
+  box-shadow: 0 2px 5px #54445f15;
+}
+.spiral-datasets button[hidden] {
+  display: none;
+}
+.specimen-samples {
+  margin: 0 0 14px;
+}
+.specimen-samples button {
+  padding: 6px 11px;
+  border: 1px solid #79658b35;
+}
+.specimen-samples button[aria-pressed="true"] {
+  background: #79658b19;
+  border-color: #79658b;
+  color: var(--ink);
+}

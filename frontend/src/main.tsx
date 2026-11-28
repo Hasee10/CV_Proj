@@ -6,6 +6,8 @@ import "./workspace.css";
 import "./results.css";
 import "./editorial.css";
 import "./workspace-polish.css";
+import "./vision-study.css";
+import "./visual-system.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { LeafThrough, type LeafThroughHandle } from "leafthrough/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -8,46 +8,62 @@ const pages = notes.map((note, i) => ({
   alt: `ChequeVerify field notes: ${note.title}`,
   text: note.text,
 }));
+const spreadQuery = "(min-width: 768px)";
+function subscribeLayout(notify: () => void) {
+  const query = matchMedia(spreadQuery);
+  query.addEventListener("change", notify);
+  return () => query.removeEventListener("change", notify);
+}
 export default function ResearchBook() {
+  const desktop = useSyncExternalStore(
+    subscribeLayout,
+    () => matchMedia(spreadQuery).matches,
+    () => false,
+  );
   const ref = useRef<LeafThroughHandle>(null);
   const [page, setPage] = useState(0),
     [last, setLast] = useState(0),
-    [plain, setPlain] = useState(false),
     [error, setError] = useState(false);
+  useEffect(() => {
+    // The library does not emit a page-change event when a new layout mounts.
+    // Align both the visible spread and its counter when crossing a breakpoint.
+    const first = desktop && page > 0 ? Math.ceil(page / 2) * 2 - 1 : page;
+    setPage(first);
+    setLast(
+      desktop && first > 0 ? Math.min(first + 1, notes.length - 1) : first,
+    );
+  }, [desktop, page]);
   return (
     <>
-      <div className="book-topline">
-        <span>CHEQUEVERIFY / NINE PAGES OF EVIDENCE</span>
-        <button onClick={() => setPlain(!plain)}>
-          {plain ? "Return to 3D" : "Read without 3D"}
-        </button>
+      <div className={`book-stage ${desktop ? "spread" : "single"}`}>
+        <LeafThrough
+          key={desktop ? "spread" : "single"}
+          ref={ref}
+          startPage={page}
+          pages={pages}
+          className="research-book"
+          layout={desktop ? "spread" : "single"}
+          pageAspect={1600 / 1200}
+          maxPixelRatio={2}
+          preload={2}
+          bleed={true}
+          loop={false}
+          label="ChequeVerify project field notes"
+          paper={{
+            grain: true,
+            grainStrength: 0.025,
+            showThrough: 0,
+            inkGloss: 0.06,
+          }}
+          lighting={{ shadows: true, shadowMapSize: 1024, floorShadow: 0.12 }}
+          motion={{ speed: 0.85, reducedMotion: "auto" }}
+          onPageChange={(d) => {
+            setPage(d.page);
+            setLast(Math.max(...d.visiblePages));
+          }}
+          onError={() => setError(true)}
+        />
       </div>
-      <LeafThrough
-        ref={ref}
-        pages={pages}
-        className="research-book"
-        layout="auto"
-        pageAspect={1600 / 1200}
-        maxPixelRatio={2}
-        preload={2}
-        bleed={true}
-        loop={false}
-        plain={plain}
-        label="ChequeVerify project field notes"
-        paper={{
-          grain: true,
-          grainStrength: 0.025,
-          showThrough: 0,
-          inkGloss: 0.06,
-        }}
-        lighting={{ shadows: true, shadowMapSize: 1024, floorShadow: 0.12 }}
-        motion={{ speed: 0.85, reducedMotion: "auto" }}
-        onPageChange={(d) => {
-          setPage(d.page);
-          setLast(Math.max(...d.visiblePages));
-        }}
-        onError={() => setError(true)}
-      />
       <div className="book-controls">
         <button
           aria-label="Previous field notes pages"
@@ -67,47 +83,23 @@ export default function ResearchBook() {
         >
           <ArrowRight size={20} aria-hidden="true" />
         </button>
-        <a href={pages[page].src} target="_blank" rel="noreferrer">
-          View page PNG ↗
-        </a>
-        {notes.slice(page, last + 1).map(
-          (note, i) =>
-            note.diagram && (
-              <a
-                key={note.diagram}
-                href={note.diagram}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Page {page + i + 1} SVG ↗
-              </a>
-            ),
-        )}
       </div>
       {error && (
         <p role="status">
-          The 3D reader could not load a page. The complete text is available
-          below.
+          The reader could not load a page. The report text is available below.
         </p>
       )}
-      <details
-        className="reading-notes"
-        id="reading-notes"
-        open={plain || undefined}
+      <section
+        className={error ? "reading-notes" : "sr-only"}
+        aria-label="Field report text"
       >
-        <summary>Text version</summary>
         {notes.map((note) => (
           <article key={note.title}>
             <h3>{note.title}</h3>
             <p>{note.text}</p>
-            {note.diagram && (
-              <a href={note.diagram} target="_blank" rel="noreferrer">
-                Open the explanatory SVG ↗
-              </a>
-            )}
           </article>
         ))}
-      </details>
+      </section>
     </>
   );
 }

@@ -7,9 +7,11 @@ import {
   ChartNoAxesCombined,
   Menu,
   X,
-  BookOpen,
+  PanelLeftClose,
+  PanelLeftOpen,
 } from "lucide-react";
 import { Brand } from "../ui/Brand";
+import { WorkspaceAssistant } from "../ui/WorkspaceAssistant";
 import { useModelStatus } from "../../hooks/useModelStatus";
 import { useSavedCapture } from "../../hooks/useSavedCapture";
 export const navigation = [
@@ -24,6 +26,13 @@ export const navigation = [
 ];
 export function AppLayout() {
   const [open, setOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(() => {
+    try {
+      return localStorage.getItem("chequeverify.sidebar") === "collapsed";
+    } catch {
+      return false;
+    }
+  });
   const location = useLocation();
   const toggle = useRef<HTMLButtonElement>(null);
   const heading = useRef<HTMLDivElement>(null);
@@ -43,28 +52,55 @@ export function AppLayout() {
     document.title = `${title} | ChequeVerify`;
   }, [title]);
   return (
-    <div className="app-shell">
+    <div className={`app-shell${collapsed ? " sidebar-collapsed" : ""}`}>
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
       <aside className="sidebar">
-        <Link to="/" aria-label="ChequeVerify introduction">
-          <Brand />
-        </Link>
+        <div className="sidebar-identity">
+          <Link to="/" aria-label="ChequeVerify introduction">
+            <Brand />
+          </Link>
+          <button
+            className="sidebar-collapse"
+            onClick={() => {
+              setCollapsed(!collapsed);
+              try {
+                localStorage.setItem(
+                  "chequeverify.sidebar",
+                  !collapsed ? "collapsed" : "expanded",
+                );
+              } catch {
+                /* The current toggle still works. */
+              }
+            }}
+            aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+            aria-expanded={!collapsed}
+            aria-controls="desktop-navigation"
+          >
+            {collapsed ? (
+              <PanelLeftOpen size={18} />
+            ) : (
+              <PanelLeftClose size={18} />
+            )}
+          </button>
+        </div>
         <div className="sidebar-section">YOUR WORKSPACE</div>
-        <nav aria-label="Main navigation">
+        <nav id="desktop-navigation" aria-label="Main navigation">
           {navigation.map(({ to, label, icon: Icon }) => (
-            <NavLink key={to} to={to}>
+            <NavLink
+              key={to}
+              to={to}
+              aria-label={label}
+              title={collapsed ? label : undefined}
+            >
               <Icon size={19} aria-hidden="true" />
-              {label}
+              <span className="nav-label">{label}</span>
             </NavLink>
           ))}
         </nav>
         <div className="sidebar-bottom">
-          <BookOpen size={19} aria-hidden="true" />
-          <div>
-            Built for human review<span>Computer Vision · Fall 2026</span>
-          </div>
+          <WorkspaceAssistant />
         </div>
       </aside>
       <div className="workspace">
@@ -122,6 +158,9 @@ export function AppLayout() {
           <span>Recognition. Comparison. Human review.</span>
           <span>LoGo-HTR / ATHN</span>
         </footer>
+      </div>
+      <div className="mobile-guide">
+        <WorkspaceAssistant />
       </div>
     </div>
   );

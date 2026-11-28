@@ -10,6 +10,8 @@ import {
   FieldResultCard,
 } from "../components/results/ResultDetails";
 import { EvidencePanel } from "../components/results/EvidencePanel";
+import { LiveLab } from "../components/results/LiveLab";
+import { recordRun } from "../lib/sessionRuns";
 import {
   RecognitionComparison,
   RecognitionPipeline,
@@ -28,6 +30,40 @@ const exampleLabels: Record<string, string> = {
   "written-baseline": "Handwritten word · baseline",
 };
 export function CapturedResults({
+  kind,
+}: {
+  kind: "verification" | "recognition";
+}) {
+  const [params] = useSearchParams();
+  const [view, setView] = useState<"live" | "saved">(() =>
+    params.has("example") ? "saved" : "live",
+  );
+  return (
+    <div className="workspace-lab-page">
+      <div
+        className="workspace-view-tabs"
+        role="group"
+        aria-label="Workspace view"
+      >
+        <button aria-pressed={view === "live"} onClick={() => setView("live")}>
+          Live lab
+        </button>
+        <button
+          aria-pressed={view === "saved"}
+          onClick={() => setView("saved")}
+        >
+          Archived comparisons
+        </button>
+      </div>
+      {view === "live" ? (
+        <LiveLab key={kind} kind={kind} />
+      ) : (
+        <SavedResults kind={kind} />
+      )}
+    </div>
+  );
+}
+export function SavedResults({
   kind,
 }: {
   kind: "verification" | "recognition";
@@ -105,6 +141,7 @@ export function CapturedResults({
           : await api.recognize(body, controller.signal);
       if (!controller.signal.aborted) {
         setFresh({ id: record.id, result: data, at: new Date().toISOString() });
+        recordRun(kind, record.description ?? record.id, data);
         requestAnimationFrame(() => resultHeading.current?.focus());
       }
     } catch (e) {

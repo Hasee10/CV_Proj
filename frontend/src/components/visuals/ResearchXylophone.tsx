@@ -134,8 +134,8 @@ export default function ResearchXylophone({
         object.updateMatrix();
         mesh.setMatrixAt(i, object.matrix);
         color
-          .copy(palette[state.current.selected])
-          .lerp(highlight, active ? 0.85 : 0.08);
+          .copy(palette[(band + state.current.selected) % palette.length])
+          .lerp(highlight, active ? 0.35 : 0);
         mesh.setColorAt(i, color);
       }
       mesh.instanceMatrix.needsUpdate = true;
@@ -152,7 +152,7 @@ export default function ResearchXylophone({
       const { width, height } = el.getBoundingClientRect();
       if (!width || !height) return;
       renderer.setSize(width, height);
-      const half = 7.8,
+      const half = el.clientWidth < 450 ? 7.5 : 7.35,
         aspect = width / height;
       camera.left = -half * aspect;
       camera.right = half * aspect;

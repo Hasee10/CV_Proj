@@ -26,18 +26,14 @@ describe("Evidence-based depth opening", () => {
   });
   it("uses project evidence plates instead of loading the archived hand scene", () => {
     const html = renderToStaticMarkup(<EntryExperience onEnter={() => {}} />);
-    for (const name of [
-      "fields",
-      "scale",
-      "review",
-      "digits",
-      "handwriting",
-      "synthetic",
-    ])
-      expect(html).toContain(`/gallery/${name}.png`);
-    expect(html).toContain("3003");
-    expect(html).toContain("3083");
-    expect(html).toContain("mummisessing");
+    expect(html.match(/class="depth-plate frame-/g)).toHaveLength(6);
+    expect(html).toContain("/brand/mark-3d.png");
+    expect(html).toContain("136075");
+    expect(html).toContain("8312");
+    expect(html).toContain("6815");
+    expect(html).toContain("Not parsed");
+    expect(html).not.toContain("/field-report/");
+    expect(html).not.toContain("/gallery/fields.png");
     expect(html).toContain("not accuracy claims");
     expect(html.match(/<button/g)).toHaveLength(1);
     expect(html).toContain("Scroll forward through the introduction");

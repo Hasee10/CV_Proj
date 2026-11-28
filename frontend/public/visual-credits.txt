@@ -35,3 +35,6 @@ Typography: Manrope, SIL Open Font License. Self-hosted font from Google Fonts; 
 
 Supplemental opening and hero studies (28 November 2026):
 Three predetermined DEV crops, captured sequentially through the unchanged local backend in both modes. CVL digit strings: CC-BY-NC-4.0, https://zenodo.org/records/1492173. GNHK handwriting: CC-BY-4.0. Synthetic fields: arunchincheti/cheques_data, Apache-2.0 as declared by its source. Exact sources, image hashes, response hashes and request IDs: /gallery/samples.json. These individual demonstrations are not a new evaluation. All outcomes, including unchanged errors and null parses, are retained. Original research captures are untouched.
+
+Observation desk and specimen opening (28 November 2026):
+The current opening uses six native HTML/CSS specimen frames, independent of the field-report pages. All crop images and readings are original DEV source/capture values from the local frozen backend. The additional capture manifest is /results/20261128T055842Z-workspace/manifest.json. CVL: CC-BY-NC-4.0. Synthetic source: arunchincheti/cheques_data, Apache-2.0 as declared. The chart geometry and Pip field-guide SVG are original frontend code. Pip currently provides local help; Groq integration is intentionally deferred. No chat service or key is loaded.

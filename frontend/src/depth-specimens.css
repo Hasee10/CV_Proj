@@ -1,0 +1,528 @@
+/* Opening specimens are dimensional interface objects, separate from the report. */
+.depth-space .depth-source-pixels > img {
+  position: static;
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  transform: none;
+  will-change: auto;
+  box-shadow: none;
+}
+.depth-space .depth-plate-brand img {
+  position: static;
+  left: auto;
+  top: auto;
+  width: 36px;
+  height: 39px;
+  max-width: none;
+  max-height: none;
+  transform: none;
+  will-change: auto;
+  box-shadow: none;
+}
+.depth-stage {
+  background: #e6dceb;
+}
+.depth-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 25% 15%, #ffffff90, transparent 60%),
+    repeating-linear-gradient(90deg, transparent 0 159px, #6b507a06 159px 160px);
+}
+.depth-stage::after {
+  opacity: 0.08;
+}
+.depth-plate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(940px, 78vw);
+  padding: 25px 30px 20px;
+  background: linear-gradient(135deg, #403247, #2d2737);
+  color: #f8f0e6;
+  border: 1px solid #fcf5ff50;
+  border-radius: 15px;
+  box-shadow:
+    2px 3px 0 #fff8,
+    10px 12px 0 #4232470d,
+    0 30px 80px #46304e40;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  will-change: transform, opacity;
+  overflow: hidden;
+  isolation: isolate;
+}
+.depth-plate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 90% 0%,
+    var(--frame-accent),
+    transparent 70%
+  );
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
+}
+.depth-plate-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d8c5e12e;
+  padding-bottom: 18px;
+  gap: 20px;
+}
+.depth-plate-brand > span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 21px;
+  letter-spacing: -0.06em;
+}
+.depth-plate-brand img {
+  width: 36px;
+  height: 39px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px #0003);
+}
+.depth-plate-brand small {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #a38daf;
+  font:
+    10px Consolas,
+    monospace;
+  letter-spacing: 0.09em;
+}
+.depth-plate-brand i {
+  width: 4px;
+  height: 4px;
+  display: block;
+  background: var(--frame-accent);
+  border-radius: 50%;
+}
+.depth-plate-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 25px 0 28px;
+}
+.depth-plate-heading > span {
+  font:
+    10px Consolas,
+    monospace;
+  letter-spacing: 0.13em;
+  color: var(--frame-accent);
+}
+.depth-plate-heading h2 {
+  font-size: clamp(27px, 3.1vw, 43px);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  max-width: 700px;
+  font-weight: 400;
+  color: #f9f1e6;
+}
+.depth-specimen-body {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+.depth-crop-stage {
+  background: #f5efe6;
+  border-radius: 9px;
+  padding: 16px 18px 0;
+  color: #685b6d;
+  min-width: 0;
+  box-shadow: inset 0 1px 0 #fff;
+}
+.depth-crop-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font:
+    9px Consolas,
+    monospace;
+  letter-spacing: 0.03em;
+}
+.depth-crop-meta > strong {
+  margin-left: auto;
+  font-weight: 400;
+  color: #988b9e;
+}
+.depth-source-pixels {
+  height: 215px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0 5px;
+  overflow: hidden;
+  padding: 30px;
+  background: radial-gradient(ellipse, #fffef9, #eee8e1);
+  border: 1px solid #e0d6de;
+  border-radius: 5px;
+}
+.depth-source-pixels > img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  image-rendering: auto;
+  box-shadow: 0 2px 10px #3e27450c;
+}
+.depth-scan-line {
+  position: absolute;
+  top: 20%;
+  height: 1px;
+  left: 13px;
+  right: 13px;
+  background: linear-gradient(90deg, transparent, #aa8db3, transparent);
+  box-shadow: 0 3px 16px #a287ae99;
+  animation: specimen-scan 6s ease-in-out infinite;
+  opacity: 0.8;
+}
+.depth-crop-corners {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: #b29fbb;
+  pointer-events: none;
+}
+.depth-input-dimensions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 4px 18px;
+  gap: 16px;
+}
+.depth-input-dimensions > span {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font:
+    9px Consolas,
+    monospace;
+  letter-spacing: 0.03em;
+  color: #ac9bb1;
+}
+.depth-input-dimensions b {
+  font:
+    500 17px Manrope,
+    sans-serif;
+  letter-spacing: -0.04em;
+  color: #6d5979;
+}
+.depth-input-dimensions > svg {
+  color: #bca9c6;
+}
+.depth-reading-rail {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  border: 1px solid #cdb6dd33;
+  border-radius: 9px;
+  background: #211c2926;
+  min-width: 0;
+}
+.depth-reading-rail > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 22px 23px;
+  min-width: 0;
+}
+.depth-reading-rail .depth-reading-athn {
+  border-top: 1px solid #cdb6dd33;
+}
+.depth-reading-rail > div > span {
+  font:
+    9px Consolas,
+    monospace;
+  letter-spacing: 0.07em;
+  color: #a58bb3;
+}
+.depth-reading-rail strong {
+  font-size: clamp(30px, 3.5vw, 49px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.06em;
+  margin: 13px 0 16px;
+  color: #e9dcef;
+  overflow-wrap: anywhere;
+}
+.depth-reading-rail strong.long {
+  font-size: 21px;
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+}
+.depth-reading-athn strong {
+  color: var(--frame-accent);
+}
+.depth-reading-rail small {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  color: #9c87a7;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.depth-reading-rail small b {
+  font-size: 12px;
+  color: #d4c1df;
+  font-weight: 400;
+}
+.depth-plate-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-top: 20px;
+  font-size: 10px;
+  color: #a58eaf;
+  line-height: 1.7;
+}
+.frame-1 {
+  background: linear-gradient(145deg, #4c3c43, #332a36);
+}
+.frame-2 {
+  background: linear-gradient(145deg, #354449, #2b303f);
+}
+.frame-3 {
+  background: linear-gradient(145deg, #493540, #302b3a);
+}
+.frame-4 {
+  background: linear-gradient(145deg, #3f3b58, #302b3d);
+}
+.frame-5 .depth-specimen-body {
+  grid-template-columns: 1fr 1.25fr;
+}
+.frame-5 .depth-source-pixels {
+  padding: 20px;
+}
+.frame-5 .depth-reading-rail strong.long {
+  font-size: 20px;
+}
+html body .vision-landing .research-xylophone {
+  height: 535px;
+}
+@keyframes specimen-scan {
+  0%,
+  100% {
+    top: 20%;
+    opacity: 0.2;
+  }
+  50% {
+    top: 80%;
+    opacity: 0.85;
+  }
+}
+@media (max-width: 1000px) {
+  .depth-plate {
+    width: 83vw;
+    padding: 23px;
+  }
+  .depth-source-pixels {
+    height: 190px;
+    padding: 22px;
+  }
+  .depth-specimen-body {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 15px;
+  }
+  .depth-reading-rail > div {
+    padding: 19px;
+  }
+  .depth-reading-rail strong {
+    font-size: 36px;
+  }
+  .depth-plate-brand small {
+    font-size: 9px;
+    gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .depth-plate {
+    width: 89vw;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow:
+      2px 3px 0 #fff6,
+      0 18px 55px #46304e40;
+  }
+  .depth-plate-brand {
+    padding-bottom: 14px;
+    gap: 10px;
+  }
+  .depth-plate-brand > span {
+    font-size: 19px;
+    gap: 6px;
+  }
+  .depth-plate-brand img {
+    width: 29px;
+    height: 32px;
+  }
+  .depth-plate-brand small {
+    font-size: 8px;
+    gap: 0;
+    max-width: 65px;
+    text-align: right;
+    line-height: 1.7;
+  }
+  .depth-plate-brand i {
+    display: none;
+  }
+  .depth-plate-heading {
+    padding: 21px 0;
+    gap: 10px;
+  }
+  .depth-plate-heading h2 {
+    font-size: 29px;
+    max-width: 280px;
+    line-height: 1.1;
+  }
+  .depth-plate-heading > span {
+    font-size: 9px;
+  }
+  .depth-specimen-body,
+  .frame-5 .depth-specimen-body {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .depth-crop-stage {
+    padding: 13px 12px 0;
+  }
+  .depth-crop-meta {
+    font-size: 8px;
+    gap: 6px;
+  }
+  .depth-crop-meta > svg {
+    width: 13px;
+  }
+  .depth-source-pixels {
+    height: 139px;
+    margin: 10px 0 0;
+    padding: 19px;
+  }
+  .depth-input-dimensions {
+    padding: 12px 2px;
+  }
+  .depth-input-dimensions > span {
+    font-size: 8px;
+    gap: 5px;
+  }
+  .depth-input-dimensions b {
+    font-size: 15px;
+  }
+  .depth-reading-rail {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .depth-reading-rail .depth-reading-athn {
+    border-top: 0;
+    border-left: 1px solid #cdb6dd33;
+  }
+  .depth-reading-rail > div {
+    padding: 14px;
+  }
+  .depth-reading-rail > div > span {
+    font-size: 8px;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+  .depth-reading-rail strong {
+    font-size: 29px;
+    margin: 12px 0;
+  }
+  .depth-reading-rail strong.long,
+  .frame-5 .depth-reading-rail strong.long {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .depth-reading-rail small {
+    font-size: 8px;
+    gap: 3px;
+  }
+  .depth-reading-rail small b {
+    font-size: 10px;
+  }
+  .depth-plate-foot {
+    font-size: 8px;
+    gap: 16px;
+    padding-top: 14px;
+  }
+  .depth-plate-foot > span {
+    max-width: 50%;
+  }
+  .depth-scroll-cue {
+    bottom: 16px;
+  }
+  html body .vision-landing .research-xylophone {
+    height: 445px;
+  }
+}
+@media (max-height: 700px) and (min-width: 601px) {
+  .depth-source-pixels {
+    height: 150px;
+  }
+  .depth-plate-heading {
+    padding: 18px 0;
+  }
+  .depth-plate-heading h2 {
+    font-size: 31px;
+  }
+  .depth-plate {
+    padding: 18px 25px;
+  }
+  .depth-reading-rail strong {
+    font-size: 30px;
+    margin: 9px 0;
+  }
+  .depth-plate-brand {
+    padding-bottom: 13px;
+  }
+}
+@media (max-height: 720px) and (max-width: 600px) {
+  .depth-plate {
+    padding: 15px;
+  }
+  .depth-plate-heading h2 {
+    font-size: 25px;
+  }
+  .depth-plate-heading {
+    padding: 14px 0;
+  }
+  .depth-source-pixels {
+    height: 105px;
+  }
+  .depth-input-dimensions {
+    padding: 9px 2px;
+  }
+  .depth-reading-rail > div {
+    padding: 11px;
+  }
+  .depth-reading-rail strong {
+    font-size: 25px;
+    margin: 9px 0;
+  }
+  .depth-plate-foot {
+    font-size: 7px;
+    padding-top: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .depth-scan-line {
+    animation: none;
+    opacity: 0.2;
+  }
+}

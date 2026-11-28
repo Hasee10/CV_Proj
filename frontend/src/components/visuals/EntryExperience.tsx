@@ -1,14 +1,58 @@
 import { useEffect, useRef } from "react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowUpRight, ScanLine } from "lucide-react";
+import { labSamples } from "../../lib/sampleLibrary";
 
-const chapters = [
-  { src: "/gallery/digits.png", color: [243, 225, 188], side: 1 },
-  { src: "/gallery/fields.png", color: [241, 234, 221], side: -1 },
-  { src: "/gallery/handwriting.png", color: [224, 218, 239], side: -1 },
-  { src: "/gallery/scale.png", color: [226, 216, 237], side: 1 },
-  { src: "/gallery/synthetic.png", color: [237, 221, 204], side: -1 },
-  { src: "/gallery/review.png", color: [241, 234, 221], side: 1 },
+export const openingFrames = [
+  {
+    sample: 0,
+    title: "Begin with the pixels.",
+    label: "01 / THE INPUT",
+    accent: "#c5abc9",
+    color: [230, 220, 235],
+    side: 1,
+  },
+  {
+    sample: 1,
+    title: "Scale changes the reading.",
+    label: "02 / PREPARATION",
+    accent: "#c7b592",
+    color: [238, 225, 204],
+    side: -1,
+  },
+  {
+    sample: 2,
+    title: "Read what the model read.",
+    label: "03 / RECOGNITION",
+    accent: "#b5c9c5",
+    color: [218, 229, 225],
+    side: 1,
+  },
+  {
+    sample: 4,
+    title: "Keep the error in view.",
+    label: "04 / THE EVIDENCE",
+    accent: "#d3afa1",
+    color: [236, 221, 217],
+    side: -1,
+  },
+  {
+    sample: 5,
+    title: "Small marks. Real consequences.",
+    label: "05 / THE DETAIL",
+    accent: "#b9b6d7",
+    color: [225, 222, 238],
+    side: -1,
+  },
+  {
+    sample: 3,
+    title: "Leave room for judgement.",
+    label: "06 / HUMAN REVIEW",
+    accent: "#d4c6a5",
+    color: [239, 231, 216],
+    side: 1,
+  },
 ];
+const chapters = openingFrames;
 
 export function openingProgress(scroll: number, range: number) {
   const phase = Math.max(0, Math.min(1, scroll / Math.max(1, range)));
@@ -26,7 +70,7 @@ export function openingProgress(scroll: number, range: number) {
 export function EntryExperience({ onEnter }: { onEnter: () => void }) {
   const root = useRef<HTMLElement>(null),
     stage = useRef<HTMLDivElement>(null);
-  const plates = useRef<(HTMLImageElement | null)[]>([]),
+  const plates = useRef<(HTMLElement | null)[]>([]),
     enter = useRef(onEnter);
   useEffect(() => {
     enter.current = onEnter;
@@ -52,22 +96,25 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
         b = chapters[Math.min(chapters.length - 1, first + 1)].color;
       stage.current!.style.backgroundColor = `rgb(${a.map((v, i) => Math.round(v + (b[i] - v) * weight)).join(",")})`;
       stage.current!.style.opacity = String(1 - dissolve);
-      stage.current!.style.filter = reduced.matches
-        ? "none"
-        : `blur(${dissolve * 3}px)`;
+
       plates.current.forEach((image, index) => {
         if (!image) return;
         const delta = index - plate;
         const direction = chapters[index].side;
-        const opacity =
-          delta >= 0 ? 1 / (1 + delta * 3) : Math.max(0, 1 + delta * 1.8);
+        const opacity = reduced.matches
+          ? index === Math.round(plate)
+            ? 1
+            : 0
+          : delta >= 0
+            ? delta > 3
+              ? 0
+              : 1 / (1 + delta * 3)
+            : Math.max(0, 1 + delta * 1.8);
         image.style.opacity = String(opacity * (1 - dissolve));
         image.style.transform = reduced.matches
           ? "translate(-50%, -50%)"
           : `translate3d(calc(-50% + ${delta * 25 * direction}vw), calc(-50% + ${delta * 5}vh), ${-delta * 480 + dissolve * 300}px) rotateY(${-delta * 13 * direction}deg)`;
-        image.style.filter = reduced.matches
-          ? "none"
-          : `blur(${Math.min(8, Math.abs(delta) * 3) + dissolve * 5}px)`;
+
         image.style.zIndex = String(10 - index);
       });
       if (phase >= 0.9995) {
@@ -110,20 +157,126 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
     >
       <div className="depth-stage" ref={stage}>
         <div className="depth-space" aria-hidden="true">
-          {chapters.map((item, index) => (
-            <img
-              key={item.src}
-              ref={(el) => {
-                plates.current[index] = el;
-              }}
-              src={item.src}
-              width="1200"
-              height="1500"
-              alt=""
-              loading="eager"
-              fetchPriority={index === 0 ? "high" : "auto"}
-            />
-          ))}
+          {chapters.map((item, index) => {
+            const sample = labSamples[item.sample],
+              base = sample.responses.baseline.result,
+              athn = sample.responses.proposed.result;
+            const width = base.model_input_shape.at(-1)!,
+              height = base.model_input_shape.at(-2)!;
+            return (
+              <article
+                key={item.label}
+                ref={(el) => {
+                  plates.current[index] = el;
+                }}
+                className={`depth-plate frame-${index}`}
+                style={{ "--frame-accent": item.accent } as React.CSSProperties}
+              >
+                <header className="depth-plate-brand">
+                  <span>
+                    <img
+                      src="/brand/mark-3d.png"
+                      width="40"
+                      height="44"
+                      alt=""
+                    />{" "}
+                    ChequeVerify
+                  </span>
+                  <small>
+                    RECORDED DEV STUDY <i />{" "}
+                    {String(index + 1).padStart(2, "0")} / 06
+                  </small>
+                </header>
+                <div className="depth-plate-heading">
+                  <span>{item.label}</span>
+                  <h2>{item.title}</h2>
+                </div>
+                <div className="depth-specimen-body">
+                  <div className="depth-crop-stage">
+                    <div className="depth-crop-meta">
+                      <ScanLine size={17} />
+                      <span>
+                        {sample.synthetic
+                          ? "SYNTHETIC FIELD"
+                          : "GENUINE HANDWRITING"}
+                      </span>
+                      <strong>
+                        {width} × {height} px
+                      </strong>
+                    </div>
+                    <div className="depth-source-pixels">
+                      <img
+                        src={sample.image}
+                        alt=""
+                        loading="eager"
+                        fetchPriority={index === 0 ? "high" : "auto"}
+                      />
+                      <span className="depth-scan-line" />
+                      <svg
+                        className="depth-crop-corners"
+                        viewBox="0 0 600 300"
+                        preserveAspectRatio="none"
+                      >
+                        <path
+                          d="M15 50V15h35M550 15h35v35M585 250v35h-35M50 285H15v-35"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                        />
+                      </svg>
+                    </div>
+                    <div className="depth-input-dimensions">
+                      <span>
+                        BASELINE INPUT{" "}
+                        <b>
+                          {width} × {height}
+                        </b>
+                      </span>
+                      <ArrowUpRight size={20} />
+                      <span>
+                        ATHN INPUT{" "}
+                        <b>
+                          {athn.model_input_shape.at(-1)} ×{" "}
+                          {athn.model_input_shape.at(-2)}
+                        </b>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="depth-reading-rail">
+                    <div>
+                      <span>BASELINE / RAW READING</span>
+                      <strong
+                        className={base.raw_text.length > 10 ? "long" : ""}
+                      >
+                        {base.raw_text || "(empty)"}
+                      </strong>
+                      <small>
+                        Parsed value <b>{base.parsed_value ?? "Not parsed"}</b>
+                      </small>
+                    </div>
+                    <div className="depth-reading-athn">
+                      <span>WITH ATHN / RAW READING</span>
+                      <strong
+                        className={athn.raw_text.length > 10 ? "long" : ""}
+                      >
+                        {athn.raw_text || "(empty)"}
+                      </strong>
+                      <small>
+                        Parsed value <b>{athn.parsed_value ?? "Not parsed"}</b>
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <footer className="depth-plate-foot">
+                  <span>Same frozen recogniser. Original output retained.</span>
+                  <span>
+                    {sample.synthetic ? "Synthetic" : "Handwritten"} · DEV
+                    demonstration
+                  </span>
+                </footer>
+              </article>
+            );
+          })}
         </div>
         <button
           className="depth-scroll-cue"
@@ -134,12 +287,10 @@ export function EntryExperience({ onEnter }: { onEnter: () => void }) {
           <ArrowDown size={15} aria-hidden="true" />
         </button>
         <div className="sr-only">
-          Six evidence plates, including newly captured DEV digit strings, a
-          handwritten 7, and synthetic 1737. Original examples include: genuine
-          handwritten fields that both parse to 1.00; a synthetic numeric crop
-          read as 3003 by baseline and 3083 with ATHN; and the synthetic written
-          reading mummisessing that cannot be parsed. These are constructed
-          development examples, not accuracy claims.
+          Six specimen frames use actual development inputs and saved backend
+          readings. These are not accuracy claims. Scrolling moves through the
+          evidence, then dissolves into the site. The leaflet is a separate
+          research publication.
         </div>
       </div>
     </section>

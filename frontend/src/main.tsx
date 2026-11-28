@@ -8,6 +8,8 @@ import "./editorial.css";
 import "./workspace-polish.css";
 import "./vision-study.css";
 import "./visual-system.css";
+import "./workspace-live.css";
+import "./depth-specimens.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />

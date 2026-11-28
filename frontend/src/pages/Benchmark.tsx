@@ -4,7 +4,7 @@ import { api, isModelInfo } from "../api/client";
 import type { BenchmarkResult, PairMetrics } from "../api/results";
 import { formatJson, useCaptureContext } from "../hooks/useSavedCapture";
 import { CaptureProvenance } from "../components/results/ResultDetails";
-import { BenchmarkVisuals } from "../components/research/BenchmarkVisuals";
+import { BenchmarkExplorer } from "../components/research/BenchmarkExplorer";
 const names: Record<string, string> = {
   D1_gnhk_words_genuine: "GNHK words",
   D4_cvl_numeric_genuine: "CVL digit strings",
@@ -119,7 +119,7 @@ export function Benchmark() {
         raw values remain in the detailed tables. CER can exceed 1 due to
         insertion errors.
       </p>
-      <BenchmarkVisuals data={data} />
+      <BenchmarkExplorer data={data} />
       <details className="benchmark-tables polish-card">
         <summary>
           Detailed metrics, confusion matrices &amp; original source values

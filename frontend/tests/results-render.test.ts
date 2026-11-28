@@ -2,7 +2,7 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter, Routes, Route, Outlet } from "react-router-dom";
 import { describe, expect, it } from "vitest";
-import { CapturedResults } from "../src/pages/CapturedResults";
+import { SavedResults as CapturedResults } from "../src/pages/CapturedResults";
 import { Benchmark } from "../src/pages/Benchmark";
 import { readFileSync } from "node:fs";
 import type { CaptureManifest } from "../src/api/results";

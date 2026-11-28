@@ -1,0 +1,379 @@
+{
+  "run_id": "20261128T055842Z-workspace",
+  "captured_at": "2026-11-28T05:59:35.396623+00:00",
+  "selection": "Four source IDs chosen before inference; DEV only; no outcome filtering.",
+  "studies": [
+    {
+      "id": "digit-string-02",
+      "title": "Digit string / CVL 02",
+      "field_type": "numeric",
+      "split": "dev",
+      "synthetic": false,
+      "source_path": "data/benchmarks/cvl_numeric/CVL_136075_0002_03.png",
+      "source_id": "CVL_136075_0002_03",
+      "licence": "CC-BY-NC-4.0",
+      "image": "/results/20261128T055842Z-workspace/CVL_136075_0002_03.png",
+      "image_sha256": "e35975b0445d9bb8e16a159b012751797df54a0aca3dd29db2d363eeeac8ae00",
+      "responses": {
+        "baseline": {
+          "path": "/results/20261128T055842Z-workspace/digit-string-02-baseline.json",
+          "sha256": "c0dd5b51d910e4e724e1675ea34ffc120cf5c68a69317381ddef4de9f58f985d",
+          "request_id": "77fa0eb10c09",
+          "result": {
+            "field_type": "numeric",
+            "mode": "baseline",
+            "raw_text": "136075",
+            "parsed_value": "136075.00",
+            "parse_status": "parsed",
+            "beam_log_probability": -0.1105,
+            "preprocessing": {
+              "method": "baseline",
+              "applied": false,
+              "path": "identity"
+            },
+            "model_input_shape": [
+              1,
+              3,
+              66,
+              238
+            ],
+            "latency_seconds": {
+              "preprocess": 0.0,
+              "queue_wait": 0.0,
+              "inference": 0.9163,
+              "total": 0.9163
+            },
+            "image": {
+              "width": 238,
+              "height": 66
+            },
+            "request_id": "77fa0eb10c09"
+          }
+        },
+        "proposed": {
+          "path": "/results/20261128T055842Z-workspace/digit-string-02-proposed.json",
+          "sha256": "a8474235fd330676594c43673e57d416bd934c94ced4aee0200e04025f7e9555",
+          "request_id": "f9c3790c27e4",
+          "result": {
+            "field_type": "numeric",
+            "mode": "proposed",
+            "raw_text": "136075",
+            "parsed_value": "136075.00",
+            "parse_status": "parsed",
+            "beam_log_probability": -0.1105,
+            "preprocessing": {
+              "method": "ATHN",
+              "estimated_text_height": 53.0,
+              "input_hw": [
+                66,
+                238
+              ],
+              "scale": 1.0,
+              "applied": false,
+              "path": "identity"
+            },
+            "model_input_shape": [
+              1,
+              3,
+              66,
+              238
+            ],
+            "latency_seconds": {
+              "preprocess": 0.0014,
+              "queue_wait": 0.0,
+              "inference": 0.7387,
+              "total": 0.7401
+            },
+            "image": {
+              "width": 238,
+              "height": 66
+            },
+            "request_id": "f9c3790c27e4"
+          }
+        }
+      }
+    },
+    {
+      "id": "synthetic-02",
+      "title": "Numeric field / Synthetic 02",
+      "field_type": "numeric",
+      "split": "dev",
+      "synthetic": true,
+      "source_path": "data/benchmarks/syn_cheques/SYN_0031_num.png",
+      "source_id": "SYN_0031_num",
+      "licence": "Apache-2.0 (declared on the HF card; underlying template provenance undocumented)",
+      "image": "/results/20261128T055842Z-workspace/SYN_0031_num.png",
+      "image_sha256": "f5af2e2117868c97c7240cbef9d151bcb21dc226047fd80915dd5e6fcdc7c21a",
+      "responses": {
+        "baseline": {
+          "path": "/results/20261128T055842Z-workspace/synthetic-02-baseline.json",
+          "sha256": "767994ccecadedb230337e8c134bc0421fb9449d337a20c3355c9da31f43fe42",
+          "request_id": "fb5c10c7dce6",
+          "result": {
+            "field_type": "numeric",
+            "mode": "baseline",
+            "raw_text": "Ban",
+            "parsed_value": null,
+            "parse_status": "unparseable",
+            "beam_log_probability": -1.1285,
+            "preprocessing": {
+              "method": "baseline",
+              "applied": false,
+              "path": "identity"
+            },
+            "model_input_shape": [
+              1,
+              3,
+              23,
+              94
+            ],
+            "latency_seconds": {
+              "preprocess": 0.0,
+              "queue_wait": 0.0,
+              "inference": 0.1868,
+              "total": 0.1868
+            },
+            "image": {
+              "width": 94,
+              "height": 23
+            },
+            "request_id": "fb5c10c7dce6"
+          }
+        },
+        "proposed": {
+          "path": "/results/20261128T055842Z-workspace/synthetic-02-proposed.json",
+          "sha256": "9aae3ed4ff552bd0bb8dde91d08fc7d4434cd2f8ceda0cd577f2a7284dd02a27",
+          "request_id": "b25dd54b138a",
+          "result": {
+            "field_type": "numeric",
+            "mode": "proposed",
+            "raw_text": "8312",
+            "parsed_value": "8312.00",
+            "parse_status": "parsed",
+            "beam_log_probability": -2.6847,
+            "preprocessing": {
+              "method": "ATHN",
+              "estimated_text_height": 12.0,
+              "input_hw": [
+                23,
+                94
+              ],
+              "scale": 4.0,
+              "applied": true,
+              "path": "resized",
+              "output_hw": [
+                92,
+                376
+              ]
+            },
+            "model_input_shape": [
+              1,
+              3,
+              92,
+              376
+            ],
+            "latency_seconds": {
+              "preprocess": 0.0011,
+              "queue_wait": 0.0,
+              "inference": 1.4893,
+              "total": 1.4904
+            },
+            "image": {
+              "width": 94,
+              "height": 23
+            },
+            "request_id": "b25dd54b138a"
+          }
+        }
+      }
+    },
+    {
+      "id": "synthetic-03",
+      "title": "Numeric field / Synthetic 03",
+      "field_type": "numeric",
+      "split": "dev",
+      "synthetic": true,
+      "source_path": "data/benchmarks/syn_cheques/SYN_0032_num.png",
+      "source_id": "SYN_0032_num",
+      "licence": "Apache-2.0 (declared on the HF card; underlying template provenance undocumented)",
+      "image": "/results/20261128T055842Z-workspace/SYN_0032_num.png",
+      "image_sha256": "9b1c5c8565bb51174b408e64b78d259fbc3b03c31d053fba0d124d564d13d661",
+      "responses": {
+        "baseline": {
+          "path": "/results/20261128T055842Z-workspace/synthetic-03-baseline.json",
+          "sha256": "aa3b101eb22dccd16edcf185781d2387f023fd6cc5abeaee988e241e24c404fb",
+          "request_id": "05842e8ac1c3",
+          "result": {
+            "field_type": "numeric",
+            "mode": "baseline",
+            "raw_text": "coon",
+            "parsed_value": null,
+            "parse_status": "unparseable",
+            "beam_log_probability": -1.1907,
+            "preprocessing": {
+              "method": "baseline",
+              "applied": false,
+              "path": "identity"
+            },
+            "model_input_shape": [
+              1,
+              3,
+              37,
+              111
+            ],
+            "latency_seconds": {
+              "preprocess": 0.0,
+              "queue_wait": 0.0,
+              "inference": 0.1982,
+              "total": 0.1982
+            },
+            "image": {
+              "width": 111,
+              "height": 37
+            },
+            "request_id": "05842e8ac1c3"
+          }
+        },
+        "proposed": {
+          "path": "/results/20261128T055842Z-workspace/synthetic-03-proposed.json",
+          "sha256": "5d36ab24dedad1eaff79cb3ecc9cbfc4da73c5236c96cdd6307946c49ac91d82",
+          "request_id": "88797a20c4a1",
+          "result": {
+            "field_type": "numeric",
+            "mode": "proposed",
+            "raw_text": "6815",
+            "parsed_value": "6815.00",
+            "parse_status": "parsed",
+            "beam_log_probability": -2.023,
+            "preprocessing": {
+              "method": "ATHN",
+              "estimated_text_height": 13.4,
+              "input_hw": [
+                37,
+                111
+              ],
+              "scale": 3.5821,
+              "applied": true,
+              "path": "resized",
+              "output_hw": [
+                133,
+                398
+              ]
+            },
+            "model_input_shape": [
+              1,
+              3,
+              133,
+              398
+            ],
+            "latency_seconds": {
+              "preprocess": 0.0017,
+              "queue_wait": 0.0,
+              "inference": 1.2518,
+              "total": 1.2535
+            },
+            "image": {
+              "width": 111,
+              "height": 37
+            },
+            "request_id": "88797a20c4a1"
+          }
+        }
+      }
+    },
+    {
+      "id": "written-02",
+      "title": "Written amount / Synthetic",
+      "field_type": "written",
+      "split": "dev",
+      "synthetic": true,
+      "source_path": "data/benchmarks/syn_cheques/SYN_0013_words.png",
+      "source_id": "SYN_0013_words",
+      "licence": "Apache-2.0 (declared on the HF card; underlying template provenance undocumented)",
+      "image": "/results/20261128T055842Z-workspace/SYN_0013_words.png",
+      "image_sha256": "aa41f3a665b8e31da80dcaf46c4aabffc4dc8ad141d8f7d39ed18a376edb2a49",
+      "responses": {
+        "baseline": {
+          "path": "/results/20261128T055842Z-workspace/written-02-baseline.json",
+          "sha256": "543d1ce791daca175aa0c8ae39ba073eb297cd450a7f72a1c1f2cde5cfb6ae4e",
+          "request_id": "a3c0f4bd39b8",
+          "result": {
+            "field_type": "written",
+            "mode": "baseline",
+            "raw_text": "comansinsuratimen",
+            "parsed_value": null,
+            "parse_status": "unparseable",
+            "beam_log_probability": -2.618,
+            "preprocessing": {
+              "method": "baseline",
+              "applied": false,
+              "path": "identity"
+            },
+            "model_input_shape": [
+              1,
+              3,
+              30,
+              290
+            ],
+            "latency_seconds": {
+              "preprocess": 0.0,
+              "queue_wait": 0.0,
+              "inference": 10.6062,
+              "total": 10.6062
+            },
+            "image": {
+              "width": 290,
+              "height": 30
+            },
+            "request_id": "a3c0f4bd39b8"
+          }
+        },
+        "proposed": {
+          "path": "/results/20261128T055842Z-workspace/written-02-proposed.json",
+          "sha256": "f86ca8088b0a52800b2efea00fbbe0e0e9c821a97a95a686a19e3477b11718e8",
+          "request_id": "2319f9304cdf",
+          "result": {
+            "field_type": "written",
+            "mode": "proposed",
+            "raw_text": "onesesererestiondndnderensiven",
+            "parsed_value": null,
+            "parse_status": "unparseable",
+            "beam_log_probability": -2.2515,
+            "preprocessing": {
+              "method": "ATHN",
+              "estimated_text_height": 10.0,
+              "input_hw": [
+                30,
+                290
+              ],
+              "scale": 3.531,
+              "applied": true,
+              "path": "resized",
+              "output_hw": [
+                106,
+                1024
+              ]
+            },
+            "model_input_shape": [
+              1,
+              3,
+              106,
+              1024
+            ],
+            "latency_seconds": {
+              "preprocess": 0.0053,
+              "queue_wait": 0.0,
+              "inference": 37.0412,
+              "total": 37.0464
+            },
+            "image": {
+              "width": 290,
+              "height": 30
+            },
+            "request_id": "2319f9304cdf"
+          }
+        }
+      }
+    }
+  ]
+}

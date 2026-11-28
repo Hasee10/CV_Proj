@@ -140,8 +140,9 @@ html body .app-shell .sidebar-bottom {
 .guide-panel {
   position: fixed;
   z-index: 90;
-  left: 22px;
-  bottom: 108px;
+  left: auto;
+  right: 22px;
+  bottom: 100px;
   width: 350px;
   max-width: calc(100vw - 32px);
   background: #fffbf5;
@@ -239,8 +240,28 @@ html body .app-shell .sidebar-bottom {
   background: #594563;
   color: #fff;
 }
-.mobile-guide {
+.assistant-dock {
+  display: block;
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 85;
+}
+.assistant-dock > .guide-trigger {
+  border: 1px solid #d4c0df;
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  background: #4c3c56;
+  box-shadow: 0 5px 22px #38204035;
+  justify-content: center;
+}
+.assistant-dock .guide-trigger > span {
   display: none;
+}
+.assistant-dock .guide-character {
+  width: 58px;
+  height: 65px;
 }
 html body .app-shell .polish-card {
   border-radius: 13px;
@@ -1396,22 +1417,12 @@ html body .app-shell .dash-launch .button {
     height: 20px;
     margin: 15px 0;
   }
-  .sidebar-collapsed .nav-label,
-  .sidebar-collapsed .guide-trigger > span {
+  .sidebar-collapsed .nav-label {
     display: none;
   }
   .sidebar-collapsed .sidebar nav a {
     justify-content: center;
     padding: 12px;
-  }
-  .sidebar-collapsed .guide-trigger {
-    justify-content: center;
-  }
-  .sidebar-collapsed .guide-character {
-    width: 54px;
-  }
-  .sidebar-collapsed .guide-panel {
-    left: 90px;
   }
 }
 @media (max-width: 1250px) {
@@ -1522,32 +1533,6 @@ html body .app-shell .dash-launch .button {
   html body .app-shell.sidebar-collapsed .workspace {
     width: 100%;
     margin-left: 0;
-  }
-  .mobile-guide {
-    display: block;
-    position: fixed;
-    left: 12px;
-    bottom: 14px;
-    z-index: 85;
-  }
-  .mobile-guide > .guide-trigger {
-    border: 1px solid #d4c0df;
-    border-radius: 50%;
-    width: 62px;
-    height: 62px;
-    background: #4c3c56;
-    box-shadow: 0 5px 22px #38204035;
-  }
-  .mobile-guide .guide-trigger > span {
-    display: none;
-  }
-  .mobile-guide .guide-character {
-    width: 58px;
-    height: 65px;
-  }
-  .mobile-guide .guide-panel {
-    left: 12px;
-    bottom: 89px;
   }
   .workspace-footer {
     padding-bottom: 90px !important;
@@ -1784,5 +1769,17 @@ html body .app-shell .dash-launch .button {
   }
   .explorer-bar {
     transition: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .assistant-dock {
+    right: 16px;
+    bottom: 16px;
+  }
+  .assistant-dock .guide-panel {
+    left: auto;
+    right: 16px;
+    bottom: 90px;
   }
 }

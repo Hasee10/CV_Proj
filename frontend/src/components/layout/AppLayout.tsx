@@ -99,9 +99,6 @@ export function AppLayout() {
             </NavLink>
           ))}
         </nav>
-        <div className="sidebar-bottom">
-          <WorkspaceAssistant />
-        </div>
       </aside>
       <div className="workspace">
         <header className="workspace-bar">
@@ -159,7 +156,7 @@ export function AppLayout() {
           <span>LoGo-HTR / ATHN</span>
         </footer>
       </div>
-      <div className="mobile-guide">
+      <div className="assistant-dock">
         <WorkspaceAssistant />
       </div>
     </div>
